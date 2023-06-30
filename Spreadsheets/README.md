@@ -1,11 +1,4 @@
-# NOTES FOR FULLY FLATTENED CIW FST
-
-## TO DO:
-
-- Move this to-do list to a set of issues
-- Investigate Prt+Dub forms in all paradigms
-- For VAIs and VIIs, put the likely BLO form as form 1
-- Make sure all i1s are noted as such, even if they aren't specifically used for a rule. This is just to ensure consistency.
+# README for spreadsheets in BorderLakesMorph
 
 ## GENERAL
 *	\>\> marks the stem/suffix juncture (or the end of the stem)
