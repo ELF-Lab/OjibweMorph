@@ -54,6 +54,10 @@ From OPD:
 
 ### RULES
 
+**Nasal assimilation**
+
+With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
+
 **ShortV-deletion**
 
 Delete word-final short vowels ("i" and "o" as in "niimi" and "nagamo"; this rule MUST PRECEED the "w-deletion" rule)
@@ -201,6 +205,10 @@ Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalizatio
 If a stem starting with "o" is immediately preceded by a prefix, lengthen "o" to "oo" (and epthensize the "d" on the prefix like normal). 
 
 ### SUFFIX RULES
+
+**Nasal assimilation**
+
+With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
 
 **d-deletion**
 
