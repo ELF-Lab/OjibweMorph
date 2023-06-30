@@ -3,14 +3,12 @@
 ## GENERAL
 *	\>\> marks the stem/suffix juncture (or the end of the stem)
 *	\<\< marks the prefix/stem juncture (or the start of the stem)
-*	Null morphemes will NOT be added unless a rule needs to refer to them
+*	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
 *	There is one special character, i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
 
 ## Verb Inanimate Intransitive (VII)
 
 ### STEM TYPES
-
-From OPD:
 
 | Class       | Description                  | Stems                             |
 |-------------|------------------------------|-----------------------------------|
@@ -23,9 +21,7 @@ Note that there is quite limited documentation for the VII Class 2 stems. Also, 
 
 ### RULES
 
-**d-deletion**
-
-Only stem change is "zanagad", where "d" is deleted when the suffix complex starts with a consonant.
+- _d-deletion:_ Only stem change is "zanagad", where "d" is deleted when the suffix complex starts with a consonant.
 
 ### NOTES/ISSUES
 
@@ -34,8 +30,6 @@ NA
 ## Verb Animate Intransitive (VAI)
 
 ### STEM TYPES
-
-From OPD:
 
 | Class       | Description               | Stems                            |
 |-------------|---------------------------|----------------------------------|
@@ -47,17 +41,11 @@ From OPD:
 
 ### RULES
 
-**Nasal assimilation**
+- _Nasal assimilation:_ With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
 
-With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
+- _ShortV-deletion:_ Delete word-final short vowels ("i" and "o" as in "niimi" and "nagamo"; this rule MUST PRECEED the "w-deletion" rule)
 
-**ShortV-deletion**
-
-Delete word-final short vowels ("i" and "o" as in "niimi" and "nagamo"; this rule MUST PRECEED the "w-deletion" rule)
-
-**W-deletion**
-
-Delete word-final "w" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
+- _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
 ### NOTES/ISSUES
 
@@ -114,25 +102,15 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 
 ### RULES
 
-**aw-to-aa**
+- *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g".
 
-For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g".
+- *aw-to-oo:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 
-**aw-to-oo**
+- *w-to-o (UPDATED JUNE 29, 2023):* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
 
-For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+- *i1-Palatalization:* Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization.
 
-**w-to-o (UPDATED JUNE 29, 2023)**
-
-For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
-
-**i1-Palatalization**
-
-Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization.
-
-**ShortV-deletion**
-
-Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
+- *ShortV-deletion:* Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
 
 ### NOTES/ISSUES
 
@@ -148,7 +126,7 @@ Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalizatio
 
 ## Summary
 
-### STEM CLASSES
+### SUMMARY OF STEM CLASSES
 
 | NICHOLS CLASS | CODE   | DESCRIPTION                   | EXAMPLE(S) (FROM YAMLS)                   |
 |---------------|--------|-------------------------------|-------------------------------------------|
@@ -173,7 +151,7 @@ Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalizatio
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
 | VTA8          | ???    | vta irregular stems           | ???                                       |
 
-### PREFIX RULES
+### SUMMARY OF PREFIX RULES
 
 - Person prefixes triggering changes to the stem (e.g. stems starting with "o" lengthen to "oo") and prefix rules in general.
 	-  https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
@@ -183,7 +161,7 @@ Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalizatio
 - ni(d/m/n)-
 	- ni- before m, n, w, p, t, k, s, sh
 	- nim- before b
-	- nin- d, j, z, zh, g
+	- nin- before d, j, z, zh, g
 	- nid- before vowels
 
 - gi(d)-
@@ -194,39 +172,32 @@ Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalizatio
 	- o- before consonants
 	- od- before vowels
 
-**o-to-oo-lengthening**
-If a stem starting with "o" is immediately preceded by a prefix, lengthen "o" to "oo" (and epthensize the "d" on the prefix like normal). 
+- *o-to-oo-lengthening:* If a stem starting with "o" is immediately preceded by a prefix, lengthen "o" to "oo" (and epthensize the "d" on the prefix like normal). 
 
-### SUFFIX RULES
+### SUMMARY OF SUFFIX RULES
 
-**Nasal assimilation**
+Note: These rules are often crucially ordered! We have indicated when that is the case.
 
-With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
+- _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
 
-**d-deletion**
+- _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
 
-Delete stem-final "d" when the suffix complex starts with a consonant.
+- *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g".
 
-**i1-Palatalization**
+- *aw-to-oo:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 
-Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
+- *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
+	- This rule MUST PRECEED the "ShortV-deletion" rule
 
-**ShortV-deletion**
+- *i1-Palatalization:* Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
+  	- This rule MUST PRECEED the "ShortV-deletion" rule
 
-Delete word-final short vowels
+- _ShortV-deletion:_ Delete word-final short vowels
 	- This rule MUST PRECEED the "w-deletion" rule
-	- This role MUST FOLLOW i1-Palatalization.
+	- This role MUST FOLLOW i1-Palatalization and w-to-o
 
-**aw-to-aa**
-
-For TA stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g".
-
-**aw-to-oo**
-For TA stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
-
-**w-to-o (UPDATED JUNE 29, 2023)**
-
-For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
+- _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg)
+	- This rule MUST FOLLOW the "ShortV-deletion" rule
 
 ### OLD RULES (defunct)
 
