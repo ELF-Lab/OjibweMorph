@@ -1,8 +1,10 @@
 # README for spreadsheets in BorderLakesMorph
 
 ## GENERAL
-*	\>\> marks the stem/suffix juncture (or the end of the stem)
-*	\<\< marks the prefix/stem juncture (or the start of the stem)
+*	Double \>\> marks the stem/suffix juncture (or the end of the stem)
+*	Double \<\< marks the prefix/stem juncture (or the start of the stem)
+*	Single \> marks boundaries between suffixes outside of the stem
+*	Single \< marks boundaries between prefixes outside of the stem
 *	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
 *	There is one special character, i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
 
