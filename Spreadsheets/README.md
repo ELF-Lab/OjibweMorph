@@ -57,7 +57,7 @@ NA
 
 - The VAI2's (the -am stems) are modelled by the -am/-aan/-aa as part of the suffix complex.
 
-## Verb Transitive Inanimate
+## Verb Transitive Inanimate (VTI)
 
 ### STEM TYPES
 
@@ -83,7 +83,7 @@ NA
 - We are showing different allomorphs of the prefix depending on if the stem starts in a consonant (ni, gi, o) or a vowel (ind, gid, od). We need to model this in a general way with the other allomoprhs that pop up, and make sure to model Border Lakes specifically. This also goes for the VAIs and VTAs.
 	- Solution: For now, we are just going to model the "d-epenthesis" so "ni" -> "nid", "gi" -> "gid", and "o" -> "od"
 
-## Verb Transitive Animate
+## Verb Transitive Animate (VTA)
 
 ### STEM TYPES
 
