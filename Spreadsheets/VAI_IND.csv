@@ -412,9 +412,9 @@ VAI,Ind,m,minongwaam,minongwaam,X,Dub,Neg,minongwaanziimwaadog,<<minongwaan>>zii
 VAI,Ind,m,minongwaam,minongwaam,1Sg,Dub,Pos,niminongwaaminaadog,ni<<minongwaam>>inaadog,JDN-PC,,,,,,
 VAI,Ind,m,minongwaam,minongwaam,2Pl,Dub,Pos,giminongwaamimwaadog,gi<<minongwaam>>imwaadog,JDN-PC,,,,,,
 VAI,Ind,m,minongwaam,minongwaam,2Sg,Dub,Pos,giminongwaaminaadog,gi<<minongwaam>>inaadog,JDN-PC,,,,,,
-VAI,Ind,m,minongwaam,minongwaam,3PlObv,Dub,Pos,minongwaamodogena',<<minongwaam>>odogena',GUESS,minongwaamowidogenan ,<<minongwaam>>owidogenan ,JDN-PC,minongwaamowidogena',<<minongwaam>>owidogena',JDN-PC
-VAI,Ind,m,minongwaam,minongwaam,3PlProx,Dub,Pos,minongwaamowidogenag ,<<minongwaam>>owidogenag ,JDN-PC,minongwaamodogenag,<<minongwaam>>odogenag,JDN-PC,,,
-VAI,Ind,m,minongwaam,minongwaam,3SgObv,Dub,Pos,minongwaamowidogenan ,<<minongwaam>>owidogenan ,JDN-PC,minongwaamodogenan,<<minongwaam>>odogenan,JDN-PC,,,
+VAI,Ind,m,minongwaam,minongwaam,3PlObv,Dub,Pos,minongwaamodogena',<<minongwaam>>odogena',GUESS,minongwaamowidogenan,<<minongwaam>>owidogenan,JDN-PC,minongwaamowidogena',<<minongwaam>>owidogena',JDN-PC
+VAI,Ind,m,minongwaam,minongwaam,3PlProx,Dub,Pos,minongwaamowidogenag,<<minongwaam>>owidogenag,JDN-PC,minongwaamodogenag,<<minongwaam>>odogenag,JDN-PC,,,
+VAI,Ind,m,minongwaam,minongwaam,3SgObv,Dub,Pos,minongwaamowidogenan,<<minongwaam>>owidogenan,JDN-PC,minongwaamodogenan,<<minongwaam>>odogenan,JDN-PC,,,
 VAI,Ind,m,minongwaam,minongwaam,3SgProx,Dub,Pos,minongwaamowidog,<<minongwaam>>owidog,JDN-PC,minongwaamodog,<<minongwaam>>odog,JDN-PC,,,
 VAI,Ind,m,minongwaam,minongwaam,Excl,Dub,Pos,niminongwaamiminaadog,ni<<minongwaam>>iminaadog,JDN-PC,,,,,,
 VAI,Ind,m,minongwaam,minongwaam,Incl,Dub,Pos,giminongwaamiminaadog,gi<<minongwaam>>iminaadog,JDN-PC,,,,,,
@@ -552,9 +552,9 @@ VAI,Ind,n,wanishin,wanishin,X,Prt,Neg,wanishinziimwaaban,<<wanishin>>ziimwaaban,
 VAI,Ind,n,wanishin,wanishin,1Sg,Prt,Pos,niwanishininaaban,ni<<wanishin>>inaaban,JDN-PC,,,,,,
 VAI,Ind,n,wanishin,wanishin,2Pl,Prt,Pos,giwanishinimwaaban,gi<<wanishin>>imwaaban,JDN-PC,,,,,,
 VAI,Ind,n,wanishin,wanishin,2Sg,Prt,Pos,giwanishininaaban,gi<<wanishin>>inaaban,JDN-PC,,,,,,
-VAI,Ind,n,wanishin,wanishin,3PlObv,Prt,Pos,wanishinoobanii',wanishin>>oobanii',GUESS,wanishinoobaniin,<<wanishin>>oobaniin,JDN-PC,wanishinoobanen,wanishin>>oobanen,JDN-PC
-VAI,Ind,n,wanishin,wanishin,3PlProx,Prt,Pos,wanishinoobaniig,<<wanishin>>oobaniig,JDN-PC,,,,wanishinoobaneg ,wanishin>>oobaneg ,JDN-PC
-VAI,Ind,n,wanishin,wanishin,3SgObv,Prt,Pos,wanishinoobaniin,<<wanishin>>oobaniin,JDN-PC,,,,wanishinoobanen,wanishin>>oobanen,JDN-PC
+VAI,Ind,n,wanishin,wanishin,3PlObv,Prt,Pos,wanishinoobanii',<<wanishin>>oobanii',GUESS,wanishinoobaniin,<<wanishin>>oobaniin,JDN-PC,wanishinoobanen,<<wanishin>>oobanen,JDN-PC
+VAI,Ind,n,wanishin,wanishin,3PlProx,Prt,Pos,wanishinoobaniig,<<wanishin>>oobaniig,JDN-PC,,,,wanishinoobaneg,<<wanishin>>oobaneg,JDN-PC
+VAI,Ind,n,wanishin,wanishin,3SgObv,Prt,Pos,wanishinoobaniin,<<wanishin>>oobaniin,JDN-PC,,,,wanishinoobanen,<<wanishin>>oobanen,JDN-PC
 VAI,Ind,n,wanishin,wanishin,3SgProx,Prt,Pos,wanishinooban,<<wanishin>>ooban,JDN-PC,,,,,,
 VAI,Ind,n,wanishin,wanishin,Excl,Prt,Pos,niwanishiniminaaban,ni<<wanishin>>iminaaban,JDN-PC,,,,,,
 VAI,Ind,n,wanishin,wanishin,Incl,Prt,Pos,giwanishiniminaaban,gi<<wanishin>>iminaaban,JDN-PC,,,,,,

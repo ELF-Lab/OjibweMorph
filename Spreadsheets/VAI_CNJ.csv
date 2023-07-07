@@ -1,4 +1,4 @@
-﻿Paradigm,Order,Class,Lemma,Stem,Subject,Mode,Negation,Form1,Form1Split,Form1Source
+﻿Paradigm,Order,Class,Lemma,Stem,Subject,Mode,Negation,Form1Surface,Form1Split,Form1Source
 VAI,Cnj,aa,nibaa,nibaa,1Sg,Dub,Neg,nibaasiiwaanen,<<nibaa>>siiwaanen,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,2Pl,Dub,Neg,nibaasiiwegwen,<<nibaa>>siiwegwen,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,2Sg,Dub,Neg,nibaasiiwanen,<<nibaa>>siiwanen,JDN-PC
@@ -41,7 +41,7 @@ VAI,Cnj,aa,nibaa,nibaa,Incl,Dub+Prt,Pos,nibaawangibanen,<<nibaa>>wangibanen,JDN-
 VAI,Cnj,aa,nibaa,nibaa,X,Dub+Prt,Pos,nibaawiingibanen,<<nibaa>>wiingibanen,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,1Sg,Neu,Neg,nibaasiwaan,<<nibaa>>siwaan,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,2Pl,Neu,Neg,nibaasiweg,<<nibaa>>siweg,JDN-PC
-VAI,Cnj,aa,nibaa,nibaa,2Sg,Neu,Neg,nibaasiwan ,<<nibaa>>siwan ,JDN-PC
+VAI,Cnj,aa,nibaa,nibaa,2Sg,Neu,Neg,nibaasiwan,<<nibaa>>siwan,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3PlObv,Neu,Neg,nibaasinig,<<nibaa>>sinig,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3PlProx,Neu,Neg,nibaasigwaa,<<nibaa>>sigwaa,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3SgObv,Neu,Neg,nibaasinig,<<nibaa>>sinig,JDN-PC
@@ -51,13 +51,13 @@ VAI,Cnj,aa,nibaa,nibaa,Incl,Neu,Neg,nibaasiwang,<<nibaa>>siwang,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,X,Neu,Neg,nibaasing,<<nibaa>>sing,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,1Sg,Neu,Pos,nibaayaan,<<nibaa>>yaan,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,2Pl,Neu,Pos,nibaayeg,<<nibaa>>yeg,JDN-PC
-VAI,Cnj,aa,nibaa,nibaa,2Sg,Neu,Pos,nibaayan  ,<<nibaa>>yan  ,JDN-PC
+VAI,Cnj,aa,nibaa,nibaa,2Sg,Neu,Pos,nibaayan,<<nibaa>>yan,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3PlObv,Neu,Pos,nibaanid,<<nibaa>>nid,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3PlProx,Neu,Pos,nibaawaad,<<nibaa>>waad,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3SgObv,Neu,Pos,nibaanid,<<nibaa>>nid,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,3SgProx,Neu,Pos,nibaad,<<nibaa>>d,JDN-PC
-VAI,Cnj,aa,nibaa,nibaa,Excl,Neu,Pos,nibaayaang ,<<nibaa>>yaang ,JDN-PC
-VAI,Cnj,aa,nibaa,nibaa,Incl,Neu,Pos,nibaayang ,<<nibaa>>yang ,JDN-PC
+VAI,Cnj,aa,nibaa,nibaa,Excl,Neu,Pos,nibaayaang,<<nibaa>>yaang,JDN-PC
+VAI,Cnj,aa,nibaa,nibaa,Incl,Neu,Pos,nibaayang,<<nibaa>>yang,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,X,Neu,Pos,nibaang,<<nibaa>>ng,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,1Sg,Prt,Neg,nibaasiwaambaan,<<nibaa>>siwaambaan,JDN-PC
 VAI,Cnj,aa,nibaa,nibaa,2Pl,Prt,Neg,nibaasiwegiban,<<nibaa>>siwegiban,JDN-PC
@@ -201,7 +201,7 @@ VAI,Cnj,e,webinige,webinige,Incl,Dub+Prt,Pos,webinigewangibanen,<<webinige>>wang
 VAI,Cnj,e,webinige,webinige,X,Dub+Prt,Pos,webinigewiingibanen,<<webinige>>wiingibanen,JDN-PC
 VAI,Cnj,e,webinige,webinige,1Sg,Neu,Neg,webinigesiwaan,<<webinige>>siwaan,JDN-PC
 VAI,Cnj,e,webinige,webinige,2Pl,Neu,Neg,webinigesiweg,<<webinige>>siweg,JDN-PC
-VAI,Cnj,e,webinige,webinige,2Sg,Neu,Neg,webinigesiwan ,<<webinige>>siwan ,JDN-PC
+VAI,Cnj,e,webinige,webinige,2Sg,Neu,Neg,webinigesiwan,<<webinige>>siwan,JDN-PC
 VAI,Cnj,e,webinige,webinige,3PlObv,Neu,Neg,webinigesinig,<<webinige>>sinig,JDN-PC
 VAI,Cnj,e,webinige,webinige,3PlProx,Neu,Neg,webinigesigwaa,<<webinige>>sigwaa,JDN-PC
 VAI,Cnj,e,webinige,webinige,3SgObv,Neu,Neg,webinigesinig,<<webinige>>sinig,JDN-PC
@@ -211,7 +211,7 @@ VAI,Cnj,e,webinige,webinige,Incl,Neu,Neg,webinigesiwang,<<webinige>>siwang,JDN-P
 VAI,Cnj,e,webinige,webinige,X,Neu,Neg,webinigesing,<<webinige>>sing,JDN-PC
 VAI,Cnj,e,webinige,webinige,1Sg,Neu,Pos,webinigeyaan,<<webinige>>yaan,JDN-PC
 VAI,Cnj,e,webinige,webinige,2Pl,Neu,Pos,webinigeyeg,<<webinige>>yeg,JDN-PC
-VAI,Cnj,e,webinige,webinige,2Sg,Neu,Pos,webinigeyan ,<<webinige>>yan ,JDN-PC
+VAI,Cnj,e,webinige,webinige,2Sg,Neu,Pos,webinigeyan,<<webinige>>yan,JDN-PC
 VAI,Cnj,e,webinige,webinige,3PlObv,Neu,Pos,webinigenid,<<webinige>>nid,JDN-PC
 VAI,Cnj,e,webinige,webinige,3PlProx,Neu,Pos,webinigewaad,<<webinige>>waad,JDN-PC
 VAI,Cnj,e,webinige,webinige,3SgObv,Neu,Pos,webinigenid,<<webinige>>nid,JDN-PC
@@ -281,7 +281,7 @@ VAI,Cnj,i,niimi,niimi,Incl,Dub+Prt,Pos,niimiwangibanen,<<niimi>>wangibanen,JDN-P
 VAI,Cnj,i,niimi,niimi,X,Dub+Prt,Pos,niimiwiingibanen,<<niimi>>wiingibanen,JDN-PC
 VAI,Cnj,i,niimi,niimi,1Sg,Neu,Neg,niimisiwaan,<<niimi>>siwaan,JDN-PC
 VAI,Cnj,i,niimi,niimi,2Pl,Neu,Neg,niimisiweg,<<niimi>>siweg,JDN-PC
-VAI,Cnj,i,niimi,niimi,2Sg,Neu,Neg,niimisiwan ,<<niimi>>siwan ,JDN-PC
+VAI,Cnj,i,niimi,niimi,2Sg,Neu,Neg,niimisiwan,<<niimi>>siwan,JDN-PC
 VAI,Cnj,i,niimi,niimi,3PlObv,Neu,Neg,niimisinig,<<niimi>>sinig,JDN-PC
 VAI,Cnj,i,niimi,niimi,3PlProx,Neu,Neg,niimisigwaa,<<niimi>>sigwaa,JDN-PC
 VAI,Cnj,i,niimi,niimi,3SgObv,Neu,Neg,niimisinig,<<niimi>>sinig,JDN-PC
@@ -291,7 +291,7 @@ VAI,Cnj,i,niimi,niimi,Incl,Neu,Neg,niimisiwang,<<niimi>>siwang,JDN-PC
 VAI,Cnj,i,niimi,niimi,X,Neu,Neg,niimising,<<niimi>>sing,JDN-PC
 VAI,Cnj,i,niimi,niimi,1Sg,Neu,Pos,niimiyaan,<<niimi>>yaan,JDN-PC
 VAI,Cnj,i,niimi,niimi,2Pl,Neu,Pos,niimiyeg,<<niimi>>yeg,JDN-PC
-VAI,Cnj,i,niimi,niimi,2Sg,Neu,Pos,niimiyan ,<<niimi>>yan ,JDN-PC
+VAI,Cnj,i,niimi,niimi,2Sg,Neu,Pos,niimiyan,<<niimi>>yan,JDN-PC
 VAI,Cnj,i,niimi,niimi,3PlObv,Neu,Pos,niiminid,<<niimi>>nid,JDN-PC
 VAI,Cnj,i,niimi,niimi,3PlProx,Neu,Pos,niimiwaad,<<niimi>>waad,JDN-PC
 VAI,Cnj,i,niimi,niimi,3SgObv,Neu,Pos,niiminid,<<niimi>>nid,JDN-PC
@@ -361,7 +361,7 @@ VAI,Cnj,ii,madaabii,madaabii,Incl,Dub+Prt,Pos,madaabiiwangibanen,<<madaabii>>wan
 VAI,Cnj,ii,madaabii,madaabii,X,Dub+Prt,Pos,madaabiiwiingibanen,<<madaabii>>wiingibanen,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,1Sg,Neu,Neg,madaabiisiwaan,<<madaabii>>siwaan,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,2Pl,Neu,Neg,madaabiisiweg,<<madaabii>>siweg,JDN-PC
-VAI,Cnj,ii,madaabii,madaabii,2Sg,Neu,Neg,madaabiisiwan ,<<madaabii>>siwan ,JDN-PC
+VAI,Cnj,ii,madaabii,madaabii,2Sg,Neu,Neg,madaabiisiwan,<<madaabii>>siwan,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,3PlObv,Neu,Neg,madaabiisinig,<<madaabii>>sinig,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,3PlProx,Neu,Neg,madaabiisigwaa,<<madaabii>>sigwaa,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,3SgObv,Neu,Neg,madaabiisinig,<<madaabii>>sinig,JDN-PC
@@ -371,7 +371,7 @@ VAI,Cnj,ii,madaabii,madaabii,Incl,Neu,Neg,madaabiisiwang,<<madaabii>>siwang,JDN-
 VAI,Cnj,ii,madaabii,madaabii,X,Neu,Neg,madaabiising,<<madaabii>>sing,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,1Sg,Neu,Pos,madaabiiyaan,<<madaabii>>yaan,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,2Pl,Neu,Pos,madaabiiyeg,<<madaabii>>yeg,JDN-PC
-VAI,Cnj,ii,madaabii,madaabii,2Sg,Neu,Pos,madaabiiyan ,<<madaabii>>yan ,JDN-PC
+VAI,Cnj,ii,madaabii,madaabii,2Sg,Neu,Pos,madaabiiyan,<<madaabii>>yan,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,3PlObv,Neu,Pos,madaabiinid,<<madaabii>>nid,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,3PlProx,Neu,Pos,madaabiiwaad,<<madaabii>>waad,JDN-PC
 VAI,Cnj,ii,madaabii,madaabii,3SgObv,Neu,Pos,madaabiinid,<<madaabii>>nid,JDN-PC
@@ -601,7 +601,7 @@ VAI,Cnj,o,nagamo,nagamo,Incl,Dub+Prt,Pos,nagamowangibanen,<<nagamo>>wangibanen,J
 VAI,Cnj,o,nagamo,nagamo,X,Dub+Prt,Pos,nagamowiingibanen,<<nagamo>>wiingibanen,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,1Sg,Neu,Neg,nagamosiwaan,<<nagamo>>siwaan,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,2Pl,Neu,Neg,nagamosiweg,<<nagamo>>siweg,JDN-PC
-VAI,Cnj,o,nagamo,nagamo,2Sg,Neu,Neg,nagamosiwan ,<<nagamo>>siwan ,JDN-PC
+VAI,Cnj,o,nagamo,nagamo,2Sg,Neu,Neg,nagamosiwan,<<nagamo>>siwan,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,3PlObv,Neu,Neg,nagamosinig,<<nagamo>>sinig,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,3PlProx,Neu,Neg,nagamosigwaa,<<nagamo>>sigwaa,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,3SgObv,Neu,Neg,nagamosinig,<<nagamo>>sinig,JDN-PC
@@ -611,7 +611,7 @@ VAI,Cnj,o,nagamo,nagamo,Incl,Neu,Neg,nagamosiwang,<<nagamo>>siwang,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,X,Neu,Neg,nagamosing,<<nagamo>>sing,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,1Sg,Neu,Pos,nagamoyaan,<<nagamo>>yaan,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,2Pl,Neu,Pos,nagamoyeg,<<nagamo>>yeg,JDN-PC
-VAI,Cnj,o,nagamo,nagamo,2Sg,Neu,Pos,nagamoyan ,<<nagamo>>yan ,JDN-PC
+VAI,Cnj,o,nagamo,nagamo,2Sg,Neu,Pos,nagamoyan,<<nagamo>>yan,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,3PlObv,Neu,Pos,nagamonid,<<nagamo>>nid,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,3PlProx,Neu,Pos,nagamowaad,<<nagamo>>waad,JDN-PC
 VAI,Cnj,o,nagamo,nagamo,3SgObv,Neu,Pos,nagamonid,<<nagamo>>nid,JDN-PC
@@ -681,7 +681,7 @@ VAI,Cnj,oo,maajiibatoo,maajiibatoo,Incl,Dub+Prt,Pos,maajiibatoowangibanen,<<maaj
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,X,Dub+Prt,Pos,maajiibatoowiingibanen,<<maajiibatoo>>wiingibanen,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,1Sg,Neu,Neg,maajiibatoosiwaan,<<maajiibatoo>>siwaan,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,2Pl,Neu,Neg,maajiibatoosiweg,<<maajiibatoo>>siweg,JDN-PC
-VAI,Cnj,oo,maajiibatoo,maajiibatoo,2Sg,Neu,Neg,maajiibatoosiwan ,<<maajiibatoo>>siwan ,JDN-PC
+VAI,Cnj,oo,maajiibatoo,maajiibatoo,2Sg,Neu,Neg,maajiibatoosiwan,<<maajiibatoo>>siwan,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,3PlObv,Neu,Neg,maajiibatoosinig,<<maajiibatoo>>sinig,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,3PlProx,Neu,Neg,maajiibatoosigwaa,<<maajiibatoo>>sigwaa,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,3SgObv,Neu,Neg,maajiibatoosinig,<<maajiibatoo>>sinig,JDN-PC
@@ -691,7 +691,7 @@ VAI,Cnj,oo,maajiibatoo,maajiibatoo,Incl,Neu,Neg,maajiibatoosiwang,<<maajiibatoo>
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,X,Neu,Neg,maajiibatoosing,<<maajiibatoo>>sing,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,1Sg,Neu,Pos,maajiibatooyaan,<<maajiibatoo>>yaan,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,2Pl,Neu,Pos,maajiibatooyeg,<<maajiibatoo>>yeg,JDN-PC
-VAI,Cnj,oo,maajiibatoo,maajiibatoo,2Sg,Neu,Pos,maajiibatooyan ,<<maajiibatoo>>yan ,JDN-PC
+VAI,Cnj,oo,maajiibatoo,maajiibatoo,2Sg,Neu,Pos,maajiibatooyan,<<maajiibatoo>>yan,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,3PlObv,Neu,Pos,maajiibatoonid,<<maajiibatoo>>nid,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,3PlProx,Neu,Pos,maajiibatoowaad,<<maajiibatoo>>waad,JDN-PC
 VAI,Cnj,oo,maajiibatoo,maajiibatoo,3SgObv,Neu,Pos,maajiibatoonid,<<maajiibatoo>>nid,JDN-PC
