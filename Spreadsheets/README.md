@@ -19,15 +19,17 @@
 | VII Class 3A | vii consonant /d/ stems      | "zanagad", "atemagad"             |
 | VII Class 3B | vii consonant /n/ stems      | "bangisin"                        |
 
-Note that there is quite limited documentation for the VII Class 2 stems. Also, from a query of a dictionary, there seem to be a small set of VII forming "finals" that fall into this class including "-amo" meaning "it is a path", "-po" meaning "it snows/there is snow"  "-aagami" meaning "it is a liquid". A relevant note for Border Lakes from the dictionary: "Most US dialects add n to the final -po when there is no inflectional ending; For example, US zoogipon 'it is snowing' and Border Lakes zoogipo (https://ojibwe.lib.umn.edu/word-part/po-final)."
 
 ### RULES
 
 - _d-deletion:_ Only stem change is "zanagad", where "d" is deleted when the suffix complex starts with a consonant.
 
+- _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg in the VII Class 2)
+
 ### NOTES/ISSUES
 
-NA
+- Note that there is quite limited documentation for the VII Class 2 stems. Also, from a query of a dictionary, there seem to be a small set of VII forming "finals" that fall into this class including "-amo" meaning "it is a path", "-po" meaning "it snows/there is snow"  "-aagami" meaning "it is a liquid". A relevant note for Border Lakes from the dictionary: "Most US dialects add n to the final -po when there is no inflectional ending; For example, US zoogipon 'it is snowing' and Border Lakes zoogipo (https://ojibwe.lib.umn.edu/word-part/po-final)."
+	- This is now modelled by the suffix complex having a -w, which will block the short vowel deletion rule, then be deleted by the W-Deletion rule. 
 
 ## Verb Animate Intransitive (VAI)
 
