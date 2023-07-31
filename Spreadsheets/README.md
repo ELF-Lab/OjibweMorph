@@ -59,7 +59,7 @@ NA
 
 - The VAI2's (the -am stems) are modelled by the -am/-aan/-aa as part of the suffix complex.
 
-- There is a separate set of spreadsheets for the reflexive/reciprocal forms. These take normal VAI morpholgy, but are more restricted in the particular argument combinations they can have. They are treated as specific VAI stem types (see the table above).
+- There is a separate set of spreadsheets for the reflexive/reciprocal forms. These take normal VAI morpholgy, but are more restricted in the particular argument combinations they can have (the reflexives have an implict object that matches the subject, and the reciprocals must be plural). They are treated as specific VAI stem types (see the table above), but generally behave the same as the VAI short vowel stems in terms of the rules that apply.
 
 ## Verb Transitive Inanimate (VTI)
 
