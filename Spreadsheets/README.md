@@ -162,7 +162,91 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 | VTA4          | ???    | vta changeable /Nn/ stems     | ???                                       |
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
-| VTA8          | ???    | vta irregular stems           | ???                                       |
+| VTA8          | VTA_irr    | vta irregular stems           | ???                                       |
+
+### SUMMARY OF TAGS
+
+#### PARADIGM
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| VAI   | Verb Animate Intransitive           |
+| VII   | Verb Inanimate Intransitive         |
+| VTI   | Verb Transitive Inanimate           |
+| VTA   | Verb Transitive Animate             |
+| VAIO  | Verb Animate Intransitive + Object  |
+
+#### ORDER
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Cnj   | Conjunct order                      |
+| Ind   | Independent order                   |
+| Imp   | Imperative order                    |
+
+#### CLASS
+
+| Tag     | Description                    |
+|---------|--------------------------------|
+| VII_VV  | vii long vowel stems           |
+| VII_V   | vii short vowel stems          |
+| VII_d   | vii consonant /d/ stems        |
+| VII_n   | vii consonant /n/ stems        |
+| VAI_VV  | vai long vowel stems           |
+| VAI_V   | vai short vowel stems          |
+| VAI_n   | vai consonant /n/ stems        |
+| VAI_m   | vai consonant /m/ stems        |
+| VAI_am  | vai2 /am/ stems                |
+| VAI_rfx | vai with /-idizo/              |
+| VAI_rcp | vai with /-idi/                |
+| VAIO    | vai with 0sg/pl object         |
+| VTI_am  | vti /am/ stems                 |
+| VTI_oo  | vti /oo/ stems                 |
+| VTI_i   | vti /i/ stems                  |
+| VTI_aa  | vti /aa/ stems                 |
+| VTA_C   | vta consonant stems            |
+| VTA_n   | vta changeable /N/ stems       |
+| VTA_s   | vta changeable /s/ stems       |
+| VTA_aw  | vta /aw/ stems                 |
+| VTA_Cw  | vta consonant-w stems          |
+| VTA_irr | vta irregular stems            |
+
+#### SUBJECT/OBJECT
+
+| Tag       | Description                             |
+|-----------|-----------------------------------------|
+| 1Sg       | First person singular                   |
+| Excl      | First person exclusive (excludes addressee) |
+| Incl      | First person inclusive (includes addressee) |
+| 2Sg       | Second person singular                  |
+| 2Pl       | Second person plural                    |
+| 3SgProx   | Animate third person singular proximate |
+| 3PlProx   | Animate third person plural proximate   |
+| 3SgObv    | Animate third person singular obviative |
+| 3PlObv    | Animate third person plural obviative   |
+| 0Sg       | Inanimate third person singular (unspecified obviation) |
+| 0Pl       | Inanimate third person plural (unspecified obviation) |
+| 0SgProx   | Inanimate third person singular proximate |
+| 0PlProx   | Inanimate third person plural proximate   |
+| 0SgObv    | Inanimate third person singular obviative |
+| 0PlObv    | Inanimate third person plural obviative   |
+| X         | Unspecified actor                       |
+
+#### MODE
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Neu   | Neutral                             |
+| Prt   | Preterit                            |
+| Dub   | Dubitative                          |
+| DubPrt| Dubitative-Preterit                 |
+
+#### NEGATION
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Pos   | Positive                            |
+| Neg   | Negative                            |
 
 ### SUMMARY OF PREFIX RULES
 
