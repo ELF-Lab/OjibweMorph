@@ -29,10 +29,10 @@ VAI,Ind,VAI_Reflex,waabandizo,waabandizo,3PlObv,3PlObv,Neu,Pos,waabandizowa',<<w
 VAI,Ind,VAI_Reflex,waabandizo,waabandizo,3SgProx,3SgProx,Neu,Pos,waabandizo,<<waabandizo>>,RV-Web
 VAI,Ind,VAI_Reflex,waabandizo,waabandizo,Excl,Excl,Neu,Pos,niwaabandizomin,ni<<waabandizo>>min,RV-Web
 VAI,Ind,VAI_Reflex,waabandizo,waabandizo,Incl,Incl,Neu,Pos,giwaabandizomin,gi<<waabandizo>>min,RV-Web
-VAI,Imp,VAI_Reflex,waabandizo,waabandizo,2Sg,2Sg,Neu,Pos,waabandizon,<<waabandizo>>n,RV-Web
-VAI,Imp,VAI_Reflex,waabandizo,waabandizo,Incl,Incl,Neu,Pos,waabandizodaa,<<waabandizo>>daa,RV-Web
-VAI,Imp,VAI_Reflex,waabandizo,waabandizo,2Sg,2Sg,Neu,Neg,waabandizoken,<<waabandizo>>ken,RV-Web
-VAI,Imp,VAI_Reflex,waabandizo,waabandizo,Incl,Incl,Neu,Neg,waabandizosiidaa,<<waabandizo>>siidaa,RV-Web
+VAI,Imp,VAI_Reflex,waabandizo,waabandizo,2Sg,2Sg,Sim,NA,waabandizon,<<waabandizo>>n,RV-Web
+VAI,Imp,VAI_Reflex,waabandizo,waabandizo,Incl,Incl,Sim,NA,waabandizodaa,<<waabandizo>>daa,RV-Web
+VAI,Imp,VAI_Reflex,waabandizo,waabandizo,2Sg,2Sg,Prb,NA,waabandizoken,<<waabandizo>>ken,RV-Web
+VAI,Imp,VAI_Reflex,waabandizo,waabandizo,Incl,Incl,Prb,NA,waabandizosiidaa,<<waabandizo>>siidaa,RV-Web
 VAI,Cnj,VAI_Recip,waabandiwag,waabandi,3PlProx,3PlProx,Neu,Neg,waabandisigwaa,<<waabandi>>sigwaa,GUESS
 VAI,Cnj,VAI_Recip,waabandiwag,waabandi,3SgObv/3PlObv,3SgObv/3PlObv,Neu,Neg,waabandisinig,<<waabandi>>sinig,GUESS
 VAI,Cnj,VAI_Recip,waabandiwag,waabandi,Excl,Excl,Neu,Neg,waabandisiwaang,<<waabandi>>siwaang,GUESS
@@ -50,5 +50,5 @@ VAI,Ind,VAI_Recip,waabandiwag,waabandi,3SgObv,3SgObv,Neu,Pos,waabandiwan,<<waaba
 VAI,Ind,VAI_Recip,waabandiwag,waabandi,3PlObv,3PlObv,Neu,Pos,waabandiwa',<<waabandi>>wa',GUESS
 VAI,Ind,VAI_Recip,waabandiwag,waabandi,Excl,Excl,Neu,Pos,niwaabandimin,ni<<waabandi>>min,GUESS
 VAI,Ind,VAI_Recip,waabandiwag,waabandi,Incl,Incl,Neu,Pos,giwaabandimin,gi<<waabandi>>min,GUESS
-VAI,Imp,VAI_Recip,waabandiwag,waabandi,Incl,Incl,Neu,Pos,waabandidaa,<<waabandi>>daa,GUESS
-VAI,Imp,VAI_Recip,waabandiwag,waabandi,Incl,Incl,Neu,Neg,waabandisiidaa,<<waabandi>>siidaa,GUESS
+VAI,Imp,VAI_Recip,waabandiwag,waabandi,Incl,Incl,Sim,NA,waabandidaa,<<waabandi>>daa,GUESS
+VAI,Imp,VAI_Recip,waabandiwag,waabandi,Incl,Incl,Del,NA,waabandisiidaa,<<waabandi>>siidaa,GUESS
