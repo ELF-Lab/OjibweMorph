@@ -40,12 +40,14 @@ NA
 | VAI Class 2A | vai consonant /n/ stems   | "washin"                         |
 | VAI Class 2B | vai consonant /m/ stems   | "minogwaam"                      |
 | VAI2        | vai2 /am/ stems           | "zaaga'am"                       |
+| VAI Reflexive | vai with /-idizo/        | "waabandizo"                     |
+| VAI Reciprocal | vai with /-idi/         | "waabandi"                       |
 
 ### RULES
 
 - _Nasal assimilation:_ With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
 
-- _ShortV-deletion:_ Delete word-final short vowels ("i" and "o" as in "niimi" and "nagamo"; this rule MUST PRECEED the "w-deletion" rule)
+- _ShortV-deletion:_ Delete word-final short vowels ("i" and "o" as in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
 
 - _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
@@ -56,6 +58,8 @@ NA
 	- SOLUTION: This is modelled by adding the second half of the long vowel in the suffix complex, rather than any sort of rule. Questionable, but it works.
 
 - The VAI2's (the -am stems) are modelled by the -am/-aan/-aa as part of the suffix complex.
+
+- There is a separate set of spreadsheets for the reflexive/reciprocal forms. These take normal VAI morpholgy, but are more restricted in the particular argument combinations they can have (the reflexives have an implict object that matches the subject, and the reciprocals must be plural). They are treated as specific VAI stem types (see the table above), but generally behave the same as the VAI short vowel stems in terms of the rules that apply.
 
 ## Verb Transitive Inanimate (VTI)
 
@@ -141,6 +145,8 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 | VAI2A         | VAI_n  | vai consonant /n/ stems       | "washin"                                  |
 | VAI2B         | VAI_m  | vai consonant /m/ stems       | "minogwaam"                               |
 | VAI2          | VAI_am | vai2 /am/ stems               | "zaaga'am"                                |
+| NA 			| VAI_rfx | vai with /-idizo/        	 | "waabandizo"                     		 |
+| NA 			| VAI_rcp | vai with /-idi/         	 | "waabandi"                       		 |
 | VTI1          | VTI_am | vti /am/ stems                | "waabandam"                               |
 | VTI2          | VTI_oo | vti /oo/ stems                | "wanitoon"                                |
 | VTI3          | VTI_i  | vti /i/ stems                 | "miijin"                                  |
