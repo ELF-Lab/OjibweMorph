@@ -39,9 +39,11 @@ NA
 | VAI Class 1B | vai short vowel stems     | "nimi", "nagamo"                 |
 | VAI Class 2A | vai consonant /n/ stems   | "washin"                         |
 | VAI Class 2B | vai consonant /m/ stems   | "minogwaam"                      |
-| VAI2        | vai2 /am/ stems           | "zaaga'am"                       |
+| VAI2        | vai2 /am/ stems           | "zaaga'am"                        |
 | VAI Reflexive | vai with /-idizo/        | "waabandizo"                     |
 | VAI Reciprocal | vai with /-idi/         | "waabandi"                       |
+| VAIO         | vai with 0sg/pl object    | "adaawe"                         |
+
 
 ### RULES
 
@@ -60,6 +62,8 @@ NA
 - The VAI2's (the -am stems) are modelled by the -am/-aan/-aa as part of the suffix complex.
 
 - There is a separate set of spreadsheets for the reflexive/reciprocal forms. These take normal VAI morpholgy, but are more restricted in the particular argument combinations they can have (the reflexives have an implict object that matches the subject, and the reciprocals must be plural). They are treated as specific VAI stem types (see the table above), but generally behave the same as the VAI short vowel stems in terms of the rules that apply.
+
+- There is a seperate set of spreadsheets for the VAI+O paradigms in each order. These are VAI verbs that can take an inanimate object, and ultimately inflect like a VTI3. 
 
 ## Verb Transitive Inanimate (VTI)
 
@@ -147,6 +151,7 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 | VAI2          | VAI_am | vai2 /am/ stems               | "zaaga'am"                                |
 | NA 			| VAI_rfx | vai with /-idizo/        	 | "waabandizo"                     		 |
 | NA 			| VAI_rcp | vai with /-idi/         	 | "waabandi"                       		 |
+| VAIO          | VAIO	 | vai with 0sg/pl object        | "adaawe"                                  |
 | VTI1          | VTI_am | vti /am/ stems                | "waabandam"                               |
 | VTI2          | VTI_oo | vti /oo/ stems                | "wanitoon"                                |
 | VTI3          | VTI_i  | vti /i/ stems                 | "miijin"                                  |
