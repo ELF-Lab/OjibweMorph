@@ -21,7 +21,7 @@ VAIO,Cnj,VAIO,adaawen,adaawe,1Sg,0Sg/0Pl,Prt,Pos,adaaweyaambaan,<<adaawe>>yaamba
 VAIO,Cnj,VAIO,adaawen,adaawe,2Sg,0Sg/0Pl,Prt,Pos,adaaweyamban,<<adaawe>>yamban,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Excl,0Sg/0Pl,Prt,Pos,adaaweyaangiban,<<adaawe>>yaangiban,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Incl,0Sg/0Pl,Prt,Pos,adaaweyangiban,<<adaawe>>yangiban,JDN-PC,,,
-VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Prt,Pos,adaaweyegiban,<<adaawe>>yegiban,JDN-PC,<<adaawe>>yegoban,,JDN-PC
+VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Prt,Pos,adaaweyegiban,<<adaawe>>yegiban,JDN-PC,adaaweyegoban,<<adaawe>>yegoban,JDN-PC
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgProx,0Sg/0Pl,Prt,Pos,adaawepan,<<adaawe>>pan,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3PlProx,0Sg/0Pl,Prt,Pos,adaawewaapan,<<adaawe>>waapan,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgObv/3PlObv,0Sg/0Pl,Prt,Pos,adaawenipan,<<adaawe>>nipan,JDN-PC,,,
@@ -30,7 +30,7 @@ VAIO,Cnj,VAIO,adaawen,adaawe,1Sg,0Sg/0Pl,Prt,Neg,adaawesiwaambaan,<<adaawe>>siwa
 VAIO,Cnj,VAIO,adaawen,adaawe,2Sg,0Sg/0Pl,Prt,Neg,adaawesiwamban,<<adaawe>>siwamban,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Excl,0Sg/0Pl,Prt,Neg,adaawesiwaangiban,<<adaawe>>siwaangiban,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Incl,0Sg/0Pl,Prt,Neg,adaawesiwangiban,<<adaawe>>siwangiban,JDN-PC,,,
-VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Prt,Neg,adaawesiwegiban,<<adaawe>>siwegiban,JDN-PC,<<adaawe>>siwegoban,,JDN-PC
+VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Prt,Neg,adaawesiwegiban,<<adaawe>>siwegiban,JDN-PC,adaawesiwegoban,<<adaawe>>siwegoban,JDN-PC
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgProx,0Sg/0Pl,Prt,Neg,adaawesigoban,<<adaawe>>sigoban,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3PlProx,0Sg/0Pl,Prt,Neg,adaawesigwaaban,<<adaawe>>sigwaaban,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgObv/3PlObv,0Sg/0Pl,Prt,Neg,adaawesinigoban,<<adaawe>>sinigoban,JDN-PC,,,
@@ -57,7 +57,7 @@ VAIO,Cnj,VAIO,adaawen,adaawe,1Sg,0Sg/0Pl,Dub+Prt,Pos,adaawewaambaanen,<<adaawe>>
 VAIO,Cnj,VAIO,adaawen,adaawe,2Sg,0Sg/0Pl,Dub+Prt,Pos,adaawewambanen,<<adaawe>>wambanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Excl,0Sg/0Pl,Dub+Prt,Pos,adaawewaangibanen,<<adaawe>>waangibanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Incl,0Sg/0Pl,Dub+Prt,Pos,adaawewangibanen,<<adaawe>>wangibanen,JDN-PC,,,
-VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Dub+Prt,Pos,adaawewegibanen,<<adaawe>>wegibanen,JDN-PC,<<adaawe>>wegobanen,,JDN-PC
+VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Dub+Prt,Pos,adaawewegibanen,<<adaawe>>wegibanen,JDN-PC,adaawewegobanen,<<adaawe>>wegobanen,JDN-PC
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgProx,0Sg/0Pl,Dub+Prt,Pos,adaawegobanen,<<adaawe>>gobanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3PlProx,0Sg/0Pl,Dub+Prt,Pos,adaawewaagobanen,<<adaawe>>waagobanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgObv/3PlObv,0Sg/0Pl,Dub+Prt,Pos,adaawenigobanen,<<adaawe>>nigobanen,JDN-PC,,,
@@ -66,7 +66,7 @@ VAIO,Cnj,VAIO,adaawen,adaawe,1Sg,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwaambaanen,<<adaaw
 VAIO,Cnj,VAIO,adaawen,adaawe,2Sg,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwambanen,<<adaawe>>siiwambanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Excl,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwaangibanen,<<adaawe>>siiwaangibanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,Incl,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwangibanen,<<adaawe>>siiwangibanen,JDN-PC,,,
-VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwegibanen,<<adaawe>>siiwegibanen,JDN-PC,<<adaawe>>siiwegobanen,,JDN-PC
+VAIO,Cnj,VAIO,adaawen,adaawe,2Pl,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwegibanen,<<adaawe>>siiwegibanen,JDN-PC,adaawesiiwegobanen,<<adaawe>>siiwegobanen,JDN-PC
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgProx,0Sg/0Pl,Dub+Prt,Neg,adaawesiigobanen,<<adaawe>>siigobanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3PlProx,0Sg/0Pl,Dub+Prt,Neg,adaawesiiwaagobanen,<<adaawe>>siiwaagobanen,JDN-PC,,,
 VAIO,Cnj,VAIO,adaawen,adaawe,3SgObv/3PlObv,0Sg/0Pl,Dub+Prt,Neg,adaawesiinigobanen,<<adaawe>>siinigobanen,JDN-PC,,,
