@@ -162,7 +162,7 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 | VTA4          | ???    | vta changeable /Nn/ stems     | ???                                       |
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
-| VTA8          | VTA_irr    | vta irregular stems           | ???                                       |
+| VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
 
 ### SUMMARY OF TAGS
 
