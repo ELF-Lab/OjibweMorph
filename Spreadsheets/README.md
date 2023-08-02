@@ -323,6 +323,7 @@ For TA stems that end in "Cw", the "w" goes to "o" when the suffix complex start
 | JDN-2010-MS-VTI-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTI paradigms 				|
 | JRV-2001-NISH-pXX		| J. Rand Valentine (2001) grammar of Nishnaabemwin 							  				|
 | JRV-Web-ANISH  		| J. Rand Valentine's webpage (https://ojibwegrammar.langsci.wisc.edu/Grammar/GrammarTOC.html) 	|
+| OPD-Note-po			| https://ojibwe.lib.umn.edu/word-part/po-final 												|
 
 
 
