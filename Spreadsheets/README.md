@@ -312,6 +312,17 @@ With stems ending in "m", so both -am and -m stems (VAI stems "minongwaam" and "
 
 For TA stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with a consonant.
 
-**W-deletion**
 
-Delete word-final "w" (as in "gimizh", 2sg>1sg neutral positive)
+### SUMMARY OF SOURCES
+
+| Key   				| Description                         											  				|
+|-----------------------|-----------------------------------------------------------------------------------------------|
+| JDN-2010-MS-VAI-pXX   | John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VAI paradigms 				|
+| JDN-2010-MS-VII-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VII paradigms 				|
+| JDN-2010-MS-VTA-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTA paradigms 				|
+| JDN-2010-MS-VTI-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTI paradigms 				|
+| JRV-2001-NISH-pXX		| J. Rand Valentine (2001) grammar of Nishnaabemwin 							  				|
+| JRV-Web-ANISH  		| J. Rand Valentine's webpage (https://ojibwegrammar.langsci.wisc.edu/Grammar/GrammarTOC.html) 	|
+
+
+
