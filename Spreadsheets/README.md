@@ -327,7 +327,11 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 
 Conjunct order verbs can undergo a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including preverbs). This produces the so-called "changed conjunct", which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred.
 
-- *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the table below.
+- *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the tables below.
+
+There are at least three patterns of initial change in the Southwestern group (Nichols 2012, NSF Report: Notes on variation in Minnesota Ojibwa).
+
+Pattern 1 (Mille Lacs, south side of Leech Lake, White Earth)
 
 | Unchanged   | Changed  |
 |-------------|----------|
@@ -338,6 +342,30 @@ Conjunct order verbs can undergo a non-concatenative vowel ablaut process known 
 | ii          | aa       |
 | o           | we       |
 | oo          | waa      |
+
+Pattern 2 (north side of Leech Lake, Red Lake):
+
+| Unchanged   | Changed  |
+|-------------|----------|
+| a           | e        |
+| aa          | aa     	 |
+| e           | e	     |
+| i           | e        |
+| ii          | aa       |
+| o           | we       |
+| oo          | waa      |
+
+Pattern 3 (Nett Lake, Lac la Croix):
+
+| Unchanged   | Changed  |
+|-------------|----------|
+| a           | e        |
+| aa          | aa     	 |
+| e           | e	     |
+| i           | e        |
+| ii          | aa       |
+| o           | we       |
+| oo          | oo       |
 
 There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change.
 
