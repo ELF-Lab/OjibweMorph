@@ -295,9 +295,9 @@ The person prefixes also trigger a lengthening process:
 - *o-to-oo-lengthening:* If a stem starting with "o" is immediately preceded by a prefix, lengthen "o" to "oo" (and epthensize the "d" on the prefix like normal).
 
 Sources:
-	- https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
-	- https://ojibwe.lib.umn.edu/main-entry/im-pf
-	- https://ojibwe.lib.umn.edu/main-entry/g-pf
+- https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
+- https://ojibwe.lib.umn.edu/main-entry/im-pf
+- https://ojibwe.lib.umn.edu/main-entry/g-pf
 
 ## Tense
 
