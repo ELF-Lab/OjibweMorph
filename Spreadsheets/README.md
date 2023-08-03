@@ -252,7 +252,7 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 
 ### SUMMARY OF PREVERB RULES
 
-## Person prefix
+#### Person prefix
 
 The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate.
 
@@ -299,7 +299,7 @@ Sources:
 - https://ojibwe.lib.umn.edu/main-entry/im-pf
 - https://ojibwe.lib.umn.edu/main-entry/g-pf
 
-## Tense
+#### Tense
 
 *Background*: A distinction known as the lenis/fortis contrast is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
 
@@ -309,7 +309,7 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 
 *Citation*: See Nichols (1980, pg. 129) *Ojibwe Morphology*, PhD Dissertation, Harvard University for a version of the rule here.
 
-## Initial change
+#### Initial change
 
 Conjunct order verbs can undergo a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including preverbs). This produces the so-called "changed conjunct", which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred.
 
