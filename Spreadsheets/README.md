@@ -292,6 +292,7 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 	- nim-/im-/m-/ni- before b
 	- nin-/in-/n-/ni- before d, j, z, zh, g
 	- nind-/ind-/nd- before vowels
+		- At Red Lake, we get niy- before aa
 
 - Second Person
 	- gi- before consonants
