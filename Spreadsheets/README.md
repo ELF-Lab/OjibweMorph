@@ -367,6 +367,8 @@ Pattern 3 (Nett Lake, Lac la Croix):
 | o           | we       |
 | oo          | oo       |
 
+Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1.
+
 There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change.
 
 The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm
