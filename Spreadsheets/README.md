@@ -110,7 +110,7 @@ NA
 
 For the VTA Class 4, I don't have any examples, but from what I can see in the dictionary I found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
 
-For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). There is a specific spreadsheet for this verb, and in principle we could create some rules to deal with it since its "irregularity" is actually quite regugular in many ways.
+For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). There is a specific spreadsheet for this verb, and in principle we could create some rules to deal with it since its "irregularity" is actually quite regular in many ways. At present, we just have the positive independent order, but it could easily be extended with educated guesses.
 
 ### RULES
 
