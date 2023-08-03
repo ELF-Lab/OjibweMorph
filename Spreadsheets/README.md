@@ -106,11 +106,11 @@ NA
 | VTA Class 5 | vta /aw/ stems                 | "mikaw"       |
 | VTA Class 6 | vta consonant-w stems          | "mizho"       |
 | VTA Class 7 | vta glottal-w stems            | Same as "mizho" |
-| VTA Class 8 | vta irregular stems            | ???           |
+| VTA Class 8 | vta irregular stems            | "in"           |
 
 For the VTA Class 4, I don't have any examples, but from what I can see in the dictionary I found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
 
-For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) mentions one irregular verb "zhi(n)" meaning "say Y to AN". This would correspond to "izhi" in CIW and has underlying stem form "iN". It mostly patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). In the long run, we probably want to just hard code this specific verb into the model.
+For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). There is a specific spreadsheet for this verb, and in principle we could create some rules to deal with it since its "irregularity" is actually quite regugular in many ways.
 
 ### RULES
 
