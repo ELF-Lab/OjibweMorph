@@ -250,18 +250,19 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 | Pos   | Positive                            |
 | Neg   | Negative                            |
 
-### SUMMARY OF PREFIX RULES
+### SUMMARY OF PREVERB RULES
 
-- Person prefixes triggering changes to the stem (e.g. stems starting with "o" lengthen to "oo") and prefix rules in general.
-	-  https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
-	- https://ojibwe.lib.umn.edu/main-entry/im-pf
-	- https://ojibwe.lib.umn.edu/main-entry/g-pf
+## Person prefix
 
-- ni(d/m/n)-
+The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate.
+
+For Border Lakes, generally:
+
+- ni(m/n/nd)-
 	- ni- before m, n, w, p, t, k, s, sh
 	- nim- before b
 	- nin- before d, j, z, zh, g
-	- nid- before vowels
+	- nind- before vowels
 
 - gi(d)-
 	- gi- before consonants
@@ -271,7 +272,64 @@ For Class 8 (irregulars) I also don't have examples. But Valentine (2001:285) me
 	- o- before consonants
 	- od- before vowels
 
-- *o-to-oo-lengthening:* If a stem starting with "o" is immediately preceded by a prefix, lengthen "o" to "oo" (and epthensize the "d" on the prefix like normal). 
+More generally for Southerwestern Ojibwe, there is significant variation:
+
+- First Person
+	- ni-/n- before m, n, w, p, t, k, s, sh
+	- nim-/im-/m-/ni- before b
+	- nin-/in-/n-/ni- before d, j, z, zh, g
+	- nind-/ind-/nd- before vowels
+
+- Second Person
+	- gi- before consonants
+	- gid- before vowels
+
+- Third Person
+	- o- before consonants
+	- od- before vowels
+
+In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). The second and third person prefixes are generally easier to model.  
+
+The person prefixes also trigger a lengthening process:
+
+- *o-to-oo-lengthening:* If a stem starting with "o" is immediately preceded by a prefix, lengthen "o" to "oo" (and epthensize the "d" on the prefix like normal).
+
+Sources:
+	- https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
+	- https://ojibwe.lib.umn.edu/main-entry/im-pf
+	- https://ojibwe.lib.umn.edu/main-entry/g-pf
+
+## Tense
+
+*Background*: A distinction known as the lenis/fortis contrast is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
+
+- *tense-tensing:* Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
+
+The rule is meant to be quite broad, triggering this process not only on stems that follow the relevant tense marker, but also preverbs. It is also worth noting that this is the type of thing that might not *always* be reflected in the orthography, so probably we want to allow some fuzziness when parsing. But in the "standard" orthography of the OPD, this is always reflected. Finally, this is specific to these morphemes, not any preverb that ends in "ii". For example, "maajii-" meaning "start" does not trigger the rule.
+
+*Citation*: See Nichols (1980, pg. 129) *Ojibwe Morphology*, PhD Dissertation, Harvard University for a version of the rule here.
+
+## Initial change
+
+Conjunct order verbs can undergo a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including preverbs). This produces the so-called "changed conjunct", which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred.
+
+- *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the table below.
+
+| Unchanged   | Changed  |
+|-------------|----------|
+| a           | e        |
+| aa          | ayaa     |
+| e           | aye	     |
+| i           | e        |
+| ii          | aa       |
+| o           | we       |
+| oo          | waa      |
+
+There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change.
+
+The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm
+
+There are also a lot of complications with the future tense prefer "ga-" that interact with intial change. Future tense appears as "ga-" in the independent order in the presence of a person prefix, but "da-" in the independent order when there is no prefix. In many dialects the "plain" conjunct (when there is no initial change), the future morpheme is realized as "ji-" (in others, it is realized as "da-" in this context). But, in the changed conjunct, it appears as "ge-". So the changed form is the regular changed form of the independent order allomorph in the presence of a person prefix, but not a changed version the plain conjunct allomorph, nor the independent allomorph in the absence of a prefix. Finally, note that some speakers will epethsize a "d" to "ga-" and "ge-" when the following segment is a vowel. This is probably best modeled as an irregularity and part of a more fullsome modeling of this future tense marker. For details and sources, see here: https://ojibwe.lib.umn.edu/main-entry/ga-pv-tns
 
 ### SUMMARY OF SUFFIX RULES
 
