@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hammerly"
+  given-names: "Christopher"
+  orcid: ""
+- family-names: "Livesay"
+  given-names: "Nora"
+  orcid: ""
+title: "BorderLakesMorph"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2023-08-03
+url: "https://github.com/ELF-Lab/BorderLakesMorph"
