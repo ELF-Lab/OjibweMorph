@@ -16,7 +16,7 @@ define amRule1 m -> a || a _ ">>" [m|n] ;
 
 define amRule2 m -> n || a _ ">>" [z|g] ;
 
-define nDeletion n -> 0 || [ i | o o ] _ ">>" Cons ;
+!define nDeletion n -> 0 || [ i | o o ] _ ">>" Cons ;
 
 define vowelDeletion [ Vowel - e ] -> 0 || Cons _ ">>" .#. ;
 
@@ -31,27 +31,67 @@ define PrefixOLengthening o -> {oo} || [ [ n | g ] i | o ] d "<<" _ \o ;
 
 define cleanUp ["<<"|">>"] -> 0 ; 
 
-read lexc VII.lexc
-define VIILexicon ;
+read lexc VAIO_CNJ.lexc
+define VAIOCNJ ;
 
-read lexc VAI.lexc
-define VAILexicon ;
+read lexc VAIO_IMP.lexc
+define VAIOIMP ;
 
-read lexc VTI.lexc
-define VTILexicon ;
+read lexc VAIO_IND.lexc
+define VAIOIND ;
 
-read lexc VTA.lexc
-define VTALexicon ;
+read lexc VAI_CNJ.lexc
+define VAICNJ ;
 
-read lexc lexc_source/verb_prefixes.lexc
-define VPrefixes ;
-read regex "<<" VPrefixes ;
-define Prefixes ;
+read lexc VAI_IMP.lexc
+define VAIIMP ;
 
-regex [ VIILexicon |
-        VAILexicon |
-	VTILexicon |
-	VTALexicon ] ;
+read lexc VAI_IND.lexc
+define VAIIND ;
+
+read lexc VII_CNJ.lexc
+define VIICNJ ;
+
+read lexc VII_IND.lexc
+define VIIIND ;
+
+read lexc VTA_CNJ.lexc
+define VTACNJ ;
+
+read lexc VTA_IMP.lexc
+define VTAIMP ;
+
+read lexc VTA_IND.lexc
+define VTAIND ;
+
+read lexc VTI_CNJ.lexc
+define VTICNJ ;
+
+read lexc VTI_IMP.lexc
+define VTIIMP ;
+
+read lexc VTI_IND.lexc
+define VTIIND ;
+
+!read lexc lexc_source/verb_prefixes.lexc
+!define VPrefixes ;
+!read regex "<<" VPrefixes ;
+!define Prefixes ;
+
+regex [ VAIOCNJ |
+      	VAIOIMP |
+	VAIOIND |
+	VAICNJ |
+	VAIIMP |
+	VAIIND |
+	VIICNJ |
+	VIIIND |
+	VTACNJ |
+	VTAIMP |
+	VTAIND |
+	VTICNJ |
+	VTIIMP |
+	VTIIND ] ;
 
 ! FIXME: We need an "insert preverbs here" flag in the lexicon.
 ! We don't want to substitute "<<" because that causes problems
@@ -64,34 +104,34 @@ read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
      	   	                       amRule2 .o.
 			               vowelDeletion .o.
 			               wDeletion .o.
-			               nDeletion .o.
+!			               nDeletion .o.
 			               PrefixDInsertion .o.
 			               PrefixOLengthening .o.
 			               cleanUp ] ;
 
-define Analyzer
+!define Analyzer
 
 ! Closed classes
-read lexc lexc_source/numerals.lexc
-define Numerals ;
+!read lexc lexc_source/numerals.lexc
+!define Numerals ;
 
-read lexc lexc_source/particles.lexc
-define Particles ;
+!read lexc lexc_source/particles.lexc
+!define Particles ;
 
-read lexc lexc_source/adverbs.lexc
-define Adverbs ;
+!read lexc lexc_source/adverbs.lexc
+!define Adverbs ;
 
-read lexc lexc_source/quantifiers.lexc
-define Quantifiers ;
+!read lexc lexc_source/quantifiers.lexc
+!define Quantifiers ;
 
-read lexc lexc_source/pronouns.lexc
-define Pronouns ;
+!read lexc lexc_source/pronouns.lexc
+!define Pronouns ;
 
-read regex [ Analyzer |
-             Numerals |
-	     Particles |
-	     Adverbs |
-	     Quantifiers |
-	     Pronouns ];
+!read regex [ Analyzer |
+!             Numerals |
+!	     Particles |
+!	     Adverbs |
+!	     Quantifiers |
+!	     Pronouns ];
 
 save stack ojibwe.fomabin
