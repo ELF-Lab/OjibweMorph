@@ -6,7 +6,10 @@
 *	Single \> marks boundaries between suffixes outside of the stem
 *	Single \< marks boundaries between prefixes outside of the stem
 *	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
-*	There is one special character, i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
+*	There is are three special characters:
+	*	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
+	*	n1, the special "changable N" that palatalizes before i1
+	*	s1, the special "changable S" that palatalizes before i1
 
 ## Verb Inanimate Intransitive (VII)
 
@@ -101,12 +104,14 @@ NA
 |------------|--------------------------------|---------------|
 | VTA Class 1 | vta consonant stems            | "waabam"      |
 | VTA Class 2 | vta changeable /N/ stems       | "miizh"       |
-| VTA Class 3 | vta changeable /s/ stems       | "mawadish"    |
+| VTA Class 3 | vta changeable /S/ stems       | "mawadish"    |
 | VTA Class 4 | vta changeable /Nn/ stems      | ???           |
 | VTA Class 5 | vta /aw/ stems                 | "mikaw"       |
 | VTA Class 6 | vta consonant-w stems          | "mizho"       |
 | VTA Class 7 | vta glottal-w stems            | Same as "mizho" |
 | VTA Class 8 | vta irregular stems            | "in"           |
+
+For VTA Class 2 and 3, we introduce special multicharacter symbols n1 (equivalent to the capital N convention used in the OPD and elsewhere in the literature) and s1 (equivalent to capital S). Then, we need to ensure that our rules are such that the i1-Palatalization rule only applies to n1 and s1, but not other stems ending in n.
 
 For the VTA Class 4, I don't have any examples, but from what I can see in the dictionary I found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
 
@@ -118,9 +123,9 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 
 - *aw-to-oo:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 
-- *w-to-o (UPDATED JUNE 29, 2023):* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
+- *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
 
-- *i1-Palatalization:* Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization.
+- *i1-Palatalization: (UPDATED FEBRUARY 4, 2024)* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization, and not all n's and s's palatalize either.
 
 - *ShortV-deletion:* Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
 
@@ -390,7 +395,7 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 - *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
 	- This rule MUST PRECEED the "ShortV-deletion" rule
 
-- *i1-Palatalization:* Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
+- *i1-Palatalization:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1".
   	- This rule MUST PRECEED the "ShortV-deletion" rule
 
 - _ShortV-deletion:_ Delete word-final short vowels
