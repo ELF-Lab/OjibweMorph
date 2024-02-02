@@ -23,7 +23,7 @@ VTA,Ind,VTA_s,mawadish,mawadis,X,1Sg,Neu,Neg,nimawadisigoosiin,ni<<mawadis>>igoo
 VTA,Ind,VTA_s,mawadish,mawadis,0Pl,1Sg,Neu,Pos,nimawadisigonan,ni<<mawadis>>igonan,JRV-Web-ANISH
 VTA,Ind,VTA_s,mawadish,mawadis,0Sg,1Sg,Neu,Pos,nimawadisigon,ni<<mawadis>>igon,JRV-Web-ANISH
 VTA,Ind,VTA_s,mawadish,mawadis,2Pl,1Sg,Neu,Pos,gimawadishim,gi<<mawadish>>i1m,JRV-Web-ANISH
-VTA,Ind,VTA_s,mawadish,mawadis,2Sg,1Sg,Neu,Pos,gimawadishi,gi<<mawadish>>i1,JRV-Web-ANISH
+VTA,Ind,VTA_s,mawadish,mawadis,2Sg,1Sg,Neu,Pos,gimawadish,gi<<mawadish>>i1,JRV-Web-ANISH
 VTA,Ind,VTA_s,mawadish,mawadis,3PlProx,1Sg,Neu,Pos,nimawadisigoog,ni<<mawadis>>igoog,JRV-Web-ANISH
 VTA,Ind,VTA_s,mawadish,mawadis,3SgProx,1Sg,Neu,Pos,nimawadisig,ni<<mawadis>>ig,JRV-Web-ANISH
 VTA,Ind,VTA_s,mawadish,mawadis,X,1Sg,Neu,Pos,nimawadisigoo,ni<<mawadis>>igoo,JRV-Web-ANISH
@@ -449,7 +449,7 @@ VTA,Ind,VTA_n,miizh,miin,X,1Sg,Neu,Neg,nimiinigoosiin,ni<<miin>>igoosiin,JRV-Web
 VTA,Ind,VTA_n,miizh,miin,0Pl,1Sg,Neu,Pos,nimiinigonan,ni<<miin>>igonan,JRV-Web-ANISH
 VTA,Ind,VTA_n,miizh,miin,0Sg,1Sg,Neu,Pos,nimiinigon,ni<<miin>>igon,JRV-Web-ANISH
 VTA,Ind,VTA_n,miizh,miin,2Pl,1Sg,Neu,Pos,gimiizhim,gi<<miizh>>i1m,JRV-Web-ANISH
-VTA,Ind,VTA_n,miizh,miin,2Sg,1Sg,Neu,Pos,gimiizhi,gi<<miizh>>i1,JRV-Web-ANISH
+VTA,Ind,VTA_n,miizh,miin,2Sg,1Sg,Neu,Pos,gimiizh,gi<<miizh>>i1,JRV-Web-ANISH
 VTA,Ind,VTA_n,miizh,miin,3PlProx,1Sg,Neu,Pos,nimiinigoog,ni<<miin>>igoog,JRV-Web-ANISH
 VTA,Ind,VTA_n,miizh,miin,3SgProx,1Sg,Neu,Pos,nimiinig,ni<<miin>>ig,JRV-Web-ANISH
 VTA,Ind,VTA_n,miizh,miin,X,1Sg,Neu,Pos,nimiinigoo,ni<<miin>>igoo,JRV-Web-ANISH
