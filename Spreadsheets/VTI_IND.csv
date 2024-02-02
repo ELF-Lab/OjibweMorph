@@ -295,8 +295,8 @@ VTI,Ind,VTI_am,waabandan,waaband,2Sg,0Pl,Neu,Pos,giwaabandaanan,gi<<waaband>>aan
 VTI,Ind,VTI_am,waabandan,waaband,2Sg,0Sg,Neu,Pos,giwaabandaan,gi<<waaband>>aan,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p5,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,3PlProx,0Pl,Neu,Pos,owaabandaanaawaan,o<<waaband>>aanaawaan,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p5,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,3PlProx,0Sg,Neu,Pos,owaabandaanaawaa,o<<waaband>>aanaawaa,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p5,,,,,,
-VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Pl,Neu,Pos,owaabandaanan,o<<waaband>>aanan,NJ-zoom-2023Sep8,owaabandamini,o<<waaband>>amini,JDN-2010-MS-VTI-p5,owaabandaanini,o<<waaband>>aanini,JDN-2010-MS-VTI-p5
-VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Sg,Neu,Pos,owaabandamini,o<<waaband>>amini,JDN-2010-MS-VTI-p5,owaabandaanini,o<<waaband>>aanini,JDN-2010-MS-VTI-p5,,,
+VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Pl,Neu,Pos,owaabandaanan,o<<waaband>>aanan,NJ-zoom-2023Sep8,owaabandamini,o<<waaband>>aminiw,JDN-2010-MS-VTI-p5,owaabandaanini,o<<waaband>>aaniniw,JDN-2010-MS-VTI-p5
+VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Sg,Neu,Pos,owaabandamini,o<<waaband>>amini,JDN-2010-MS-VTI-p5,owaabandaanini,o<<waaband>>aaniniw,JDN-2010-MS-VTI-p5,,,
 VTI,Ind,VTI_am,waabandan,waaband,3SgProx,0Pl,Neu,Pos,owaabandaanan,o<<waaband>>aanan,JDN-2010-MS-VTI-p5,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,3SgProx,0Sg,Neu,Pos,owaabandaan,o<<waaband>>aan,JDN-2010-MS-VTI-p5,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,Excl,0Pl,Neu,Pos,niwaabandaamin,ni<<waaband>>aamin,JDN-2010-MS-VTI-p5,,,,,,
@@ -313,8 +313,8 @@ VTI,Ind,VTI_am,waabandan,waaband,2Sg,0Pl,Neu,Neg,giwaabandanziinan,gi<<waaband>>
 VTI,Ind,VTI_am,waabandan,waaband,2Sg,0Sg,Neu,Neg,giwaabandanziin,gi<<waaband>>anziin,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,3PlProx,0Pl,Neu,Neg,owaabandanziinaawaan,o<<waaband>>anziinaawaan,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,3PlProx,0Sg,Neu,Neg,owaabandanziinaawaa,o<<waaband>>anziinaawaa,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,,,,,,
-VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Pl,Neu,Neg,owaabandanziinan,o<<waaband>>anziinan,NJ-zoom-2023Sep8,owaabandanziinini,o<<waaband>>anziinini,JDN-2010-MS-VTI-p6,owaabandanziini,o<<waaband>>anziini,JDN-2010-MS-VTI-p6
-VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Sg,Neu,Neg,owaabandanziinini,o<<waaband>>anziinini,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,owaabandanziini,o<<waaband>>anziini,JDN-2010-MS-VTI-p6,,,
+VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Pl,Neu,Neg,owaabandanziinan,o<<waaband>>anziinan,NJ-zoom-2023Sep8,owaabandanziinini,o<<waaband>>anziininiw,JDN-2010-MS-VTI-p6,owaabandanziini,o<<waaband>>anziiniw,JDN-2010-MS-VTI-p6
+VTI,Ind,VTI_am,waabandan,waaband,3SgObv/3PlObv,0Sg,Neu,Neg,owaabandanziinini,o<<waaband>>anziinini,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,owaabandanziini,o<<waaband>>anziiniw,JDN-2010-MS-VTI-p6,,,
 VTI,Ind,VTI_am,waabandan,waaband,3SgProx,0Pl,Neu,Neg,owaabandanziinan,o<<waaband>>anziinan,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,3SgProx,0Sg,Neu,Neg,owaabandanziin,o<<waaband>>anziin,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,,,,,,
 VTI,Ind,VTI_am,waabandan,waaband,Excl,0Pl,Neu,Neg,niwaabandanziimin,ni<<waaband>>anziimin,NJ-zoom-2023Sep8; JDN-2010-MS-VTI-p6,,,,,,
