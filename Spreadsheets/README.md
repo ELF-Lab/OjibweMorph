@@ -15,7 +15,7 @@
 
 ### STEM TYPES
 
-| Class       | Description                  | Stems                             |
+| Class       | Description                  | Lemmas                             |
 |-------------|------------------------------|-----------------------------------|
 | VII Class 1 | vii long vowel stems         | "michaa", "ate", "gonzaabii"      |
 | VII Class 2 | vii short vowel stems        | "dakaagami", "inamo"              |
@@ -38,7 +38,7 @@
 
 ### STEM TYPES
 
-| Class       | Description               | Stems                            |
+| Class       | Description               | Lemmas                            |
 |-------------|---------------------------|----------------------------------|
 | VAI Class 1A | vai long vowel stems      | "nibaa", "webinige", "madaabii", "maajibatoo" |
 | VAI Class 1B | vai short vowel stems     | "nimi", "nagamo"                 |
@@ -74,7 +74,7 @@
 
 ### STEM TYPES
 
-| Class | Description    | Stems        |
+| Class | Description    | Lemmas        |
 |-------|----------------|--------------|
 | VTI1  | vti /am/ stems | "waabandam" |
 | VTI2  | vti /oo/ stems | "wanitoon"  |
@@ -100,7 +100,7 @@ NA
 
 ### STEM TYPES
 
-| Class      | Description                    | Stems         |
+| Class      | Description                    | Lemmas         |
 |------------|--------------------------------|---------------|
 | VTA Class 1 | vta consonant stems            | "waabam"      |
 | VTA Class 2 | vta changeable /N/ stems       | "miizh"       |
@@ -109,7 +109,7 @@ NA
 | VTA Class 5 | vta /aw/ stems                 | "mikaw"       |
 | VTA Class 6 | vta consonant-w stems          | "mizho"       |
 | VTA Class 7 | vta glottal-w stems            | Same as "mizho" |
-| VTA Class 8 | vta irregular stems            | "in"           |
+| VTA Class 8 | vta irregular stems            | "izhi"           |
 
 For VTA Class 2 and 3, we introduce special multicharacter symbols n1 (equivalent to the capital N convention used in the OPD and elsewhere in the literature) and s1 (equivalent to capital S). Then, we need to ensure that our rules are such that the i1-Palatalization rule only applies to n1 and s1, but not other stems ending in n.
 
