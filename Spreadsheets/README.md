@@ -52,7 +52,7 @@
 
 ### RULES
 
-- _Nasal assimilation:_ With stems ending in "m"(VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
+- _Nasal assimilation:_ With stems ending in "m" (VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
 
 - _ShortV-deletion:_ Delete word-final short vowels ("i" and "o" as in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
 
@@ -386,7 +386,7 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 
 - _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
 
-- _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
+- _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
 
 - *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g".
 
