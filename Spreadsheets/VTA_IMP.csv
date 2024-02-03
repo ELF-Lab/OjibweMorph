@@ -129,16 +129,16 @@ VTA,Imp,VTA_s,mawadish,mawadis,2Sg,3SgProx/3PlProx,Sim,NA,mawadish,<<mawadish>>i
 VTA,Imp,VTA_n,miizh,miin,2Sg,3SgProx/3PlProx,Sim,NA,miizh,<<miizh>>i1,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_aw,mikaw,mikaw,2Sg,3SgProx/3PlProx,Sim,NA,mikaw,<<mikaw>>i1,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_Cw,mizho,mizhw,2Sg,3SgProx/3PlProx,Sim,NA,mizh,<<mizh>>i1,JDN-2010-MS-VTA-p20,,,,,,
-VTA,Imp,VTA_C,ganawaabam,ganawaabam,2Sg/2Pl,Excl,Sim,NA,ganawaabamishinaan,<<ganawaabam>>ishinaan,JDN-2010-MS-VTA-p20,ganawaabamishinaang,<<ganawaabam>>ishinaang,JDN-2010-MS-VTA-p20,ganawaabamishinaam,<<ganawaabam>>ishinaam,JDN-2010-MS-VTA-p20
+VTA,Imp,VTA_C,ganawaabam,ganawaabam,2Sg/2Pl,Excl,Sim,NA,ganawaabamishinaan,<<ganawaabam>>i1shinaan,JDN-2010-MS-VTA-p20,ganawaabamishinaang,<<ganawaabam>>i1shinaang,JDN-2010-MS-VTA-p20,ganawaabamishinaam,<<ganawaabam>>i1shinaam,JDN-2010-MS-VTA-p20
 VTA,Imp,VTA_s,mawadish,mawadis,2Sg/2Pl,Excl,Sim,NA,mawadishishinaan,<<mawadish>>i1shinaan,JDN-2010-MS-VTA-p20,mawadishishinaang,<<mawadish>>i1shinaang,JDN-2010-MS-VTA-p20,mawadishishinaam,<<mawadish>>i1shinaam,JDN-2010-MS-VTA-p20
 VTA,Imp,VTA_n,miizh,miin,2Sg/2Pl,Excl,Sim,NA,miizhishinaan,<<miizh>>i1shinaan,JDN-2010-MS-VTA-p20,miizhishinaang,<<miizh>>i1shinaang,JDN-2010-MS-VTA-p20,miizhishinaam,<<miizh>>i1shinaam,JDN-2010-MS-VTA-p20
-VTA,Imp,VTA_aw,mikaw,mikaw,2Sg/2Pl,Excl,Sim,NA,mikawishinaan,<<mikaw>>i1shinaan,JDN-2010-MS-VTA-p20,mikawishinaang,<<mikaw>>ishinaang,JDN-2010-MS-VTA-p20,mikawishinaam,<<mikawish>>inaam,JDN-2010-MS-VTA-p20
-VTA,Imp,VTA_Cw,mizho,mizhw,2Sg/2Pl,Excl,Sim,NA,mizhoshinaan,<<mizho>>i1shinaan,JDN-2010-MS-VTA-p20,mizhoshinaang,<<mizho>>shinaang,JDN-2010-MS-VTA-p20,mizhoshinaam,<<mizho>>shinaam,JDN-2010-MS-VTA-p20
+VTA,Imp,VTA_aw,mikaw,mikaw,2Sg/2Pl,Excl,Sim,NA,mikawishinaan,<<mikaw>>i1shinaan,JDN-2010-MS-VTA-p20,mikawishinaang,<<mikaw>>i1shinaang,JDN-2010-MS-VTA-p20,mikawishinaam,<<mikawish>>i1naam,JDN-2010-MS-VTA-p20
+VTA,Imp,VTA_Cw,mizho,mizhw,2Sg/2Pl,Excl,Sim,NA,mizhoshinaan,<<mizho>>i1shinaan,JDN-2010-MS-VTA-p20,mizhoshinaang,<<mizho>>i1shinaang,JDN-2010-MS-VTA-p20,mizhoshinaam,<<mizho>>i1shinaam,JDN-2010-MS-VTA-p20
 VTA,Imp,VTA_C,ganawaabam,ganawaabam,Incl,3PlProx,Sim,NA,ganawaabamaadaanig,<<ganawaabam>>aadaanig,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_s,mawadish,mawadis,Incl,3PlProx,Sim,NA,mawadisaadaanig,<<mawadis>>aadaanig,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_n,miizh,miin,Incl,3PlProx,Sim,NA,miinadaanig,<<miin>>adaanig,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_aw,mikaw,mikaw,Incl,3PlProx,Sim,NA,mikawaadaanig,<<mikaw>>aadaanig,JDN-2010-MS-VTA-p20,,,,,,
-VTA,Imp,VTA_Cw,mizho,mizhw,Incl,3PlProx,Sim,NA,miizhwaadaanig,<<miizhw>>aadaanig,JDN-2010-MS-VTA-p20,,,,,,
+VTA,Imp,VTA_Cw,mizho,mizhw,Incl,3PlProx,Sim,NA,mizhwaadaanig,<<mizhw>>aadaanig,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_C,ganawaabam,ganawaabam,Incl,3SgObv/3PlObv,Sim,NA,ganawaabamimaadaa,<<ganawaabam>>imaadaa,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_s,mawadish,mawadis,Incl,3SgObv/3PlObv,Sim,NA,MISSING,,,,,,,,
 VTA,Imp,VTA_n,miizh,miin,Incl,3SgObv/3PlObv,Sim,NA,MISSING,,,,,,,,
@@ -148,4 +148,4 @@ VTA,Imp,VTA_C,ganawaabam,ganawaabam,Incl,3SgProx,Sim,NA,ganawaabamaadaa,<<ganawa
 VTA,Imp,VTA_s,mawadish,mawadis,Incl,3SgProx,Sim,NA,mawadisaadaa,<<mawadis>>aadaa,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_n,miizh,miin,Incl,3SgProx,Sim,NA,miinadaa,<<miin>>adaa,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_aw,mikaw,mikaw,Incl,3SgProx,Sim,NA,mikawaadaa,<<mikaw>>aadaa,JDN-2010-MS-VTA-p20,,,,,,
-VTA,Imp,VTA_Cw,mizho,mizhw,Incl,3SgProx,Sim,NA,miizhwaadaa,<<miizhw>>aadaa,JDN-2010-MS-VTA-p20,,,,,,
+VTA,Imp,VTA_Cw,mizho,mizhw,Incl,3SgProx,Sim,NA,mizhwaadaa,<<mizhw>>aadaa,JDN-2010-MS-VTA-p20,,,,,,
