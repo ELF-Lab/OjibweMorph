@@ -116,7 +116,7 @@ VTA,Imp,VTA_aw,mikaw,mikaw,2Pl,3SgProx/3PlProx,Sim,NA,mikawik,<<mikaw>>ik,JDN-20
 VTA,Imp,VTA_Cw,mizho,mizhw,2Pl,3SgProx/3PlProx,Sim,NA,mizhok,<<mizho>>ik,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_C,ganawaabam,ganawaabam,2Sg,1Sg,Sim,NA,ganawaabamishin,<<ganawaabam>>ishin,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_s,mawadish,mawadis,2Sg,1Sg,Sim,NA,mawadishishin,<<mawadish>>i1shin,JDN-2010-MS-VTA-p20,,,,,,
-VTA,Imp,VTA_n,miizh,miin,2Sg,1Sg,Sim,NA,miizhizhin,<<miizh>>i1shin,JDN-2010-MS-VTA-p20,,,,,,
+VTA,Imp,VTA_n,miizh,miin,2Sg,1Sg,Sim,NA,miizhishin,<<miizh>>i1shin,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_aw,mikaw,mikaw,2Sg,1Sg,Sim,NA,mikawishin,<<mikaw>>i1shin,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_Cw,mizho,mizhw,2Sg,1Sg,Sim,NA,mizhoshin,<<mizho>>i1shin,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_C,ganawaabam,ganawaabam,2Sg,3SgObv/3PlObv,Sim,NA,ganawaabamim,<<ganawaabam>>im,JDN-2010-MS-VTA-p20,,,,,,
@@ -127,7 +127,7 @@ VTA,Imp,VTA_Cw,mizho,mizhw,2Sg,3SgObv/3PlObv,Sim,NA,MISSING,,,,,,,,
 VTA,Imp,VTA_C,ganawaabam,ganawaabam,2Sg,3SgProx/3PlProx,Sim,NA,ganawaabam,<<ganawaabam>>i1,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_s,mawadish,mawadis,2Sg,3SgProx/3PlProx,Sim,NA,mawadish,<<mawadish>>i1,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_n,miizh,miin,2Sg,3SgProx/3PlProx,Sim,NA,miizh,<<miizh>>i1,JDN-2010-MS-VTA-p20,,,,,,
-VTA,Imp,VTA_aw,mikaw,mikaw,2Sg,3SgProx/3PlProx,Sim,NA,mikaw,<<mikaw>>i1,JDN-2010-MS-VTA-p20,,,,,,
+VTA,Imp,VTA_aw,mikaw,mikaw,2Sg,3SgProx/3PlProx,Sim,NA,mikaw,<<mikaw>>,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_Cw,mizho,mizhw,2Sg,3SgProx/3PlProx,Sim,NA,mizh,<<mizh>>i1,JDN-2010-MS-VTA-p20,,,,,,
 VTA,Imp,VTA_C,ganawaabam,ganawaabam,2Sg/2Pl,Excl,Sim,NA,ganawaabamishinaan,<<ganawaabam>>i1shinaan,JDN-2010-MS-VTA-p20,ganawaabamishinaang,<<ganawaabam>>i1shinaang,JDN-2010-MS-VTA-p20,ganawaabamishinaam,<<ganawaabam>>i1shinaam,JDN-2010-MS-VTA-p20
 VTA,Imp,VTA_s,mawadish,mawadis,2Sg/2Pl,Excl,Sim,NA,mawadishishinaan,<<mawadish>>i1shinaan,JDN-2010-MS-VTA-p20,mawadishishinaang,<<mawadish>>i1shinaang,JDN-2010-MS-VTA-p20,mawadishishinaam,<<mawadish>>i1shinaam,JDN-2010-MS-VTA-p20
