@@ -53,79 +53,16 @@ define PrefixOLengthening o -> {oo} || [ [ n | g ] i | o ] d "<<" _ \o ;
 
 define cleanUp ["<<"|">>"] -> 0 ; 
 
-read lexc VAIO_CNJ.lexc
-define VAIOCNJ ;
-
-read lexc VAIO_IMP.lexc
-define VAIOIMP ;
-
-read lexc VAIO_IND.lexc
-define VAIOIND ;
-
-read lexc VAI_CNJ.lexc
-define VAICNJ ;
-
-read lexc VAI_IMP.lexc
-define VAIIMP ;
-
-read lexc VAI_IND.lexc
-define VAIIND ;
-
-read lexc VAI_Reflex_Recip.lexc
-define VAIReflexRecip ;
-
-read lexc VII_CNJ.lexc
-define VIICNJ ;
-
-read lexc VII_IND.lexc
-define VIIIND ;
-
-read lexc VTA_CNJ.lexc
-define VTACNJ ;
-
-read lexc VTA_IMP.lexc
-define VTAIMP ;
-
-read lexc VTA_IND.lexc
-define VTAIND ;
-
-read lexc VTA_IRR.lexc
-define VTAIRR ;
-
-read lexc VTI_CNJ.lexc
-define VTICNJ ;
-
-read lexc VTI_IMP.lexc
-define VTIIMP ;
-
-read lexc VTI_IND.lexc
-define VTIIND ;
+read lexc ojibwe_verbs.lexc
 
 !read lexc lexc_source/verb_prefixes.lexc
 !define VPrefixes ;
 !read regex "<<" VPrefixes ;
 !define Prefixes ;
 
-regex [ VAIOCNJ |
-      	VAIOIMP |
-	VAIOIND |
-	VAICNJ |
-	VAIIMP |
-	VAIIND |
-	VAIReflexRecip |
-	VIICNJ |
-	VIIIND |
-	VTACNJ |
-	VTAIMP |
-	VTAIND |
-	VTICNJ |
-	VTIIMP |
-	VTIIND ] ;
-
-! FIXME: We need an "insert preverbs here" flag in the lexicon.
-! We don't want to substitute "<<" because that causes problems
-! later.
-substitute defined Prefixes for "<<"
+! FIXME: We want to actually insert preverbs, not just remove the flag
+define zero 0 ;
+substitute defined zero for "[PREVERB]"
 define Lexicon ;
 
 read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
@@ -146,7 +83,7 @@ read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
 
 define Analyzer ;
 
-regex [ VTAIRR ] ;
+read lexc ojibwe_irregular_verbs.lexc
 define IrregularLexicon ;
 
 read regex Analyzer | IrregularLexicon ;
