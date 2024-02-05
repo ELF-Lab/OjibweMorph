@@ -10,22 +10,38 @@ define Vowel [ a | e | i | o ] ;
 define PrefixBoundaryCleanup ["<<"]+ @-> "<<" ;
 define SuffixBoundaryCleanup [">>"]+ @-> ">>" ;
 
+
+! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ ">>" Cons ;
 
+! This rule MUST PRECEED the "ShortV-deletion" rule
+! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
 define n2zhRule n -> {zh} || _ ">>" i1 ;
-
 define s2shRule s -> {sh} || _ ">>" i1 ;
 
 define i1Rule i1 -> i ;
 
+! Nasal assimilation: With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a
+! "g" (3SgProx in the conjunct) or "d" (inclusive simple imperative)
 define amRule1 m -> a || a _ ">>" [m|n] ;
+define amRule2 m -> n || a _ ">>" [z|g|d] ;
 
-define amRule2 m -> n || a _ ">>" [z|g] ;
+! aw-to-aa: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
+! aw-to-oo: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+define awaaRule w -> a || a _ ">>" [k|g] ;
+define awooRule a w -> o o || _ ">>" [n|s] ;
 
 !define nDeletion n -> 0 || [ i | o o ] _ ">>" Cons ;
 
+! ShortV-deletion: Delete word-final short vowels
+! This rule MUST PRECEED the "w-deletion" rule
 define vowelDeletion [ Vowel - e ] -> 0 || Cons (">>") _ (">>") .#. ;
 
+! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
+define wRule [ w -> o1 || Cons _ ">>" [i|i1] ] .o. [[i|i1] -> 0 || o1 ">>" _ ] .o. [o1 -> o];
+
+! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
+! This role MUST FOLLOW i1-Palatalization and w-to-o
 define wDeletion w -> 0 || _ (">>") .#. ;
 
 ! Sources:
@@ -73,6 +89,9 @@ define VTAIMP ;
 read lexc VTA_IND.lexc
 define VTAIND ;
 
+read lexc VTA_IRR.lexc
+define VTAIRR ;
+
 read lexc VTI_CNJ.lexc
 define VTICNJ ;
 
@@ -112,15 +131,25 @@ define Lexicon ;
 read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
      	   	     	 	       n2zhRule .o.
 				       s2shRule .o.
-				       i1Rule .o.
      	   	                       amRule1 .o.
      	   	                       amRule2 .o.
+				       awaaRule .o.
+				       awooRule .o.
+				       wRule .o.
+				       i1Rule .o.
 			               vowelDeletion .o.
-			               wDeletion .o.
+			               wDeletion .o.				      
 !			               nDeletion .o.
 			               PrefixDInsertion .o.
 			               PrefixOLengthening .o.
 			               cleanUp ] ;
+
+define Analyzer ;
+
+regex [ VTAIRR ] ;
+define IrregularLexicon ;
+
+read regex Analyzer | IrregularLexicon ;
 
 !define Analyzer
 
