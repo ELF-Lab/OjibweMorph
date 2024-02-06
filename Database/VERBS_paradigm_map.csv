@@ -1,4 +1,4 @@
-Class,OPDClass,MatchElement,Ending
+Class,OPDClass,MatchElement,Pattern
 VAI_V,vai,lemma,"^.*[^iou][iou]$"
 VAI_VV,vai,lemma,"^.*(aa|ii|oo|e)$"
 VAI_am,vai2,lemma,"^.*am$"
@@ -20,4 +20,4 @@ VTA_s,vta,stem,"^.*s$"
 VTI_am,vti1,stem,"^.*and$"
 VTI_i,vti3,stem,"^.*i$"
 VTI_oo,vti2,lemma,"^.*oon$"
-VTI_aa,vti4,stem,"^.*aa$"
+VTI_aa,vti4,lemma,"^.*aan$"
