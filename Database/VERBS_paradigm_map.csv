@@ -1,5 +1,5 @@
 Class,OPDClass,MatchElement,Pattern
-VAI_V,vai,lemma,"^.*[^iou][iou]$"
+VAI_V,vai,lemma,"^.*[^aiou][aiou]$"
 VAI_VV,vai,lemma,"^.*(aa|ii|oo|e)$"
 VAI_am,vai2,lemma,"^.*am$"
 VAI_m,vai,lemma,"^.*[^a]m$"
