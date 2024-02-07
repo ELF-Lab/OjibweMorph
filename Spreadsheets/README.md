@@ -213,7 +213,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTI_aa  | vti /aa/ stems                 |
 | VTA_C   | vta consonant stems            |
 | VTA_n   | vta changeable /N/ stems       |
-| VTA_s   | vta changeable /s/ stems       |
+| VTA_s   | vta changeable /S/ stems       |
 | VTA_aw  | vta /aw/ stems                 |
 | VTA_Cw  | vta consonant-w stems          |
 | VTA_irr | vta irregular stems            |
