@@ -165,7 +165,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTI4          | VTI_aa | vti /aa/ stems                | "ayaan"                                   |
 | VTA1          | VTA_C  | vta consonant stems           | "waabam"                                  |
 | VTA2          | VTA_n  | vta changeable /N/ stems      | "miizh"                                   |
-| VTA3          | VTA_s  | vta changeable /s/ stems      | "mawadish"                                |
+| VTA3          | VTA_s  | vta changeable /S/ stems      | "mawadish"                                |
 | VTA4          | ???    | vta changeable /Nn/ stems     | ???                                       |
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
