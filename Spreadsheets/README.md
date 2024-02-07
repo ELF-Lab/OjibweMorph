@@ -6,7 +6,7 @@
 *	Single \> marks boundaries between suffixes outside of the stem
 *	Single \< marks boundaries between prefixes outside of the stem
 *	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
-*	There is are three special characters:
+*	There are three special characters:
 	*	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
 	*	n1, the special "changable N" that palatalizes before i1
 	*	s1, the special "changable S" that palatalizes before i1
