@@ -1,4 +1,4 @@
-# README for spreadsheets in BorderLakesMorph
+# BorderLakesMorph Spreadsheets
 
 ## GENERAL
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
@@ -220,24 +220,24 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 
 #### SUBJECT/OBJECT
 
-| Tag       | Description                             |
-|-----------|-----------------------------------------|
-| 1Sg       | First person singular                   |
-| Excl      | First person exclusive (excludes addressee) |
-| Incl      | First person inclusive (includes addressee) |
-| 2Sg       | Second person singular                  |
-| 2Pl       | Second person plural                    |
-| 3SgProx   | Animate third person singular proximate |
-| 3PlProx   | Animate third person plural proximate   |
-| 3SgObv    | Animate third person singular obviative |
-| 3PlObv    | Animate third person plural obviative   |
-| 0Sg       | Inanimate third person singular (unspecified obviation) |
-| 0Pl       | Inanimate third person plural (unspecified obviation) |
-| 0SgProx   | Inanimate third person singular proximate |
-| 0PlProx   | Inanimate third person plural proximate   |
-| 0SgObv    | Inanimate third person singular obviative |
-| 0PlObv    | Inanimate third person plural obviative   |
-| X         | Unspecified actor                       |
+| Our Tag   | OPD Tag | Description                             |
+|-----------|---------|-----------------------------------------|
+| 1Sg       | 1s      | First person singular                   |
+| Excl      | 1p      | First person exclusive (excludes addressee) |
+| Incl      | 21p     | First person inclusive (includes addressee) |
+| 2Sg       | 2s      | Second person singular                  |
+| 2Pl       | 2p      | Second person plural                    |
+| 3SgProx   | 3s      | Animate third person singular proximate |
+| 3PlProx   | 3p      | Animate third person plural proximate   |
+| 3SgObv    | 3's     | Animate third person singular obviative |
+| 3PlObv    | 3'p     | Animate third person plural obviative   |
+| 0Sg       | 0s      | Inanimate third person singular (unspecified obviation) |
+| 0Pl       | 0p      | Inanimate third person plural (unspecified obviation) |
+| 0SgProx   | 0s      | Inanimate third person singular proximate |
+| 0PlProx   | 0p      | Inanimate third person plural proximate   |
+| 0SgObv    | 0's     | Inanimate third person singular obviative |
+| 0PlObv    |? (No 0'p)| Inanimate third person plural obviative   |
+| X         | X       | Unspecified actor                       |
 
 #### MODE
 
