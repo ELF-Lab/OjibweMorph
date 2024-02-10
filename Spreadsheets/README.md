@@ -225,8 +225,10 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | 1Sg            | 1s       | First person singular                   |
 | Excl           | 1p       | First person exclusive (excludes addressee) |
 | Incl           | 21p      | First person inclusive (includes addressee) |
+| 1Sg/Excl       | 1        | First person (unspecified number)       |
 | 2Sg            | 2s       | Second person singular                  |
 | 2Pl            | 2p       | Second person plural                    |
+| 2Sg/2Pl        | 2        | Second person (unspecified number)      |
 | 3SgProx/3PlProx| 3        | Animate third person proximate (unspecified number) |
 | 3SgProx        | 3s       | Animate third person singular proximate |
 | 3PlProx        | 3p       | Animate third person plural proximate   |
