@@ -4,6 +4,7 @@ set flag-is-epsilon ON
 define Sigma [ a | b | c | d | e | g | h | i | k | m | n | o | s | t | w | y | z ] ;
 define Cons [ b | c | d | g | h | k | m | n | s | t | w | y | z ] ;
 define Vowel [ a | e | i | o ] ;
+define NonLight [[Vowel ?* Vowel] | e ] ?* ;
 
 ! Sometimes there may be more than one consecutive
 ! morpheme boundary. Reduce those to 1.
@@ -16,8 +17,10 @@ define dDeletion d -> 0 || _ ">>" Cons ;
 
 ! This rule MUST PRECEED the "ShortV-deletion" rule
 ! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
-define n2zhRule n -> {zh} || _ ">>" i1 ;
-define s2shRule s -> {sh} || _ ">>" i1 ;
+define n1Rule n1 -> {zh} || _ ">>" i1 ;
+define s1Rule s1 -> {sh} || _ ">>" i1 ;
+define n1Default n1 -> n ;
+define s1Default s1 -> s ;
 
 define i1Rule i1 -> i ;
 
@@ -35,10 +38,14 @@ define awooRule a w -> o o || _ ">>" [n|s] ;
 
 ! ShortV-deletion: Delete word-final short vowels
 ! This rule MUST PRECEED the "w-deletion" rule
-define vowelDeletion [ Vowel - e ] -> 0 || Cons (">>") _ (">>") .#. ;
+define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (">>") _ (">>") .#. ;
 
-! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
-define wRule [ w -> o1 || Cons _ ">>" [i|i1] ] .o. [[i|i1] -> 0 || o1 ">>" _ ] .o. [o1 -> o];
+! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1".
+! AKA, wi -> o / C __
+! In Border Lakes, this only happens when w is not the last character in the word so we need to allow for
+! wi word-finally.
+define wRule1 [ w -> o1 || Cons _ ">>" [i|i1] (">>") [? - (">>")] ] .o. [[i|i1] -> 0 || o1 ">>" _ ] .o. [o1 -> o];
+define wRule2 [ w (->) o1 || Cons _ ">>" [i|i1] (">>") .#. ] .o. [[i|i1] -> 0 || o1 ">>" _ ] .o. [o1 -> o];
 
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
@@ -66,13 +73,16 @@ substitute defined zero for "[PREVERB]"
 define Lexicon ;
 
 read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
-     	   	     	 	       n2zhRule .o.
-				       s2shRule .o.
+     	   	     	 	       n1Rule .o.
+				       s1Rule .o.
+     	   	     	 	       n1Default .o.
+				       s1Default .o.				       
      	   	                       amRule1 .o.
      	   	                       amRule2 .o.
 				       awaaRule .o.
 				       awooRule .o.
-				       wRule .o.
+				       wRule1 .o.
+				       wRule2 .o.				       
 				       i1Rule .o.
 			               vowelDeletion .o.
 			               wDeletion .o.				      
