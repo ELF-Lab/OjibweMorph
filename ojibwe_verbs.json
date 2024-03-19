@@ -36,7 +36,9 @@
   "missing_tag_marker": "NA",
   "missing_form_marker": "MISSING",
   "multichar_symbols": [
-    "i1"
+    "i1",
+    "s1",
+    "n1"
   ],
   "pre_element_tag": "[PREVERB]"
 }
