@@ -54,7 +54,7 @@
 
 - _Nasal assimilation:_ With stems ending in "m" (VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
 
-- _ShortV-deletion:_ Delete word-final short vowels ("i" and "o" as in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
+- _ShortV-deletion:_ Delete word-final short vowels, unless deletion creates monosyllabic word with only a short vowel nucleaus. That is, delete from non-monosyllabic words or monosyllabic words with a long vowel. (e.g.\ "i" and "o" delete in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
 
 - _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
@@ -127,7 +127,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 
 - *i1-Palatalization: (UPDATED FEBRUARY 4, 2024)* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization, and not all n's and s's palatalize either.
 
-- *ShortV-deletion:* Delete word-final short vowels (as "i1"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
+- *ShortV-deletion: (UPDATED MARCH 20, 2024)* Delete word-final short vowels, unless deletion creates monosyllabic word with only a short vowel nucleaus. That is, delete from non-monosyllabic words or monosyllabic words with a long vowel. This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
 
 ### NOTES/ISSUES
 
