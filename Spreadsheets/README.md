@@ -13,6 +13,9 @@
  		*	This is the same as "n1" in the Bowers et al (2017) FST for Odawa
 	*	s1, the special "changable S" that palatalizes before i1
  		*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
+	*	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
+ 		*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
+
 ## Verb Inanimate Intransitive (VII)
 
 ### STEM TYPES
