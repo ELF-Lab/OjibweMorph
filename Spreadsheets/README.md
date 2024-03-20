@@ -32,7 +32,7 @@
 
 - _d-deletion:_ Only stem change is "zanagad", where "d" is deleted when the suffix complex starts with a consonant.
 
-- _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg in the VII Class 2)
+- _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg in the VII Class 2)
 
 ### NOTES/ISSUES
 
@@ -61,7 +61,7 @@
 
 - _ShortV-deletion:_ Delete word-final short vowels, unless deletion creates monosyllabic word with only a short vowel nucleaus. That is, delete from non-monosyllabic words or monosyllabic words with a long vowel. (e.g.\ "i" and "o" delete in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
 
-- _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
+- _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
 ### NOTES/ISSUES
 
@@ -411,7 +411,7 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 	- This rule MUST PRECEED the "w-deletion" rule
 	- This role MUST FOLLOW i1-Palatalization and w-to-o
 
-- _W-deletion:_ Delete word-final "w" (occurs with neutral, positive 3sg)
+- _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg)
 	- This rule MUST FOLLOW the "ShortV-deletion" rule
 
 ### OLD RULES (defunct)
