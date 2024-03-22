@@ -20,9 +20,7 @@
 
 This folder contains the verb paradigm spreadsheets used to create and validate the BorderLakesMorph FST for morphological production and parsing. 
 
-###
-
-### SUMMARY OF TAGS
+### Descripton of Tags
 
 All spreadsheets contain the following columns:
 
@@ -127,6 +125,11 @@ All spreadsheets contain the following columns:
 | Pos   | Positive                            |
 | Neg   | Negative                            |
 
+### Other helpful notes
+
+Right nonw, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations. Any additional forms (Form2, Form3) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, with hopes that we will also have a more proper multi-dialect model in the future (where dialect is tagged in some way).
+
+When a given form is ambiguous, we have represented that indirectly by repeating identical forms in more than one row. 
 
 ## Guiding Principles
 
