@@ -18,9 +18,9 @@
 
 ## Organization
 
-This folder contains the verb paradigm spreadsheets used to create and validate the BorderLakesMorph FST for morphological production and parsing. 
+This folder (Spreadsheets) currently contains the verb paradigm spreadsheets used to build and validate the BorderLakesMorph FST for morphological production and parsing. This will be expanded to include nominal morphology as well.
 
-### Descripton of Tags
+### Descripton of Tags (Verbs)
 
 All spreadsheets contain the following columns:
 
@@ -33,8 +33,8 @@ All spreadsheets contain the following columns:
 * **Object:** The person/noun associated with the prototypical "undergoer" role in transitive paradigms. Always NA in intransitive paradigms.
 * **Mode:** Traditional Algonquianist categories in Ojibwe related to the epistemic/modal/aspectual system.
 * **Negation:** Whether the verb is positive or negative. The independent order negatives must be preceded by "gaawiin" to be well-formed.
-* **Form\#Surface:** The surface form of the example verb, after all phonological processes have been executed. The source for these forms is indated in a different column. Form1 is the attested or assumed form for Border Lakes, which all other forms are variants from other closely related dialects. Marked MISSING if a form is expected, but not yet attested in a source or extended with a GUESS.
-* **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of the independent order) and suffixal morphology. This is the form before any phonological rules have applied.
+* **Form\#Surface:** The surface form of the example verb, after all phonological processes have been executed. The source for these forms is indated in a different column. Form1 is the attested or assumed form for Border Lakes, which all other forms are variants from other closely related dialects. Marked MISSING if a form is expected, but not yet attested in a source or extended with a GUESS. Surface forms are used to test the FST.
+* **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of the independent order) and suffixal morphology. This is the form before any phonological rules have applied, and is what is directly used to build the FST.
 * **Form\#Source**: The source for the surface form. See below for some discussion of how to interpret "GUESS" and for a source key.
 
 #### PARADIGM
@@ -125,9 +125,21 @@ All spreadsheets contain the following columns:
 | Pos   | Positive                            |
 | Neg   | Negative                            |
 
+#### SOURCES
+
+| Key   				| Description                         											  				|
+|-----------------------|-----------------------------------------------------------------------------------------------|
+| JDN-2010-MS-VAI-pXX   | John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VAI paradigms 				|
+| JDN-2010-MS-VII-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VII paradigms 				|
+| JDN-2010-MS-VTA-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTA paradigms 				|
+| JDN-2010-MS-VTI-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTI paradigms 				|
+| JRV-2001-NISH-pXX		| J. Rand Valentine (2001) grammar of Nishnaabemwin 							  				|
+| JRV-Web-ANISH  		| J. Rand Valentine's webpage (https://ojibwegrammar.langsci.wisc.edu/Grammar/GrammarTOC.html) 	|
+| OPD-Note-po			| https://ojibwe.lib.umn.edu/word-part/po-final 												|
+
 ### Notes on ambiguous forms and alternate forms
 
-Right nonw, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations. Any additional forms (Form2, Form3) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, with hopes that we will also have a more proper multi-dialect model in the future (where dialect is tagged in some way).
+Right nonw, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations in Northwestern Ontario, just east of Fort Fraces. Any additional forms (Form2, Form3, etc) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, and also with hopes that we will also have a more proper multi-dialect model in the future (where dialect is more clearly indicated in some way).
 
 When a given form is ambiguous, we have represented that indirectly by repeating identical forms in more than one row. There are no "composite" tags to indicate ambiguity. On the FST side, this will result in an ambiguous form being ambiguous as to which particular tag set is appropriate. In other uses such as the conjugator, this means the same form will appear in more than one place in the table.
 
@@ -140,13 +152,15 @@ There are a few principles we used when designing the present system:
 3. **Match the assumptions of previous work**, especially the assumptions regading stems and other classification schemes in the Ojibwe People's Dictionary. This is both because the information is highly accurate and useful, but also because we want to interface cleanly with the dictionary and use terms and schemes that are familiar to language learners, linguists, and Algonquianists.
 4. **Be as explcit as possible.** With the tags that the model produces and the labels in the spreadsheet, don't leave anything to assumption or interpretation. For example, use "3ProxSg" rather than interpreting a bare "3" as proximate and singular in contrast to "3Pl" or "3Obv". Indicate all ambiguities. Keep detailed track of sources.
 
-# Linguistic Details
+# Linguistic Details for Verbs
+
+This section is devoted to detailing the paradigms and stem classes as intantiated in the model, as well as the phonological rules that are needed to derive the surface form from the split (underlying) forms. It follows most closely the classification system developed by John Nichols in the tradition of Algonquianist linguistics, which is also commonly used in educational settings. The first four sections are organized by broad paradigm and detail: (i) the stem types in each paradigm, (ii) the phonological rules needed in the model to capture variation at the stem/suffix juncture, (iii) any important notes or issues on the approach taken. 
 
 ## Verb Inanimate Intransitive (VII)
 
 ### STEM TYPES
 
-| Class       | Description                  | Lemmas                             |
+| Class       | Description                  | Example Lemmas                             |
 |-------------|------------------------------|-----------------------------------|
 | VII Class 1 | vii long vowel stems         | "michaa", "ate", "gonzaabii"      |
 | VII Class 2 | vii short vowel stems        | "dakaagami", "inamo"              |
@@ -162,7 +176,7 @@ There are a few principles we used when designing the present system:
 
 ### NOTES/ISSUES
 
-- There are certain stems that can only take plural forms. These generally refer to collectives, but their exact semantics is not presently clear. In any case, they are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VII_Pl, which is a proper subset of the regular VII inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1 and Class 3A stems behaving this way.
+- There are certain stems that can only take plural forms, which are modelled as their own sub-paradigm VII_Pl. These generally refer to collectives, but their exact semantics is not presently clear. In any case, they are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VII_Pl, which is a proper subset of the regular VII inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1 and Class 3A stems behaving this way.
 - Note that there is quite limited documentation for the VII Class 2 stems. Also, from a query of a dictionary, there seem to be a small set of VII forming "finals" that fall into this class including "-amo" meaning "it is a path", "-po" meaning "it snows/there is snow"  "-aagami" meaning "it is a liquid". A relevant note for Border Lakes from the dictionary: "Most US dialects add n to the final -po when there is no inflectional ending; For example, US zoogipon 'it is snowing' and Border Lakes zoogipo (https://ojibwe.lib.umn.edu/word-part/po-final)."
 	- This is now modelled by the suffix complex having a -w, which will block the short vowel deletion rule, then be deleted by the W-Deletion rule. 
 
@@ -170,7 +184,7 @@ There are a few principles we used when designing the present system:
 
 ### STEM TYPES
 
-| Class       | Description               | Lemmas                            |
+| Class       | Description               | Example Lemmas                            |
 |-------------|---------------------------|----------------------------------|
 | VAI Class 1A | vai long vowel stems      | "nibaa", "webinige", "madaabii", "maajibatoo" |
 | VAI Class 1B | vai short vowel stems     | "nimi", "nagamo"                 |
@@ -202,13 +216,13 @@ There are a few principles we used when designing the present system:
 
 - There is a seperate set of spreadsheets for the VAI+O paradigms in each order. These are VAI verbs that can take an inanimate object, and ultimately inflect like a VTI3.
 
-- As in the VIIs, there are certain VAI stems that can only take plural forms. They are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VAI_Pl, which is a proper subset of the regular VAI inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1A, 1B, and 2A stems behaving this way.
+- As in the VIIs, there are certain VAI stems that can only take plural forms. These are captured by a unique sub-paradigm VAI_Pl. They are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VAI_Pl, which is a proper subset of the regular VAI inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1A, 1B, and 2A stems behaving this way.
 
 ## Verb Transitive Inanimate (VTI)
 
 ### STEM TYPES
 
-| Class | Description    | Lemmas        |
+| Class | Description    | Example Lemmas        |
 |-------|----------------|--------------|
 | VTI1  | vti /am/ stems | "waabandam" |
 | VTI2  | vti /oo/ stems | "wanitoon"  |
@@ -234,7 +248,7 @@ NA
 
 ### STEM TYPES
 
-| Class      | Description                    | Lemmas         |
+| Class      | Description                    | Example Lemmas         |
 |------------|--------------------------------|---------------|
 | VTA Class 1 | vta consonant stems            | "waabam"      |
 | VTA Class 2 | vta changeable /N/ stems       | "miizh"       |
@@ -280,7 +294,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 
 ### SUMMARY OF STEM CLASSES
 
-| NICHOLS CLASS | CODE   | DESCRIPTION                   | EXAMPLE(S) (FROM YAMLS)                   |
+| NICHOLS CLASS | CODE   | DESCRIPTION                   | Example Lemmas                   |
 |---------------|--------|-------------------------------|-------------------------------------------|
 | VII1          | VII_VV | vii long vowel stems          | "michaa", "ate", "gonzaabii"              |
 | VII2          | VII_V  | vii short vowel stems         | "dakaagami", "inamo"                      |
@@ -306,23 +320,13 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
 | VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
 
+# More on phonological rules
 
-#### SOURCES
+The previous section indicated the specific rules that end up being used in a given paradigm at the stem/suffix juncture. In this section, we detail additional rules that are needed to capture the phonological alternations triggered by certain preverbs (person prefix, tense, initial change AKA C-Form AKA changed conjunct), and give the overall ordering of the rules that apply to the suffix complex.
 
-| Key   				| Description                         											  				|
-|-----------------------|-----------------------------------------------------------------------------------------------|
-| JDN-2010-MS-VAI-pXX   | John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VAI paradigms 				|
-| JDN-2010-MS-VII-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VII paradigms 				|
-| JDN-2010-MS-VTA-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTA paradigms 				|
-| JDN-2010-MS-VTI-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTI paradigms 				|
-| JRV-2001-NISH-pXX		| J. Rand Valentine (2001) grammar of Nishnaabemwin 							  				|
-| JRV-Web-ANISH  		| J. Rand Valentine's webpage (https://ojibwegrammar.langsci.wisc.edu/Grammar/GrammarTOC.html) 	|
-| OPD-Note-po			| https://ojibwe.lib.umn.edu/word-part/po-final 												|
+## Preverb Rules
 
-
-### SUMMARY OF PREVERB RULES
-
-#### Person prefix
+### Person prefix
 
 The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate.
 
@@ -370,7 +374,7 @@ Sources:
 - https://ojibwe.lib.umn.edu/main-entry/im-pf
 - https://ojibwe.lib.umn.edu/main-entry/g-pf
 
-#### Tense
+### Tense
 
 *Background*: A distinction known as the lenis/fortis contrast is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
 
@@ -380,7 +384,7 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 
 *Citation*: See Nichols (1980, pg. 129) *Ojibwe Morphology*, PhD Dissertation, Harvard University for a version of the rule here.
 
-#### Initial change
+### Initial change
 
 Conjunct order verbs can undergo a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including preverbs). This produces the so-called "changed conjunct", which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred.
 
@@ -432,7 +436,7 @@ The above description is adapted from here: https://ojibwegrammar.langsci.wisc.e
 
 There are also a lot of complications with the future tense prefer "ga-" that interact with intial change. Future tense appears as "ga-" in the independent order in the presence of a person prefix, but "da-" in the independent order when there is no prefix. In many dialects the "plain" conjunct (when there is no initial change), the future morpheme is realized as "ji-" (in others, it is realized as "da-" in this context). But, in the changed conjunct, it appears as "ge-". So the changed form is the regular changed form of the independent order allomorph in the presence of a person prefix, but not a changed version the plain conjunct allomorph, nor the independent allomorph in the absence of a prefix. Finally, note that some speakers will epethsize a "d" to "ga-" and "ge-" when the following segment is a vowel. This is probably best modeled as an irregularity and part of a more fullsome modeling of this future tense marker. For details and sources, see here: https://ojibwe.lib.umn.edu/main-entry/ga-pv-tns
 
-### SUMMARY OF SUFFIX RULES
+## Suffix Rules Summary
 
 Note: These rules are often crucially ordered! We have indicated when that is the case.
 
@@ -458,7 +462,7 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 - _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg)
 	- This rule MUST FOLLOW the "ShortV-deletion" rule
 
-### OLD RULES (defunct)
+## Old rules (defunct)
 
 **M-deletion & vowel lengthening**
 
