@@ -1,9 +1,12 @@
-﻿Paradigm,Order,Class,Lemma,Stem,Subject,Object,Mode,Negation,Form1Surface,Form1Split,Form1Source,,,
+Paradigm,Order,Class,Lemma,Stem,Subject,Object,Mode,Negation,Form1Surface,Form1Split,Form1Source,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,1Sg,1Sg,Neu,Neg,waabandizosiwaan,<<waabandizo>>siwaan,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,2Sg,2Sg,Neu,Neg,waabandizosiwan,<<waabandizo>>siwan,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,2pl,2pl,Neu,Neg,waabandizosiweg,<<waabandizo>>siweg,NJ-Zoom-2023-Sep19,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3PlProx,3PlProx,Neu,Neg,waabandizosigwaa,<<waabandizo>>sigwaa,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
-VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgObv/3PlObv,3SgObv/3PlObv,Neu,Neg,waabandizosinid,<<waabandizo>>sinid,NJ-Zoom-2023-Sep19,waabandizosinig,<<waabandizo>>sinig,JRV-Web-ANISH
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgObv,3SgObv,Neu,Neg,waabandizosinid,<<waabandizo>>sinid,NJ-Zoom-2023-Sep19,waabandizosinig,<<waabandizo>>sinig,JRV-Web-ANISH
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgObv,3PlObv,Neu,Neg,waabandizosinid,<<waabandizo>>sinid,NJ-Zoom-2023-Sep19,waabandizosinig,<<waabandizo>>sinig,JRV-Web-ANISH
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3PlObv,3SgObv,Neu,Neg,waabandizosinid,<<waabandizo>>sinid,NJ-Zoom-2023-Sep19,waabandizosinig,<<waabandizo>>sinig,JRV-Web-ANISH
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3PlObv,3PlObv,Neu,Neg,waabandizosinid,<<waabandizo>>sinid,NJ-Zoom-2023-Sep19,waabandizosinig,<<waabandizo>>sinig,JRV-Web-ANISH
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgProx,3SgProx,Neu,Neg,waabandizosig,<<waabandizo>>sig,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,Excl,Excl,Neu,Neg,waabandizosiwaang,<<waabandizo>>siwaang,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,Incl,Incl,Neu,Neg,waabandizosiwang,<<waabandizo>>siwang,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
@@ -11,7 +14,10 @@ VAI,Cnj,VAI_rfx,waabandizo,waabandizo,1Sg,1Sg,Neu,Pos,waabandizoyaan,<<waabandiz
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,2Sg,2Sg,Neu,Pos,waabandizoyan,<<waabandizo>>yan,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,2pl,2pl,Neu,Neg,waabandizoyeg,<<waabandizo>>yeg,NJ-Zoom-2023-Sep19,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3PlProx,3PlProx,Neu,Pos,waabandizowaad,<<waabandizo>>waad,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
-VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgObv/3PlObv,3SgObv/3PlObv,Neu,Pos,waabandizonid,<<waabandizo>>nid,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgObv,3SgObv,Neu,Pos,waabandizonid,<<waabandizo>>nid,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgObv,3PlObv,Neu,Pos,waabandizonid,<<waabandizo>>nid,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3PlObv,3SgObv,Neu,Pos,waabandizonid,<<waabandizo>>nid,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
+VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3PlObv,3PlObv,Neu,Pos,waabandizonid,<<waabandizo>>nid,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,3SgProx,3SgProx,Neu,Pos,waabandizod,<<waabandizo>>d,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,Excl,Excl,Neu,Pos,waabandizoyaang,<<waabandizo>>yaang,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
 VAI,Cnj,VAI_rfx,waabandizo,waabandizo,Incl,Incl,Neu,Pos,waabandizoyang,<<waabandizo>>yang,NJ-Zoom-2023-Sep19; JRV-Web-ANISH,,,
