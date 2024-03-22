@@ -125,11 +125,11 @@ All spreadsheets contain the following columns:
 | Pos   | Positive                            |
 | Neg   | Negative                            |
 
-### Other helpful notes
+### Notes on ambiguous forms and alternate forms
 
 Right nonw, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations. Any additional forms (Form2, Form3) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, with hopes that we will also have a more proper multi-dialect model in the future (where dialect is tagged in some way).
 
-When a given form is ambiguous, we have represented that indirectly by repeating identical forms in more than one row. 
+When a given form is ambiguous, we have represented that indirectly by repeating identical forms in more than one row. There are no "composite" tags to indicate ambiguity. On the FST side, this will result in an ambiguous form being ambiguous as to which particular tag set is appropriate. In other uses such as the conjugator, this means the same form will appear in more than one place in the table.
 
 ## Guiding Principles
 
