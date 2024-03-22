@@ -1,6 +1,6 @@
 # BorderLakesMorph Spreadsheets
 
-## GENERAL
+## General
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
 *	Double \<\< marks the prefix/stem juncture (or the start of the stem)
 *	Single \> marks boundaries between suffixes outside of the stem (not yet used)
@@ -15,6 +15,129 @@
  		*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
 	*	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
  		*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
+
+## Organization
+
+This folder contains the verb paradigm spreadsheets used to create and validate the BorderLakesMorph FST for morphological production and parsing. 
+
+###
+
+### SUMMARY OF TAGS
+
+All spreadsheets contain the following columns:
+
+* **Paradigm:** Traditional Algonquianist split based primarily on transitivity and argument animacy. Exception is added VAI_Pl and VII_Pl, which are special cases of each stem that only allow plural arguments.
+* **Order:** Clause-type distinction in traditional Algonquianist terms, which differ in their verb paraidgms. Independent (also known as A-form) is roughly main clauses, conjunct (also known as B-form) is roughly embedded clauses and questions. Imperative are the command forms.
+* **Class:** Phonological classes based on the sounds at the right edge of the stem. Change the shape of the suffix complex due to phonological processes at the stem-suffix boundary.
+* **Lemma:** Each class within each order/paradigm combination is exemplified by at least one sample verb, often more than one. The lemma is the "dictionary form" of the verb (akin to the infinitive with English verbs) as taken from the OPD. This is usually either the third person singular and/or second person simple imperative form. Lemmas are also used for verb tags in the FST.
+* **Stem:** The stem is the underlying form of the example verb. Unless otherwise indicated, we take the stem specified in the OPD. Sometimes, this is the same as the lemma. However, often it is distinct, as various phonological processes can intervene.
+* **Subject:** The person/noun associated with the prototpyical "actor" role in transitive paradigms, or the sole person/noun of intransitive paradigms. 
+* **Object:** The person/noun associated with the prototypical "undergoer" role in transitive paradigms. Always NA in intransitive paradigms.
+* **Mode:** Traditional Algonquianist categories in Ojibwe related to the epistemic/modal/aspectual system.
+* **Negation:** Whether the verb is positive or negative. The independent order negatives must be preceded by "gaawiin" to be well-formed.
+* **Form\#Surface:** The surface form of the example verb, after all phonological processes have been executed. The source for these forms is indated in a different column. Form1 is the attested or assumed form for Border Lakes, which all other forms are variants from other closely related dialects. Marked MISSING if a form is expected, but not yet attested in a source or extended with a GUESS.
+* **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of the independent order) and suffixal morphology. This is the form before any phonological rules have applied.
+* **Form\#Source**: The source for the surface form. See below for some discussion of how to interpret "GUESS" and for a source key.
+
+#### PARADIGM
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| VAI   | Verb Animate Intransitive           |
+| VAI_PL   | Verb Animate Intransitive (Plural Only)           |
+| VII   | Verb Inanimate Intransitive         |
+| VII_PL   | Verb Inanimate Intransitive (Plural Only         |
+| VTI   | Verb Transitive Inanimate           |
+| VTA   | Verb Transitive Animate             |
+| VAIO  | Verb Animate Intransitive + Object  |
+
+#### ORDER
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Cnj   | Conjunct order                      |
+| Ind   | Independent order                   |
+| Imp   | Imperative order                    |
+
+#### CLASS
+
+| Tag     | Description                    |
+|---------|--------------------------------|
+| VII_VV  | vii long vowel stems           |
+| VII_V   | vii short vowel stems          |
+| VII_d   | vii consonant /d/ stems        |
+| VII_n   | vii consonant /n/ stems        |
+| VAI_VV  | vai long vowel stems           |
+| VAI_V   | vai short vowel stems          |
+| VAI_n   | vai consonant /n/ stems        |
+| VAI_m   | vai consonant /m/ stems        |
+| VAI_am  | vai2 /am/ stems                |
+| VAI_rfx | vai with /-idizo/_P              |
+| VAI_rcp | vai with /-idi/                |
+| VAIO    | vai with 0sg/pl object         |
+| VTI_am  | vti /am/ stems                 |
+| VTI_oo  | vti /oo/ stems                 |
+| VTI_i   | vti /i/ stems                  |
+| VTI_aa  | vti /aa/ stems                 |
+| VTA_C   | vta consonant stems            |
+| VTA_n   | vta changeable /N/ stems       |
+| VTA_s   | vta changeable /S/ stems       |
+| VTA_aw  | vta /aw/ stems                 |
+| VTA_Cw  | vta consonant-w stems          |
+| VTA_irr | vta irregular stems            |
+
+#### SUBJECT/OBJECT
+
+| Our Tag        | OPD Tag  | Description                             |
+|----------------|----------|-----------------------------------------|
+| 1Sg            | 1s       | First person singular                   |
+| Excl           | 1p       | First person exclusive (excludes addressee) |
+| Incl           | 21p      | First person inclusive (includes addressee) |
+| 1Sg/Excl       | 1        | First person (unspecified number)       |
+| 2Sg            | 2s       | Second person singular                  |
+| 2Pl            | 2p       | Second person plural                    |
+| 2Sg/2Pl        | 2        | Second person (unspecified number)      |
+| 3SgProx/3PlProx| 3        | Animate third person proximate (unspecified number) |
+| 3SgProx        | 3s       | Animate third person singular proximate |
+| 3PlProx        | 3p       | Animate third person plural proximate   |
+| 3SgObv/3PlObv  | 3'       | Animate third person singular obviative |
+| 3SgObv         | 3's      | Animate third person singular obviative |
+| 3PlObv         | 3'p      | Animate third person plural obviative   |
+| 0Sg/0Pl        | 0        | Inanimate third person (unspecified number) |
+| 0Sg            | 0s       | Inanimate third person singular (unspecified obviation) |
+| 0Pl            | 0p       | Inanimate third person plural (unspecified obviation) |
+| 0SgObv/0PlObv  | 0'       | Inanimate third person obviative (unspecified number) |
+| 0SgObv         | 0's      | Inanimate third person singular obviative |
+| 0PlObv         |? (No 0'p)| Inanimate third person plural obviative   |
+| X              | X        | Unspecified actor                       |
+
+#### MODE
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Neu   | Neutral                             |
+| Prt   | Preterit                            |
+| Dub   | Dubitative                          |
+| DubPrt| Dubitative-Preterit                 |
+
+#### NEGATION
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Pos   | Positive                            |
+| Neg   | Negative                            |
+
+
+## Guiding Principles
+
+There are a few principles we used when designing the present system:
+
+1. **Maximize use of spreadsheets.** Start by positing as few phonological rules as possible. Ideally, only rules that entail changes to the stem.
+2. **Guesses are based on extending an attested paradigm**, not from-scratch assumption. For example, if we know the forms in one VAI class, and we know how that stem class affects the shape of the suffix complex, then we extended the form to these cells as a "guess". Therefore, these are best interpreted as simply "awaiting final confirmation". They are always forms that are generally attested in the language.
+3. **Match the assumptions of previous work**, especially the assumptions regading stems and other classification schemes in the Ojibwe People's Dictionary. This is both because the information is highly accurate and useful, but also because we want to interface cleanly with the dictionary and use terms and schemes that are familiar to language learners, linguists, and Algonquianists.
+4. **Be as explcit as possible.** With the tags that the model produces and the labels in the spreadsheet, don't leave anything to assumption or interpretation. For example, use "3ProxSg" rather than interpreting a bare "3" as proximate and singular in contrast to "3Pl" or "3Obv". Indicate all ambiguities. Keep detailed track of sources.
+
+# Linguistic Details
 
 ## Verb Inanimate Intransitive (VII)
 
@@ -180,93 +303,6 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
 | VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
 
-### SUMMARY OF TAGS
-
-#### PARADIGM
-
-| Tag   | Description                         |
-|-------|-------------------------------------|
-| VAI   | Verb Animate Intransitive           |
-| VII   | Verb Inanimate Intransitive         |
-| VTI   | Verb Transitive Inanimate           |
-| VTA   | Verb Transitive Animate             |
-| VAIO  | Verb Animate Intransitive + Object  |
-
-#### ORDER
-
-| Tag   | Description                         |
-|-------|-------------------------------------|
-| Cnj   | Conjunct order                      |
-| Ind   | Independent order                   |
-| Imp   | Imperative order                    |
-
-#### CLASS
-
-| Tag     | Description                    |
-|---------|--------------------------------|
-| VII_VV  | vii long vowel stems           |
-| VII_V   | vii short vowel stems          |
-| VII_d   | vii consonant /d/ stems        |
-| VII_n   | vii consonant /n/ stems        |
-| VAI_VV  | vai long vowel stems           |
-| VAI_V   | vai short vowel stems          |
-| VAI_n   | vai consonant /n/ stems        |
-| VAI_m   | vai consonant /m/ stems        |
-| VAI_am  | vai2 /am/ stems                |
-| VAI_rfx | vai with /-idizo/              |
-| VAI_rcp | vai with /-idi/                |
-| VAIO    | vai with 0sg/pl object         |
-| VTI_am  | vti /am/ stems                 |
-| VTI_oo  | vti /oo/ stems                 |
-| VTI_i   | vti /i/ stems                  |
-| VTI_aa  | vti /aa/ stems                 |
-| VTA_C   | vta consonant stems            |
-| VTA_n   | vta changeable /N/ stems       |
-| VTA_s   | vta changeable /S/ stems       |
-| VTA_aw  | vta /aw/ stems                 |
-| VTA_Cw  | vta consonant-w stems          |
-| VTA_irr | vta irregular stems            |
-
-#### SUBJECT/OBJECT
-
-| Our Tag        | OPD Tag  | Description                             |
-|----------------|----------|-----------------------------------------|
-| 1Sg            | 1s       | First person singular                   |
-| Excl           | 1p       | First person exclusive (excludes addressee) |
-| Incl           | 21p      | First person inclusive (includes addressee) |
-| 1Sg/Excl       | 1        | First person (unspecified number)       |
-| 2Sg            | 2s       | Second person singular                  |
-| 2Pl            | 2p       | Second person plural                    |
-| 2Sg/2Pl        | 2        | Second person (unspecified number)      |
-| 3SgProx/3PlProx| 3        | Animate third person proximate (unspecified number) |
-| 3SgProx        | 3s       | Animate third person singular proximate |
-| 3PlProx        | 3p       | Animate third person plural proximate   |
-| 3SgObv/3PlObv  | 3'       | Animate third person singular obviative |
-| 3SgObv         | 3's      | Animate third person singular obviative |
-| 3PlObv         | 3'p      | Animate third person plural obviative   |
-| 0Sg/0Pl        | 0        | Inanimate third person (unspecified number) |
-| 0Sg            | 0s       | Inanimate third person singular (unspecified obviation) |
-| 0Pl            | 0p       | Inanimate third person plural (unspecified obviation) |
-| 0SgObv/0PlObv  | 0'       | Inanimate third person obviative (unspecified number) |
-| 0SgObv         | 0's      | Inanimate third person singular obviative |
-| 0PlObv         |? (No 0'p)| Inanimate third person plural obviative   |
-| X              | X        | Unspecified actor                       |
-
-#### MODE
-
-| Tag   | Description                         |
-|-------|-------------------------------------|
-| Neu   | Neutral                             |
-| Prt   | Preterit                            |
-| Dub   | Dubitative                          |
-| DubPrt| Dubitative-Preterit                 |
-
-#### NEGATION
-
-| Tag   | Description                         |
-|-------|-------------------------------------|
-| Pos   | Positive                            |
-| Neg   | Negative                            |
 
 #### SOURCES
 
