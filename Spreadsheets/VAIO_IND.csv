@@ -89,8 +89,8 @@ VAIO,Ind,VAIO,adaawen,adaawe,3PlObv,0Sg,Neu,Neg,MISSING,,,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3PlObv,0Pl,Neu,Neg,MISSING,,,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3PlProx,0Sg,Neu,Neg,odadaawesiinaawaa,o<<adaawe>>siinaawaa,JDN-2010-MS-VTI-p8,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3PlProx,0Pl,Neu,Neg,odadaawesiinaawaan,o<<adaawe>>siinaawaan,JDN-2010-MS-VTI-p8,,,
-VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Sg,Neu,Neg,odadaawesiinini,o<<adaawe>>siininiw,JDN-2010-MS-VTI-p8,odadaawesiini,od<<adaawe>>siiniw,JDN-2010-MS-VTI-p8
-VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Pl,Neu,Neg,odadaawesiinini,o<<adaawe>>siininiw,JDN-2010-MS-VTI-p8,odadaawesiini,od<<adaawe>>siiniw,JDN-2010-MS-VTI-p8
+VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Sg,Neu,Neg,odadaawesiinini,o<<adaawe>>siininiw1,JDN-2010-MS-VTI-p8,odadaawesiini,od<<adaawe>>siiniw1,JDN-2010-MS-VTI-p8
+VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Pl,Neu,Neg,odadaawesiinini,o<<adaawe>>siininiw1,JDN-2010-MS-VTI-p8,odadaawesiini,od<<adaawe>>siiniw1,JDN-2010-MS-VTI-p8
 VAIO,Ind,VAIO,adaawen,adaawe,3SgProx,0Sg,Neu,Neg,odadaawesiin,o<<adaawe>>siin,JDN-2010-MS-VTI-p8,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3SgProx,0Pl,Neu,Neg,odadaawesiinan,o<<adaawe>>siinan,JDN-2010-MS-VTI-p8,,,
 VAIO,Ind,VAIO,adaawen,adaawe,Excl,0Sg,Neu,Neg,indadaawesiimin,ni<<adaawe>>siimin,JDN-2010-MS-VTI-p8,,,
@@ -109,8 +109,8 @@ VAIO,Ind,VAIO,adaawen,adaawe,3PlObv,0Sg,Neu,Pos,MISSING,,,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3PlObv,0Pl,Neu,Pos,MISSING,,,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3PlProx,0Sg,Neu,Pos,odadaawenaawaa,o<<adaawe>>naawaa,JDN-2010-MS-VTI-p7,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3PlProx,0Pl,Neu,Pos,odadaawenaawaan,o<<adaawe>>naawaan,JDN-2010-MS-VTI-p7,,,
-VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Sg,Neu,Pos,odadaawenini,o<<adaawe>>niniw,JDN-2010-MS-VTI-p7,odadaaweni,od<<adaawe>>niw,JDN-2010-MS-VTI-p7
-VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Pl,Neu,Pos,odadaawenini,o<<adaawe>>niniw,JDN-2010-MS-VTI-p7,odadaaweni,od<<adaawe>>niw,JDN-2010-MS-VTI-p7
+VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Sg,Neu,Pos,odadaawenini,o<<adaawe>>niniw1,JDN-2010-MS-VTI-p7,odadaaweni,od<<adaawe>>niw1,JDN-2010-MS-VTI-p7
+VAIO,Ind,VAIO,adaawen,adaawe,3SgObv,0Pl,Neu,Pos,odadaawenini,o<<adaawe>>niniw1,JDN-2010-MS-VTI-p7,odadaaweni,od<<adaawe>>niw1,JDN-2010-MS-VTI-p7
 VAIO,Ind,VAIO,adaawen,adaawe,3SgProx,0Sg,Neu,Pos,odadaawen,o<<adaawe>>n,JDN-2010-MS-VTI-p7,,,
 VAIO,Ind,VAIO,adaawen,adaawe,3SgProx,0Pl,Neu,Pos,odadaawenan,o<<adaawe>>nan,JDN-2010-MS-VTI-p7,,,
 VAIO,Ind,VAIO,adaawen,adaawe,Excl,0Sg,Neu,Pos,indadaawemin,ni<<adaawe>>min,JDN-2010-MS-VTI-p7,,,
