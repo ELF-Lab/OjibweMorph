@@ -20,8 +20,8 @@ VTA,Ind,VTA_irr,izhi,in,3PlProx,2Sg,Neu,Pos,gidigoog,gid<<>>igoog,JRV-Web-ANISH,
 VTA,Ind,VTA_irr,izhi,in,3SgProx,2Sg,Neu,Pos,gidig,gid<<>>ig,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,Excl,2Sg,Neu,Pos,gidigoo,gid<<>>igoo,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,X,2Sg,Neu,Pos,gidigoo,gid<<>>igoo,JRV-Web-ANISH,,,
-VTA,Ind,VTA_irr,izhi,in,0Pl,3PlObv,Neu,Pos,odigonini,od<<>>igoniniw,JRV-Web-ANISH,,,
-VTA,Ind,VTA_irr,izhi,in,0Sg,3PlObv,Neu,Pos,odigonini,od<<>>igoniniw,JRV-Web-ANISH,,,
+VTA,Ind,VTA_irr,izhi,in,0Pl,3PlObv,Neu,Pos,odigonini,od<<>>igoniniw1,JRV-Web-ANISH,,,
+VTA,Ind,VTA_irr,izhi,in,0Sg,3PlObv,Neu,Pos,odigonini,od<<>>igoniniw1,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,1Sg,3PlObv,Neu,Pos,nindinimaa',nind<<in>>imaa',GUESS,nindinimaan,nind<<in>>imaan,GUESS
 VTA,Ind,VTA_irr,izhi,in,2Pl,3PlObv,Neu,Pos,gidinimaawaa',gid<<in>>imaawaa',GUESS,gidinimaawaan,gid<<in>>imaawaan,GUESS
 VTA,Ind,VTA_irr,izhi,in,2Sg,3PlObv,Neu,Pos,gidinimaa',gid<<in>>imaa',GUESS,gidinimaan,gid<<in>>imaan,GUESS
@@ -40,8 +40,8 @@ VTA,Ind,VTA_irr,izhi,in,3SgObv,3PlProx,Neu,Pos,odigowaan,od<<>>igowaan,JRV-Web-A
 VTA,Ind,VTA_irr,izhi,in,Excl,3PlProx,Neu,Pos,nindinaanaanig,nind<<in>>aanaanig,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,Incl,3PlProx,Neu,Pos,gidinaanaanig,gid<<in>>aanaanig,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,X,3PlProx,Neu,Pos,inaawag,<<in>>aawag,JRV-Web-ANISH,,,
-VTA,Ind,VTA_irr,izhi,in,0Pl,3SgObv,Neu,Pos,odigonini,od<<>>igoniniw,JRV-Web-ANISH,,,
-VTA,Ind,VTA_irr,izhi,in,0Sg,3SgObv,Neu,Pos,odigonini,od<<>>igoniniw,JRV-Web-ANISH,,,
+VTA,Ind,VTA_irr,izhi,in,0Pl,3SgObv,Neu,Pos,odigonini,od<<>>igoniniw1,JRV-Web-ANISH,,,
+VTA,Ind,VTA_irr,izhi,in,0Sg,3SgObv,Neu,Pos,odigonini,od<<>>igoniniw1,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,1Sg,3SgObv,Neu,Pos,nindinimaan,nind<<in>>imaan,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,2Pl,3SgObv,Neu,Pos,gidinimaawaan,gid<<in>>imaawaan,JRV-Web-ANISH,,,
 VTA,Ind,VTA_irr,izhi,in,2Sg,3SgObv,Neu,Pos,gidinimaan,gid<<in>>imaan,JRV-Web-ANISH,,,
