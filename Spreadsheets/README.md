@@ -31,7 +31,7 @@ All spreadsheets contain the following columns:
 * **Stem:** The stem is the underlying form of the example verb. Unless otherwise indicated, we take the stem specified in the OPD. Sometimes, this is the same as the lemma. However, often it is distinct, as various phonological processes can intervene.
 * **Subject:** The person/noun associated with the prototpyical "actor" role in transitive paradigms, or the sole person/noun of intransitive paradigms. 
 * **Object:** The person/noun associated with the prototypical "undergoer" role in transitive paradigms. Always NA in intransitive paradigms.
-* **Mode:** Traditional Algonquianist categories in Ojibwe related to the epistemic/modal/aspectual system.
+* **Mode:** Traditional Algonquianist categories in Ojibwe related to the epistemic/modal/aspectual system. In the imperative order (command forms) this encodes whether it is "simple", "delayed", or "prohibative". The prohibative must be precede by "gego" to be well-formed.
 * **Negation:** Whether the verb is positive or negative. The independent order negatives must be preceded by "gaawiin" to be well-formed.
 * **Form\#Surface:** The surface form of the example verb, after all phonological processes have been executed. The source for these forms is indated in a different column. Form1 is the attested or assumed form for Border Lakes, which all other forms are variants from other closely related dialects. Marked MISSING if a form is expected, but not yet attested in a source or extended with a GUESS. Surface forms are used to test the FST.
 * **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of the independent order) and suffixal morphology. This is the form before any phonological rules have applied, and is what is directly used to build the FST.
@@ -117,6 +117,9 @@ All spreadsheets contain the following columns:
 | Prt   | Preterit                            |
 | Dub   | Dubitative                          |
 | DubPrt| Dubitative-Preterit                 |
+| Sim   | Simple (imperative only)            |
+| Del	| Delayed (imperative only)           |
+| Prb	| Prohibative (imperative only)       |
 
 #### NEGATION
 
