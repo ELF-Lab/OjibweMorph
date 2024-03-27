@@ -49,14 +49,40 @@ define wRule2 [ w (->) o1 || Cons _ ">>" [i|i1] (">>") .#. ] .o. [[i|i1] -> 0 ||
 
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
-define wDeletion w -> 0 || _ (">>") .#. ;
+define wDeletion w1 -> 0 || _ (">>") .#. ;
+define wDefault w1 -> w ;
 
 ! Sources:
 ! https://ojibwe.lib.umn.edu/main-entry/g-pf
 ! https://ojibwe.lib.umn.edu/main-entry/g-pf
 ! https://ojibwegrammar.langsci.wisc.edu/Assets/Pdfs/InflAnishPersonPrefixes1.02.pdf
-define PrefixDInsertion [..] -> d || [ [ n | g ] i | o ] _ "<<" Vowel ;
-define PrefixOLengthening o -> {oo} || [ [ n | g ] i | o ] d "<<" _ \o ; 
+!Border Lakes prefix rules:
+
+!ni(m/n/nd)-
+!ni- before m, n, w, p, t, k, s, sh
+!nim- before b
+!nin- before d, j, z, zh, g
+!nind- before vowels
+
+!gi(d)-
+!gi- before consonants
+!gid- before vowels
+
+!o(d)-
+!o- before consonants
+!od- before vowels
+define PrefixDInsertion [..] -> d || .#. ("<<") [{gi}|o] _ "<<" Vowel ;
+define PrefixNDInsertion [..] (->) [d | {nd}] || .#. ("<<") {ni} _ "<<" Vowel ;
+define PrefixIND {nid} (->) {ind} || .#. ("<<") _ "<<" ;
+define PrefixMInsertion [..] (->) m || .#. ("<<") {ni} _ "<<" b ;
+define PrefixNInsertion [..] (->) n || .#. ("<<") {ni} _ "<<" [d|j|z|{zh}|g] ;
+define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ n | g ] i | o | {nin} ] d "<<" _ \o ; 
+
+!ni-/n- before m, n, w, p, t, k, s, sh
+!nim-/im-/m-/ni- before b
+!nin-/in-/n-/ni- before d, j, z, zh, g
+!nind-/ind-/nd- before vowels
+!At Red Lake, we get niy- before aa
 
 define cleanUp ["<<"|">>"] -> 0 ; 
 
@@ -85,9 +111,14 @@ read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
 				       wRule2 .o.				       
 				       i1Rule .o.
 			               vowelDeletion .o.
-			               wDeletion .o.				      
+			               wDeletion .o.
+				       wDefault .o.					
 !			               nDeletion .o.
 			               PrefixDInsertion .o.
+				       PrefixNDInsertion .o.
+				       PrefixIND .o.
+				       PrefixMInsertion .o.
+				       PrefixNInsertion .o.				       
 			               PrefixOLengthening .o.
 			               cleanUp ] ;
 
