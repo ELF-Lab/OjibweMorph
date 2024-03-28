@@ -1,8 +1,7 @@
 ! There are flags at morpheme boundaries.
 set flag-is-epsilon ON
 
-define Sigma [ a | b | c | d | e | g | h | i | k | m | n | o | s | t | w | y | z ] ;
-define Cons [ b | c | d | g | h | j | k | m | n | s | t | w | y | z ] ;
+define Cons [ b | c | d | f | g | h | j | k | l | m | n | p | s | t | v | w | x | y | z ] ;
 define Vowel [ a | e | i | o ] ;
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
 
