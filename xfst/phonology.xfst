@@ -71,8 +71,8 @@ define wDefault w1 -> w ;
 !o(d)-
 !o- before consonants
 !od- before vowels
-define PrefixDInsertion [..] -> d || .#. ("<<") [{gi}|o] _ "<<" Vowel ;
-define PrefixNDInsertion [..] (->) [d | {nd}] || .#. ("<<") {ni} _ "<<" Vowel ;
+define PrefixDInsertion [..] -> d || .#. ("<<") [{gi}|o|{ni}] _ "<<" Vowel ;
+define PrefixNDInsertion [..] (->) n || .#. ("<<") {ni} _ d "<<" Vowel ;
 define PrefixIND {nid} (->) {ind} || .#. ("<<") _ "<<" ;
 define PrefixMInsertion [..] (->) m || .#. ("<<") {ni} _ "<<" b ;
 define PrefixNInsertion [..] (->) n || .#. ("<<") {ni} _ "<<" [d|j|z|{zh}|g] ;
