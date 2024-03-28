@@ -83,6 +83,10 @@ define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ n | g ] i | o | {nin} ] d 
 !nind-/ind-/nd- before vowels
 !At Red Lake, we get niy- before aa
 
+! Nasal vowel rule 
+! y -> h / VVn_#
+define YRule y -> h || [Vowel Vowel | e] n (">>") _ (">>") .#. ;
+
 define cleanUp ["<<"|">>"] -> 0 ; 
 
 read lexc ojibwe_verbs.lexc
@@ -113,6 +117,7 @@ read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
 			               wDeletion .o.
 				       wDefault .o.					
 !			               nDeletion .o.
+                                       YRule .o.
 			               PrefixDInsertion .o.
 				       PrefixNDInsertion .o.
 				       PrefixIND .o.
