@@ -72,10 +72,11 @@ define wDefault w1 -> w ;
 !od- before vowels
 define PrefixDInsertion [..] -> d || .#. ("<<") [{gi}|o|{ni}] _ "<<" Vowel ;
 define PrefixNDInsertion [..] (->) n || .#. ("<<") {ni} _ d "<<" Vowel ;
-define PrefixIND {nid} (->) {ind} || .#. ("<<") _ "<<" ;
+define PrefixDDeletion d (->) 0 || .#. ("<<") {nin} _ "<<" ;
+define PrefixIND {nid} (->) [{ind} | {nd}] || .#. ("<<") _ "<<";
 define PrefixMInsertion [..] (->) m || .#. ("<<") {ni} _ "<<" b ;
 define PrefixNInsertion [..] (->) n || .#. ("<<") {ni} _ "<<" [d|j|z|{zh}|g] ;
-define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ n | g ] i | o | {nin} ] d "<<" _ \o ; 
+define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ [ n | g ] i | o | {nin} ] d | {nin} ] "<<" _ \o ; 
 
 !ni-/n- before m, n, w, p, t, k, s, sh
 !nim-/im-/m-/ni- before b
@@ -120,12 +121,31 @@ read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
                                        YRule .o.
 			               PrefixDInsertion .o.
 				       PrefixNDInsertion .o.
+				       PrefixDDeletion .o.
 				       PrefixIND .o.
 				       PrefixMInsertion .o.
 				       PrefixNInsertion .o.				       
-			               PrefixOLengthening .o.
-			               cleanUp ] ;
+			               PrefixOLengthening ] ;
 
+! Make sure @P.Alt@ flag is on both sides
+
+define Analyzer ;
+
+set flag-is-epsilon OFF
+
+define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} "<<"       |
+                                                             {nd}  "<<"       |
+							     {nin} "<<" Vowel ]  ?* _ .#. ;
+read regex Analyzer .o. AltRule1 ;
+twosided flag-diacritics
+define Analyzer
+define AltRule2 [..] -> "+Alt" || _ "@P.Alt.On@" ;
+read regex AltRule2.i .o. Analyzer ;
+define Analyzer
+
+set flag-is-epsilon ON
+
+read regex Analyzer .o. cleanUp ;
 define Analyzer ;
 
 read lexc ojibwe_irregular_verbs.lexc
