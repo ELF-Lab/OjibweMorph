@@ -1,4 +1,7 @@
-Order,Class,Lemma,Stem,CCnj
-Cnj,,da,ge,Yes
-Cnj,,da,ji,No
-Ind,,da,da,No
+Order,Lemma,Stem,CCnj
+Cnj,da,ge,Yes
+Cnj,da,ji,No
+Ind,da,da,No
+,gii',gii',No
+,gii',gii,No
+Cnj,gii',ge,Yes
