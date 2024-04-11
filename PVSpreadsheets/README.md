@@ -68,7 +68,7 @@ Here is a summary of the tenses that we are currently modelling:
 
 | Tense                            | Independent | PlainConjunct | ChangedConjunct |
 |----------------------------------|-------------|---------------|-----------------|
-| Future definitive               	| ga          | ji            | ge              |
+| Future definitive               	| ga/da          | ji            | ge              |
 | Modal (General Southwestern)    	| daa         | ji            | ge              |
 | Modal (Eastern Southwestern Dialects) | daa         | da            | da              |
 | Past (General Southwestern)     | gii         | gii           | gaa              |
