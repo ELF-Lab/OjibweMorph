@@ -89,3 +89,5 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 *Citation*: See Nichols (1980, pg. 129) *Ojibwe Morphology*, PhD Dissertation, Harvard University for a version of the rule here.
 
 ## Directional
+
+Directional preverbs indicate spatial/temporal orientation. We have included directional preverbs from both the OPD and from the Bowers et al (2017) Odawa model. As indicated above, some are irregular under initial change, and these forms are specified in the spreadsheets only where necessary.
