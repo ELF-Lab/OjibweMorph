@@ -1,4 +1,4 @@
-# BorderLakesMorph Spreadsheets
+# BorderLakesMorph Verb Spreadsheets
 
 ## General
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
