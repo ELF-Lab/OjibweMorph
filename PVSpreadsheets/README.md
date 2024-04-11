@@ -54,11 +54,33 @@ The above description is adapted from here: https://ojibwegrammar.langsci.wisc.e
 
 There are also a lot of complications with the future tense prefer "ga-" that interact with intial change. Future tense appears as "ga-" in the independent order in the presence of a person prefix, but "da-" in the independent order when there is no prefix. In many dialects the "plain" conjunct (when there is no initial change), the future morpheme is realized as "ji-" (in others, it is realized as "da-" in this context). But, in the changed conjunct, it appears as "ge-". So the changed form is the regular changed form of the independent order allomorph in the presence of a person prefix, but not a changed version the plain conjunct allomorph, nor the independent allomorph in the absence of a prefix. Finally, note that some speakers will epethsize a "d" to "ga-" and "ge-" when the following segment is a vowel. This is probably best modeled as an irregularity and part of a more fullsome modeling of this future tense marker. For details and sources, see here: https://ojibwe.lib.umn.edu/main-entry/ga-pv-tns
 
+Finally, not all of the directional preverbs undergo the expected vowel ablaut process under initial change. One example is "bi-", which takes the same form in the changed conjunct as it does in the plain conjunct and independent orders.
+
 ## Subordinating
+
+Subordinating preverbs only combine with conjunct order verbs. There are differences across dialects, and we have included all known subordinators in Ojibwe. In Border Lakes, currently only "gaa-" is attested. It is likely dervied from the past tense marker "gii-" under initial change, but does not have a past tense interpretation synchronically, so is therefore distinct.
 
 ## Tense
 
-*Background*: A distinction known as the lenis/fortis contrast is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
+There are some differences in tense across dialects, and we are attempting to model all variants. There is also some irregularities (dicussed above) in the changed conjunct form of certain tenses, as well as suppletive forms between the independent and conjunct order. 
+
+Here is a summary of the tenses that we are currently modelling:
+
+| Tense                            | Independent | PlainConjunct | ChangedConjunct |
+|----------------------------------|-------------|---------------|-----------------|
+| Future definitive               	| ga          | ji            | ge              |
+| Modal (General Southwestern)    	| daa         | ji            | ge              |
+| Modal (Eastern Southwestern Dialects) | daa         | da            | da              |
+| Past (General Southwestern)     | gii         | gii           | gaa              |
+| Past (Border Lakes)             | gii'        | gii'          | gaa'              |
+| Future volitional (General Southwestern) | wii         | wii           | waa              |
+| Future volitional (Border Lakes) | wii'        | wii'          | waa'              |
+
+Note that both the general forms (gii-/wii-) and the Border Lakes specific forms (gii'-/wii'-) are both used in Border Lakes. The difference between the two forms is not currently well understood. Note also that many forms are expected under the normal initial change rules. In those cases, we do not specify those forms in the spreadsheets. Only those forms that are not predicted from more general rules are specified. 
+
+- *ga-to-da:* The definitive future marker in the independent order is ga-, unless there is no person prefix, in which case it appears as da-
+
+Certain tenses trigger a phonological process that requires a bit of background on the phonology of the language. There is a distinction known as the lenis/fortis contrast, which is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
 
 - *tense-tensing:* Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
 
