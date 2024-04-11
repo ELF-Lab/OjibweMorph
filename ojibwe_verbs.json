@@ -1,6 +1,6 @@
 {
   "comments": "You should modify the 'path' entry to match your CSV source directory",
-  "source_path": "~/src/BorderLakesMorph/Spreadsheets/",
+  "source_path": "~/src/BorderLakesMorph/VerbSpreadsheets/",
   "regular_csv_files": [
     "VAIO_CNJ",
     "VAIO_IMP",
