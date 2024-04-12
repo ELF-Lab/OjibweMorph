@@ -2,9 +2,21 @@
 
 This folder houses the spreadsheets for the various preverbs in Ojibwe. This description is in progress.
 
+## General overview
+
+Preverbs are semi-phonologically dependent elements that are added before a verb stem. Many also overlap with prenouns. In the OPD, there is no separate category for prenouns versus preverbs; in the Valentine (2001) grammar of Odawa, there is some discussion of the what specific elements are prenouns. Here, most prenouns end up in the "lexical preverb" bin.
+
+We follow the basic ordering and classification scheme for preverbs as outlined in Valentine (2001), and also used in the OPD. The basic order of preverbs is given in the table below, where 1-4 are the "functional" preverbs, and are generally closed-class and play a more grammatical role.
+
+| Subordinator | Tense/Modal | Directional | Relative | Lexical |
+|----------|----------|----------|----------|----------|
+|   1   |   2   |   3   |   4   |   5   |
+
+There are various dependencies between the functional preverbs and the wider clause structure. For example, subordinating preverbs all require the use of the conjunct order (and some are perhaps best thought of as a type of changed conjunct marker). Similarly, the tense/modal preverbs show allomorphy depending on order.
+
 ## Initial change
 
-Conjunct order verbs can undergo a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including preverbs). This produces the so-called "changed conjunct" (AKA C-Form), which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred.
+Conjunct order verbs can undergo a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including preverbs). This produces the so-called "changed conjunct" (AKA C-Form), which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred. We are currently modelling this by an affix, which triggers either the insertion of the appropriate idisyncratic allomorph or the regular initial change vowel ablaut process.
 
 - *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the tables below.
 
