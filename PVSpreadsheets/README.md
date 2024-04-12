@@ -16,7 +16,7 @@ There are various dependencies between the functional preverbs and the wider cla
 
 ## Initial change
 
-In fact, initial change can be thought of as a subordinating preverb that tiggers a non-concatenative vowel ablaut process known as "initial change", which transforms the first vowel of the verbal complex (including other preverbs). All verbs that are specificed for the initial change preverb take conjunct order morphology. This produces the so-called "changed conjunct" (AKA C-Form), which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred. We are currently modelling this by an affix, which triggers either the insertion of the appropriate idisyncratic allomorph or the regular initial change vowel ablaut process.
+In fact, initial change can be thought of as a subordinating preverb that tiggers a non-concatenative vowel ablaut process. This transforms the first vowel of the verbal complex (including other preverbs) in a predictable way, as outlined below. All verbs that are specificed for the initial change preverb take conjunct order morphology. This produces the so-called "changed conjunct" (AKA C-Form), which is used when some A' process such as topicalization, *wh*-movement, or relativization has occurred. We are currently modelling this by an affix, which triggers either the insertion of the appropriate idisyncratic allomorph or the regular initial change vowel ablaut process.
 
 - *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the tables below.
 
