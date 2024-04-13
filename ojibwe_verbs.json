@@ -43,5 +43,7 @@
     "n1",
     "w1"  
   ],
-  "pre_element_tag": "[PREVERB]"
+  "pre_element_tag": "[PREVERB]",
+  "template_path":"/Users/mpsilfve/src/BorderLakesMorph/templates",
+  "pv_source_path":"~/src/BorderLakesMorph/PVSpreadsheets"  
 }
