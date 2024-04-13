@@ -1,5 +1,5 @@
 {
-  "comments": "You should modify the 'path' entry to match your CSV source directory",
+  "comments": "You should modify the 'source_path' entry to match your CSV source directory",
   "source_path": "~/src/BorderLakesMorph/VerbSpreadsheets/",
   "regular_csv_files": [
     "VAIO_CNJ",
