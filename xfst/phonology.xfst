@@ -88,21 +88,24 @@ define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ [ n | g ] i | o | {nin} ] 
 ! y -> h / VVn_#
 define YRule y -> h || [Vowel Vowel | e] n (">>") _ (">>") .#. ;
 
+! Changed conjunct rules
+define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
+define cleanUpChCnj "<ChCnj>" -> 0 ;
+
+define cleanUpEmpty "<EMPTYLEX>" -> 0 ;
+
 define cleanUp ["<<"|">>"] -> 0 ; 
 
+
+! Read preverbs from preverbs.lexc
+read lexc preverbs.lexc
+define VPrefixes ;
 read lexc ojibwe_verbs.lexc
-
-!read lexc lexc_source/verb_prefixes.lexc
-!define VPrefixes ;
-!read regex "<<" VPrefixes ;
-!define Prefixes ;
-
-! FIXME: We want to actually insert preverbs, not just remove the flag
-define zero 0 ;
-substitute defined zero for "[PREVERB]"
+substitute defined VPrefixes for "[PREVERB]"
 define Lexicon ;
 
-read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
+read regex [cleanUpEmpty.i .o.
+            cleanUp.i ] .o. Lexicon .o. [ dDeletion .o.
      	   	     	 	       n1Rule .o.
 				       s1Rule .o.
      	   	     	 	       n1Default .o.
@@ -125,7 +128,10 @@ read regex cleanUp.i .o. Lexicon .o. [ dDeletion .o.
 				       PrefixIND .o.
 				       PrefixMInsertion .o.
 				       PrefixNInsertion .o.				       
-			               PrefixOLengthening ] ;
+			               PrefixOLengthening .o.
+				       ChCnjV .o.
+				       cleanUpChCnj .o.
+				       cleanUpEmpty ] ;
 
 ! Make sure @P.Alt@ flag is on both sides
 
