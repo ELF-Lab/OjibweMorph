@@ -92,7 +92,7 @@ define YRule y -> h || [Vowel Vowel | e] n (">>") _ (">>") .#. ;
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define cleanUpChCnj "<ChCnj>" -> 0 ;
 
-define cleanUpEmpty "<EMPTYLEX>" -> 0 ;
+define emptyFilter [? - "<EMPTYLEX>"]* ;
 
 define cleanUp ["<<"|">>"] -> 0 ; 
 
@@ -104,7 +104,7 @@ read lexc ojibwe_verbs.lexc
 substitute defined VPrefixes for "[PREVERB]"
 define Lexicon ;
 
-read regex [cleanUpEmpty.i .o.
+read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ dDeletion .o.
      	   	     	 	       n1Rule .o.
 				       s1Rule .o.
@@ -131,7 +131,7 @@ read regex [cleanUpEmpty.i .o.
 			               PrefixOLengthening .o.
 				       ChCnjV .o.
 				       cleanUpChCnj .o.
-				       cleanUpEmpty ] ;
+				       emptyFilter ] ;
 
 ! Make sure @P.Alt@ flag is on both sides
 
