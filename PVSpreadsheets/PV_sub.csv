@@ -1,4 +1,4 @@
-PV,Independent,PlainConjunct,ChangedConjunct
-e,NA,e,NA
-a,NA,a,NA
-gaa,NA,gaa,NA
+PV,Tag,Independent,PlainConjunct,ChangedConjunct
+e,PVSub/,NA,e,NA
+a,PVSub/,NA,a,NA
+gaa,PVSub/,NA,gaa,NA
