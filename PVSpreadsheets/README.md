@@ -4,7 +4,7 @@ This folder houses the spreadsheets for the various preverbs in Ojibwe. This des
 
 ## General overview
 
-Preverbs are semi-phonologically dependent elements that are added before a verb stem. Many also overlap with prenouns. In the OPD, there is no separate category for prenouns versus preverbs; in the Valentine (2001) grammar of Odawa, there is some discussion of the what specific elements are prenouns. Here, most prenouns end up in the "lexical preverb" bin.
+Preverbs are semi-phonologically dependent elements that are added before a verb stem. The preverbs, together with the stem (and the person prefix, which we treat as part of the inflectional system), form the *verbal complex*. Many preverbs also overlap with so-called prenouns. In the OPD, there is no separate category for prenouns versus preverbs; in the Valentine (2001) grammar of Odawa, there is some discussion of the what specific elements are prenouns. Here, most prenouns end up in the "lexical preverb" bin.
 
 We follow the basic ordering and classification scheme for preverbs as outlined in Valentine (2001), and also used in the OPD. The basic order of preverbs is given in the table below, where 1-4 are the "functional" preverbs, and are generally closed-class and play a more grammatical role.
 
@@ -12,7 +12,11 @@ We follow the basic ordering and classification scheme for preverbs as outlined 
 |----------|----------|----------|----------|----------|
 |   1   |   2   |   3   |   4   |   5   |
 
-There are various dependencies between the functional preverbs and the wider clause structure. For example, subordinating preverbs all require the use of the conjunct order (and some are perhaps best thought of as a type of changed conjunct marker). Similarly, the tense/modal preverbs show allomorphy depending on order.
+Note also that, when present, the "person prefix" appears in the leftmost position in the verbal complex, so always appears before any preverbs.
+
+There are various dependencies between the functional preverbs and the wider clause structure. For example, subordinating preverbs all require the use of the conjunct order (and some are perhaps best thought of as a type of changed conjunct marker). Similarly, the tense/modal preverbs often show allomorphy depending on order.
+
+The overall strategy for the functional preverbs is to create spreadsheets with forms for the indpendent and conjunct orders, as well as the changed conjunct when the changed form is not predictable from the regular (or sub-regular) phonological rules. For example, the tense preverb "daa-" becomes "ge-" under initial change. In the FST, the exceptions apply first, and if applied, they block the regular rules from applying. This ensures that we only get a single process related to initial change within a given changed conjunct verb complex.
 
 ## Initial change
 
