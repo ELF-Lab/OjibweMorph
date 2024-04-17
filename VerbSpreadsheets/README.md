@@ -15,6 +15,7 @@
  		*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
 	*	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
  		*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
+ 	*	V, a stand-in for what becomes the second half of a long vowel with certain preterit and delayed imperative forms in the VAIs.
 
 ## Organization
 
@@ -70,7 +71,7 @@ All spreadsheets contain the following columns:
 | VAI_n   | vai consonant /n/ stems        |
 | VAI_m   | vai consonant /m/ stems        |
 | VAI_am  | vai2 /am/ stems                |
-| VAI_rfx | vai with /-idizo/_P              |
+| VAI_rfx | vai with /-idizo/              |
 | VAI_rcp | vai with /-idi/                |
 | VAIO    | vai with 0sg/pl object         |
 | VTI_am  | vti /am/ stems                 |
@@ -207,11 +208,9 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
-### NOTES/ISSUES
+- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode. Actual rule uses the special character V in the suffix complex, which assimilates to match the vowel at the end of the stem.
 
-- There is a process where stem-final short finals are lengthened to the corresponding long vowels in front of the preterit morpheme "-ban". 
-	
-	- SOLUTION: This is modelled by adding the second half of the long vowel in the suffix complex, rather than any sort of rule. Questionable, but it works.
+### NOTES/ISSUES
 
 - The VAI2's (the -am stems) are modelled by the -am/-aan/-aa as part of the suffix complex.
 
@@ -383,6 +382,8 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 - _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
 
 - _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
+
+- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode. Actual rule uses the special character V in the suffix complex, which assimilates to match the vowel at the end of the stem.
 
 - *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 
