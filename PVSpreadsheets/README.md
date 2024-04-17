@@ -4,7 +4,7 @@ This folder houses the spreadsheets for the various preverbs in Ojibwe. This des
 
 ## General overview
 
-Preverbs are semi-phonologically dependent elements that are added before a verb stem. Many also overlap with prenouns. In the OPD, there is no separate category for prenouns versus preverbs; in the Valentine (2001) grammar of Odawa, there is some discussion of the what specific elements are prenouns. Here, most prenouns end up in the "lexical preverb" bin.
+Preverbs are semi-phonologically dependent elements that are added before a verb stem. The preverbs, together with the stem (and the person prefix, which we treat as part of the inflectional system), form the *verbal complex*. Many preverbs also overlap with so-called prenouns. In the OPD, there is no separate category for prenouns versus preverbs; in the Valentine (2001) grammar of Odawa, there is some discussion of the what specific elements are prenouns. Here, most prenouns end up in the "lexical preverb" bin.
 
 We follow the basic ordering and classification scheme for preverbs as outlined in Valentine (2001), and also used in the OPD. The basic order of preverbs is given in the table below, where 1-4 are the "functional" preverbs, and are generally closed-class and play a more grammatical role.
 
@@ -12,7 +12,11 @@ We follow the basic ordering and classification scheme for preverbs as outlined 
 |----------|----------|----------|----------|----------|
 |   1   |   2   |   3   |   4   |   5   |
 
-There are various dependencies between the functional preverbs and the wider clause structure. For example, subordinating preverbs all require the use of the conjunct order (and some are perhaps best thought of as a type of changed conjunct marker). Similarly, the tense/modal preverbs show allomorphy depending on order.
+Note also that, when present, the "person prefix" appears in the leftmost position in the verbal complex, so always appears before any preverbs.
+
+There are various dependencies between the functional preverbs and the wider clause structure. For example, subordinating preverbs all require the use of the conjunct order (and some are perhaps best thought of as a type of changed conjunct marker). Similarly, the tense/modal preverbs often show allomorphy depending on order.
+
+The overall strategy for the functional preverbs is to create spreadsheets with forms for the indpendent and conjunct orders, as well as the changed conjunct when the changed form is not predictable from the regular (or sub-regular) phonological rules. For example, the tense preverb "daa-" becomes "ge-" under initial change. In the FST, the exceptions apply first, and if applied, they block the regular rules from applying. This ensures that we only get a single process related to initial change within a given changed conjunct verb complex.
 
 ## Initial change
 
@@ -60,9 +64,9 @@ Pattern 3 (Nett Lake, Lac la Croix):
 
 Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1.
 
-There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change.
+There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change. There are, also, exceptions to these exceptions. For example the tense preverb "daa-" instead appears as "ge-" under initial change, not "endaa-". 
 
-The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm
+The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156).
 
 There are also a lot of complications with the future tense prefer "ga-" that interact with intial change. Future tense appears as "ga-" in the independent order in the presence of a person prefix, but "da-" in the independent order when there is no prefix. In many dialects the "plain" conjunct (when there is no initial change), the future morpheme is realized as "ji-" (in others, it is realized as "da-" in this context). But, in the changed conjunct, it appears as "ge-". So the changed form is the regular changed form of the independent order allomorph in the presence of a person prefix, but not a changed version the plain conjunct allomorph, nor the independent allomorph in the absence of a prefix. Finally, note that some speakers will epethsize a "d" to "ga-" and "ge-" when the following segment is a vowel. This is probably best modeled as an irregularity and part of a more fullsome modeling of this future tense marker. For details and sources, see here: https://ojibwe.lib.umn.edu/main-entry/ga-pv-tns
 
