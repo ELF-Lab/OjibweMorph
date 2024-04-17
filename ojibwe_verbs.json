@@ -1,5 +1,5 @@
 {
-  "verb_source_path": "./VerbSpreadsheets/",
+  "morphology_source_path": "./VerbSpreadsheets/",
   "regular_csv_files": [
     "VAIO_CNJ",
     "VAIO_IMP",
