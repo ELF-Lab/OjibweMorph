@@ -40,7 +40,8 @@
     "i1",
     "s1",
     "n1",
-    "w1"  
+    "w1",
+    "V1"
   ],
   "pre_element_tag": "[PREVERB]",
   "template_path":"./templates",

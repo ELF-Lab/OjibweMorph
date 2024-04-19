@@ -92,6 +92,9 @@ define YRule y -> h || [Vowel Vowel | e] n (">>") _ (">>") .#. ;
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define cleanUpChCnj "<ChCnj>" -> 0 ;
 
+! VAI vowel lengthening
+define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ ">>" V1 ] .o. [ V1 -> 0 ] ;
+
 define emptyFilter [? - "<EMPTYLEX>"]* ;
 
 define cleanUp ["<<"|">>"] -> 0 ; 
@@ -122,6 +125,7 @@ read regex [emptyFilter .o.
 				       wDefault .o.					
 !			               nDeletion .o.
                                        YRule .o.
+				       LengthenV .o.								       
 			               PrefixDInsertion .o.
 				       PrefixNDInsertion .o.
 				       PrefixDDeletion .o.
@@ -184,4 +188,10 @@ read regex Analyzer | IrregularLexicon ;
 !	     Quantifiers |
 !	     Pronouns ];
 
+! Just to be on the safe side, let's always remove the flag
+! diacritics. It doesn't really increase the size too much
+! but it does prevent the occasional infinite loop when
+! generating. 
+eliminate flags
 save stack ojibwe.fomabin
+
