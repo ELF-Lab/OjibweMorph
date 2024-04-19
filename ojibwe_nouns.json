@@ -2,21 +2,9 @@
   "morphology_source_path": "./NounSpreadsheets/",
   "regular_csv_files": [
     "NA_C_final",
-    "NA_Cw_final",
-    "NA_Cy_final",
-    "NA_VV_final",
-    "NA_VVny_final",
-    "NA_VVw_final",
-    "NA_Vw_final",
-    "NI_AA_augment",
-    "NI_C_final",
-    "NI_Cw_final",
-    "NI_Cy_final",
-    "NI_VV_final",
-    "NI_VVny_final"
+    "NI_C_final"
   ],
   "irregular_csv_files": [
-    "NA_irr"
   ],
   "lexical_database": "None",
   "class_map": "None",
@@ -24,7 +12,12 @@
   "irregular_lexc_file": "ojibwe_irregular_nouns.lexc",
   "morph_features": [
     "Paradigm",
-    "Suffix"
+      "PersPoss",
+      "Dim",
+      "Poss",
+      "Pej",
+      "Pret",
+      "Basic"
   ],
   "missing_tag_marker": "NA",
   "missing_form_marker": "NA",
