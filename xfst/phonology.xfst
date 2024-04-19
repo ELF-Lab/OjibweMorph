@@ -105,7 +105,15 @@ read lexc preverbs.lexc
 define VPrefixes ;
 read lexc ojibwe_verbs.lexc
 substitute defined VPrefixes for "[PREVERB]"
-define Lexicon ;
+define VerbLexicon ;
+
+define zero 0 ;
+read lexc ojibwe_nouns.lexc
+substitute defined zero for "[PRENOUN]"
+define NounLexicon ;
+
+define Lexicon [ VerbLexicon |
+                 NounLexicon ] ;
 
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ dDeletion .o.
