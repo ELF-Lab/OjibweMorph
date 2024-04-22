@@ -2,7 +2,7 @@
 
 To cite this work or the contents of the repository (including, but not limited to, datasets, tables, explanations, methods, analysis, structure, etc) in an academic work, please use the following:
 
-> Hammerly, C., Livesay, N., Arppe, A., Parkhill, S., Stacey, A., Steiner, R., & Silfverberg, M. (2024). BorderLakesMorph (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.1234
+> Hammerly, C., Livesay, N., Arppe, A., Stacey, A., Steiner, R., & Silfverberg, M. (2024). OjibweMorph (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.1234
 
 # License/Copyright
 
