@@ -1,11 +1,23 @@
-	- y2 appears in Cy noun class stems
-	- w2 appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems
+# Special characters
+
+There are seven special characters:
+*	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
+*	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
+*	n1, the special "changable N" that palatalizes before i1
+ 	*	This is the same as "n1" in the Bowers et al (2017) FST for Odawa
+*	s1, the special "changable S" that palatalizes before i1
+ 	*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
+*	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
+ 	*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
+*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
+*	y2, appears in Cy noun class stems and is always deleted
+*	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 
 # Prefix rules
 
 ## Person prefix rules
 
-The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate. This is the only preverb being modelled in this part of spreadsheets, since it is part of the verbal inflection proper.
+The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate. These rules apply to both verbs and nouns (the person prefix appears in possessed nouns).
 
 For Border Lakes, generally:
 
@@ -29,7 +41,7 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 	- ni-/n- before m, n, w, p, t, k, s, sh
 	- nim-/im-/m-/ni- before b
 	- nin-/in-/n-/ni- before d, j, z, zh, g
-	- nind-/ind-/nd- before vowels
+	- nind-/ind-/nd- OR nid- before vowels
 		- At Red Lake, we get niy- before aa
 
 - Second Person
@@ -40,7 +52,7 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 	- o- before consonants
 	- od- before vowels
 
-In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). The second and third person prefixes are generally easier to model.  
+In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). Then, sometimes nid- appears before vowels. The second and third person prefixes are generally easier to model, as they just have d-epenthesis before vowels and take the form that lacks a final d before consonants.  
 
 The person prefixes also trigger a lengthening process:
 
@@ -51,7 +63,23 @@ Sources:
 - https://ojibwe.lib.umn.edu/main-entry/im-pf
 - https://ojibwe.lib.umn.edu/main-entry/g-pf
 
+## Tense Rules
+
+There is an allomorphic alternation in tense based on whether or not a person prefix is present:
+
+- *ga-to-da:* The definitive future marker in the independent order is ga-, unless there is no person prefix, in which case it appears as da-
+
+Certain tenses trigger a phonological process that requires a bit of background on the phonology of the language. There is a distinction known as the lenis/fortis contrast, which is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
+
+- *tense-tensing:* Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
+
+The rule is meant to be quite broad, triggering this process not only on stems that follow the relevant tense marker, but also preverbs. It is also worth noting that this is the type of thing that might not *always* be reflected in the orthography, so probably we want to allow some fuzziness when parsing. But in the "standard" orthography of the OPD, this is always reflected. Finally, this is specific to these morphemes, not any preverb that ends in "ii". For example, "maajii-" meaning "start" does not trigger the rule.
+
+*Citation*: See Nichols (1980, pg. 129) *Ojibwe Morphology*, PhD Dissertation, Harvard University for a version of the rule here.
+
 # Suffix Rules
+
+Almost suffix rules target just processes occuring at the stem/suffix juncture, the only part of the phonology that we absolutely need to model. Some rules only end up applying in the verbal or nominal paradgims.
 
 - _y2-deletion:_ Always delete y2
 

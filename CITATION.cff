@@ -10,9 +10,6 @@ authors:
 - family-names: "Arppe"
   given-names: "Antti"
   orcid: ""
-- family-names: "Parkhill"
-  given-names: "Scott"
-  orcid: ""
 - family-names: "Stacey"
   given-names: "Anna"
   orcid: ""
@@ -22,8 +19,8 @@ authors:
 - family-names: "Silfverberg"
   given-names: "Miikka"
   orcid: ""
-title: "BorderLakesMorph"
+title: "OjibweMorph"
 version: 1.0.0
 doi: 10.5281/zenodo.1234
 date-released: 2024-03-21
-url: "https://github.com/ELF-Lab/BorderLakesMorph"
+url: "https://github.com/ELF-Lab/OjibweMorph"

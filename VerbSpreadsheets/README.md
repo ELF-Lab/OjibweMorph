@@ -1,4 +1,4 @@
-# BorderLakesMorph Verb Spreadsheets
+# Verb Spreadsheets
 
 ## General
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
@@ -6,7 +6,7 @@
 *	Single \> marks boundaries between suffixes outside of the stem (not yet used)
 *	Single \< marks boundaries between prefixes outside of the stem (not yet used)
 *	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
-*	There are three special characters:
+*	There are five special characters in the verbs:
 	*	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
 		*	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
 	*	n1, the special "changable N" that palatalizes before i1
@@ -19,7 +19,7 @@
 
 ## Organization
 
-This folder (Spreadsheets) currently contains the verb paradigm spreadsheets used to build and validate the BorderLakesMorph FST for morphological production and parsing. This will be expanded to include nominal morphology as well.
+This folder (Spreadsheets) currently contains the verb paradigm spreadsheets used to build and validate the OjibweMorph FST for morphological production and parsing.
 
 ### Descripton of Tags (Verbs)
 
@@ -92,20 +92,14 @@ All spreadsheets contain the following columns:
 | 1Sg            | 1s       | First person singular                   |
 | Excl           | 1p       | First person exclusive (excludes addressee) |
 | Incl           | 21p      | First person inclusive (includes addressee) |
-| 1Sg/Excl       | 1        | First person (unspecified number)       |
 | 2Sg            | 2s       | Second person singular                  |
 | 2Pl            | 2p       | Second person plural                    |
-| 2Sg/2Pl        | 2        | Second person (unspecified number)      |
-| 3SgProx/3PlProx| 3        | Animate third person proximate (unspecified number) |
 | 3SgProx        | 3s       | Animate third person singular proximate |
 | 3PlProx        | 3p       | Animate third person plural proximate   |
-| 3SgObv/3PlObv  | 3'       | Animate third person singular obviative |
 | 3SgObv         | 3's      | Animate third person singular obviative |
 | 3PlObv         | 3'p      | Animate third person plural obviative   |
-| 0Sg/0Pl        | 0        | Inanimate third person (unspecified number) |
 | 0Sg            | 0s       | Inanimate third person singular (unspecified obviation) |
 | 0Pl            | 0p       | Inanimate third person plural (unspecified obviation) |
-| 0SgObv/0PlObv  | 0'       | Inanimate third person obviative (unspecified number) |
 | 0SgObv         | 0's      | Inanimate third person singular obviative |
 | 0PlObv         |? (No 0'p)| Inanimate third person plural obviative   |
 | X              | X        | Unspecified actor                       |
@@ -151,7 +145,7 @@ When a given form is ambiguous, we have represented that indirectly by repeating
 
 There are a few principles we used when designing the present system:
 
-1. **Maximize use of spreadsheets.** Start by positing as few phonological rules as possible. Ideally, only rules that entail changes to the stem.
+1. **Maximize use of spreadsheets.** Start by positing as few phonological rules as possible. Ideally, only rules that entail changes to the stem or allow a consistent stem to be used across all forms within a verb class.
 2. **Guesses are based on extending an attested paradigm**, not from-scratch assumption. For example, if we know the forms in one VAI class, and we know how that stem class affects the shape of the suffix complex, then we extended the form to these cells as a "guess". Therefore, these are best interpreted as simply "awaiting final confirmation". They are always forms that are generally attested in the language.
 3. **Match the assumptions of previous work**, especially the assumptions regading stems and other classification schemes in the Ojibwe People's Dictionary. This is both because the information is highly accurate and useful, but also because we want to interface cleanly with the dictionary and use terms and schemes that are familiar to language learners, linguists, and Algonquianists.
 4. **Be as explcit as possible.** With the tags that the model produces and the labels in the spreadsheet, don't leave anything to assumption or interpretation. For example, use "3ProxSg" rather than interpreting a bare "3" as proximate and singular in contrast to "3Pl" or "3Obv". Indicate all ambiguities. Keep detailed track of sources.

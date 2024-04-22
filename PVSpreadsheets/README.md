@@ -94,7 +94,7 @@ Here is a summary of the tenses that we are currently modelling:
 
 Note that both the general forms (gii-/wii-) and the Border Lakes specific forms (gii'-/wii'-) are both used in Border Lakes. The difference between the two forms is not currently well understood. Note also that many forms are expected under the normal initial change rules. In those cases, we do not specify those forms in the spreadsheets. Only those forms that are not predicted from more general rules are specified. 
 
-- *ga-to-da:* The definitive future marker in the independent order is ga-, unless there is no person prefix, in which case it appears as da-
+The definitive future marker in the independent order is ga-, unless there is no person prefix, in which case it appears as da-
 
 Certain tenses trigger a phonological process that requires a bit of background on the phonology of the language. There is a distinction known as the lenis/fortis contrast, which is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
 
