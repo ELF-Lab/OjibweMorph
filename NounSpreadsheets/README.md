@@ -32,6 +32,34 @@ All spreadsheets contain the following columns:
 * **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of possessed nouns) and suffixal morphology. This is the form before any phonological rules have applied, and is what is directly used to build the FST.
 * **Form\#Source**: The source for the surface form.
 
+#### PARADIGM
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| NA   	| Noun Animate          			  |
+| NAD   | Noun Animate Dependent              |
+| NI   	| Noun Inanimate         			  |
+| NID   | Noun Inanimate Dependent 			  |
+
+#### CLASS
+
+| Tag     | Description                    |
+|---------|--------------------------------|
+| NA_C 	  | na consonant           		   |
+| NA_Cw   | na consonant-w          	   |
+| NA_Cy   | na consonant-y       		   |
+| NA_irrCw | na irrgular consonant-w       |
+| NA_VV   | na long vowel            	   |
+| NA_VVny | na nasal long vowel      	   |
+| NA_VVw  | na long vowel-w        		   |
+| NA_Vw   | na short vowel-w        	   |
+| NI_C 	  | ni consonant           		   |
+| NI_Cw   | ni consonant-w          	   |
+| NI_Cy   | ni consonant-y       		   |
+| NI_VV   | ni long vowel            	   |
+| NI_VVny | ni nasal long vowel      	   |
+| NI_Vw   | ni short vowel-w        	   |
+| NI_aa   | ni aa-augment 		       	   |
 
 ## OTHER
 
