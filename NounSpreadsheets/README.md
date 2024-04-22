@@ -159,11 +159,13 @@ In the NA_C and NA_Cy classes, the singular form includes a short vowel, which u
 
 ## Issues to deal with
 
-Deal with "mishi", where the signular vowel is "i" rather than "a".
+Nouns like "mishi", where the signular vowel is "i" rather than "a". Listed on Page 174 of Valentine.
 
-Deal with some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni
+Some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni
 
-Deal with irregular diminutives in the VVny stem class.
+Irregular diminutives in the VVny stem class.
+
+Stems that end in VVy (/maamaay/); probably only the borrowings maamaa and baabaa have this form, so they are exceptional.
 
 ## STACKING RULES
 
