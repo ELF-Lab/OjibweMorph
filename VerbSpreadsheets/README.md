@@ -1,4 +1,4 @@
-# BorderLakesMorph Verb Spreadsheets
+# Verb Spreadsheets
 
 ## General
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
@@ -6,7 +6,7 @@
 *	Single \> marks boundaries between suffixes outside of the stem (not yet used)
 *	Single \< marks boundaries between prefixes outside of the stem (not yet used)
 *	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
-*	There are three special characters:
+*	There are five special characters in the verbs:
 	*	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
 		*	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
 	*	n1, the special "changable N" that palatalizes before i1

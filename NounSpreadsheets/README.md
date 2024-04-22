@@ -1,36 +1,25 @@
-STEM/SUFFIX RULES
+# Noun Spreadsheets
 
-y2-deletion: Always delete y2
-	- y2 appears in Cy stems
+## General
 
-w2-deletion: w2 deletes word finally, before consonants, before "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
-	- w2 appears at the end of VV, VVw, Vw, and both regular and irregular Cw stems
-	- Must precede ShortV-Lengthening
-	- Must follow Short-V deletion (used in the verbs)
+*	Double \>\> marks the stem/suffix juncture (or the end of the stem)
+*	Double \<\< marks the prefix/stem juncture (or the start of the stem)
+*	Single \> marks boundaries between suffixes outside of the stem (not yet used)
+*	Single \< marks boundaries between prefixes outside of the stem (not yet used)
+*	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
+*	There are three special characters used in the nouns:
+	*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
+	*	y2, appears in Cy noun class stems and is always deleted
+	*	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 
-ShortV-lengthening: a short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
-	- Also used in the verbs
-	- Must follow w2-Deletion
 
-y-to-h: turn y into h if it follows a long vowel + n sequence at the end of a word (y -> h / VVn_#)
-	- This will handle some stems that are encoded inconsistently
-	- Also used in the verbs
-
-y-deletion: Delete y at the end of words (y -> 0 / _ #)
-	- Must precede h-deletion!
-	- Must follow Short-V deletion!
-
-h-deletion (OPTIONAL!): Optionally delete h between n and y (h -> 0 / n_y)
-	- Must follow y-deletion!
-	- Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
-
-OTHER
+## OTHER
 
 Need to deal with "mishi", where the signular volwe is "i" rather than "a".
 
 Need to deal with irregular diminutives in the VVny stem class.
 
-STACKING RULES
+## STACKING RULES
 
 The first person plural suffix =inaan loses its final n when a preterit or locative suffix immediately follows it (final n is preserved with number/obviation marking)
 
