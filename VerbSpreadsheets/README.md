@@ -208,7 +208,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
-- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode. Actual rule uses the special character V in the suffix complex, which triggers lengthing of the vowel at the end of the stem and then is deleted.
+- _ShortV-lengthening:_ A short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1). That is, stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode.
 
 ### NOTES/ISSUES
 
@@ -243,8 +243,7 @@ NA
 
 	- Solution: The OPD shows two verbs like this "ayaan/ayaam" and "gidaan/gidaam". So they are quite exceptional. We have opted to include the "n/m" in the suffix complex, which is generally in line with the OPD's approach where the stems are listed as "ayaa" and "gidaa", without the nasal.
 
-- We are showing different allomorphs of the prefix depending on if the stem starts in a consonant (ni, gi, o) or a vowel (ind, gid, od). We need to model this in a general way with the other allomoprhs that pop up, and make sure to model Border Lakes specifically. This also goes for the VAIs and VTAs.
-	- Solution: For now, we are just going to model the "d-epenthesis" so "ni" -> "nid", "gi" -> "gid", and "o" -> "od"
+- We are showing different allomorphs of the prefix depending on if the stem starts in a consonant (ni, gi, o) or a vowel (nind, gid, od).
 
 ## Verb Transitive Animate (VTA)
 
@@ -276,9 +275,9 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 - *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1)". AKA, wi -> o / C __
 	- In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.  	
 
-- *i1-Palatalization: (UPDATED FEBRUARY 4, 2024)* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization, and not all n's and s's palatalize either.
+- *i1-Palatalization:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization, and not all n's and s's palatalize either.
 
-- *ShortV-deletion: (UPDATED MARCH 20, 2024)* Delete word-final short vowels, unless deletion creates monosyllabic word with only a short vowel nucleaus. That is, delete from non-monosyllabic words or monosyllabic words with a long vowel. This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
+- *ShortV-deletion:* Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
 
 ### NOTES/ISSUES
 
@@ -288,9 +287,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 
 	- SOLUTION: For both of these, we've introduced a special character "i1" and the "i1-Palatalization" rule.
 
-- UPDATE: I changed the suffixation on the Cw stems to include an initial "i", and changed the w-to-o rule so that "Cwi" -> "Co". The consonant is important context, since it doesn't happen with "aw" stems where the suffix starts with "i". This needs to happen before the short-vowel deletion, since we see that this feeds the deletion in forms that end up ending in this short vowel. We can also get rid of the W-deletion rule.
-
-- ISSUE: in the imperative order, with the 2Sg -> 3SgProx/3PlProx, there is an "i1" that appears only on monosyllabic shortvowel stems: nishi ‘killhim/her’. Otherwise, it is deleted. This is (I am quite certain) a more general rule that limits the word-final short-vowel deletion rule. For example, with the noun "makwa". We need to somehow implement this block into the model. Currently, we have the "i1" in the suffix complex, and it always gets deleted by the rule. It needs to be there to condition the palatalization process before being deleted.
+- In the imperative order, with the 2Sg -> 3SgProx/3PlProx, there is an "i1" that appears only on monosyllabic shortvowel stems: nishi ‘killhim/her’. Otherwise, it is deleted. This is due to a more general rule that limits the word-final short-vowel deletion rule. For example, with the noun "makwa". This is implemented by only deleting in multisyllable words or monosyllable words that have a long vowel.
 
 ## Summary
 
@@ -321,84 +318,3 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
 | VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
-
-# More on phonological rules
-
-The previous section indicated the specific rules that end up being used in a given paradigm at the stem/suffix juncture. In this section, we detail additional rules that are needed to capture the phonological alternations triggered by certain preverbs (person prefix, tense, initial change AKA C-Form AKA changed conjunct), and give the overall ordering of the rules that apply to the suffix complex.
-
-## Person prefix rules
-
-The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate. This is the only preverb being modelled in this part of spreadsheets, since it is part of the verbal inflection proper.
-
-For Border Lakes, generally:
-
-- ni(m/n/nd)-
-	- ni- before m, n, w, p, t, k, s, sh
-	- nim- before b
-	- nin- before d, j, z, zh, g
-	- nind- before vowels
-
-- gi(d)-
-	- gi- before consonants
-	- gid- before vowels
-
-- o(d)-
-	- o- before consonants
-	- od- before vowels
-
-More generally for Southerwestern Ojibwe, there is significant variation:
-
-- First Person
-	- ni-/n- before m, n, w, p, t, k, s, sh
-	- nim-/im-/m-/ni- before b
-	- nin-/in-/n-/ni- before d, j, z, zh, g
-	- nind-/ind-/nd- before vowels
-		- At Red Lake, we get niy- before aa
-
-- Second Person
-	- gi- before consonants
-	- gid- before vowels
-
-- Third Person
-	- o- before consonants
-	- od- before vowels
-
-In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). The second and third person prefixes are generally easier to model.  
-
-The person prefixes also trigger a lengthening process:
-
-- *o-to-oo-lengthening:* If a stem/preverb starting with "o" is immediately preceded by a person prefix, lengthen "o" to "oo" (and the "d" form of prefix shows up, like normal).
-
-Sources:
-- https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
-- https://ojibwe.lib.umn.edu/main-entry/im-pf
-- https://ojibwe.lib.umn.edu/main-entry/g-pf
-
-
-## Suffix Rules Summary
-
-Note: These rules are often crucially ordered! We have indicated when that is the case.
-
-- _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
-
-- _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
-
-- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode
-
-- *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
-
-- *aw-to-oo:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
-
-- *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
-	- This rule MUST PRECEED the "ShortV-deletion" rule
-	- In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.
-
-- *i1-Palatalization:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1".
-  	- This rule MUST PRECEED the "ShortV-deletion" rule
-
-- _ShortV-deletion:_ Delete word-final short vowels
-	- This rule MUST PRECEED the "w-deletion" rule
-	- This role MUST FOLLOW i1-Palatalization and w-to-o
-
-- _w1-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg)
-	- This rule MUST FOLLOW the "ShortV-deletion" rule
