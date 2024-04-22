@@ -1,13 +1,63 @@
 	- y2 appears in Cy noun class stems
 	- w2 appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems
 
-# Stem/Suffix Rules
+# Prefix rules
+
+## Person prefix rules
+
+The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate. This is the only preverb being modelled in this part of spreadsheets, since it is part of the verbal inflection proper.
+
+For Border Lakes, generally:
+
+- ni(m/n/nd)-
+	- ni- before m, n, w, p, t, k, s, sh
+	- nim- before b
+	- nin- before d, j, z, zh, g
+	- nind- before vowels
+
+- gi(d)-
+	- gi- before consonants
+	- gid- before vowels
+
+- o(d)-
+	- o- before consonants
+	- od- before vowels
+
+More generally for Southerwestern Ojibwe, there is significant variation:
+
+- First Person
+	- ni-/n- before m, n, w, p, t, k, s, sh
+	- nim-/im-/m-/ni- before b
+	- nin-/in-/n-/ni- before d, j, z, zh, g
+	- nind-/ind-/nd- before vowels
+		- At Red Lake, we get niy- before aa
+
+- Second Person
+	- gi- before consonants
+	- gid- before vowels
+
+- Third Person
+	- o- before consonants
+	- od- before vowels
+
+In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). The second and third person prefixes are generally easier to model.  
+
+The person prefixes also trigger a lengthening process:
+
+- *o-to-oo-lengthening:* If a stem/preverb starting with "o" is immediately preceded by a person prefix, lengthen "o" to "oo" (and the "d" form of prefix shows up, like normal).
+
+Sources:
+- https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
+- https://ojibwe.lib.umn.edu/main-entry/im-pf
+- https://ojibwe.lib.umn.edu/main-entry/g-pf
+
+# Suffix Rules
 
 - _y2-deletion:_ Always delete y2
 
 - _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
 
-- _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
+- _Nasal assimilation:_ With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
 
 - *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 
@@ -24,7 +74,7 @@
 	- MUST PRECEED _w1-deletion_, _w2-deletion_, and _y-deletion_
 	- MUST FOLLOW _i1-Palatalization_ and _w-to-o_
 
-- _w1-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg)
+- _w1-deletion:_ Delete word-final "w1"
 	- MUST FOLLOW _ShortV-deletion_
 
 - _w2-deletion:_ w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
