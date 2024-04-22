@@ -124,30 +124,30 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### Noun Animate (NA)
 
-| Tag     | Description                    | Example Lemmas 		| Example Stems 	     |
-|---------|--------------------------------|------------------------|------------------------|
-| NA_C 	  | na consonant           		   | "zhiishiib"			| /zhiishiib/			 |
-| NA_Cw   | na consonant w          	   | "mitig"				| /mitigw2/				 |
-| NA_Cy   | na consonant y       		   | "asin"					| /asiny2/				 |
-| NA_irrCw | na irrgular consonant w       | "amik"					| /amikw2/				 |
-| NA_VV   | na long vowel            	   | "anishinaabe"			| /anishinaabe/			 |
-| NA_VVny | na nasal long vowel      	   | "giihoonh"				| /giihoonhy/			 |
-| NA_VVw  | na long vowel w        		   | "ikwe"					| /ikwew2/				 |
-| NA_Vw   | na short vowel w        	   | "inini"				| /ininiw2/				 |
+| Tag      | Nichols/Valentine | Description                    | Example Lemmas 		 | Example Stems 	      |
+|----------|-------------------|--------------------------------|------------------------|------------------------|
+| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib"			 | /zhiishiib/			  |
+| NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig"				 | /mitigw2/			  |
+| NA_Cy    | Class 5A/5B	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
+| NA_irrCw | Class 4B		   | na irrgular consonant w       	| "amik"				 | /amikw2/				  |
+| NA_VV    | Class 2A		   | na long vowel            	   	| "anishinaabe"			 | /anishinaabew2/		  |
+| NA_VVny  | Class 1C		   | na nasal long vowel      	   	| "giihoonh"			 | /giihoonhy/			  |
+| NA_VVw   | Class 2B		   | na long vowel w        		| "ikwe"				 | /ikwew2/				  |
+| NA_Vw    | Class 3		   | na short vowel w        	   	| "inini"				 | /ininiw2/			  |
 
 
 
 ### Noun Inanimate (NI)
 
-| Tag     | Description                    | Example Lemmas 		| Example Stems 		 |
-|---------|--------------------------------|------------------------|------------------------|
-| NI_C 	  | ni consonant           		   | "jiimaan"				| /jiimaan/				 |
-| NI_Cw   | ni consonant w          	   | "mitig"				| /mitigw/				 |
-| NI_Cy   | ni consonant y       		   | "aki"					| /aky2/				 |
-| NI_VV   | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
-| NI_VVny | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
-| NI_Vw   | ni short vowel w        	   | "mashkiki"				| /mashkikiw2/			 |
-| NI_aa   | ni aa-augment 		       	   | "mashkimod"			| /mashkimod/			 |
+| Tag     | Nichols/Valentine | Description                    | Example Lemmas 		| Example Stems 		 |
+|---------|-------------------|--------------------------------|------------------------|------------------------|
+| NI_C 	  | Class 1A/1B	   	  | ni consonant           		   | "jiimaan"				| /jiimaan/				 |
+| NI_Cw   | Class 4A/4C	      | ni consonant w          	   | "mitig"				| /mitigw/				 |
+| NI_Cy   | Class 5A/5B	      | ni consonant y       		   | "aki"					| /aky2/				 |
+| NI_VV   | Class 2A		  | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
+| NI_VVny | Class 1C		  | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
+| NI_Vw   | Class 2B		  | ni short vowel w        	   | "mashkiki"				| /mashkikiw2/			 |
+| NI_aa   | Class 6		  	  | ni aa-augment 		       	   | "mashkimod"			| /mashkimod/			 |
 
 
 ## OTHER
