@@ -34,7 +34,7 @@
     "Subject",
     "Object"
   ],
-  "missing_tag_marker": "NA",
+  "missing_tag_marker": "NONE",
   "missing_form_marker": "MISSING",
   "multichar_symbols": [
     "i1",
