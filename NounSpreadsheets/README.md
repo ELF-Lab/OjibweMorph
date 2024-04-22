@@ -142,7 +142,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | Tag     | Nichols/Valentine | Description                    | Example Lemmas 		| Example Stems 		 |
 |---------|-------------------|--------------------------------|------------------------|------------------------|
 | NI_C 	  | Class 1A/1B	   	  | ni consonant           		   | "jiimaan"				| /jiimaan/				 |
-| NI_Cw   | Class 4A/4C	      | ni consonant w          	   | "mitig"				| /mitigw/				 |
+| NI_Cw   | Class 4A/4C	      | ni consonant w          	   | "mitig"				| /mitigw2/				 |
 | NI_Cy   | Class 5A/5B	      | ni consonant y       		   | "aki"					| /aky2/				 |
 | NI_VV   | Class 2A		  | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
 | NI_VVny | Class 1C		  | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
