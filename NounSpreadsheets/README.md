@@ -126,7 +126,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 | Tag      | Nichols/Valentine | Description                    | Example Lemmas 		 | Example Stems 	      |
 |----------|-------------------|--------------------------------|------------------------|------------------------|
-| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib"			 | /zhiishiib/			  |
+| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib", "makwa"	 | /zhiishiib/, /makw/    |
 | NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig"				 | /mitigw2/			  |
 | NA_Cy    | Class 5A/5B	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
 | NA_irrCw | Class 4B		   | na irrgular consonant w       	| "amik"				 | /amikw2/				  |
@@ -135,6 +135,13 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NA_VVw   | Class 2B		   | na long vowel w        		| "ikwe"				 | /ikwew2/				  |
 | NA_Vw    | Class 3		   | na short vowel w        	   	| "inini"				 | /ininiw2/			  |
 
+For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
+
+The NA_Cy stems end in a special "y2", which always deletes.
+
+The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
+
+In the NA_C and NA_Cy classes, the singular form includes a short vowel, which usually gets deleted, unless the stem is short (as in "makwa" and "aki").
 
 
 ### Noun Inanimate (NI)
@@ -150,11 +157,13 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NI_aa   | Class 6		  	  | ni aa-augment 		       	   | "mashkimod"			| /mashkimod/			 |
 
 
-## OTHER
+## Issues to deal with
 
-Need to deal with "mishi", where the signular volwe is "i" rather than "a".
+Deal with "mishi", where the signular vowel is "i" rather than "a".
 
-Need to deal with irregular diminutives in the VVny stem class.
+Deal with some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni
+
+Deal with irregular diminutives in the VVny stem class.
 
 ## STACKING RULES
 
