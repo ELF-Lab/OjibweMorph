@@ -161,7 +161,8 @@ In the NA_C and NA_Cy classes, the singular form includes a short vowel, which u
 
 Nouns like "mishi", where the signular vowel is "i" rather than "a". Listed on Page 174 of Valentine.
 
-Some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni
+Some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni, also "aki" does not delete; these are all inanimate Cy stems. Seems like there are some irregularities here.
+	- "anwi", "mini" are also small stems that end in y
 
 Irregular diminutives in the VVny stem class.
 
