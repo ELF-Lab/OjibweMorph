@@ -15,7 +15,7 @@
  		*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
 	*	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
  		*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
- 	*	V, a stand-in for what becomes the second half of a long vowel with certain preterit and delayed imperative forms in the VAIs.
+ 	*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
 
 ## Organization
 
@@ -208,7 +208,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
-- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode. Actual rule uses the special character V in the suffix complex, which assimilates to match the vowel at the end of the stem.
+- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode. Actual rule uses the special character V in the suffix complex, which triggers lengthing of the vowel at the end of the stem and then is deleted.
 
 ### NOTES/ISSUES
 
@@ -383,7 +383,7 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 
 - _Nasal assimilation:_ With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
 
-- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode. Actual rule uses the special character V in the suffix complex, which assimilates to match the vowel at the end of the stem.
+- _ShortV-lengthening:_ Stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode
 
 - *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 
