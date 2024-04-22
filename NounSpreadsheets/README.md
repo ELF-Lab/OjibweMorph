@@ -90,7 +90,7 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
-| Poss  | Possessiv                           |
+| Poss  | Possessive                          |
 | NONE  | Regular 	                          |
 
 #### Pej
@@ -117,10 +117,6 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 | ObvPl | Obviative plural 	                  |
 | Loc   | Locative                            |
 | Voc   | Vocative 	                          |
-
-#### BASIC
-
-
 
 ## OTHER
 
