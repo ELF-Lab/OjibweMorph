@@ -19,7 +19,7 @@
 
 ## Organization
 
-This folder (Spreadsheets) currently contains the verb paradigm spreadsheets used to build and validate the BorderLakesMorph FST for morphological production and parsing. This will be expanded to include nominal morphology as well.
+This folder (Spreadsheets) currently contains the verb paradigm spreadsheets used to build and validate the OjibweMorph FST for morphological production and parsing.
 
 ### Descripton of Tags (Verbs)
 
