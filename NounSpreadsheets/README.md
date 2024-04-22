@@ -124,29 +124,30 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### Noun Animate (NA)
 
-| Tag     | Description                    | Example Lemmas 		|
-|---------|--------------------------------|------------------------|
-| NA_C 	  | na consonant           		   | "zhiishiib"			|
-| NA_Cw   | na consonant w          	   | "mitig"				|
-| NA_Cy   | na consonant y       		   | "asin"					|
-| NA_irrCw | na irrgular consonant w       | "amik"					|
-| NA_VV   | na long vowel            	   | "anishinaabe"			|
-| NA_VVny | na nasal long vowel      	   | "giihoonh"				|
-| NA_VVw  | na long vowel w        		   | "ikwe"					|
-| NA_Vw   | na short vowel w        	   | "inini"				|
+| Tag     | Description                    | Example Lemmas 		| Example Stems 	     |
+|---------|--------------------------------|------------------------|------------------------|
+| NA_C 	  | na consonant           		   | "zhiishiib"			| /zhiishiib/			 |
+| NA_Cw   | na consonant w          	   | "mitig"				| /mitigw2/				 |
+| NA_Cy   | na consonant y       		   | "asin"					| /asiny2/				 |
+| NA_irrCw | na irrgular consonant w       | "amik"					| /amikw2/				 |
+| NA_VV   | na long vowel            	   | "anishinaabe"			| /anishinaabe/			 |
+| NA_VVny | na nasal long vowel      	   | "giihoonh"				| /giihoonhy/			 |
+| NA_VVw  | na long vowel w        		   | "ikwe"					| /ikwew2/				 |
+| NA_Vw   | na short vowel w        	   | "inini"				| /ininiw2/				 |
+
 
 
 ### Noun Inanimate (NI)
 
-| Tag     | Description                    | Example Lemmas 		|
-|---------|--------------------------------|------------------------|
-| NI_C 	  | ni consonant           		   | "jiimaan"				|
-| NI_Cw   | ni consonant w          	   | "mitig"				|
-| NI_Cy   | ni consonant y       		   | "aki"					|
-| NI_VV   | ni long vowel            	   | "ishkode"				|
-| NI_VVny | ni nasal long vowel      	   | "anishinaabe"			|
-| NI_Vw   | ni short vowel w        	   | "wiiyagasenh"			|
-| NI_aa   | ni aa-augment 		       	   | "mashkimod"			|
+| Tag     | Description                    | Example Lemmas 		| Example Stems 		 |
+|---------|--------------------------------|------------------------|------------------------|
+| NI_C 	  | ni consonant           		   | "jiimaan"				| /jiimaan/				 |
+| NI_Cw   | ni consonant w          	   | "mitig"				| /mitigw/				 |
+| NI_Cy   | ni consonant y       		   | "aki"					| /aky2/				 |
+| NI_VV   | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
+| NI_VVny | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
+| NI_Vw   | ni short vowel w        	   | "mashkiki"				| /mashkikiw2/			 |
+| NI_aa   | ni aa-augment 		       	   | "mashkimod"			| /mashkimod/			 |
 
 
 ## OTHER
