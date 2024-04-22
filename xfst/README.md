@@ -41,7 +41,7 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 	- ni-/n- before m, n, w, p, t, k, s, sh
 	- nim-/im-/m-/ni- before b
 	- nin-/in-/n-/ni- before d, j, z, zh, g
-	- nind-/ind-/nd- before vowels
+	- nind-/ind-/nd- OR nid- before vowels
 		- At Red Lake, we get niy- before aa
 
 - Second Person
@@ -52,7 +52,7 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 	- o- before consonants
 	- od- before vowels
 
-In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). The second and third person prefixes are generally easier to model.  
+In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). Then, sometimes nid- appears before vowels. The second and third person prefixes are generally easier to model, as they just have d-epenthesis before vowels and take the form that lacks a final d before consonants.  
 
 The person prefixes also trigger a lengthening process:
 
