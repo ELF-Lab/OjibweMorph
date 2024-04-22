@@ -43,23 +43,84 @@ All spreadsheets contain the following columns:
 
 #### CLASS
 
+Still need to add the dependent nouns:
+
 | Tag     | Description                    |
 |---------|--------------------------------|
 | NA_C 	  | na consonant           		   |
-| NA_Cw   | na consonant-w          	   |
-| NA_Cy   | na consonant-y       		   |
-| NA_irrCw | na irrgular consonant-w       |
+| NA_Cw   | na consonant w          	   |
+| NA_Cy   | na consonant y       		   |
+| NA_irrCw | na irrgular consonant w       |
 | NA_VV   | na long vowel            	   |
 | NA_VVny | na nasal long vowel      	   |
-| NA_VVw  | na long vowel-w        		   |
-| NA_Vw   | na short vowel-w        	   |
+| NA_VVw  | na long vowel w        		   |
+| NA_Vw   | na short vowel w        	   |
 | NI_C 	  | ni consonant           		   |
-| NI_Cw   | ni consonant-w          	   |
-| NI_Cy   | ni consonant-y       		   |
+| NI_Cw   | ni consonant w          	   |
+| NI_Cy   | ni consonant y       		   |
 | NI_VV   | ni long vowel            	   |
 | NI_VVny | ni nasal long vowel      	   |
-| NI_Vw   | ni short vowel-w        	   |
+| NI_Vw   | ni short vowel w        	   |
 | NI_aa   | ni aa-augment 		       	   |
+
+#### PossPers
+
+All tags end with "Poss" to indicate that they are the possessor of the noun.
+
+| Our Tag        | Description                             |
+|----------------|-----------------------------------------|
+| 1Sg            | First person singular                   |
+| Excl           | First person exclusive (excludes addressee) |
+| Incl           | First person inclusive (includes addressee) |
+| 2Sg            | Second person singular                  |
+| 2Pl            | Second person plural                    |
+| 3SgProx        | Animate third person singular proximate |
+| 3PlProx        | Animate third person plural proximate   |
+| 3SgObv         | Animate third person singular obviative |
+| 3PlObv         | Animate third person plural obviative   |
+
+#### DIM
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Dim   | Diminuative                         |
+| NONE  | Regular 	                          |
+
+#### Poss
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Poss  | Possessiv                           |
+| NONE  | Regular 	                          |
+
+#### Pej
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Pej   | Pejorative                          |
+| NONE  | Regular 	                          |
+
+#### Pret
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| Pret  | Preterit                         	  |
+| NONE  | Regular 	                          |
+
+#### Basic
+
+| Tag   | Description                         |
+|-------|-------------------------------------|
+| ProxSg| Proximate singular                  |
+| ProxPl| Proximate plural                    |
+| ObvSg | Obviative singular                  |
+| ObvPl | Obviative plural 	                  |
+| Loc   | Locative                            |
+| Voc   | Vocative 	                          |
+
+#### BASIC
+
+
 
 ## OTHER
 
