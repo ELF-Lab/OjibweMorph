@@ -118,6 +118,37 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 | Loc   | Locative                            |
 | Voc   | Vocative 	                          |
 
+## Linguistic Details for Nouns
+
+This section is devoted to detailing the paradigms and stem classes as intantiated in the model, as well as the phonological rules that are needed to derive the surface form from the split (underlying) forms. It follows most closely the classification system developed by John Nichols and Rand Valentine in the tradition of Algonquianist linguistics, which is also commonly used in educational settings.
+
+### Noun Animate (NA)
+
+| Tag     | Description                    | Example Lemmas 		|
+|---------|--------------------------------|------------------------|
+| NA_C 	  | na consonant           		   | "zhiishiib"			|
+| NA_Cw   | na consonant w          	   | "mitig"				|
+| NA_Cy   | na consonant y       		   | "asin"					|
+| NA_irrCw | na irrgular consonant w       | "amik"					|
+| NA_VV   | na long vowel            	   | "anishinaabe"			|
+| NA_VVny | na nasal long vowel      	   | "giihoonh"				|
+| NA_VVw  | na long vowel w        		   | "ikwe"					|
+| NA_Vw   | na short vowel w        	   | "inini"				|
+
+
+### Noun Inanimate (NI)
+
+| Tag     | Description                    | Example Lemmas 		|
+|---------|--------------------------------|------------------------|
+| NI_C 	  | ni consonant           		   | "jiimaan"				|
+| NI_Cw   | ni consonant w          	   | "mitig"				|
+| NI_Cy   | ni consonant y       		   | "aki"					|
+| NI_VV   | ni long vowel            	   | "ishkode"				|
+| NI_VVny | ni nasal long vowel      	   | "anishinaabe"			|
+| NI_Vw   | ni short vowel w        	   | "wiiyagasenh"			|
+| NI_aa   | ni aa-augment 		       	   | "mashkimod"			|
+
+
 ## OTHER
 
 Need to deal with "mishi", where the signular volwe is "i" rather than "a".
