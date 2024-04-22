@@ -1,5 +1,15 @@
-	- y2 appears in Cy noun class stems
-	- w2 appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems
+There are five special characters:
+*	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
+*	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
+*	n1, the special "changable N" that palatalizes before i1
+ 	*	This is the same as "n1" in the Bowers et al (2017) FST for Odawa
+*	s1, the special "changable S" that palatalizes before i1
+ 	*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
+*	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
+ 	*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
+*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
+*	y2, appears in Cy noun class stems and is always deleted
+*	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 
 # Prefix rules
 
