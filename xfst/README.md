@@ -77,6 +77,8 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 
 # Suffix Rules
 
+Almost suffix rules target just processes occuring at the stem/suffix juncture, the only part of the phonology that we absolutely need to model. Some rules only end up applying in the verbal or nominal paradgims.
+
 - _y2-deletion:_ Always delete y2
 
 - _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
