@@ -400,19 +400,5 @@ Note: These rules are often crucially ordered! We have indicated when that is th
 	- This rule MUST PRECEED the "w-deletion" rule
 	- This role MUST FOLLOW i1-Palatalization and w-to-o
 
-- _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg)
+- _w1-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg)
 	- This rule MUST FOLLOW the "ShortV-deletion" rule
-
-## Old rules (defunct)
-
-**M-deletion & vowel lengthening**
-
-Stem-final "m" is deleted and the vowel "a" is elongated to "aa" when the suffix complex starts with "m" or "n" (as in TI -am stems like "waabandam"; VAI2 -am stems "zaaga'am")
-
-**M-assimilation & vowel lengthening**
-
-With stems ending in "m", so both -am and -m stems (VAI stems "minongwaam" and "zaaga'am"; VTI stem "waabandam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a "g" (3SgProx in the conjunct)
-
-**w-to-o (REPLACED ON JUNE 29, 2023)**
-
-For TA stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with a consonant.
