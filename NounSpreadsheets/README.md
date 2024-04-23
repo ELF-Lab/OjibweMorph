@@ -135,7 +135,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NA_VVw   | Class 2B		   | na long vowel w        		| "ikwe"				 | /ikwew2/				  |
 | NA_Vw    | Class 3		   | na short vowel w        	   	| "inini"				 | /ininiw2/			  |
 
-The pairs above (1A/1B, 4A/4C, 5A/5B) represent the "regular" versus "shorter" stem distinction. The "shorter" stems appear with a word-final short vowel, as evident in the lemmas. This vowel is present in the spreadsheets, and gets deleted unless the stem is short, where short is defined by having a single short vowel in the stem (monosyllabic stem with short vowel nucleus). At present, there are no known cases of the animate Class 5B (shorter na consonant y stems), but in principle this is possible so accounted for in the spreadsheets. Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD. Class 5B does occur with a number of examples in the inanimate paradigms.
+The pairs above (1A/1B, 4A/4C, 5A/5B) represent the "regular" versus "shorter" stem distinction. In the singular, the "shorter" stems appear with a word-final short vowel, as evident in the lemmas. This vowel is present in the spreadsheets, and gets deleted unless the stem is short, where short is defined by having a single short vowel in the stem (monosyllabic stem with short vowel nucleus). At present, there are no known cases of the animate Class 5B (shorter na consonant y stems), but in principle this is possible so accounted for in the spreadsheets. Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD. Class 5B does occur with a number of examples in the inanimate paradigms.
 
 In the NA_C and NA_Cy classes, the singular form includes a short vowel, which usually gets deleted, unless the stem is short (as in "makwa" and "aki").
 
@@ -164,10 +164,12 @@ As above, the pairs represent "regular" versus "shorter" forms. With inanimate n
 
 ## Issues to deal with
 
-Nouns like "mishi", where the signular vowel is "i" rather than "a". Listed on Page 174 of Valentine.
+Nouns like "mishi", where the signular vowel is "i" rather than "a". Listed on Page 177 of Valentine. These are vestiges of an old gender marking system where "i" was inanimate and "a" was animate.
 
-Some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni, also "aki" does not delete; these are all inanimate Cy stems. Seems like there are some irregularities here.
+Some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni, also "aki" does not delete; these are all inanimate Cy stems. Basically, it seems like the short vowel persists in the singular forms no matter what, so we probably need a special character to ensure it never deletes.
 	- "anwi", "mini" are also small stems that end in y
+
+Cases like "miskwi" and "nibi", where the stem ends in "yi". These are probably just Class 5B, but with an inconsistent stem in the OPD. These also are cases where the short vowel never deletes.
 
 Irregular diminutives in the VVny stem class.
 
