@@ -126,8 +126,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 | Tag      | Nichols/Valentine | Description                    | Example Lemmas 		 | Example Stems 	      |
 |----------|-------------------|--------------------------------|------------------------|------------------------|
-| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib", "makwa"	 | /zhiishiib/, /makw/    |
-| NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig"				 | /mitigw2/			  |
+| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib", "nika"	 | /zhiishiib/, /nik/    |
+| NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig", "makwa"				 | /mitigw2/, /makw2/			  |
 | NA_Cy    | Class 5A/5B	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
 | NA_irrCw | Class 4B		   | na irrgular consonant w       	| "amik"				 | /amikw2/				  |
 | NA_VV    | Class 2A		   | na long vowel            	   	| "anishinaabe"			 | /anishinaabew2/		  |
