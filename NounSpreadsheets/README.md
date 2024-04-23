@@ -126,14 +126,18 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 | Tag      | Nichols/Valentine | Description                    | Example Lemmas 		 | Example Stems 	      |
 |----------|-------------------|--------------------------------|------------------------|------------------------|
-| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib", "nika"	 | /zhiishiib/, /nik/    |
-| NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig", "makwa"				 | /mitigw2/, /makw2/			  |
-| NA_Cy    | Class 5A/5B	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
+| NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib", "nika"	 | /zhiishiib/, /nik/     |
+| NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig", "makwa"		 | /mitigw2/, /makw2/	  |
+| NA_Cy    | Class 5A/5B*	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
 | NA_irrCw | Class 4B		   | na irrgular consonant w       	| "amik"				 | /amikw2/				  |
 | NA_VV    | Class 2A		   | na long vowel            	   	| "anishinaabe"			 | /anishinaabew2/		  |
 | NA_VVny  | Class 1C		   | na nasal long vowel      	   	| "giihoonh"			 | /giihoonhy/			  |
 | NA_VVw   | Class 2B		   | na long vowel w        		| "ikwe"				 | /ikwew2/				  |
 | NA_Vw    | Class 3		   | na short vowel w        	   	| "inini"				 | /ininiw2/			  |
+
+The pairs above (1A/1B, 4A/4C, 5A/5B) represent the "regular" versus "shorter" stem distinction. The "shorter" stems appear with a word-final short vowel, as evident in the lemmas. This vowel is present in the spreadsheets, and gets deleted unless the stem is short, where short is defined by having a single short vowel in the stem (monosyllabic stem with short vowel nucleus). At present, there are no known cases of the animate Class 5B (shorter na consonant y stems), but in principle this is possible so accounted for in the spreadsheets. Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD. Class 5B does occur with a number of examples in the inanimate paradigms.
+
+In the NA_C and NA_Cy classes, the singular form includes a short vowel, which usually gets deleted, unless the stem is short (as in "makwa" and "aki").
 
 For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
 
@@ -141,21 +145,22 @@ The NA_Cy stems end in a special "y2", which always deletes.
 
 The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
 
-In the NA_C and NA_Cy classes, the singular form includes a short vowel, which usually gets deleted, unless the stem is short (as in "makwa" and "aki").
+
 
 
 ### Noun Inanimate (NI)
 
 | Tag     | Nichols/Valentine | Description                    | Example Lemmas 		| Example Stems 		 |
 |---------|-------------------|--------------------------------|------------------------|------------------------|
-| NI_C 	  | Class 1A/1B	   	  | ni consonant           		   | "jiimaan"				| /jiimaan/				 |
-| NI_Cw   | Class 4A/4C	      | ni consonant w          	   | "mitig"				| /mitigw2/				 |
-| NI_Cy   | Class 5A/5B	      | ni consonant y       		   | "aki"					| /aky2/				 |
+| NI_C 	  | Class 1A/1B	   	  | ni consonant           		   | "jiimaan", "mishi"		| /jiimaan/, /mis1/		 |
+| NI_Cw   | Class 4A	      | ni consonant w          	   | "mitig"				| /mitigw2/				 |
+| NI_Cy   | Class 5A/5B	      | ni consonant y       		   | "anit", aki"			| /anity2/, /aky2/		 |
 | NI_VV   | Class 2A		  | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
 | NI_VVny | Class 1C		  | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
 | NI_Vw   | Class 2B		  | ni short vowel w        	   | "mashkiki"				| /mashkikiw2/			 |
 | NI_aa   | Class 6		  	  | ni aa-augment 		       	   | "mashkimod"			| /mashkimod/			 |
 
+As above, the pairs represent "regular" versus "shorter" forms. With inanimate nouns we see an example of Class 5B with "aki" (/aky2/), but there are no known examples of Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 
 ## Issues to deal with
 
