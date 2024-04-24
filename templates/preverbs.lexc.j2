@@ -26,6 +26,9 @@ PVSub/ PVTense/ PVDir/ ChCnj+
 ! post-processing rule in phonology.xfst.
 %<EMPTYLEX%>
 
+! We'll define all preverb tags like PVTense/gii+ as multichar symbols 
+{{ all_preverb_tags() }}
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
 !!   PV lexicons start     !!
@@ -56,7 +59,7 @@ LEXICON ChCnjPV
 @U.ChCnj.On@:@U.ChCnj.On@%<ChCnj%> TensePV ;
 
 LEXICON SubPVBoundary
-+:- TensePV ;
+0:- TensePV ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!

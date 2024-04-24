@@ -1,23 +1,28 @@
 ! There are flags at morpheme boundaries.
 set flag-is-epsilon ON
 
-define Cons [ b | c | d | f | g | h | j | k | l | m | n | p | s | t | v | w | x | y | z ] ;
-define Vowel [ a | e | i | o ] ;
+define Cons [ b | c | d | f | g | h | j | k | l | m | n | n1 | p | s | s1 | t | v | w | w1 | w2 | x | y | z | "'" ] ;
+define Vowel [ a | e | i | o | V1 ] ;
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
+define ShortStem [ "<<" [ Vowel - e ] Cons Cons ">>" | "<<" (Cons) [ Vowel - e ] Cons ">>" ] ;
+
+define PREBD "<<"+ ;
+define SUFBD ">>"+ ;
+define BD ["<<" | ">>"]+ ;
 
 ! Sometimes there may be more than one consecutive
 ! morpheme boundary. Reduce those to 1.
-define PrefixBoundaryCleanup ["<<"]+ @-> "<<" ;
-define SuffixBoundaryCleanup [">>"]+ @-> ">>" ;
+define PrefixBoundaryCleanup PREBD @-> "<<" ;
+define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 
 
 ! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
-define dDeletion d -> 0 || _ ">>" Cons ;
+define dDeletion d -> 0 || _ SUFBD Cons ;
 
 ! This rule MUST PRECEED the "ShortV-deletion" rule
 ! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
-define n1Rule n1 -> {zh} || _ ">>" i1 ;
-define s1Rule s1 -> {sh} || _ ">>" i1 ;
+define n1Rule n1 -> {zh} || _ SUFBD i1 ;
+define s1Rule s1 -> {sh} || _ SUFBD i1 ;
 define n1Default n1 -> n ;
 define s1Default s1 -> s ;
 
@@ -25,31 +30,37 @@ define i1Rule i1 -> i ;
 
 ! Nasal assimilation: With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a
 ! "g" (3SgProx in the conjunct) or "d" (inclusive simple imperative)
-define amRule1 m -> a || a _ ">>" [m|n] ;
-define amRule2 m -> n || a _ ">>" [z|g|d] ;
+define amRule1 m -> a || a _ SUFBD [m|n] ;
+define amRule2 m -> n || a _ SUFBD [z|g|d] ;
 
 ! aw-to-aa: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 ! aw-to-oo: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
-define awaaRule w -> a || a _ ">>" [k|g] ;
-define awooRule a w -> o o || _ ">>" [n|s] ;
+define awaaRule w -> a || a _ SUFBD [k|g] ;
+define awooRule a w -> o o || _ SUFBD [n|s] ;
 
-!define nDeletion n -> 0 || [ i | o o ] _ ">>" Cons ;
+!define nDeletion n -> 0 || [ i | o o ] _ SUFBD Cons ;
 
 ! ShortV-deletion: Delete word-final short vowels
 ! This rule MUST PRECEED the "w-deletion" rule
-define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (">>") _ (">>") .#. ;
+define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 
 ! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1".
 ! AKA, wi -> o / C __
 ! In Border Lakes, this only happens when w is not the last character in the word so we need to allow for
 ! wi word-finally.
-define wRule1 [ w -> o1 || Cons _ ">>" [i|i1] (">>") [? - (">>")] ] .o. [[i|i1] -> 0 || o1 ">>" _ ] .o. [o1 -> o];
-define wRule2 [ w (->) o1 || Cons _ ">>" [i|i1] (">>") .#. ] .o. [[i|i1] -> 0 || o1 ">>" _ ] .o. [o1 -> o];
+define wRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define wRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
-define wDeletion w1 -> 0 || _ (">>") .#. ;
+define wDeletion w1 -> 0 || _ (SUFBD) .#. ;
 define wDefault w1 -> w ;
+
+!w2-deletion: w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
+!MUST PRECEDE ShortV-Lengthening
+!MUST FOLLOW ShortV-Deletion
+define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
+define w2Default w2 -> w ;
 
 ! Sources:
 ! https://ojibwe.lib.umn.edu/main-entry/g-pf
@@ -70,13 +81,13 @@ define wDefault w1 -> w ;
 !o(d)-
 !o- before consonants
 !od- before vowels
-define PrefixDInsertion [..] -> d || .#. ("<<") [{gi}|o|{ni}] _ "<<" Vowel ;
-define PrefixNDInsertion [..] (->) n || .#. ("<<") {ni} _ d "<<" Vowel ;
-define PrefixDDeletion d (->) 0 || .#. ("<<") {nin} _ "<<" ;
-define PrefixIND {nid} (->) [{ind} | {nd}] || .#. ("<<") _ "<<";
-define PrefixMInsertion [..] (->) m || .#. ("<<") {ni} _ "<<" b ;
-define PrefixNInsertion [..] (->) n || .#. ("<<") {ni} _ "<<" [d|j|z|{zh}|g] ;
-define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ [ n | g ] i | o | {nin} ] d | {nin} ] "<<" _ \o ; 
+define PrefixDInsertion [..] -> d || .#. (PREBD) [{gi}|o|{ni}] _ PREBD Vowel ;
+define PrefixNDInsertion [..] (->) n || .#. (PREBD) {ni} _ d PREBD Vowel ;
+define PrefixDDeletion d (->) 0 || .#. (PREBD) {nin} _ PREBD ;
+define PrefixIND {nid} (->) [{ind} | {nd}] || .#. (PREBD) _ PREBD;
+define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
+define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
+define PrefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
 
 !ni-/n- before m, n, w, p, t, k, s, sh
 !nim-/im-/m-/ni- before b
@@ -86,18 +97,27 @@ define PrefixOLengthening o -> {oo} || .#. ("<<") [ [ [ n | g ] i | o | {nin} ] 
 
 ! Nasal vowel rule 
 ! y -> h / VVn_#
-define YRule y -> h || [Vowel Vowel | e] n (">>") _ (">>") .#. ;
+define YRule y -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
+
+! Delete y at the end of words
+define deleteY y -> 0 || _ (SUFBD) .#. ;
+
+! Delete h optionally
+define deleteH h (->) 0 || n _ y ;
 
 ! Changed conjunct rules
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define cleanUpChCnj "<ChCnj>" -> 0 ;
 
 ! VAI vowel lengthening
-define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ ">>" V1 ] .o. [ V1 -> 0 ] ;
+define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
+
+! Noun-specific rules
+define deleteY2 y2 -> 0 ;
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
 
-define cleanUp ["<<"|">>"] -> 0 ; 
+define cleanUp BD -> 0 ; 
 
 
 ! Read preverbs from preverbs.lexc
@@ -116,7 +136,7 @@ define Lexicon [ VerbLexicon |
                  NounLexicon ] ;
 
 read regex [emptyFilter .o.
-            cleanUp.i ] .o. Lexicon .o. [ dDeletion .o.
+            cleanUp.i ] .o. Lexicon .o. [ deleteY2 .o.
      	   	     	 	       n1Rule .o.
 				       s1Rule .o.
      	   	     	 	       n1Default .o.
@@ -130,9 +150,14 @@ read regex [emptyFilter .o.
 				       i1Rule .o.
 			               vowelDeletion .o.
 			               wDeletion .o.
-				       wDefault .o.					
+				       wDefault .o.
+				       w2Deletion .o.
+				       w2Default .o.
+                                       dDeletion .o.				       
 !			               nDeletion .o.
                                        YRule .o.
+				       deleteY .o.
+				       deleteH .o.
 				       LengthenV .o.								       
 			               PrefixDInsertion .o.
 				       PrefixNDInsertion .o.
@@ -151,9 +176,9 @@ define Analyzer ;
 
 set flag-is-epsilon OFF
 
-define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} "<<"       |
-                                                             {nd}  "<<"       |
-							     {nin} "<<" Vowel ]  ?* _ .#. ;
+define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} PREBD       |
+                                                             {nd}  PREBD       |
+							     {nin} PREBD Vowel ]  ?* _ .#. ;
 read regex Analyzer .o. AltRule1 ;
 twosided flag-diacritics
 define Analyzer
@@ -167,7 +192,12 @@ read regex Analyzer .o. cleanUp ;
 define Analyzer ;
 
 read lexc ojibwe_irregular_verbs.lexc
-define IrregularLexicon ;
+define IrregularVerbLexicon ;
+
+read lexc ojibwe_irregular_nouns.lexc
+define IrregularNounLexicon ;
+
+define IrregularLexicon [IrregularNounLexicon | IrregularVerbLexicon] ;
 
 read regex Analyzer | IrregularLexicon ;
 
