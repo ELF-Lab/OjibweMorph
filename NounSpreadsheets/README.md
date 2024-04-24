@@ -153,7 +153,7 @@ The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs
 | Tag     | Nichols/Valentine | Description                    | Example Lemmas 		| Example Stems 		 |
 |---------|-------------------|--------------------------------|------------------------|------------------------|
 | NI_C 	  | Class 1A/1B	   	  | ni consonant           		   | "jiimaan", "mishi"		| /jiimaan/, /mis1/		 |
-| NI_Cw   | Class 4A	      | ni consonant w          	   | "mitig"				| /mitigw2/				 |
+| NI_Cw   | Class 4A	      | ni consonant w          	   | "aniibiishibag"		| /aniibiishibagw2/		 |
 | NI_Cy   | Class 5A/5B	      | ni consonant y       		   | "anit", aki"			| /anity2/, /aky2/		 |
 | NI_VV   | Class 2A		  | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
 | NI_VVny | Class 1C		  | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
