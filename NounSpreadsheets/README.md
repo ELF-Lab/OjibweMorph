@@ -128,7 +128,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 |----------|-------------------|--------------------------------|------------------------|------------------------|
 | NA_C 	   | Class 1A/1B	   | na consonant           	  	| "zhiishiib", "nika"	 | /zhiishiib/, /nik/     |
 | NA_Cw    | Class 4A/4C	   | na consonant w          	   	| "mitig", "makwa"		 | /mitigw2/, /makw2/	  |
-| NA_Cy    | Class 5A/5B*	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
+| NA_Cy    | Class 5A/5B   	   | na consonant y       		   	| "asin"				 | /asiny2/				  |
 | NA_irrCw | Class 4B		   | na irrgular consonant w       	| "amik"				 | /amikw2/				  |
 | NA_VV    | Class 2A		   | na long vowel            	   	| "anishinaabe"			 | /anishinaabew2/		  |
 | NA_VVny  | Class 1C		   | na nasal long vowel      	   	| "giihoonh"			 | /giihoonhy/			  |
@@ -146,14 +146,12 @@ The NA_Cy stems end in a special "y2", which always deletes.
 The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
 
 
-
-
 ### Noun Inanimate (NI)
 
 | Tag     | Nichols/Valentine | Description                    | Example Lemmas 		| Example Stems 		 |
 |---------|-------------------|--------------------------------|------------------------|------------------------|
 | NI_C 	  | Class 1A/1B	   	  | ni consonant           		   | "jiimaan", "mishi"		| /jiimaan/, /mis1/		 |
-| NI_Cw   | Class 4A	      | ni consonant w          	   | "aniibiishibag"		| /aniibiishibagw2/		 |
+| NI_Cw   | Class 4A/4C	      | ni consonant w          	   | "aniibiishibag"		| /aniibiishibagw2/		 |
 | NI_Cy   | Class 5A/5B	      | ni consonant y       		   | "anit", aki"			| /anity2/, /aky2/		 |
 | NI_VV   | Class 2A		  | ni long vowel            	   | "ishkode"				| /ishkodew2/			 |
 | NI_VVny | Class 1C		  | ni nasal long vowel      	   | "wiiyagasenh"			| /wiiyagasenhy/		 |
