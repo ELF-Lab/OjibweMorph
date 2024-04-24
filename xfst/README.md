@@ -83,8 +83,6 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 
 - _y2-deletion:_ Always delete y2
 
-- _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
-
 - _Nasal assimilation:_ With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
 
 - *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
@@ -103,7 +101,11 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 	- MUST FOLLOW _i1-Palatalization_ and _w-to-o_
 
 - _w1-deletion:_ Delete word-final "w1"
-	- MUST FOLLOW _ShortV-deletion_
+	- MUST PRECEDE _d-deletion_
+  	- MUST FOLLOW _ShortV-deletion_
+
+- _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
+ 	- MUST FOLLOW _w1-deletion_
 
 - _w2-deletion:_ w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 	- MUST PRECEDE _ShortV-Lengthening_
