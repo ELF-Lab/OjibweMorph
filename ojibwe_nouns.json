@@ -26,7 +26,8 @@
   "regular_lexc_file": "ojibwe_nouns.lexc",
   "irregular_lexc_file": "ojibwe_irregular_nouns.lexc",
   "morph_features": [
-    "Paradigm",
+      "Paradigm",
+      "PersPoss",
       "Dim",
       "Poss",
       "Pej",
@@ -36,9 +37,13 @@
   "missing_tag_marker": "NONE",
   "missing_form_marker": "MISSING",
   "multichar_symbols": [
-    "w1",
-    "w2",
-    "y2"
+    "i1",
+    "n1",
+    "s1",
+      "w1",
+      "V1",
+      "w2",
+      "y2"
   ],
   "pre_element_tag": "[PRENOUN]",
   "template_path":"None",
