@@ -141,15 +141,15 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NA_VVw    | Class 2B		    | na long vowel /w/        		 | "ikwe"				 | /ikwew2/				  |
 | NA_Vw     | Class 3		    | na short vowel /w/       	   	 | "inini"				 | /ininiw2/			  |
 
-At present, there are no known cases of the animate Class 5B (shorter na consonant y stems). Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD, so we do not attempt to model it.
+- At present, there are no known cases of the animate Class 5B (shorter na consonant y stems). Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD, so we do not attempt to model it.
 
-For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
+- For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
 
-The NA_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
+- The NA_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
-The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
+- The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
 
-The special character "a1" appears in the singular forms of the two "short" stems (Classes 1B and 4C). This resists deletion. Very few nouns fall into these classes.
+- The special character "a1" appears in the singular forms of the two "short" stems (Classes 1B and 4C). This resists deletion. Very few nouns fall into these classes.
 
 
 ### Noun Inanimate (NI)
@@ -166,28 +166,16 @@ The special character "a1" appears in the singular forms of the two "short" stem
 | NI_Vw   	 | Class 2B		  	 | ni short vowel /w/        	  | "mashkiki"				| /mashkikiw2/			 |
 | NI_aa    	 | Class 6		  	 | ni /aa/-augment 		       	  | "mashkimod"				| /mashkimod/			 |
 
-There are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
+- At present, there are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 
-For all of the NI nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
+- For all of the NI nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
 
-The NI_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
+- The NI_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
-The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NI_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
+- The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NI_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
 
-The special character "i2" appears in the singular forms of the two "short" stems (Classes 1B and 5B). This resists deletion and triggers palatalization of s1. Very few nouns fall into these classes.
+- The special character "i2" appears in the singular forms of the two "short" stems (Classes 1B and 5B). This resists deletion and triggers palatalization of s1 (the same as i1 does in many verb forms). Very few nouns fall into these classes.
 
-## Issues to deal with
-
-Nouns like "mishi", where the signular vowel is "i" rather than "a". Listed on Page 177 of Valentine. These are vestiges of an old gender marking system where "i" was inanimate and "a" was animate.
-
-Some cases where the short vowel is not deleted when expected (see the possessive form here): https://ojibwe.lib.umn.edu/main-entry/abwi-ni, also "aki" does not delete; these are all inanimate Cy stems. Basically, it seems like the short vowel persists in the singular forms no matter what, so we probably need a special character to ensure it never deletes.
-	- "anwi", "mini" are also small stems that end in y
-
-Cases like "miskwi" and "nibi", where the stem ends in "yi". These are probably just Class 5B, but with an inconsistent stem in the OPD. These also are cases where the short vowel never deletes.
-
-Irregular diminutives in the VVny stem class.
-
-Stems that end in VVy (/maamaay/); probably only the borrowings maamaa and baabaa have this form, so they are exceptional.
 
 ## STACKING RULES
 
