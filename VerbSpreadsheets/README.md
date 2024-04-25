@@ -127,6 +127,8 @@ All spreadsheets contain the following columns:
 
 | Key   				| Description                         											  				|
 |-----------------------|-----------------------------------------------------------------------------------------------|
+| NJ-ngs-20XX-MonXX   	| X's replaced with date where form confirmed by Nancy Jones during in person interview with C. Hammerly |
+| NJ-zoom-20XX-MonXX   	| X's replaced with date where form confirmed by Nancy Jones during zoom interview with C. Hammerly |
 | JDN-2010-MS-VAI-pXX   | John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VAI paradigms 				|
 | JDN-2010-MS-VII-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VII paradigms 				|
 | JDN-2010-MS-VTA-pXX 	| John Nichols (2010) Unpublished Manuscript of Southwestern Ojibwe VTA paradigms 				|
@@ -158,12 +160,12 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### STEM TYPES
 
-| Class       | Description                  | Example Lemmas                             |
-|-------------|------------------------------|-----------------------------------|
-| VII Class 1 | vii long vowel stems         | "michaa", "ate", "gonzaabii"      |
-| VII Class 2 | vii short vowel stems        | "dakaagami", "inamo"              |
-| VII Class 3A | vii consonant /d/ stems      | "zanagad", "atemagad"             |
-| VII Class 3B | vii consonant /n/ stems      | "bangisin"                        |
+| Class       | Description                  | Example Lemmas                    | Example Stems           			|
+|-------------|------------------------------|-----------------------------------|----------------------------------|
+| VII Class 1 | vii long vowel stems         | "michaa", "ate", "gonzaabii"      |	/michaa/, /ate/, gonzaabii/		|
+| VII Class 2 | vii short vowel stems        | "dakaagami", "inamo"              |	/dakaamgi/, /inamo/				|
+| VII Class 3A | vii consonant /d/ stems     | "zanagad", "atemagad"             |	/zanaga/, /atemagad/			|
+| VII Class 3B | vii consonant /n/ stems     | "bangisin"                        |	/bangisin/ 						|
 
 
 ### RULES
@@ -218,7 +220,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### STEM TYPES
 
-| Class | Description    | Example Lemmas        |
+| Class | Description    | Example Lemmas |
 |-------|----------------|--------------|
 | VTI1  | vti /am/ stems | "waabandam" |
 | VTI2  | vti /oo/ stems | "wanitoon"  |
