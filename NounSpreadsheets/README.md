@@ -7,7 +7,7 @@
 *	Single \> marks boundaries between suffixes outside of the stem (not yet used)
 *	Single \< marks boundaries between prefixes outside of the stem (not yet used)
 *	Null morphemes will NOT be added unless a rule needs to refer to them. So far there are no such rules.
-*	There are six special characters used in the nouns:
+*	There are seven special characters used in the nouns:
 	*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
 	*	s1, the special "s" that palatalizes to "sh" under certain conditions. Here, triggered by "i2".
 	*	y2, appears in Cy noun class stems and is always deleted
@@ -132,14 +132,14 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 |-----------|-------------------|--------------------------------|-----------------------|------------------------|
 | NA_C 	    | Class 1A	   	    | na consonant (regular)    	 | "zhiishiib"	 		 | /zhiishiib/            |
 | NA_ShortC | Class 1B	   	    | na consonant (short)      	 | "nika"	 			 | /nik/                  |
-| NA_Cw     | Class 4A	   	    | na consonant w (regular) 		 | "mitig"		 		 | /mitigw2/			  |
-| NA_ShortCw| Class 4C	   	    | na consonant w (short) 		 | "makwa"		 		 | /makw2/				  |
-| NA_Cy     | Class 5A   	    | na consonant y (regular)     	 | "asin"				 | /asiny2/				  |
-| NA_irrCw  | Class 4B		    | na irregular consonant w       | "amik"				 | /amikw2/				  |
+| NA_Cw     | Class 4A	   	    | na consonant /w/ (regular) 	 | "mitig"		 		 | /mitigw2/			  |
+| NA_ShortCw| Class 4C	   	    | na consonant /w/ (short) 		 | "makwa"		 		 | /makw2/				  |
+| NA_Cy     | Class 5A   	    | na consonant /y/ (regular)     | "asin"				 | /asiny2/				  |
+| NA_irrCw  | Class 4B		    | na irregular consonant /w/     | "amik"				 | /amikw2/				  |
 | NA_VV     | Class 2A		    | na long vowel            	   	 | "anishinaabe"		 | /anishinaabew2/		  |
 | NA_VVny   | Class 1C		    | na nasal long vowel      	   	 | "giihoonh"			 | /giihoonhy/			  |
-| NA_VVw    | Class 2B		    | na long vowel w        		 | "ikwe"				 | /ikwew2/				  |
-| NA_Vw     | Class 3		    | na short vowel w        	   	 | "inini"				 | /ininiw2/			  |
+| NA_VVw    | Class 2B		    | na long vowel /w/        		 | "ikwe"				 | /ikwew2/				  |
+| NA_Vw     | Class 3		    | na short vowel /w/       	   	 | "inini"				 | /ininiw2/			  |
 
 At present, there are no known cases of the animate Class 5B (shorter na consonant y stems). Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD, so we do not attempt to model it.
 
@@ -158,13 +158,13 @@ The special character "a1" appears in the singular forms of the two "short" stem
 |------------|-------------------|--------------------------------|-------------------------|------------------------|
 | NI_C 	  	 | Class 1A 		 | ni consonant (regular)         | "jiimaan"				| /jiimaan/		 		 |
 | NI_ShortC  | Class 1B 	   	 | ni consonant (short)           | "mishi"					| /mis1/		 		 |
-| NI_Cw   	 | Class 4A 		 | ni consonant w (regular)    	  | "aniibiishibag"			| /aniibiishibagw2/		 |
-| NI_Cy 	 | Class 5A	         | ni consonant y (regular)       | "anit"					| /anity2/		 		 |
-| NI_ShortCy | Class 5B  		 | ni consonant y (short)   	  | "aki"					| /aky2/		 		 |
+| NI_Cw   	 | Class 4A 		 | ni consonant /w/ (regular)     | "aniibiishibag"			| /aniibiishibagw2/		 |
+| NI_Cy 	 | Class 5A	         | ni consonant /y/ (regular)     | "anit"					| /anity2/		 		 |
+| NI_ShortCy | Class 5B  		 | ni consonant /y/ (short)   	  | "aki"					| /aky2/		 		 |
 | NI_VV   	 | Class 2A		  	 | ni long vowel            	  | "ishkode"				| /ishkodew2/			 |
 | NI_VVny 	 | Class 1C		  	 | ni nasal long vowel      	  | "wiiyagasenh"			| /wiiyagasenhy/		 |
-| NI_Vw   	 | Class 2B		  	 | ni short vowel w        	   	  | "mashkiki"				| /mashkikiw2/			 |
-| NI_aa    	 | Class 6		  	 | ni aa-augment 		       	  | "mashkimod"				| /mashkimod/			 |
+| NI_Vw   	 | Class 2B		  	 | ni short vowel /w/        	  | "mashkiki"				| /mashkikiw2/			 |
+| NI_aa    	 | Class 6		  	 | ni /aa/-augment 		       	  | "mashkimod"				| /mashkimod/			 |
 
 There are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 

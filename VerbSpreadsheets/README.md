@@ -184,16 +184,16 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### STEM TYPES
 
-| Class       | Description               | Example Lemmas                            |
-|-------------|---------------------------|----------------------------------|
-| VAI Class 1A | vai long vowel stems      | "nibaa", "webinige", "madaabii", "maajibatoo" |
-| VAI Class 1B | vai short vowel stems     | "nimi", "nagamo"                 |
-| VAI Class 2A | vai consonant /n/ stems   | "washin"                         |
-| VAI Class 2B | vai consonant /m/ stems   | "minogwaam"                      |
-| VAI2        | vai2 /am/ stems           | "zaaga'am"                        |
-| VAI Reflexive | vai with /-idizo/        | "waabandizo"                     |
-| VAI Reciprocal | vai with /-idi/         | "waabandi"                       |
-| VAIO         | vai with 0sg/pl object    | "adaawe"                         |
+| Class       | Description               | Example Lemmas                            	   | Example Stems 		|
+|-------------|---------------------------|------------------------------------------------|--------------------|
+| VAI Class 1A | vai long vowel stems      | "nibaa", "webinige", "madaabii", "maajibatoo" | /nibaa/, /webinige/, /madaabii/, /maajibatoo/	|
+| VAI Class 1B | vai short vowel stems     | "nimi", "nagamo"                 			   | /nimi/, /nagamo/   |
+| VAI Class 2A | vai consonant /n/ stems   | "washin"                         			   | /washin/           |
+| VAI Class 2B | vai consonant /m/ stems   | "minogwaam"                      			   | /minogwaam/        |
+| VAI2        | vai2 /am/ stems           |	 "zaaga'am"                        			   | /zaaga'am/         |
+| VAI Reflexive | vai with /-idizo/        | "waabandizo"                     			   | /waabandizo/       |
+| VAI Reciprocal | vai with /-idi/         | "waabandi"                       			   | /waabandi/         |
+| VAIO         | vai with 0sg/pl object    | "adaawe"                         			   | /adaawe/           |
 
 
 ### RULES
@@ -220,12 +220,12 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### STEM TYPES
 
-| Class | Description    | Example Lemmas |
-|-------|----------------|--------------|
-| VTI1  | vti /am/ stems | "waabandam" |
-| VTI2  | vti /oo/ stems | "wanitoon"  |
-| VTI3  | vti /i/ stems  | "miijin"    |
-| VTI4  | vti /aa/ stems | "ayaan"     |
+| Class | Description    | Example Lemmas | Example Stems   |
+|-------|----------------|----------------|-----------------|
+| VTI1  | vti /am/ stems | "waabandam"    | /waaband/     	|
+| VTI2  | vti /oo/ stems | "wanitoon"     | /wanit/      	|
+| VTI3  | vti /i/ stems  | "miijin"       | /miiji/        	|
+| VTI4  | vti /aa/ stems | "ayaan"        | /ayaa/         	|
 
 ### RULES
 
@@ -245,20 +245,19 @@ NA
 
 ### STEM TYPES
 
-| Class      | Description                    | Example Lemmas         |
-|------------|--------------------------------|---------------|
-| VTA Class 1 | vta consonant stems            | "waabam"      |
-| VTA Class 2 | vta changeable /N/ stems       | "miizh"       |
-| VTA Class 3 | vta changeable /S/ stems       | "mawadish"    |
-| VTA Class 4 | vta changeable /Nn/ stems      | ???           |
-| VTA Class 5 | vta /aw/ stems                 | "mikaw"       |
-| VTA Class 6 | vta consonant-w stems          | "mizho"       |
-| VTA Class 7 | vta glottal-w stems            | Same as "mizho" |
-| VTA Class 8 | vta irregular stems            | "izhi"           |
+| Class      | Description                     | Example Lemmas    	|Example Lemmas    	|
+|------------|-------------------------------- |--------------------|-------------------|
+| VTA Class 1  | vta consonant stems            | "waabam"      	| /waabam/      	|
+| VTA Class 2  | vta changeable /N/ stems       | "miizh"       	| /miin1/       	|
+| VTA Class 3  | vta changeable /S/ stems       | "mawadish"    	| /mawadis1/    	|
+| VTA Class 4  | vta changeable /Nn/ stems      | ???           	| ???           	|
+| VTA Class 5  | vta /aw/ stems                 | "mikaw"       	| /mikaw/       	|
+| VTA Class 6/7 | vta consonant-w stems          | "mizho"       	| /mizhw/       	|
+| VTA Class 8  | vta irregular stems            | "izhi"           	| /in/           	|
 
 For VTA Class 2 and 3, we introduce special multicharacter symbols n1 (equivalent to the capital N convention used in the OPD and elsewhere in the literature) and s1 (equivalent to capital S). Then, we need to ensure that our rules are such that the i1-Palatalization rule only applies to n1 and s1, but not other stems ending in n.
 
-For the VTA Class 4, I don't have any examples, but from what I can see in the dictionary I found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
+For the VTA Class 4, we don't have any examples, but from what we can see in the dictionary we found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
 
 For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). There is a specific spreadsheet for this verb, and in principle we could create some rules to deal with it since its "irregularity" is actually quite regular in many ways. At present, we just have the positive independent order, but it could easily be extended with educated guesses.
 
