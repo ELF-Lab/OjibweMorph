@@ -179,26 +179,53 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ## STACKING RULES
 
-The first person plural suffix =inaan loses its final n when a preterit or locative suffix immediately follows it (final n is preserved with number/obviation marking)
+The overall approach we are taking means that we have hard-coded all possible "stacked" suffix forms rather than generating these forms from scratch. For example, an independent noun (e.g.\ _jiimaan_ "boat") can have just diminutive suffix (_jiimaanens_), just a plural suffix (_jiimaanan_), or can stack both (_jiimaanensan_). Both the individual and the stacked forms can be found in the spreadsheets. These stackings occur in a set order, can condition sound changes to forms between suffixes, and are subject to certain restrictions. This section gives a brief overview of the ordering and combinatorial restrictions, as well as some of the sound changes that occur between suffixes. 
 
-The animate plural, inanimate plural, and obviative basic suffixes show up with an initial "i" rather than "a" after =inaan
-	- This does not exactly match any of the noun classes.
+### Order of noun suffixes
 
-The animate plural (-ag), inanimate plural (-an), obviative singular (-an), obviative plural (-a'), and locative (-ing) basic suffixes lose their initial vowel if whatever is to the left ends in a vowel
-	- vowel hiatus rule
+Noun stems show the following ordering restrictions:
 
-When a diminutive nouns also has a pejorative suffix, the diminutive suffix may change its s to zh; Pejorative nouns may undergo a change of some of the consonants in the stem when =(i)sh is added: an s or z near the end of the stem can change to zh.
-	- probably, preterit is actually -i1sh, so triggers palatalization sort of like i1 does in verbs.
-		- I have not seen any examples, though, of n palatalizing
-		- Also, s/z -> zh, rather than sh; so this is a different rule
-	- Might want this to be optional, since some speakers will "unwind" this according to Nichols.
+| Person Prefix | STEM | Diminutive | Possessive | Pejorative | Person Suffix | Preterit | Basic |
+|---------------|------|------------|------------|------------|---------------|----------|-------|
+|   -1   		|   0  |   1   		|   2  	 	 |   3   	  | 4			  |	5		 |	6	 |
+
+A few notes:
+
+- In the spreadsheets, the Person Prefix + Person Suffix is respresented in a single column PossPers, since these two slots can be thought of as a circumfix (a single morpheme that appears on both sides of the stem).
+
+- The Basic suffix is a single slot that can take one of six forms: ProxSg, ProxPl, ObvSg, ObvPl, Loc, and Voc. Therefore none of these suffixes can appear at the same time, as they "compete" for expression at the same location.
 
 
-Following the preterit suffix -ban, the "a" in the animate plural (-ag), inanimate plural (-an), obviative singular (-an), and obviative plural (-a') turns to "ii" or "e"
+### Restrictions on noun suffix combinations
+
+Beyond the restrictions based on "slot competition", the following retrictions are adopted:
+
+- The Preterit and Vocative suffixes never appear together (Nichols 2010, pg. 33)
+- The Preterit and Pejorative suffixes never appear together (assumption)
+- Vocatives only appear in non-possessed nouns (assumption, since no possessed vocative forms have been observed)
+- We assume that the Preterit and Locative suffixes never appear together (assumption)
+- The Possessor (PossPers) and the noun cannot both be proximate; the noun must be obviative with a third person possessor (Nichols 2010).
+- The Possessive Suffix (Poss) only appears (but is optional) in the presence of a possessor (PossPers) (Nichols 2010, p. 9).
+
+### Sound changes between stacked suffixes
+
+These rules are summarized and re-organized versions of the description of noun suffixation in Nichols (2010). They may not be exahustive of all the rules at play.
+
+- The first person plural suffix =inaan loses its final n when a preterit or locative suffix immediately follows it (final n is preserved with number/obviation marking)
+
+- The animate plural, inanimate plural, and obviative basic suffixes show up with an initial "i" rather than "a" after =inaan
+
+- The animate plural (-ag), inanimate plural (-an), obviative singular (-an), obviative plural (-a'), and locative (-ing) basic suffixes lose their initial vowel if whatever is to the left ends in a vowel
+
+- When a diminutive nouns also has a pejorative suffix, the diminutive suffix may change its s to zh; Pejorative nouns may undergo a change of some of the consonants in the stem when =(i)sh is added: an s or z near the end of the stem can change to zh.
+	- This is s/z -> zh, rather than sh; so this is a different rule than palatalization seen with s1 and n1 in the verbs.
+	- Some speakers will "unwind" this according to Nichols, so may be sort of optional in some cases.
+
+- Following the preterit suffix -ban, the "a" in the animate plural (-ag), inanimate plural (-an), obviative singular (-an), and obviative plural (-a') turns to "ii" or "e"
 	- really, "-ban" is probably underlyingly "-bany", so behaves like a Class 5 Cy stem would
 
-No Pret+Voc is allowed
+- Inflection added after diminutive stems is generally the regular form; they are treated as a Class I stem, no matter what the class of the non-diminutive noun stem
 
-Inflection of diminutive stems is generally regular; they are treated as a Class I stem, no matter what the class of the non-diminutive noun stem (Nichols 2010)
+- Other suffixes appear in the usual form for Class 1 (consonant) stems when immediately following the pejorative suffix, including the personal suffixes and the basic suffixes
 
-Other suffixes appear in the usual form for class 1 (consonant) stems following the pejorative suffix, including the personal suffixes and the basic suffixes (Nichols 2010)
+- Other suffixes appear in the usual form for Class 1 (consonant) stems when immediately following the possession suffix
