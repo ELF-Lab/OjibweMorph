@@ -3,6 +3,8 @@
 There are seven special characters:
 *	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
        *	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
+*	i2, the vestigial "inanimate singular" marker that appears in inanimate "short" stems. Resists _ShortV-Deletion_ and triggers palatalization of s1.
+*	a1, the vestigial "animate singular" marker that appears in animate "short" stems. Resists _ShortV-Deletion_.
 *	n1, the special "changable N" that palatalizes before i1
  	*	This is the same as "n1" in the Bowers et al (2017) FST for Odawa
 *	s1, the special "changable S" that palatalizes before i1
