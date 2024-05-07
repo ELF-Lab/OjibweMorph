@@ -21,8 +21,7 @@
   "irregular_csv_files": [
     "NA_irrCw"
   ],
-  "lexical_database": "None",
-  "class_map": "None",
+  "lexical_database": "generated/NOUNS.csv",
   "regular_lexc_file": "ojibwe_nouns.lexc",
   "irregular_lexc_file": "ojibwe_irregular_nouns.lexc",
   "morph_features": [

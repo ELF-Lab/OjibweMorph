@@ -22,8 +22,7 @@
   "irregular_csv_files": [
     "VTA_IRR"
   ],
-  "lexical_database": "./Database/main_entries-VERBS_fields-lemma-stem-POS.csv",
-  "class_map": "./Database/VERBS_paradigm_map.csv",  
+  "lexical_database": "generated/VERBS.csv",
   "regular_lexc_file": "ojibwe_verbs.lexc",
   "irregular_lexc_file": "ojibwe_irregular_verbs.lexc",
   "morph_features": [
