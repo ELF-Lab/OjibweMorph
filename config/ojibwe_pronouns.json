@@ -9,6 +9,7 @@
   "regular_lexc_file": "ojibwe_pronouns.lexc",
   "irregular_lexc_file": "ojibwe_irregular_pronouns.lexc",
   "morph_features": [
+    "Paradigm"
   ],
   "missing_tag_marker": "NONE",
   "missing_form_marker": "MISSING",
