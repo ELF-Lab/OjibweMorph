@@ -1,0 +1,20 @@
+{
+  "morphology_source_path": "./OtherSpreadsheets/",
+  "regular_csv_files": [
+    "PRON"
+  ],
+  "irregular_csv_files": [
+  ],
+  "lexical_database": "generated/PRONOUNS.csv",
+  "regular_lexc_file": "ojibwe_pronouns.lexc",
+  "irregular_lexc_file": "ojibwe_irregular_pronouns.lexc",
+  "morph_features": [
+  ],
+  "missing_tag_marker": "NONE",
+  "missing_form_marker": "MISSING",
+  "multichar_symbols": [
+  ],
+  "pre_element_tag": "",
+  "template_path":"None",
+  "pv_source_path":"None"
+}
