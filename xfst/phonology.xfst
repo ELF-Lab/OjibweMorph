@@ -109,6 +109,14 @@ define deleteH h (->) 0 || n _ y ;
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define cleanUpChCnj "<ChCnj>" -> 0 ;
 
+<<<<<<< HEAD
+! Tense-tensing rule Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
+! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
+! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
+define TenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> [ .#. | "-" ] [ g | w ] {ii} ("'") "-" _ ;
+
+=======
+>>>>>>> 1215441f3f37fc05febbb637848bde216063df06
 ! VAI vowel lengthening
 define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
 
@@ -167,6 +175,10 @@ read regex [emptyFilter .o.
 				       PrefixNInsertion .o.				       
 			               PrefixOLengthening .o.
 				       ChCnjV .o.
+<<<<<<< HEAD
+				       TenseTensing .o.
+=======
+>>>>>>> 1215441f3f37fc05febbb637848bde216063df06
 				       cleanUpChCnj .o.
 				       emptyFilter ] ;
 
