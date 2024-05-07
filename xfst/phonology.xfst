@@ -137,8 +137,12 @@ read lexc ojibwe_nouns.lexc
 substitute defined zero for "[PRENOUN]"
 define NounLexicon ;
 
-define Lexicon [ VerbLexicon |
-                 NounLexicon ] ;
+read lexc ojibwe_pronouns.lexc
+define PronounLexicon ;
+
+define Lexicon [ VerbLexicon    |
+                 NounLexicon    |
+		 PronounLexicon ] ;
 
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ deleteY2 .o.
@@ -203,39 +207,11 @@ define IrregularVerbLexicon ;
 read lexc ojibwe_irregular_nouns.lexc
 define IrregularNounLexicon ;
 
-define IrregularLexicon [IrregularNounLexicon | IrregularVerbLexicon] ;
+define IrregularLexicon [IrregularNounLexicon | 
+                         IrregularVerbLexicon ] ;
 
 read regex Analyzer | IrregularLexicon ;
 
-!define Analyzer
-
-! Closed classes
-!read lexc lexc_source/numerals.lexc
-!define Numerals ;
-
-!read lexc lexc_source/particles.lexc
-!define Particles ;
-
-!read lexc lexc_source/adverbs.lexc
-!define Adverbs ;
-
-!read lexc lexc_source/quantifiers.lexc
-!define Quantifiers ;
-
-!read lexc lexc_source/pronouns.lexc
-!define Pronouns ;
-
-!read regex [ Analyzer |
-!             Numerals |
-!	     Particles |
-!	     Adverbs |
-!	     Quantifiers |
-!	     Pronouns ];
-
-! Just to be on the safe side, let's always remove the flag
-! diacritics. It doesn't really increase the size too much
-! but it does prevent the occasional infinite loop when
-! generating. 
 eliminate flags
 save stack ojibwe.fomabin
 
