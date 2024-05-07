@@ -112,7 +112,7 @@ define cleanUpChCnj "<ChCnj>" -> 0 ;
 ! Tense-tensing rule Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
-define TenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] {ii} ("'") "-" _ ;
+define TenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" _ ;
 
 ! VAI vowel lengthening
 define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
