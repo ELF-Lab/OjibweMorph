@@ -89,7 +89,7 @@ define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
 define PrefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
 
-
+! Dependent noun prefix rules
 define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
@@ -123,6 +123,11 @@ define TenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-
 define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
 
 ! Noun-specific rules
+
+! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
+
+define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
+
 define deleteY2 y2 -> 0 ;
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
@@ -152,6 +157,7 @@ define Lexicon [ VerbLexicon    |
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ deleteY2 .o.
      	   	     	 	       n1Rule .o.
+     	   	     	 	irrDimGan .o.
 				       s1Rule .o.
      	   	     	 	       n1Default .o.
 				       s1Default .o.				       
@@ -167,22 +173,22 @@ read regex [emptyFilter .o.
 				       wDefault .o.
 				       w2Deletion .o.
 				       w2Default .o.
-                                       dDeletion .o.				       
+                       dDeletion .o.				       
 !			               nDeletion .o.
                                        YRule .o.
 				       deleteY .o.
 				       deleteH .o.
 				       LengthenV .o.								       
-			               PrefixDInsertion .o.
+			           PrefixDInsertion .o.
 				       PrefixNDInsertion .o.
 				       PrefixDDeletion .o.
 				       PrefixIND .o.
 				       PrefixMInsertion .o.
 				       PrefixNInsertion .o.				       
-			               PrefixOLengthening .o.
-			           define DepPrefixIInsertion .o.
-					   define DepPrefixWtoO .o.
-					   define DepPrefixWDeletion .o.
+			           PrefixOLengthening .o.
+			           DepPrefixIInsertion .o.
+					   DepPrefixWtoO .o.
+					   DepPrefixWDeletion .o.
 				       ChCnjV .o.
 				       TenseTensing .o.
 				       cleanUpChCnj .o.
