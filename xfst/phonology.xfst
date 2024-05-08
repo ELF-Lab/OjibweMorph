@@ -89,6 +89,11 @@ define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
 define PrefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
 
+
+define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
+define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
+define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
+
 !ni-/n- before m, n, w, p, t, k, s, sh
 !nim-/im-/m-/ni- before b
 !nin-/in-/n-/ni- before d, j, z, zh, g
@@ -175,6 +180,9 @@ read regex [emptyFilter .o.
 				       PrefixMInsertion .o.
 				       PrefixNInsertion .o.				       
 			               PrefixOLengthening .o.
+			           define DepPrefixIInsertion .o.
+					   define DepPrefixWtoO .o.
+					   define DepPrefixWDeletion .o.
 				       ChCnjV .o.
 				       TenseTensing .o.
 				       cleanUpChCnj .o.
