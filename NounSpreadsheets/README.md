@@ -140,6 +140,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NA_VVny   | Class 1C		    | na nasal long vowel      	   	 | "giihoonh"			 | /giihoonhy/			  |
 | NA_VVw    | Class 2B		    | na long vowel /w/        		 | "ikwe"				 | /ikwew2/				  |
 | NA_Vw     | Class 3		    | na short vowel /w/       	   	 | "inini"				 | /ininiw2/			  |
+| NA_VVy    | N/A		    	| na long vowel /y/           	 | "akiwenzii"		 	 | /akiwenziiy1/		  |
 
 - At present, there are no known cases of the animate Class 5B (shorter na consonant y stems). Nichols (2010) indicates that the word for "paddle" _abwi_ (/abwy2/) is animate for some speakers, but this variation is not represented in the OPD, so we do not attempt to model it.
 
@@ -185,12 +186,13 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 | Tag     	 | Nichols/Valentine | Description                    | Example Lemmas 		    | Example Stems 		 |
 |------------|-------------------|--------------------------------|-------------------------|------------------------|
-| NAD_C		 |	Class 1A		 |	na consonant (regular)		  |	"=naan-"				| /naan/				 |
-| NAD_VVny	 |	Class 1C		 |	na nasal long vowel			  |	"=daangosheny-"			| /daangosheny2/		 |
-| NAD_VV	 |	Class 2A		 |	na long vowel				  |	"=dawemaaw-"			| /dawemaaw2/			 |
-| NAD_Vw	 |	Class 3			 |	na short vowel /w/			  |	"=nishiw-"				| /nishiw2/				 |
-| NAD_Cw	 |	Class 4A		 |	na consonant /w/ (regular)	  |	"=niigi'igw-"			| /niigi'igw2/			 |
-| NAD_Cy	 |	Class 5A		 |	na consonant /y/ (regular)	  |	"=shkanzhy-"			| /shkanzhy2/			 |
+| NAD_C		 |	Class 1A		 |	nad consonant (regular)		  |	"=naan-"				| /naan/				 |
+| NAD_VVny	 |	Class 1C		 |	nad nasal long vowel		  |	"=daangosheny-"			| /daangosheny2/		 |
+| NAD_VV	 |	Class 2A		 |	nad long vowel				  |	"=dawemaaw-"			| /dawemaaw2/			 |
+| NAD_Vw	 |	Class 3			 |	nad short vowel /w/			  |	"=nishiw-"				| /nishiw2/				 |
+| NAD_Cw	 |	Class 4A		 |	nad consonant /w/ (regular)	  |	"=niigi'igw-"			| /niigi'igw2/			 |
+| NAD_Cy	 |	Class 5A		 |	nad consonant /y/ (regular)	  |	"=shkanzhy-"			| /shkanzhy2/			 |
+| NAD_VVy    |  N/A		    	 |  nad long vowel /y/            | "=maamaa-"		 	    | /maamaay1/			 |
 
 ### Noun Inanimate Dependent (NID)
 
