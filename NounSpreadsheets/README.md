@@ -165,6 +165,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NI_VVny 	 | Class 1C		  	 | ni nasal long vowel      	  | "wiiyagasenh"			| /wiiyagasenhy/		 |
 | NI_Vw   	 | Class 3		  	 | ni short vowel /w/        	  | "mashkiki"				| /mashkikiw2/			 |
 | NI_aa    	 | Class 6		  	 | ni /aa/-augment 		       	  | "mashkimod"				| /mashkimod/			 |
+| NI_kana    | N/A		  	 	 | ni -kana ending 		       	  | "miikana"				| /miikan/			 |
 
 - At present, there are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 
