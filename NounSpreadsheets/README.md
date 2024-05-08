@@ -176,6 +176,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - The special character "i2" appears in the singular forms of the two "short" stems (Classes 1B and 5B). This resists deletion and triggers palatalization of s1 (the same as i1 does in many verb forms). Very few nouns fall into these classes.
 
+- The words ending in "-kana" eaming "road, path" are treated in a special class, as they are irregular. We assume the underlying stem lacks the underlying final vowel, which is instead added in the inflection as the "a1" (non-deleting "a").
+
 
 ## STACKING RULES
 
