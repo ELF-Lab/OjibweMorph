@@ -151,6 +151,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - The special character "a1" appears in the singular forms of the two "short" stems (Classes 1B and 4C). This resists deletion. Very few nouns fall into these classes.
 
+- The "irregular plura" with stems ending in _-(i)gan_, which appears as _-(i)gaans_ rather than _-(i)ganens_ is handled by a phonological rule.
+
 
 ### Noun Inanimate (NI)
 
