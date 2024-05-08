@@ -167,7 +167,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NI_VVny 	 | Class 1C		  	 | ni nasal long vowel      	  | "wiiyagasenh"			| /wiiyagasenhy/		 |
 | NI_Vw   	 | Class 3		  	 | ni short vowel /w/        	  | "mashkiki"				| /mashkikiw2/			 |
 | NI_aa    	 | Class 6		  	 | ni /aa/-augment 		       	  | "mashkimod"				| /mashkimod/			 |
-| NI_kana    | N/A		  	 	 | ni -kana ending 		       	  | "miikana"				| /miikan/			 |
+| NI_kana    | N/A		  	 	 | ni -kana ending 		       	  | "miikana"				| /miikan/			 	 |
 
 - At present, there are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 
@@ -180,6 +180,26 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 - The special character "i2" appears in the singular forms of the two "short" stems (Classes 1B and 5B). This resists deletion and triggers palatalization of s1 (the same as i1 does in many verb forms). Very few nouns fall into these classes.
 
 - The words ending in "-kana" eaming "road, path" are treated in a special class, as they are irregular. We assume the underlying stem lacks the underlying final vowel, which is instead added in the inflection as the "a1" (non-deleting "a").
+
+### Noun Animate Dependent (NAD)
+
+| Tag     	 | Nichols/Valentine | Description                    | Example Lemmas 		    | Example Stems 		 |
+|------------|-------------------|--------------------------------|-------------------------|------------------------|
+| NAD_C		 |	Class 1A		 |	na consonant (regular)		  |	"=naan-"				| /naan/				 |
+| NAD_VVny	 |	Class 1C		 |	na nasal long vowel			  |	"=daangosheny-"			| /daangosheny2/		 |
+| NAD_VV	 |	Class 2A		 |	na long vowel				  |	"=dawemaaw-"			| /dawemaaw2/			 |
+| NAD_Vw	 |	Class 3			 |	na short vowel /w/			  |	"=nishiw-"				| /nishiw2/				 |
+| NAD_Cw	 |	Class 4A		 |	na consonant /w/ (regular)	  |	"=niigi'igw-"			| /niigi'igw2/			 |
+| NAD_Cy	 |	Class 5A		 |	na consonant /y/ (regular)	  |	"=shkanzhy-"			| /shkanzhy2/			 |
+
+### Noun Inanimate Dependent (NID)
+
+| Tag     	 | Nichols/Valentine | Description                    | Example Lemmas 		    | Example Stems 		 |
+|------------|-------------------|--------------------------------|-------------------------|------------------------|
+| NID_C		 |	Class 1A		 | na consonant (regular)		  | "=kaad-"				| /kaad/				 |
+| NID_Cw	 |	Class 4A		 | na consonant /w/ (regular)	  | "=gidigw-"				| /gidigw2/			 	 |
+| NID_Cy	 |	Class 5A		 | na consonant /y/ (regular)	  | "=disy-"				| /disy2/			 	 |
+| NID_aa	 |	Class 6			 | ni /aa/-augment				  | "=denaniw-"				| /denaniw/			 	|
 
 
 ## STACKING RULES
