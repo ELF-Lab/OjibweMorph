@@ -14,7 +14,7 @@
 	*	w1, appears at the end of the obviative possessor suffix and blocks _shortV-deletion_
 	*	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 	*	i2, the vestigial "inanimate singular" marker that appears in inanimate "short" stems. Resists _ShortV-Deletion_ and triggers palatalization of s1.
-	*	a1, the vestigial "animate singular" marker that appears in animate "short" stems. Resists _ShortV-Deletion_.
+	*	a1, the vestigial "animate singular" marker that appears in animate "short" stems, and also with NI_kana stems. Resists _ShortV-Deletion_.
 
 ## Organization
 
