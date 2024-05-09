@@ -130,6 +130,10 @@ define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1
 
 define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 
+! 
+
+define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
+
 define deleteY2 y2 -> 0 ;
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
@@ -180,6 +184,7 @@ read regex [emptyFilter .o.
                                        YRule .o.
 				       deleteY .o.
 				       deleteH .o.
+				       irrDimVVny .o.
 				       y1Default .o.
 				       LengthenV .o.								       
 			           PrefixDInsertion .o.
