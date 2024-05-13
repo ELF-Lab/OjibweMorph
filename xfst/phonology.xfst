@@ -140,6 +140,7 @@ define emptyFilter [? - "<EMPTYLEX>"]* ;
 
 define cleanUp BD -> 0 ; 
 
+define restoreChars [a1:a | i2:i ] @-> || _ ;
 
 ! Read preverbs from preverbs.lexc
 read lexc preverbs.lexc
@@ -187,18 +188,19 @@ read regex [emptyFilter .o.
 				       irrDimVVny .o.
 				       y1Default .o.
 				       LengthenV .o.								       
-			           PrefixDInsertion .o.
+			           DepPrefixIInsertion .o.
+					   DepPrefixWtoO .o.
+					   DepPrefixWDeletion .o.
+			           PrefixDInsertion .o.					   
 				       PrefixNDInsertion .o.
 				       PrefixDDeletion .o.
 				       PrefixIND .o.
 				       PrefixMInsertion .o.
 				       PrefixNInsertion .o.				       
 			           PrefixOLengthening .o.
-			           DepPrefixIInsertion .o.
-					   DepPrefixWtoO .o.
-					   DepPrefixWDeletion .o.
 				       ChCnjV .o.
 				       TenseTensing .o.
+				       restoreChars .o.
 				       cleanUpChCnj .o.
 				       emptyFilter ] ;
 
