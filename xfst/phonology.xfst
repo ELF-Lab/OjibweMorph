@@ -43,7 +43,7 @@ define i1Default i1 -> i ;
 ! Nasal assimilation: With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a
 ! "g" (3SgProx in the conjunct) or "d" (inclusive simple imperative)
 define amRule1 m -> a || a _ SUFBD [m|n] ;
-define amRule2 m -> n || a _ SUFBD [z|g|d] ;
+define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
 
 ! aw-to-aa: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 ! aw-to-oo: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
@@ -184,7 +184,7 @@ read regex [emptyFilter .o.
      	   	     	 	n1Default .o.
 				       	s1Default .o.				       
      	   	            amRule1 .o.
-     	   	            amRule2 .o.
+     	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
 				       	wRule1 .o.
