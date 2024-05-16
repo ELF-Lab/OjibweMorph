@@ -59,7 +59,7 @@ In short, ni- can in principle appear before any consonant. Otherwise, the nim-/
 
 This is captured by the following rules:
 
-- PrefixDInsertion: insert d at the end of the person prefix if whatever appears to the right starts with a vowel (derive nid-, gid-, od-)
+- _PrefixDInsertion_: insert d at the end of the person prefix if whatever appears to the right starts with a vowel (derive nid-, gid-, od-)
 - _PrefixNDInsertion_: Optionally insert "n" between "ni" and "d" (derives "nind-")
 - _PrefixDDeletion_: Optionally delete "d" at the end of "nind" (derives "nin-")
 - _PrefixIND_: Optionally turn "nid" to "ind" and "nd" (derices "ind-" and "nd")
