@@ -5,16 +5,16 @@ There are seven special characters:
        *	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
 *	i2, the vestigial "inanimate singular" marker that appears in inanimate "short" stems. Resists _ShortV-Deletion_ and triggers palatalization of s1.
 *	a1, the vestigial "animate singular" marker that appears in animate "short" stems. Resists _ShortV-Deletion_.
+*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
 *	n1, the special "changable N" that palatalizes before i1
  	*	This is the same as "n1" in the Bowers et al (2017) FST for Odawa
 *	s1, the special "changable S" that palatalizes before i1
  	*	This is the same as "s1" in the Bowers et al (2017) FST for Odawa
 *	w1, the independent order third person agreement that is usually deleted, and opaquely blocks short vowel deletion
  	*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
-*	V1, triggers vowel lengthening with certain preterit and delayed imperative forms in the VAIs.
+*	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 * 	y1, appears in VVy and VVny stems and is deleted at the end of words only
 *	y2, appears in Cy noun class stems and is always deleted
-*	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 
 # Prefix rules
 
