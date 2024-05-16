@@ -137,7 +137,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NA_Cy     | Class 5A   	    | na consonant /y/ (regular)     | "asin"				 | /asiny2/				  |
 | NA_irrCw  | Class 4B		    | na irregular consonant /w/     | "amik"				 | /amikw2/				  |
 | NA_VV     | Class 2A		    | na long vowel            	   	 | "anishinaabe"		 | /anishinaabew2/		  |
-| NA_VVny   | Class 1C		    | na nasal long vowel      	   	 | "giihoonh"			 | /giihoonhy/			  |
+| NA_VVny   | Class 1C		    | na nasal long vowel      	   	 | "giihoonh"			 | /giihoonhy1/			  |
 | NA_VVw    | Class 2B		    | na long vowel /w/        		 | "ikwe"				 | /ikwew2/				  |
 | NA_Vw     | Class 3		    | na short vowel /w/       	   	 | "inini"				 | /ininiw2/			  |
 | NA_VVy    | N/A		    	| na long vowel /y/           	 | "akiwenzii"		 	 | /akiwenziiy1/		  |
@@ -165,7 +165,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NI_Cy 	 | Class 5A	         | ni consonant /y/ (regular)     | "anit"					| /anity2/		 		 |
 | NI_ShortCy | Class 5B  		 | ni consonant /y/ (short)   	  | "aki"					| /aky2/		 		 |
 | NI_VV   	 | Class 2A		  	 | ni long vowel            	  | "ishkode"				| /ishkodew2/			 |
-| NI_VVny 	 | Class 1C		  	 | ni nasal long vowel      	  | "wiiyagasenh"			| /wiiyagasenhy/		 |
+| NI_VVny 	 | Class 1C		  	 | ni nasal long vowel      	  | "wiiyagasenh"			| /wiiyagasenhy1/		 |
 | NI_Vw   	 | Class 3		  	 | ni short vowel /w/        	  | "mashkiki"				| /mashkikiw2/			 |
 | NI_aa    	 | Class 6		  	 | ni /aa/-augment 		       	  | "mashkimod"				| /mashkimod/			 |
 | NI_kana    | N/A		  	 	 | ni -kana ending 		       	  | "miikana"				| /miikan/			 	 |
