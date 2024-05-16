@@ -84,46 +84,46 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 
 Almost suffix rules target just processes occuring at the stem/suffix juncture, the only part of the phonology that we absolutely need to model. Some rules only end up applying in the verbal or nominal paradgims.
 
-- _y2-deletion:_ Always delete y2
+- _y2Deletion:_ Always delete y2
 
-- _Nasal assimilation:_ With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
+- _nasalAssimilation:_ With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
 
-- *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
+- *awaaRule:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 
-- *aw-to-oo:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+- *awooRule:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 
-- *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
-	- MUST PRECEED _ShortV-deletion_
-	- In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.
+- *woRule1, woRule2:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.
+	- MUST PRECEED _vowelDeletion_
 
-- *i1-Palatalization:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1".
-  	- MUST PRECEED _ShortV-deletion_
+- *n1Rule, s1Rule:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1" or "i2".
+  	- MUST PRECEED _vowelDeletion_
 
-- _ShortV-deletion:_ Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
-	- MUST PRECEED _w1-deletion_, _w2-deletion_, and _y-deletion_
-	- MUST FOLLOW _i1-Palatalization_ and _w-to-o_
+- _vowelDeletion:_ Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
+	- MUST PRECEED _w1Deletion_, _w2Deletion_, and _yDeletion_
+	- MUST FOLLOW _n1Rule_, _s1Rule_, _woRule1_, and _woRule2_
 
-- _w1-deletion:_ Delete word-final "w1"
-	- MUST PRECEDE _d-deletion_
-  	- MUST FOLLOW _ShortV-deletion_
+- _w1Deletion:_ Delete word-final "w1"
+	- MUST PRECEDE _dDeletion_
+  	- MUST FOLLOW _vowelDeletion_
 
-- _d-deletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
- 	- MUST FOLLOW _w1-deletion_
+- _dDeletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
+ 	- MUST FOLLOW _w1Deletion_
 
-- _w2-deletion:_ w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
-	- MUST PRECEDE _ShortV-Lengthening_
-	- MUST FOLLOW _ShortV-Deletion_
+- _w2Deletion:_ w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
+	- MUST PRECEDE _LengthenV_
+	- MUST FOLLOW _vowelDeletion_
 
-- _ShortV-lengthening:_ a short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
-	- MUST FOLLOW _w2-Deletion_
+- _LengthenV:_ a short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
+	- MUST FOLLOW _w2Deletion_
 
-- _y-to-h:_ Turn y into h if it follows a long vowel + n sequence at the end of a word (y -> h / VVn_#)
+- _y1hRule:_ Turn y1 into h if it follows a long vowel + n sequence at the end of a word (y1 -> h / VVn_#)
 	- This handles some stems that are encoded inconsistently in the OPD; a purely orthographic rule.
 
-- _y-deletion:_ Delete y at the end of words (y -> 0 / _ #)
-	- MUST PRECEDE _h-deletion_
-	- MUST FOLLOW _ShortV-Deletion_ and _y-to-h_
+- _y1Deletion:_ Delete y1 at the end of words (y1 -> 0 / _ #)
+	- MUST PRECEDE _hDeletion_
+	- MUST FOLLOW _vowelDeletion_ and _y1hRule_
 
-- _h-deletion (OPTIONAL!):_ Optionally delete h between n and y (h -> 0 / n_y)
-	- MUST FOLLOW _y-deletion_
+- _hDeletion (OPTIONAL!):_ Optionally delete h between n and y (h -> 0 / n_y)
+	- MUST FOLLOW _y1deletion_
 	- Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
+
