@@ -57,6 +57,15 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 
 In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). Then, sometimes nid- appears before vowels. The second and third person prefixes are generally easier to model, as they just have d-epenthesis before vowels and take the form that lacks a final d before consonants.  
 
+This is captured by the following rules:
+
+	- PrefixDInsertion: insert d at the end of the person prefix if whatever appears to the right starts with a vowel (derive nid-, gid-, od-)
+	- PrefixNDInsertion: Optionally insert "n" between "ni" and "d" (derives "nind-")
+	- PrefixDDeletion: Optionally delete "d" at the end of "nind" (derives "nin-")
+	- PrefixIND: Optionally turn "nid" to "ind" and "nd" (derices "ind-" and "nd")
+	- PrefixMInsertion: Optionally insert "m" after "ni" if whatever appears to the right starts with "b" (derives "nim-")
+	- PrefixNInsertion: Optionally insert "n" after "ni" if whatever appears to the right starts with "d", "j", z", "zh", or "g".
+
 The person prefixes also trigger a lengthening process:
 
 - *prefixOLengthening:* If a stem/preverb starting with "o" is immediately preceded by a person prefix, lengthen "o" to "oo" (and the "d" form of prefix shows up, like normal).
