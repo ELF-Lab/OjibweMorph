@@ -21,8 +21,8 @@ define dDeletion d -> 0 || _ SUFBD Cons ;
 
 ! This rule MUST PRECEED the "ShortV-deletion" rule
 ! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
-define n1Rule n1 -> {zh} || _ SUFBD i1 ;
-define s1Rule s1 -> {sh} || _ SUFBD i1 ;
+define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
+define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
 define n1Default n1 -> n ;
 define s1Default s1 -> s ;
 
