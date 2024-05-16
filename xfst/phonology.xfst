@@ -100,7 +100,7 @@ define PrefixIND {nid} (->) [{ind} | {nd}] || .#. (PREBD) _ PREBD;
 define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
 
-define PrefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
+define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
 
 ! Dependent noun prefix rules
 define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
@@ -212,7 +212,7 @@ read regex [emptyFilter .o.
 				       	PrefixIND .o.
 				       	PrefixMInsertion .o.
 				       	PrefixNInsertion .o.				       
-			           	PrefixOLengthening .o.
+			           	prefixOLengthening .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
 				       	restoreChars .o.

@@ -59,7 +59,7 @@ In short, ni- can in principle appear before any consonant. Otherwise, the nim-/
 
 The person prefixes also trigger a lengthening process:
 
-- *o-to-oo-lengthening:* If a stem/preverb starting with "o" is immediately preceded by a person prefix, lengthen "o" to "oo" (and the "d" form of prefix shows up, like normal).
+- *prefixOLengthening:* If a stem/preverb starting with "o" is immediately preceded by a person prefix, lengthen "o" to "oo" (and the "d" form of prefix shows up, like normal).
 
 Sources:
 - https://ojibwegrammar.langsci.wisc.edu › Assets › Pdfs › InflAnishPersonPrefixes1.02.pdf
