@@ -1,9 +1,19 @@
 ! There are flags at morpheme boundaries.
 set flag-is-epsilon ON
 
+
+! Defining natural classes and morphological boundaries
+
+! All consonants, including special characters
 define Cons [ b | c | d | f | g | h | j | k | l | m | n | n1 | p | s | s1 | t | v | w | w1 | w2 | x | y | z | "'" ] ;
+
+! implictly includes long vowels, which just repeats characters
 define Vowel [ a | e | i | o | V1 ] ;
+
+! nonlight vowels are simply short vowels
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
+
+! Short stems consist of a single short vowel, and resist short vowel deletion
 define ShortStem [ "<<" [ Vowel - e ] Cons Cons ">>" | "<<" (Cons) [ Vowel - e ] Cons ">>" ] ;
 
 define PREBD "<<"+ ;
@@ -15,6 +25,8 @@ define BD ["<<" | ">>"]+ ;
 define PrefixBoundaryCleanup PREBD @-> "<<" ;
 define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 
+
+! Begin rules
 
 ! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ SUFBD Cons ;
@@ -87,6 +99,7 @@ define PrefixDDeletion d (->) 0 || .#. (PREBD) {nin} _ PREBD ;
 define PrefixIND {nid} (->) [{ind} | {nd}] || .#. (PREBD) _ PREBD;
 define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
+
 define PrefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
 
 ! Dependent noun prefix rules
@@ -100,7 +113,8 @@ define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 !nind-/ind-/nd- before vowels
 !At Red Lake, we get niy- before aa
 
-! Nasal vowel rule 
+! Nasal vowel rules
+
 ! y -> h / VVn_#
 define YRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
 
