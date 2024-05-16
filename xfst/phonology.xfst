@@ -60,8 +60,8 @@ define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 ! AKA, wi -> o / C __
 ! In Border Lakes, this only happens when w is not the last character in the word so we need to allow for
 ! wi word-finally.
-define wRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
-define wRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
@@ -187,8 +187,8 @@ read regex [emptyFilter .o.
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
-				       	wRule1 .o.
-				       	wRule2 .o.				       
+				       	woRule1 .o.
+				       	woRule2 .o.				       
 				       	i1Default .o.
 			            vowelDeletion .o.
 			            w1Deletion .o.
