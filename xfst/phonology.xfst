@@ -38,7 +38,7 @@ define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
 define n1Default n1 -> n ;
 define s1Default s1 -> s ;
 
-define i1Rule i1 -> i ;
+define i1Default i1 -> i ;
 
 ! Nasal assimilation: With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a
 ! "g" (3SgProx in the conjunct) or "d" (inclusive simple imperative)
@@ -65,8 +65,8 @@ define wRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 
 
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
-define wDeletion w1 -> 0 || _ (SUFBD) .#. ;
-define wDefault w1 -> w ;
+define w1Deletion w1 -> 0 || _ (SUFBD) .#. ;
+define w1Default w1 -> w ;
 
 !w2-deletion: w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 !MUST PRECEDE ShortV-Lengthening
@@ -116,13 +116,13 @@ define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 ! Nasal vowel rules
 
 ! y -> h / VVn_#
-define YRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
+define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
 
 ! Delete y at the end of words
-define deleteY y1 -> 0 || _ (SUFBD) .#. ;
+define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
 
 ! Delete h optionally
-define deleteH h (->) 0 || n _ y1 ;
+define hDeletion h (->) 0 || n _ y1 ;
 
 define y1Default y1 -> y ;
 
@@ -148,7 +148,7 @@ define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
 
-define deleteY2 y2 -> 0 ;
+define y2Deletion y2 -> 0 ;
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
 
@@ -177,7 +177,7 @@ define Lexicon [ VerbLexicon    |
 
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ 
-						deleteY2 .o.
+						y2Deletion .o.
      	   	     	 	n1Rule .o.
      	   	     	 	irrDimGan .o.
 				       	s1Rule .o.
@@ -189,17 +189,17 @@ read regex [emptyFilter .o.
 				       	awooRule .o.
 				       	wRule1 .o.
 				       	wRule2 .o.				       
-				       	i1Rule .o.
+				       	i1Default .o.
 			            vowelDeletion .o.
-			            wDeletion .o.
-				       	wDefault .o.
+			            w1Deletion .o.
+				       	w1Default .o.
 				       	w2Deletion .o.
 				       	w2Default .o.
                        	dDeletion .o.				       
 !						nDeletion .o.
-                        YRule .o.
-				       	deleteY .o.
-				      	deleteH .o.
+                        y1hRule .o.
+				       	y1Deletion .o.
+				      	hDeletion .o.
 				       	irrDimVVny .o.
 				      	y1Default .o.
 				       	LengthenV .o.								       
