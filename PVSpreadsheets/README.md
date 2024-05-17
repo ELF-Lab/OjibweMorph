@@ -24,10 +24,6 @@ In fact, initial change can be thought of as a subordinating preverb that tigger
 
 - *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the tables below.
 
-There are at least three patterns of initial change in the Southwestern group (Nichols 2012, NSF Report: Notes on variation in Minnesota Ojibwa).
-
-Pattern 1 (Mille Lacs, south side of Leech Lake, White Earth)
-
 | Unchanged   | Changed  |
 |-------------|----------|
 | a           | e        |
@@ -38,39 +34,8 @@ Pattern 1 (Mille Lacs, south side of Leech Lake, White Earth)
 | o           | we       |
 | oo          | waa      |
 
-Pattern 2 (north side of Leech Lake, Red Lake):
 
-| Unchanged   | Changed  |
-|-------------|----------|
-| a           | e        |
-| aa          | aa     	 |
-| e           | e	     |
-| i           | e        |
-| ii          | aa       |
-| o           | we       |
-| oo          | waa      |
-
-Pattern 3 (Nett Lake, Lac la Croix):
-
-| Unchanged   | Changed  |
-|-------------|----------|
-| a           | e        |
-| aa          | aa     	 |
-| e           | e	     |
-| i           | e        |
-| ii          | aa       |
-| o           | we       |
-| oo          | oo       |
-
-Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1.
-
-There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change. There are, also, exceptions to these exceptions. For example the tense preverb "daa-" instead appears as "ge-" under initial change, not "endaa-". 
-
-The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156).
-
-There are also a lot of complications with the future tense prefer "ga-" that interact with intial change. Future tense appears as "ga-" in the independent order in the presence of a person prefix, but "da-" in the independent order when there is no prefix. In many dialects the "plain" conjunct (when there is no initial change), the future morpheme is realized as "ji-" (in others, it is realized as "da-" in this context). But, in the changed conjunct, it appears as "ge-". So the changed form is the regular changed form of the independent order allomorph in the presence of a person prefix, but not a changed version the plain conjunct allomorph, nor the independent allomorph in the absence of a prefix. Finally, note that some speakers will epethsize a "d" to "ga-" and "ge-" when the following segment is a vowel. This is probably best modeled as an irregularity and part of a more fullsome modeling of this future tense marker. For details and sources, see here: https://ojibwe.lib.umn.edu/main-entry/ga-pv-tns
-
-Finally, not all of the directional preverbs undergo the expected vowel ablaut process under initial change. One example is "bi-", which takes the same form in the changed conjunct as it does in the plain conjunct and independent orders.
+Note, there are further complications. There are at least three patterns of initial change in the Southwestern group (Nichols 2012, NSF Report: Notes on variation in Minnesota Ojibwa). There are also various exceptions to the regular rules. These are all disucssed in more detail in the readme for phonology.xfst, where these intricacies are modelled.
 
 ## Subordinating
 
