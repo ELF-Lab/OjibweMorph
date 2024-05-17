@@ -20,7 +20,7 @@ There are seven special characters:
 
 ## Person prefix rules
 
-The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating. Variation is due to phonology to some degree, but also dialect and speech rate. These rules apply to both verbs and nouns (the person prefix appears in possessed nouns).
+The person prefixes, especially the first person prefix, show a lot of variation. We'll want to account for all of it in the parser so we can get coverage, but limit outputs when generating to be tuned to a specific dialect. Variation is due to phonology to some degree, but also dialect and speech rate. These rules apply to both verbs and nouns (the person prefix appears in possessed nouns).
 
 For Border Lakes, generally:
 
@@ -66,13 +66,13 @@ This is captured by the following rules on verbs:
 - _PrefixMInsertion_: Optionally insert "m" after "ni" if whatever appears to the right starts with "b" (derives "nim-")
 - _PrefixNInsertion_: Optionally insert "n" after "ni" if whatever appears to the right starts with "d", "j", z", "zh", or "g".
 
-In dependent nouns, the rules are a little different:
+In dependent nouns, the rules are a little different. For the first and second person prefixes, we get "n" and "g" before vowels, and "gi" and "ni" before consonants. The third person prefix alternates between "w" before "ii", "o" before consonants, and null before "oo". The following rules account for this:
 
 - _DepPrefixIInsertion_: Insert "i" after "n" or "g" if whatever to the right is a consonant (derives "ni" and "gi")
 - _DepPrefixWtoO_: change "w" to "o" if whatever to the right is a consonant (derives "o")
 - _DepPrefixWDeletion_: delete "w" if whatever to the right starts with "o" or "oo" (derives null third person prefix)
 
-The person prefixes also trigger a lengthening process:
+The person prefixes in the verbs in particular also trigger a lengthening process:
 
 - *prefixOLengthening:* If a stem/preverb starting with "o" is immediately preceded by a person prefix, lengthen "o" to "oo" (and the "d" form of prefix shows up, like normal).
 
