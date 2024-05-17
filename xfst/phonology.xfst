@@ -13,10 +13,6 @@ define Vowel [ a | e | i | o | V1 ] ;
 ! nonlight vowels are simply short vowels
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
 
-! Short stems consist of a single short vowel, and resist short vowel deletion. 
-! Currently not used.
-define ShortStem [ "<<" [ Vowel - e ] Cons Cons ">>" | "<<" (Cons) [ Vowel - e ] Cons ">>" ] ;
-
 ! Define stem boundary markers
 define PREBD "<<"+ ;
 define SUFBD ">>"+ ;
@@ -50,12 +46,7 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 ! In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
 ! For example, we get "mizhwi" rather than "mizho" for the imerative form.
 define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
-define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
-
-! currently not used
-!define nDeletion n -> 0 || [ i | o o ] _ SUFBD Cons ;
-! amRule1: no idea what this rule is doing
-define amRule1 m -> a || a _ SUFBD [m|n] ;
+define woRule2 [ w (->) o1 "@P.Alt.On@" || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 ("@P.Alt.On@") SUFBD _ ] .o. [o1 -> o];
 
 ! shared noun and verb suffix rules
 
@@ -205,7 +196,6 @@ read regex [emptyFilter .o.
 				       	s1Rule .o. ! Must precede vowelDeletion
      	   	     	 	n1Default .o.
 				       	s1Default .o.				       
-     	   	            amRule1 .o.
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
@@ -218,7 +208,6 @@ read regex [emptyFilter .o.
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
 				       	w2Default .o.
                        	dDeletion .o. ! Must follow w1Deletion      
-!						nDeletion .o. 
                         y1hRule .o. ! Must precede y1Deletion
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
