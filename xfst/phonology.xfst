@@ -97,15 +97,9 @@ define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
 
 
-! Default rules
+! Default rule
 
-define n1Default n1 -> n ;
-define s1Default s1 -> s ;
-define i1Default i1 -> i ;
-define w1Default w1 -> w ;
-define w2Default w2 -> w ;
-define y1Default y1 -> y ;
-define restoreChars [a1:a | i2:i ] @-> || _ ;
+define defaultRules [a1:a | i2:i | n1:n | s1:s | i1:i | w1:w | w2:w | y1:y ] @-> || _ ;
 
 
 ! Begin prefix rules
@@ -193,26 +187,20 @@ read regex [emptyFilter .o.
 						y2Deletion .o.
      	   	     	 	n1Rule .o. ! Must precede vowelDeletion
      	   	     	 	irrDimGan .o.
-				       	s1Rule .o. ! Must precede vowelDeletion
-     	   	     	 	n1Default .o.
-				       	s1Default .o.				       
+				       	s1Rule .o. ! Must precede vowelDeletion				       
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
 				       	woRule2 .o.	! Must precede vowelDeletion			       
-				       	i1Default .o.
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and yDeletion; must follow n1Rule, s1Rule, woRule1, and woRule2
 			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion
-				       	w1Default .o.
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
-				       	w2Default .o.
                        	dDeletion .o. ! Must follow w1Deletion      
                         y1hRule .o. ! Must precede y1Deletion
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
 				       	irrDimVVny .o.
-				      	y1Default .o.
 				       	LengthenV .o. ! Must follow w2Deletion								       
 			           	DepPrefixIInsertion .o.
 					   	DepPrefixWtoO .o.
@@ -226,7 +214,7 @@ read regex [emptyFilter .o.
 			           	prefixOLengthening .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
-				       	restoreChars .o.
+				       	defaultRules .o.
 				       	ChCnjDefault .o.
 				       	emptyFilter ] ;
 
