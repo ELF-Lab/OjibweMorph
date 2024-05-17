@@ -188,7 +188,6 @@ define Lexicon [ VerbLexicon    |
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ 
 						! Suffix Rules
-						y2Deletion .o.
      	   	     	 	n1Rule .o. ! Must precede vowelDeletion
 				       	s1Rule .o. ! Must precede vowelDeletion				       
      	   	            nasalAssimilation .o.
@@ -196,10 +195,11 @@ read regex [emptyFilter .o.
 				       	awooRule .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
 				       	woRule2 .o.	! Must precede vowelDeletion			       
-			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and yDeletion; must follow n1Rule, s1Rule, woRule1, and woRule2
+			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
 			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
-                       	dDeletion .o. ! Must follow w1Deletion      
+                       	dDeletion .o. ! Must follow w1Deletion
+						y2Deletion .o.   
                         y1hRule .o. ! Must precede y1Deletion
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
