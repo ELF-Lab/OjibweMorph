@@ -30,6 +30,8 @@ define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 
 ! Begin suffix rules
 
+! Begin verb suffix rules
+
 ! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ SUFBD Cons ;
 
@@ -52,11 +54,8 @@ define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
 define awaaRule w -> a || a _ SUFBD [k|g] ;
 define awooRule a w -> o o || _ SUFBD [n|s] ;
 
+! currently not used
 !define nDeletion n -> 0 || [ i | o o ] _ SUFBD Cons ;
-
-! ShortV-deletion: Delete word-final short vowels
-! This rule MUST PRECEED the "w-deletion" rule
-define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 
 ! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1".
 ! AKA, wi -> o / C __
@@ -65,18 +64,29 @@ define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
+
+! shared noun and verb suffix rules
+
+! ShortV-deletion: Delete word-final short vowels
+! This rule MUST PRECEED the "w-deletion" rule
+define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
+
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
 define w1Deletion w1 -> 0 || _ (SUFBD) .#. ;
 define w1Default w1 -> w ;
+
+! VAI vowel lengthening
+define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
+
+
+! noun-specific suffix rules
 
 !w2-deletion: w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 !MUST PRECEDE ShortV-Lengthening
 !MUST FOLLOW ShortV-Deletion
 define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
 define w2Default w2 -> w ;
-
-! Nasal vowel rules
 
 ! y -> h / VVn_#
 define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
@@ -87,21 +97,19 @@ define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
 ! Delete h optionally
 define hDeletion h (->) 0 || n _ y1 ;
 
-define y1Default y1 -> y ;
-
-! VAI vowel lengthening
-define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
-
-! Noun-specific rules
-
 ! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
 define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 
 ! 
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
 
+!
 define y2Deletion y2 -> 0 ;
 
+!
+define y1Default y1 -> y ;
+
+!
 define restoreChars [a1:a | i2:i ] @-> || _ ;
 
 ! Begin prefix rules
