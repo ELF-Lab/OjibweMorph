@@ -187,9 +187,9 @@ define Lexicon [ VerbLexicon    |
 
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ 
+						! Suffix Rules
 						y2Deletion .o.
      	   	     	 	n1Rule .o. ! Must precede vowelDeletion
-     	   	     	 	irrDimGan .o.
 				       	s1Rule .o. ! Must precede vowelDeletion				       
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
@@ -204,7 +204,9 @@ read regex [emptyFilter .o.
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
 				       	irrDimVVny .o.
-				       	LengthenV .o. ! Must follow w2Deletion								       
+     	   	     	 	irrDimGan .o.
+				       	LengthenV .o. ! Must follow w2Deletion
+						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
 					   	DepPrefixWtoO .o.
 					   	DepPrefixWDeletion .o.
@@ -218,6 +220,7 @@ read regex [emptyFilter .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
 						gadaRule .o.
+						! Cleanup rules
 				       	defaultRules .o.
 				       	ChCnjDefault .o.
 				       	emptyFilter ] ;
