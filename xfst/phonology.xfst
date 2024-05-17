@@ -144,6 +144,9 @@ define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 
+! gadaRule
+define gadaRule g a "-" -> d a "-" || .#. _ ;
+
 ! Changed conjunct rules
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define ChCnjDefault "<ChCnj>" -> 0 ;
