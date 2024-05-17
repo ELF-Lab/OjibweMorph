@@ -99,7 +99,7 @@ The rule is meant to be quite broad, triggering this process not only on stems t
 
 We are currently modelling this by an affix, which triggers either the insertion of the appropriate idisyncratic allomorph or the regular initial change vowel ablaut process.
 
-- *initial-change:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the tables below.
+- *ChCnjV:* In the presence of the initial change morpheme, alternate the first vowel of the verbal complex according to the tables below.
 
 There are at least three patterns of initial change in the Southwestern group (Nichols 2012, NSF Report: Notes on variation in Minnesota Ojibwa).
 
@@ -139,9 +139,11 @@ Pattern 3 (Nett Lake, Lac la Croix):
 | o           | we       |
 | oo          | oo       |
 
-Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1.
+Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1. Right now this is the only versio  of initial change being modelled.
 
 There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change. There are, also, exceptions to these exceptions. For example the tense preverb "daa-" instead appears as "ge-" under initial change, not "endaa-". 
+
+_irrChCnj_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
 
 The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156).
 
