@@ -35,9 +35,9 @@ define dDeletion d -> 0 || _ SUFBD Cons ;
 ! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
 define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
 define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
+
 define n1Default n1 -> n ;
 define s1Default s1 -> s ;
-
 define i1Default i1 -> i ;
 
 ! Nasal assimilation: With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a
@@ -141,11 +141,9 @@ define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1
 ! Noun-specific rules
 
 ! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
-
 define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 
 ! 
-
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
 
 define y2Deletion y2 -> 0 ;
