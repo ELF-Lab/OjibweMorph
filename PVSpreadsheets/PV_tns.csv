@@ -2,7 +2,7 @@ PV,Tag,Independent,PlainConjunct,ChangedConjunct
 ga,PVTense,ga,ji,ge
 daa,PVTense,daa,ji,ge
 daa,PVTense,daa,da,ge
-gii,PVTense,gii,gii,NA
-gii',PVTense,gii',gii',NA
-wii,PVTense,wii,wii,NA
-wii',PVTense,wii',wii',NA
+gii,PVTense,gii,gii,NONE
+gii',PVTense,gii',gii',NONE
+wii,PVTense,wii,wii,NONE
+wii',PVTense,wii',wii',NONE
