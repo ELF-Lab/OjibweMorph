@@ -217,6 +217,7 @@ read regex [emptyFilter .o.
 			           	prefixOLengthening .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
+						gadaRule .o.
 				       	defaultRules .o.
 				       	ChCnjDefault .o.
 				       	emptyFilter ] ;
