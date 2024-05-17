@@ -91,10 +91,10 @@ define hDeletion h (->) 0 || n _ y1 ;
 define y2Deletion y2 -> 0 ;
 
 ! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
-define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
+define irrDimGan g a n SUFBD e n  -> g a a n ">>" ;
 
 ! Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
-define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
+define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 
 
 ! Default rule
