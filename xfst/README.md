@@ -197,3 +197,6 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 - _hDeletion (OPTIONAL!):_ Optionally delete h between n and y (h -> 0 / n_y). Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
 	- MUST FOLLOW _y1deletion_
 
+- _irrDimGan:_ Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
+
+- _irrDimVVny:_ Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
