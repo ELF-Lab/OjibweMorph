@@ -80,9 +80,8 @@ define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1
 
 ! noun-specific suffix rules
 
-!w2-deletion: w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
-!MUST PRECEDE ShortV-Lengthening
-!MUST FOLLOW ShortV-Deletion
+! w2Deletion: w2 deletes word finally, before consonants, before vowels "o", 
+! before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
 
 ! y -> h / VVn_#
