@@ -32,11 +32,9 @@ define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 
 ! Begin verb suffix rules
 
-! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
+! d-deletion: Delete stem-final "d" 
+! when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ SUFBD Cons ;
-
-! amRule1: no idea what this rule is doing
-define amRule1 m -> a || a _ SUFBD [m|n] ;
 
 ! nasalAssimilation: With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
 define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
@@ -47,15 +45,17 @@ define awaaRule w -> a || a _ SUFBD [k|g] ;
 ! awooRule: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 define awooRule a w -> o o || _ SUFBD [n|s] ;
 
-! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1".
-! AKA, wi -> o / C __
-! In Border Lakes, this only happens when w is not the last character in the word so we need to allow for
-! wi word-finally.
+! woRule1, woRule2: For stems that end in "Cw", the "w" goes to "o" 
+! when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. 
+! In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
+! For example, we get "mizhwi" rather than "mizho" for the imerative form.
 define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
 ! currently not used
 !define nDeletion n -> 0 || [ i | o o ] _ SUFBD Cons ;
+! amRule1: no idea what this rule is doing
+define amRule1 m -> a || a _ SUFBD [m|n] ;
 
 ! shared noun and verb suffix rules
 
@@ -70,11 +70,11 @@ define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
 ! (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
 define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 
-! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
-! This role MUST FOLLOW i1-Palatalization and w-to-o
+! w1Deletion: Delete word-final w1
 define w1Deletion w1 -> 0 || _ (SUFBD) .#. ;
 
-! VAI vowel lengthening
+! LengthenV: a short vowel to the left of v1 lengthens 
+! (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
 define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
 
 
@@ -84,13 +84,16 @@ define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1
 ! before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
 
-! y -> h / VVn_#
+! y1hRule: Turn y1 into h if it follows a long vowel + n sequence at the end of a word 
+! This handles some stems that are encoded inconsistently; 
+! a purely orthographic rule.
 define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
 
-! Delete y at the end of words
+! y1Deletion: Delete y1 at the end of a word
 define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
 
-! Delete h optionally
+! hDeletion: Optionally delete h between n and y (h -> 0 / n_y). 
+! Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
 define hDeletion h (->) 0 || n _ y1 ;
 
 ! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
