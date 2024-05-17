@@ -13,9 +13,11 @@ define Vowel [ a | e | i | o | V1 ] ;
 ! nonlight vowels are simply short vowels
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
 
-! Short stems consist of a single short vowel, and resist short vowel deletion
+! Short stems consist of a single short vowel, and resist short vowel deletion. 
+! Currently not used.
 define ShortStem [ "<<" [ Vowel - e ] Cons Cons ">>" | "<<" (Cons) [ Vowel - e ] Cons ">>" ] ;
 
+! Define stem boundary markers
 define PREBD "<<"+ ;
 define SUFBD ">>"+ ;
 define BD ["<<" | ">>"]+ ;
@@ -26,12 +28,12 @@ define PrefixBoundaryCleanup PREBD @-> "<<" ;
 define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 
 
-! Begin rules
+! Begin suffix rules
 
 ! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ SUFBD Cons ;
 
-! This rule MUST PRECEED the "ShortV-deletion" rule
+! This rule MUST PRECEED the ShortV-deletion rule
 ! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
 define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
 define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
@@ -74,6 +76,36 @@ define w1Default w1 -> w ;
 define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
 define w2Default w2 -> w ;
 
+! Nasal vowel rules
+
+! y -> h / VVn_#
+define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
+
+! Delete y at the end of words
+define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
+
+! Delete h optionally
+define hDeletion h (->) 0 || n _ y1 ;
+
+define y1Default y1 -> y ;
+
+! VAI vowel lengthening
+define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
+
+! Noun-specific rules
+
+! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
+define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
+
+! 
+define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
+
+define y2Deletion y2 -> 0 ;
+
+define restoreChars [a1:a | i2:i ] @-> || _ ;
+
+! Begin prefix rules
+
 ! Sources:
 ! https://ojibwe.lib.umn.edu/main-entry/g-pf
 ! https://ojibwe.lib.umn.edu/main-entry/g-pf
@@ -93,6 +125,13 @@ define w2Default w2 -> w ;
 !o(d)-
 !o- before consonants
 !od- before vowels
+
+!ni-/n- before m, n, w, p, t, k, s, sh
+!nim-/im-/m-/ni- before b
+!nin-/in-/n-/ni- before d, j, z, zh, g
+!nind-/ind-/nd- before vowels
+!At Red Lake, we get niy- before aa
+
 define PrefixDInsertion [..] -> d || .#. (PREBD) [{gi}|o|{ni}] _ PREBD Vowel ;
 define PrefixNDInsertion [..] (->) n || .#. (PREBD) {ni} _ d PREBD Vowel ;
 define PrefixDDeletion d (->) 0 || .#. (PREBD) {nin} _ PREBD ;
@@ -107,25 +146,6 @@ define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 
-!ni-/n- before m, n, w, p, t, k, s, sh
-!nim-/im-/m-/ni- before b
-!nin-/in-/n-/ni- before d, j, z, zh, g
-!nind-/ind-/nd- before vowels
-!At Red Lake, we get niy- before aa
-
-! Nasal vowel rules
-
-! y -> h / VVn_#
-define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
-
-! Delete y at the end of words
-define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
-
-! Delete h optionally
-define hDeletion h (->) 0 || n _ y1 ;
-
-define y1Default y1 -> y ;
-
 ! Changed conjunct rules
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define cleanUpChCnj "<ChCnj>" -> 0 ;
@@ -135,24 +155,15 @@ define cleanUpChCnj "<ChCnj>" -> 0 ;
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
 define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" _ ;
 
-! VAI vowel lengthening
-define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
 
-! Noun-specific rules
-
-! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
-define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
-
-! 
-define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
-
-define y2Deletion y2 -> 0 ;
+! Clean up rules
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
 
 define cleanUp BD -> 0 ; 
 
-define restoreChars [a1:a | i2:i ] @-> || _ ;
+
+! Composition, etc. Needs a lot more documentation
 
 ! Read preverbs from preverbs.lexc
 read lexc preverbs.lexc
