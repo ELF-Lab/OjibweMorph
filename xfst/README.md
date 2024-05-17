@@ -14,7 +14,7 @@ There are ten special characters:
  	*	This is the same as "w5" in the Bowers et al (2017) FST for Odawa
 *	w2, appears at the end of VV, VVw, Vw, and both regular and irregular Cw noun class stems and is deleted unless the suffix complex starts with non-back vowels (a, aa, i, ii, and e)
 * 	y1, appears in VVy and VVny stems and is deleted at the end of words only
-*	y2, appears in Cy noun class stems and is always deleted
+*	y2, appears in Cy noun class stems (regular and short) and is always deleted
 
 # Prefix rules
 
@@ -110,7 +110,7 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 - *woRule1, woRule2:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.
 	- MUST PRECEED _vowelDeletion_
 
-- *n1Rule, s1Rule:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1" or "i2".
+- *n1Rule, s1Rule:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1" or inanimate singular marker "i2".
   	- MUST PRECEED _vowelDeletion_
 
 - _vowelDeletion:_ Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
@@ -131,14 +131,13 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 - _LengthenV:_ a short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
 	- MUST FOLLOW _w2Deletion_
 
-- _y1hRule:_ Turn y1 into h if it follows a long vowel + n sequence at the end of a word (y1 -> h / VVn_#)
-	- This handles some stems that are encoded inconsistently in the OPD; a purely orthographic rule.
+- _y1hRule:_ Turn y1 into h if it follows a long vowel + n sequence at the end of a word (y1 -> h / VVn_#). This handles some stems that are encoded inconsistently in the OPD; a purely orthographic rule.
+    - MUST PRECEDE _y1Deletion_
 
 - _y1Deletion:_ Delete y1 at the end of words (y1 -> 0 / _ #)
 	- MUST PRECEDE _hDeletion_
 	- MUST FOLLOW _vowelDeletion_ and _y1hRule_
 
-- _hDeletion (OPTIONAL!):_ Optionally delete h between n and y (h -> 0 / n_y)
+- _hDeletion (OPTIONAL!):_ Optionally delete h between n and y (h -> 0 / n_y). Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
 	- MUST FOLLOW _y1deletion_
-	- Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
 

@@ -47,9 +47,6 @@ define awaaRule w -> a || a _ SUFBD [k|g] ;
 ! awooRule: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 define awooRule a w -> o o || _ SUFBD [n|s] ;
 
-! currently not used
-!define nDeletion n -> 0 || [ i | o o ] _ SUFBD Cons ;
-
 ! w-to-o: For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1".
 ! AKA, wi -> o / C __
 ! In Border Lakes, this only happens when w is not the last character in the word so we need to allow for
@@ -57,11 +54,14 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
+! currently not used
+!define nDeletion n -> 0 || [ i | o o ] _ SUFBD Cons ;
 
 ! shared noun and verb suffix rules
 
-! This rule MUST PRECEED the ShortV-deletion rule
-! i1-Palatalization: Stems ending in "n" palatalize to "zh" and "s" to "sh" when the suffix complex starts with the first person theme sign "i1".
+! Stems ending in "n1" palatalize to "zh" and "s1" to "sh" 
+! when the suffix complex starts with the first person theme sign "i1" 
+! or inanimate singular marker "i2".
 define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
 define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
 
@@ -69,8 +69,9 @@ define n1Default n1 -> n ;
 define s1Default s1 -> s ;
 define i1Default i1 -> i ;
 
-! ShortV-deletion: Delete word-final short vowels
-! This rule MUST PRECEED the "w-deletion" rule
+! Delete word-final short vowels in multi-syllabic words 
+! or mono-syllabic words with a long vowel 
+! (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
 define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
@@ -102,16 +103,14 @@ define hDeletion h (->) 0 || n _ y1 ;
 ! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
 define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 
-! 
+! Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
 
 ! y2Deletion: Always delete y2
 define y2Deletion y2 -> 0 ;
 
-!
+! Default rules
 define y1Default y1 -> y ;
-
-!
 define restoreChars [a1:a | i2:i ] @-> || _ ;
 
 ! Begin prefix rules
@@ -158,7 +157,7 @@ define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 
 ! Changed conjunct rules
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
-define cleanUpChCnj "<ChCnj>" -> 0 ;
+define ChCnjDefault "<ChCnj>" -> 0 ;
 
 ! Tense-tensing rule Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
@@ -197,9 +196,9 @@ define Lexicon [ VerbLexicon    |
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ 
 						y2Deletion .o.
-     	   	     	 	n1Rule .o.
+     	   	     	 	n1Rule .o. ! Must precede vowelDeletion
      	   	     	 	irrDimGan .o.
-				       	s1Rule .o.
+				       	s1Rule .o. ! Must precede vowelDeletion
      	   	     	 	n1Default .o.
 				       	s1Default .o.				       
      	   	            amRule1 .o.
@@ -209,19 +208,19 @@ read regex [emptyFilter .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
 				       	woRule2 .o.	! Must precede vowelDeletion			       
 				       	i1Default .o.
-			            vowelDeletion .o.
-			            w1Deletion .o.
+			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and yDeletion; must follow n1Rule, s1Rule, woRule1, and woRule2
+			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion
 				       	w1Default .o.
-				       	w2Deletion .o.
+				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
 				       	w2Default .o.
-                       	dDeletion .o.				       
-!						nDeletion .o.
-                        y1hRule .o.
-				       	y1Deletion .o.
-				      	hDeletion .o.
+                       	dDeletion .o. 				       
+!						nDeletion .o. ! Must follow w1Deletion
+                        y1hRule .o. ! Must precede y1Deletion
+				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
+				      	hDeletion .o. ! Must follow y1Deletion
 				       	irrDimVVny .o.
 				      	y1Default .o.
-				       	LengthenV .o.								       
+				       	LengthenV .o. ! Must follow w2Deletion								       
 			           	DepPrefixIInsertion .o.
 					   	DepPrefixWtoO .o.
 					   	DepPrefixWDeletion .o.
@@ -235,7 +234,7 @@ read regex [emptyFilter .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
 				       	restoreChars .o.
-				       	cleanUpChCnj .o.
+				       	ChCnjDefault .o.
 				       	emptyFilter ] ;
 
 ! Make sure @P.Alt@ flag is on both sides
