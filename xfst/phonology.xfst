@@ -96,14 +96,14 @@ define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
 ! Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
 define hDeletion h (->) 0 || n _ y1 ;
 
+! y2Deletion: Always delete y2
+define y2Deletion y2 -> 0 ;
+
 ! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
 define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 
 ! Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
-
-! y2Deletion: Always delete y2
-define y2Deletion y2 -> 0 ;
 
 
 ! Default rules
