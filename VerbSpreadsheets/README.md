@@ -139,7 +139,7 @@ All spreadsheets contain the following columns:
 
 ### Notes on ambiguous forms and alternate forms
 
-Right now, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations in Northwestern Ontario, just east of Fort Fraces. Any additional forms (Form2, Form3, etc) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, and also with hopes that we will also have a more proper multi-dialect model in the future (where dialect is more clearly indicated in some way).
+Right now, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations in Northwestern Ontario, just east of Fort Frances. Any additional forms (Form2, Form3, etc) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, and also with hopes that we will also have a more proper multi-dialect model in the future (where dialect is more clearly indicated in some way).
 
 When a given form is ambiguous, we have represented that indirectly by repeating identical forms in more than one row. There are no "composite" tags to indicate ambiguity. On the FST side, this will result in an ambiguous form being ambiguous as to which particular tag set is appropriate. In other uses such as the conjugator, this means the same form will appear in more than one place in the table.
 
@@ -160,11 +160,11 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### STEM TYPES
 
-| Class       | Description                  | Example Lemmas                    | Example Stems           			|
+| Class       | Description                  | Example Lemmas                    | Example Stems           		|
 |-------------|------------------------------|-----------------------------------|----------------------------------|
 | VII Class 1 | vii long vowel stems         | "michaa", "ate", "gonzaabii"      |	/michaa/, /ate/, gonzaabii/		|
 | VII Class 2 | vii short vowel stems        | "dakaagami", "inamo"              |	/dakaamgi/, /inamo/				|
-| VII Class 3A | vii consonant /d/ stems     | "zanagad", "atemagad"             |	/zanaga/, /atemagad/			|
+| VII Class 3A | vii consonant /d/ stems     | "zanagad", "atemagad"             |	/zanagad/, /atemagad/			|
 | VII Class 3B | vii consonant /n/ stems     | "bangisin"                        |	/bangisin/ 						|
 
 
