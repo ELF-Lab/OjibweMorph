@@ -1,6 +1,6 @@
 # Special characters
 
-There are seven special characters:
+There are ten special characters:
 *	i1, the first person "theme sign" (marking a first person object with the subject is also a first person), which is used to trigger palatalization in certain VTAs (see VTA notes with quotes from Rand Valentine).
        *	This is the same as "i2" in the Bowers et al (2017) FST for Odawa
 *	i2, the vestigial "inanimate singular" marker that appears in inanimate "short" stems. Resists _ShortV-Deletion_ and triggers palatalization of s1.
