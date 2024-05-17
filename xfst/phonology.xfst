@@ -35,14 +35,16 @@ define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 ! d-deletion: Delete stem-final "d" when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ SUFBD Cons ;
 
-! Nasal assimilation: With stems ending in "m" (e.g. VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation) or a
-! "g" (3SgProx in the conjunct) or "d" (inclusive simple imperative)
+! amRule1: no idea what this rule is doing
 define amRule1 m -> a || a _ SUFBD [m|n] ;
+
+! nasalAssimilation: With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
 define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
 
-! aw-to-aa: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
-! aw-to-oo: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+! awaaRule: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 define awaaRule w -> a || a _ SUFBD [k|g] ;
+
+! awooRule: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 define awooRule a w -> o o || _ SUFBD [n|s] ;
 
 ! currently not used
@@ -103,7 +105,7 @@ define irrDimGan g a n (SUFBD) e n  -> g a a n (SUFBD) ;
 ! 
 define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (SUFBD) ;
 
-!
+! y2Deletion: Always delete y2
 define y2Deletion y2 -> 0 ;
 
 !
@@ -204,8 +206,8 @@ read regex [emptyFilter .o.
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
-				       	woRule1 .o.
-				       	woRule2 .o.				       
+				       	woRule1 .o. ! Must precede vowelDeletion
+				       	woRule2 .o.	! Must precede vowelDeletion			       
 				       	i1Default .o.
 			            vowelDeletion .o.
 			            w1Deletion .o.
