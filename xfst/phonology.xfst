@@ -65,10 +65,6 @@ define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0
 define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
 define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
 
-define n1Default n1 -> n ;
-define s1Default s1 -> s ;
-define i1Default i1 -> i ;
-
 ! Delete word-final short vowels in multi-syllabic words 
 ! or mono-syllabic words with a long vowel 
 ! (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
@@ -77,7 +73,6 @@ define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
 ! W-deletion: Delete word-final "w" (occurs with neutral, positive 3sg)
 ! This role MUST FOLLOW i1-Palatalization and w-to-o
 define w1Deletion w1 -> 0 || _ (SUFBD) .#. ;
-define w1Default w1 -> w ;
 
 ! VAI vowel lengthening
 define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
@@ -89,7 +84,6 @@ define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1
 !MUST PRECEDE ShortV-Lengthening
 !MUST FOLLOW ShortV-Deletion
 define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
-define w2Default w2 -> w ;
 
 ! y -> h / VVn_#
 define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
@@ -109,9 +103,17 @@ define irrDimVVny [Vowel Vowel | e] n y1 (SUFBD) e n (->) [Vowel Vowel | e] n (S
 ! y2Deletion: Always delete y2
 define y2Deletion y2 -> 0 ;
 
+
 ! Default rules
+
+define n1Default n1 -> n ;
+define s1Default s1 -> s ;
+define i1Default i1 -> i ;
+define w1Default w1 -> w ;
+define w2Default w2 -> w ;
 define y1Default y1 -> y ;
 define restoreChars [a1:a | i2:i ] @-> || _ ;
+
 
 ! Begin prefix rules
 
@@ -213,8 +215,8 @@ read regex [emptyFilter .o.
 				       	w1Default .o.
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
 				       	w2Default .o.
-                       	dDeletion .o. 				       
-!						nDeletion .o. ! Must follow w1Deletion
+                       	dDeletion .o. ! Must follow w1Deletion      
+!						nDeletion .o. 
                         y1hRule .o. ! Must precede y1Deletion
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
