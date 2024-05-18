@@ -143,7 +143,7 @@ Based on examples from the dictionary, it seems like Border Lakes belongs into P
 
 There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change. There are, also, exceptions to these exceptions. For example the tense preverb "daa-" instead appears as "ge-" under initial change, not "endaa-". 
 
-_irrChCnj_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+- _irrChCnj_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
 
 The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156).
 
