@@ -289,7 +289,7 @@ VTA,Ind,VTA_n,miizh,miin1,2PlSubj,3SgProxObj,Dub,Pos,gimiinaawaadog,gi<<miin>>aa
 VTA,Ind,VTA_aw,mikaw,mikaw,2PlSubj,3SgProxObj,Dub,Pos,gimikawaawaadog,gi<<mikaw>>aawaadog,GUESS,,,,,,
 VTA,Ind,VTA_Cw,mizho,mizhw,2PlSubj,3SgProxObj,Dub,Pos,gimizhwaawaadog,gi<<mizhw>>aawaadog,GUESS,,,,,,
 VTA,Ind,VTA_C,waabam,waabam,2PlSubj,3SgProxObj,Dub,Pos,giwaabamaawaadog,gi<<waabam>>aawaadog,GUESS,,,,,,
-VTA,Ind,VTA_s,mawadish,mawadis1,2PlSubj,ExclObj,Dub,Neg,gimawadishisiinaam,gi<<mawadish>>i1siinaam,GUESS,gimawadishisiiminaadog,gi<<mawadish>>i1siiminaadog,JRV-Web-ANISH,,,
+VTA,Ind,VTA_s,mawadish,mawadis1,2PlSubj,ExclObj,Dub,Neg,gimawadishisiinaamaadog,gi<<mawadish>>i1siinaamaadog,GUESS,gimawadishisiiminaadog,gi<<mawadish>>i1siiminaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_n,miizh,miin1,2PlSubj,ExclObj,Dub,Neg,gimiizhisiinaamaadog,gi<<miizh>>i1siinaamaadog,GUESS,gimiizhisiiminaadog,gi<<miizh>>i1siiminaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_aw,mikaw,mikaw,2PlSubj,ExclObj,Dub,Neg,gimikawisiinaamaadog,gi<<mikaw>>i1siinaamaadog,GUESS,gimikawisiiminaadog,gi<<mikaw>>i1siiminaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_Cw,mizho,mizhw,2PlSubj,ExclObj,Dub,Neg,gimizhosiinaamaadog,gi<<mizho>>i1siinaamaadog,GUESS,gimizhosiiminaadog,gi<<mizho>>i1siiminaadog,JRV-Web-ANISH,,,
