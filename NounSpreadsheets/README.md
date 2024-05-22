@@ -1,7 +1,5 @@
 # Noun Spreadsheets
 
-TEST
-
 ## General
 
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
