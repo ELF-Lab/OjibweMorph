@@ -85,6 +85,35 @@ LEXICON DirPV
 DirPVAny ;
 @U.Order.Ind@ DirPVIndependent ;
 @U.Order.Cnj@ DirPVPlainConjunct ;
-# ;
+RelPV ;
 
 {{ generate_preverb_sub_lexicons("PV_dir.csv", "PVDir/", "DirPV") }}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!       Relative PV       !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON RelPV
+RelPVAny ;
+@U.Order.Ind@ RelPVIndependent ;
+@U.Order.Cnj@ RelPVPlainConjunct ;
+# ;
+
+{{ generate_preverb_sub_lexicons("PV_rel.csv", "PVRel/", "RelPV") }}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!        Lexical PV       !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON LexPV
+LexPVAny ;
+@U.Order.Ind@ LexPVIndependent ;
+@U.Order.Cnj@ LexPVPlainConjunct ;
+# ;
+
+{{ generate_preverb_sub_lexicons("PV_lex.csv", "PVLex/", "LexPV") }}
+
