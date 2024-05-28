@@ -151,11 +151,13 @@ define gadaRule g a "-" -> d a "-" || .#. _ ;
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define ChCnjDefault "<ChCnj>" -> 0 ;
 
-! Tense-tensing rule Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
+! Tense-tensing: Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
 define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" _ ;
 
+! pejorativePalatalization: s and z palatalize to zh when followed by the pejorative marker ish.
+define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
 
 ! Clean up rules
 
@@ -203,9 +205,10 @@ read regex [emptyFilter .o.
                         y1hRule .o. ! Must precede y1Deletion
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
+						LengthenV .o. ! Must follow w2Deletion
 				       	irrDimVVny .o.
      	   	     	 	irrDimGan .o.
-				       	LengthenV .o. ! Must follow w2Deletion
+						pejorativePalatalization .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
 					   	DepPrefixWtoO .o.
