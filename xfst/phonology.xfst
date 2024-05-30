@@ -96,6 +96,11 @@ define irrDimGan g a n SUFBD e n  -> g a a n ">>" ;
 ! Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
 define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 
+! Irregular diminutive form for animosh.
+define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
+
+! pejorativePalatalization: s and z palatalize to zh when followed by the pejorative marker ish.
+define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
 
 ! Default rule
 
@@ -156,9 +161,6 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
 define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" _ ;
 
-! pejorativePalatalization: s and z palatalize to zh when followed by the pejorative marker ish.
-define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
-
 ! Clean up rules
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
@@ -208,6 +210,7 @@ read regex [emptyFilter .o.
 						LengthenV .o. ! Must follow w2Deletion
 				       	irrDimVVny .o.
      	   	     	 	irrDimGan .o.
+						irrDimAnimosh .o.
 						pejorativePalatalization .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
