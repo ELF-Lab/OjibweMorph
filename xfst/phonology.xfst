@@ -177,17 +177,31 @@ read lexc ojibwe_verbs.lexc
 substitute defined VPrefixes for "[PREVERB]"
 define VerbLexicon ;
 
-define zero 0 ;
+read lexc prenouns.lexc
+define NPrefixes ;
 read lexc ojibwe_nouns.lexc
-substitute defined zero for "[PRENOUN]"
+substitute defined NPrefixes for "[PRENOUN]"
 define NounLexicon ;
 
 read lexc ojibwe_pronouns.lexc
 define PronounLexicon ;
 
-define Lexicon [ VerbLexicon    |
-                 NounLexicon    |
-		 PronounLexicon ] ;
+read lexc ojibwe_adverbs.lexc
+define AdverbLexicon ;
+
+read lexc ojibwe_numerals.lexc
+define NumeralLexicon ;
+
+read lexc ojibwe_particles.lexc
+define ParticleLexicon ;
+
+define Lexicon [ AdverbLexicon   |
+                 NounLexicon     |
+		 NumeralLexicon  |
+		 ParticleLexicon |
+		 PronounLexicon  |
+                 VerbLexicon 
+	       ] ;
 
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ 
@@ -265,4 +279,4 @@ read regex Analyzer | IrregularLexicon ;
 
 eliminate flags
 save stack ojibwe.fomabin
-
+write att > ojibwe.att
