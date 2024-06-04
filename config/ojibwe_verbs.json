@@ -43,6 +43,6 @@
     "V1"
   ],
   "pre_element_tag": "[PREVERB]",
-  "template_path":"./templates",
+  "template_path":"./templates/preverbs.lexc.j2",
   "pv_source_path":"./PVSpreadsheets"  
 }

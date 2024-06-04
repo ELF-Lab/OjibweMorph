@@ -31,14 +31,14 @@
 	"NI_VV ",
 	"NI_VVny",
 	"NI_Vw",
-	"NI_aa"
+	"NI_aa",
+	"NA_irrCw"	
     ],
     "irregular_csv_files": [
-	"NA_irrCw"
     ],
     "lexical_database": "generated/NOUNS.csv",
     "regular_lexc_file": "ojibwe_nouns.lexc",
-    "irregular_lexc_file": "ojibwe_irregular_nouns.lexc",
+    "irregular_lexc_file": "None",
     "morph_features": [
 	"Paradigm",
 	"PersPoss",
@@ -63,6 +63,6 @@
 	"y2"
     ],
     "pre_element_tag": "[PRENOUN]",
-    "template_path":"None",
-    "pv_source_path":"None"
+    "template_path":"./templates/prenouns.lexc.j2",
+    "pv_source_path":"./PVSpreadsheets"
 }

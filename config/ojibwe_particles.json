@@ -1,12 +1,12 @@
 {
   "morphology_source_path": "./OtherSpreadsheets/",
   "regular_csv_files": [
-    "PRON"
+    "PARTICLE"
   ],
   "irregular_csv_files": [
   ],
-  "lexical_database": "generated/PRONOUNS.csv",
-  "regular_lexc_file": "ojibwe_pronouns.lexc",
+  "lexical_database": "generated/PARTICLES.csv",
+  "regular_lexc_file": "ojibwe_particles.lexc",
   "irregular_lexc_file": "None",
   "morph_features": [
     "Paradigm"
