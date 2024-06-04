@@ -11,7 +11,7 @@
 
 Multichar_Symbols
 
-PVSub/ PVTense/ PVDir/ ChCnj+
+PVSub/ PVTense/ PVDir/ PVRel/ PVLex/ PVQnt/ ChCnj+
 %<ChCnj%>
 @U.Order.Cnj@
 @U.Order.Ind@
@@ -27,7 +27,7 @@ PVSub/ PVTense/ PVDir/ ChCnj+
 %<EMPTYLEX%>
 
 ! We'll define all preverb tags like PVTense/gii+ as multichar symbols 
-{{ all_preverb_tags() }}
+{{ all_pre_element_tags() }}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
@@ -51,7 +51,7 @@ TensePV ;
 
 LEXICON SubPVPlainConjunct
 ChCnj+:0 ChCnjPV ;
-{{ load_preverb_csv("PV_sub.csv", "PVSub/", "SubPVBoundary", "PlainConjunct") }}
+{{ load_pre_element_csv([("PV_sub.csv", "PVSub/")], "SubPVBoundary", "PlainConjunct") }}
 
 LEXICON ChCnjPV
 @U.ChCnj.On@ TensePVChangedConjunct ;
@@ -73,7 +73,7 @@ TensePVAny ;
 @U.Order.Cnj@ TensePVPlainConjunct ;
 DirPV ;
 
-{{ generate_preverb_sub_lexicons("PV_tns.csv", "PVTense/", "TensePV") }}
+{{ generate_pre_element_sub_lexicons([("PV_tns.csv", "PVTense/")], "TensePV") }}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
@@ -87,7 +87,7 @@ DirPVAny ;
 @U.Order.Cnj@ DirPVPlainConjunct ;
 RelPV ;
 
-{{ generate_preverb_sub_lexicons("PV_dir.csv", "PVDir/", "DirPV") }}
+{{ generate_pre_element_sub_lexicons([("PV_dir.csv", "PVDir/")], "DirPV") }}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
@@ -101,7 +101,7 @@ RelPVAny ;
 @U.Order.Cnj@ RelPVPlainConjunct ;
 # ;
 
-{{ generate_preverb_sub_lexicons("PV_rel.csv", "PVRel/", "RelPV") }}
+{{ generate_pre_element_sub_lexicons([("PV_rel.csv", "PVRel/")], "RelPV") }}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
@@ -115,5 +115,6 @@ LexPVAny ;
 @U.Order.Cnj@ LexPVPlainConjunct ;
 # ;
 
-{{ generate_preverb_sub_lexicons("PV_lex.csv", "PVLex/", "LexPV") }}
+{{ generate_pre_element_sub_lexicons([("PV_lex.csv", "PVLex/"), ("PV_qnt.csv", "PVQnt/")], "LexPV") }}
+
 
