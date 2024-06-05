@@ -199,11 +199,19 @@ define NumeralLexicon ;
 read lexc ojibwe_particles.lexc
 define ParticleLexicon ;
 
+read lexc preverbs.lexc
+define Preverbs
+
+read lexc preverbs.lexc
+define Prenouns
+
 define Lexicon [ AdverbLexicon   |
                  NounLexicon     |
 		 NumeralLexicon  |
 		 ParticleLexicon |
 		 PronounLexicon  |
+		 Preverbs |
+		 Prenouns |
                  VerbLexicon 
 	       ] ;
 
