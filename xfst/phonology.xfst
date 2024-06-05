@@ -160,10 +160,11 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! Tense-tensing: Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
-define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" _ ;
+!define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" ("<<") _ ;
+define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ g | w ] [ {ii} | {aa} ] ("'") "-" (PREBD) _ ;
 
 ! Allow for deletion of preverb boundaries
-define DeletePVHyphen "-" (->) 0 || _ ?* "<<" ;
+define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
 
 ! Clean up rules
 
@@ -199,19 +200,11 @@ define NumeralLexicon ;
 read lexc ojibwe_particles.lexc
 define ParticleLexicon ;
 
-read lexc preverbs.lexc
-define Preverbs
-
-read lexc preverbs.lexc
-define Prenouns
-
 define Lexicon [ AdverbLexicon   |
                  NounLexicon     |
 		 NumeralLexicon  |
 		 ParticleLexicon |
 		 PronounLexicon  |
-		 Preverbs |
-		 Prenouns |
                  VerbLexicon 
 	       ] ;
 
@@ -284,11 +277,7 @@ define Analyzer ;
 read lexc ojibwe_irregular_verbs.lexc
 define IrregularVerbLexicon ;
 
-read lexc ojibwe_irregular_nouns.lexc
-define IrregularNounLexicon ;
-
-define IrregularLexicon [IrregularNounLexicon | 
-                         IrregularVerbLexicon ] ;
+define IrregularLexicon [ IrregularVerbLexicon ] ;
 
 read regex Analyzer | IrregularLexicon ;
 
