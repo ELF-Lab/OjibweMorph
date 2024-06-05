@@ -162,6 +162,9 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
 define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" _ ;
 
+! Allow for deletion of preverb boundaries
+define DeletePVHyphen "-" (->) 0 || _ ?* "<<" ;
+
 ! Clean up rules
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
@@ -242,7 +245,9 @@ read regex [emptyFilter .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
 						gadaRule .o.
+					DeletePVHyphen .o.
 						! Cleanup rules
+						
 				       	defaultRules .o.
 				       	ChCnjDefault .o.
 				       	emptyFilter ] ;
