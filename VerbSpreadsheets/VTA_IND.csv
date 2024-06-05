@@ -145,7 +145,7 @@ VTA,Ind,VTA_aw,mikaw,mikaw,0SgSubj,3SgObvObj,Dub,Neg,omikaagosiinaadog,o<<mikaa>
 VTA,Ind,VTA_Cw,mizho,mizhw,0SgSubj,3SgObvObj,Dub,Neg,omizhogosiinaadog,o<<mizho>>igosiinaadog,GUESS,omizhogosiininaadog,o<<mizho>>igosiininaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_C,waabam,waabam,0SgSubj,3SgObvObj,Dub,Neg,owaabamigosiinaadog,o<<waabam>>igosiinaadog,GUESS,owaabamigosiininaadog,o<<waabam>>igosiininaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_s,mawadish,mawadis1,0SgSubj,3SgObvObj,Dub,Pos,omawadisigonaadog,o<<mawadis>>igonaadog,GUESS,omawadisigoninaadog,o<<mawadis>>igoninaadog,JRV-Web-ANISH,,,
-VTA,Ind,VTA_n,miizh,miin1,0SgSubj,3SgObvObj,Dub,Pos,omiinaadogigonaadog,o<<miinaadog>>igonaadog,GUESS,omiinigoninaadog,o<<miin>>igoninaadog,JRV-Web-ANISH,,,
+VTA,Ind,VTA_n,miizh,miin1,0SgSubj,3SgObvObj,Dub,Pos,omiinigonaadog,o<<miin>>igonaadog,GUESS,omiinigoninaadog,o<<miin>>igoninaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_aw,mikaw,mikaw,0SgSubj,3SgObvObj,Dub,Pos,omikaagonaadog,o<<mikaa>>gonaadog,GUESS,omikaagoninaadog,o<<mikaa>>goninaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_Cw,mizho,mizhw,0SgSubj,3SgObvObj,Dub,Pos,omizhogonaadog,o<<mizho>>igonaadog,GUESS,omizhogoninaadog,o<<mizho>>igoninaadog,JRV-Web-ANISH,,,
 VTA,Ind,VTA_C,waabam,waabam,0SgSubj,3SgObvObj,Dub,Pos,owaabamigonaadog,o<<waabam>>igonaadog,GUESS,owaabamigoninaadog,o<<waabam>>igoninaadog,JRV-Web-ANISH,,,
