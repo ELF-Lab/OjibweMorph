@@ -12,7 +12,7 @@
 Multichar_Symbols
 
 PVSub/ PVTense/ PVDir/ PVRel/ PVLex/ PVQnt/ ChCnj+
-%<ChCnj%>
+%<ChCnj%> %<%<
 @U.Order.Cnj@
 @U.Order.Ind@
 @U.ChCnj.On@
@@ -113,8 +113,10 @@ LEXICON LexPV
 LexPVAny ;
 @U.Order.Ind@ LexPVIndependent ;
 @U.Order.Cnj@ LexPVPlainConjunct ;
-# ;
+End ;
 
 {{ generate_pre_element_sub_lexicons([("PV_lex.csv", "PVLex/"), ("PV_qnt.csv", "PVQnt/")], "LexPV") }}
 
 
+LEXICON End
+%<%< # ;
