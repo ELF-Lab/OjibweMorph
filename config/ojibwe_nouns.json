@@ -41,12 +41,12 @@
     "irregular_lexc_file": "None",
     "morph_features": [
 	"Paradigm",
-	"PersPoss",
 	"Dim",
 	"Poss",
 	"Pej",
 	"Pret",
-	"Basic"
+	"Basic",
+	"PersPoss"	
     ],
     "missing_tag_marker": "NONE",
     "missing_form_marker": "MISSING",
