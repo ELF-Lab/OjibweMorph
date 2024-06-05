@@ -141,6 +141,7 @@ define PrefixDDeletion d (->) 0 || .#. (PREBD) {nin} _ PREBD ;
 define PrefixIND {nid} (->) [{ind} | {nd}] || .#. (PREBD) _ PREBD;
 define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
+define PrefixNInitialDeletion n (->) 0 || .#. (PREBD) _ [ {in} | {im} ] PREBD ;
 
 define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} ] d | {nin} ] PREBD _ \o ; 
 
@@ -235,7 +236,8 @@ read regex [emptyFilter .o.
 				       	PrefixDDeletion .o.
 				       	PrefixIND .o.
 				       	PrefixMInsertion .o.
-				       	PrefixNInsertion .o.				       
+				       	PrefixNInsertion .o.
+					PrefixNInitialDeletion .o.
 			           	prefixOLengthening .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
