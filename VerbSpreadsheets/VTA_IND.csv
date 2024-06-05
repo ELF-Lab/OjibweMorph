@@ -307,7 +307,7 @@ VTA,Ind,VTA_C,waabam,waabam,2SgSubj,1SgObj,Dub,Neg,giwaabamisiinaadog,gi<<waabam
 VTA,Ind,VTA_s,mawadish,mawadis1,2SgSubj,1SgObj,Dub,Pos,gimawadishinaadog,gi<<mawadish>>i1naadog,GUESS,,,,,,
 VTA,Ind,VTA_n,miizh,miin1,2SgSubj,1SgObj,Dub,Pos,gimiizhinaadog,gi<<miizh>>i1naadog,GUESS,,,,,,
 VTA,Ind,VTA_aw,mikaw,mikaw,2SgSubj,1SgObj,Dub,Pos,gimikawinaadog,gi<<mikaw>>i1naadog,GUESS,,,,,,
-VTA,Ind,VTA_Cw,mizho,mizhw,2SgSubj,1SgObj,Dub,Pos,gimizhnaadog,gi<<mizho>>i1naadog,GUESS,,,,,,
+VTA,Ind,VTA_Cw,mizho,mizhw,2SgSubj,1SgObj,Dub,Pos,gimizhonaadog,gi<<mizho>>i1naadog,GUESS,,,,,,
 VTA,Ind,VTA_C,waabam,waabam,2SgSubj,1SgObj,Dub,Pos,giwaabaminaadog,gi<<waabam>>i1naadog,GUESS,,,,,,
 VTA,Ind,VTA_s,mawadish,mawadis1,2SgSubj,3PlObvObj,Dub,Neg,gimawadisimaasiidogena',gi<<mawadis>>imaasiidogena',GUESS,gimawadisimaasiidogenan,gi<<mawadis>>imaasiidogenan,GUESS,,,
 VTA,Ind,VTA_n,miizh,miin1,2SgSubj,3PlObvObj,Dub,Neg,gimiinimaasiidogena',gi<<miin>>imaasiidogena',GUESS,gimiinimaasiidogenan,gi<<miin>>imaasiidogenan,GUESS,,,
