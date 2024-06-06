@@ -1,49 +1,50 @@
 {
-  "morphology_source_path": "./VerbSpreadsheets/",
-  "regular_csv_files": [
-    "VAIO_CNJ",
-    "VAIO_IMP",
-    "VAIO_IND",
-    "VAI_CNJ",
-    "VAI_IMP",
-    "VAI_IND",
-    "VAI_Pl",
-    "VAI_Reflex_Recip",
-    "VII_CNJ",
-    "VII_IND",
-    "VII_Pl",      
-    "VTA_CNJ",
-    "VTA_IMP",
-    "VTA_IND",
-    "VTI_CNJ",
-    "VTI_IMP",
-    "VTI_IND"
-  ],
-  "irregular_csv_files": [
-    "VTA_IRR"
-  ],
-  "lexical_database": "generated/VERBS.csv",
-  "regular_lexc_file": "ojibwe_verbs.lexc",
-  "irregular_lexc_file": "ojibwe_irregular_verbs.lexc",
-  "morph_features": [
-    "Paradigm",
-    "Order",
-    "Negation",
-    "Mode",
-    "Subject",
-    "Object"
-  ],
-  "missing_tag_marker": "NONE",
-  "missing_form_marker": "MISSING",
-  "multichar_symbols": [
-    "i1",
-    "s1",
-    "n1",
-    "w1",
-    "V1",
-    "<T>"
-  ],
-  "pre_element_tag": "[PREVERB]",
-  "template_path":"./templates/preverbs.lexc.j2",
-  "pv_source_path":"./PVSpreadsheets"  
+    "morphology_source_path": "./VerbSpreadsheets/",
+    "regular_csv_files": [
+	"VAIO_CNJ",
+	"VAIO_IMP",
+	"VAIO_IND",
+	"VAI_CNJ",
+	"VAI_IMP",
+	"VAI_IND",
+	"VAI_Pl",
+	"VAI_Reflex_Recip",
+	"VII_CNJ",
+	"VII_IND",
+	"VII_Pl",      
+	"VTA_CNJ",
+	"VTA_IMP",
+	"VTA_IND",
+	"VTI_CNJ",
+	"VTI_IMP",
+	"VTI_IND"
+    ],
+    "irregular_csv_files": [
+	"VTA_IRR"
+    ],
+    "lexical_database": "generated/VERBS.csv",
+    "regular_lexc_file": "ojibwe_verbs.lexc",
+    "irregular_lexc_file": "ojibwe_irregular_verbs.lexc",
+    "morph_features": [
+	"Paradigm",
+	"Order",
+	"Negation",
+	"Mode",
+	"Subject",
+	"Object"
+    ],
+    "missing_tag_marker": "NONE",
+    "missing_form_marker": "MISSING",
+    "multichar_symbols": [
+	"i1",
+	"s1",
+	"n1",
+	"w1",
+	"V1",
+	"w2",
+	"<T>"
+    ],
+    "pre_element_tag": "[PREVERB]",
+    "template_path":"./templates/preverbs.lexc.j2",
+    "pv_source_path":"./PVSpreadsheets"  
 }

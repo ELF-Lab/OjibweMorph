@@ -1,21 +1,22 @@
 {
-  "morphology_source_path": "./OtherSpreadsheets/",
-  "regular_csv_files": [
-    "ADVERB"
-  ],
-  "irregular_csv_files": [
-  ],
-  "lexical_database": "generated/ADVERBS.csv",
-  "regular_lexc_file": "ojibwe_adverbs.lexc",
-  "irregular_lexc_file": "None",
-  "morph_features": [
-    "Paradigm"
-  ],
-  "missing_tag_marker": "NONE",
-  "missing_form_marker": "MISSING",
-  "multichar_symbols": [
-  ],
-  "pre_element_tag": "",
-  "template_path":"None",
-  "pv_source_path":"None"
+    "morphology_source_path": "./OtherSpreadsheets/",
+    "regular_csv_files": [
+	"ADVERB"
+    ],
+    "irregular_csv_files": [
+    ],
+    "lexical_database": "generated/ADVERBS.csv",
+    "regular_lexc_file": "ojibwe_adverbs.lexc",
+    "irregular_lexc_file": "None",
+    "morph_features": [
+	"Paradigm"
+    ],
+    "missing_tag_marker": "NONE",
+    "missing_form_marker": "MISSING",
+    "multichar_symbols": [
+	"w2"
+    ],
+    "pre_element_tag": "",
+    "template_path":"None",
+    "pv_source_path":"None"
 }
