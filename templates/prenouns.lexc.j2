@@ -23,6 +23,10 @@ PNLex/ PNQnt/ @C.ChCnj@
 ! We'll define all preverb tags like PVTense/gii+ as multichar symbols 
 {{ all_pre_element_tags('lambda x:x.replace("PV","PN")') }}
 
+! We'll add all multichar symbols used in the lexical items because
+! some of them might be used in prenouns as well
+{{ add_lexeme_multichar_symbols() }}
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
 !!   PV lexicons start     !!
