@@ -40,7 +40,8 @@
     "s1",
     "n1",
     "w1",
-    "V1"
+    "V1",
+    "<T>"
   ],
   "pre_element_tag": "[PREVERB]",
   "template_path":"./templates/preverbs.lexc.j2",
