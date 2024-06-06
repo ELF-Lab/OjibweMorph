@@ -160,8 +160,7 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! Tense-tensing: Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
-!define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ .#. | "-" ] [ g | w ] [ {ii} | {aa} ] ("'") "-" ("<<") _ ;
-define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || [ g | w ] [ {ii} | {aa} ] ("'") "-" (PREBD) _ ;
+define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || "<T>" "-" (PREBD) _ ;
 
 ! Allow for deletion of preverb boundaries
 define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
@@ -170,7 +169,7 @@ define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
 
 define emptyFilter [? - "<EMPTYLEX>"]* ;
 
-define cleanUp BD -> 0 ; 
+define cleanUp [ BD | "<T>" ] -> 0 ; 
 
 
 ! Composition, etc. Needs a lot more documentation
