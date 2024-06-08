@@ -153,6 +153,10 @@ define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 ! gadaRule
 define gadaRule g a "-" -> d a "-" || .#. _ ;
 
+! "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+! endaso-biboonagizid 
+define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"-" ] ; 
+
 ! Changed conjunct rules
 define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
 define ChCnjDefault "<ChCnj>" -> 0 ;
@@ -242,6 +246,7 @@ read regex [emptyFilter .o.
 				       	PrefixNInsertion .o.
 					PrefixNInitialDeletion .o.
 			           	prefixOLengthening .o.
+					ChCnjEn .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
 						gadaRule .o.
