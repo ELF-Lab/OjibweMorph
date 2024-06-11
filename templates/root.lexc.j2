@@ -1,0 +1,42 @@
+{#
+   This jinja2 template should be processed using a python script
+   to generate root.lexc.
+#}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!   Symbol declarations   !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Multichar_Symbols
+
+%<ChCnj%> %<%<
+
+! Flag diacritics for preverbs and prenouns
+@U.Order.Cnj@
+@U.Order.Ind@
+@U.ChCnj.On@
+@R.ChCnj.On@
+@D.ChCnj@
+@C.ChCnj@
+
+! We sometimes end up with empty sub-lexicons. This can cause
+! artificial ambiguity (and even epsilon loops) due to sequences of
+! flag diacritics, which slows down analysis. Therefore, we mark empty
+! entries with an <EMPTYLEX> tag and filter them out using a
+! post-processing rule in phonology.xfst.
+%<EMPTYLEX%>
+
+! Add multichar symbols harvested from noun spreadsheets, verb
+! spreadsheets, pronoun spreadsheets, etc.
+{{ add_harvested_multichar_symbols() }}
+
+LEXICON Root
+AdverbRoot ;
+NounRoot ;
+NumeralRoot ;
+ParticleRoot ;
+PronounRoot ;
+VerbRoot ;
+VerbRootIrregular ;

@@ -5,37 +5,13 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
-!!   Symbol declarations   !!
-!!                         !!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-Multichar_Symbols
-
-PNLex/ PNQnt/ @C.ChCnj@
-%<%<
-! We sometimes end up with empty sub-lexicons. This can cause
-! artificial ambiguity (and even epsilon loops) due to sequences of
-! flag diacritics, which slows down analysis. Therefore, we mark empty
-! entries with an <EMPTYLEX> tag and filter them out using a
-! post-processing rule in phonology.xfst.
-%<EMPTYLEX%>
-
-! We'll define all preverb tags like PVTense/gii+ as multichar symbols 
-{{ all_pre_element_tags('lambda x:x.replace("PV","PN")') }}
-
-! We'll add all multichar symbols used in the lexical items because
-! some of them might be used in prenouns as well
-{{ add_lexeme_multichar_symbols() }}
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!                         !!
 !!   PV lexicons start     !!
 !!                         !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON Root
+LEXICON PrenounRoot
 LexPN ;
-# ;
+NounStems ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                         !!
@@ -50,4 +26,4 @@ End ;
 {{ generate_pre_element_sub_lexicons([("PV_lex.csv", "PNLex/"), ("PV_qnt.csv", "PNQnt/")], "LexPN") }}
 
 LEXICON End
-%<%< # ;
+%<%< NounStems ;
