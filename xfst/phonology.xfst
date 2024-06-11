@@ -231,30 +231,35 @@ read regex [emptyFilter .o.
 
 define Analyzer ;
 
-set flag-is-epsilon OFF
-
-define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} PREBD       |
-                                                             {nd}  PREBD       |
-							     {nin} PREBD Vowel ]  ?* _ .#. ;
-read regex Analyzer .o. AltRule1 ;
-twosided flag-diacritics
-define Analyzer
-define AltRule2 [..] -> "+Alt" || _ "@P.Alt.On@" ;
-read regex AltRule2.i .o. Analyzer ;
-define Analyzer
-
-set flag-is-epsilon ON
-
-read regex Analyzer .o. cleanUp ;
-define Analyzer ;
-
-read lexc ojibwe_irregular_verbs.lexc
-define IrregularVerbLexicon ;
-
-define IrregularLexicon [ IrregularVerbLexicon ] ;
-
-read regex Analyzer | IrregularLexicon ;
-
 eliminate flags
 save stack ojibwe.fomabin
 write att > ojibwe.att
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The following is related to Alt-tags which mark alternative
+! analyses. We'll comment it out for now.
+
+!set flag-is-epsilon OFF
+
+!define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} PREBD       |
+                                                             {nd}  PREBD       |
+							     {nin} PREBD Vowel ]  ?* _ .#. ;
+!read regex Analyzer .o. AltRule1 ;
+!twosided flag-diacritics
+!define Analyzer
+!define AltRule2 [..] -> "+Alt" || _ "@P.Alt.On@" ;
+!read regex AltRule2.i .o. Analyzer ;
+!define Analyzer
+
+!set flag-is-epsilon ON
+
+!read regex Analyzer .o. cleanUp ;
+!define Analyzer ;
+
+!read lexc ojibwe_irregular_verbs.lexc
+!define IrregularVerbLexicon ;
+
+!define IrregularLexicon [ IrregularVerbLexicon ] ;
+
+!read regex Analyzer | IrregularLexicon ;
+
