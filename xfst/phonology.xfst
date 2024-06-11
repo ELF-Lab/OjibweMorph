@@ -178,38 +178,8 @@ define cleanUp [ BD | "<T>" ] -> 0 ;
 
 ! Composition, etc. Needs a lot more documentation
 
-! Read preverbs from preverbs.lexc
-read lexc preverbs.lexc
-define VPrefixes ;
-read lexc ojibwe_verbs.lexc
-substitute defined VPrefixes for "[PREVERB]"
-define VerbLexicon ;
-
-read lexc prenouns.lexc
-define NPrefixes ;
-read lexc ojibwe_nouns.lexc
-substitute defined NPrefixes for "[PRENOUN]"
-define NounLexicon ;
-
-read lexc ojibwe_pronouns.lexc
-define PronounLexicon ;
-
-read lexc ojibwe_adverbs.lexc
-define AdverbLexicon ;
-
-read lexc ojibwe_numerals.lexc
-define NumeralLexicon ;
-
-read lexc ojibwe_particles.lexc
-define ParticleLexicon ;
-
-define Lexicon [ AdverbLexicon   |
-                 NounLexicon     |
-		 NumeralLexicon  |
-		 ParticleLexicon |
-		 PronounLexicon  |
-                 VerbLexicon 
-	       ] ;
+read lexc all.lexc
+define Lexicon
 
 read regex [emptyFilter .o.
             cleanUp.i ] .o. Lexicon .o. [ 
