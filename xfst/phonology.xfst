@@ -153,7 +153,7 @@ define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 ! gadaRule
 define gadaRule g a "-" -> d a "-" || .#. _ ;
 
-! "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+! "dan", "das", "dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
 ! endaso-biboonagizid 
 define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"-" ] ; 
 
