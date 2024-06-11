@@ -1,4 +1,6 @@
 {
+    "pos":"Numeral",
+    "root_lexicon":"NumeralRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"NUMERAL"

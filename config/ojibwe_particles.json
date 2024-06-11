@@ -1,4 +1,6 @@
 {
+    "pos":"Particle",
+    "root_lexicon":"ParticleRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"PARTICLE"

@@ -1,4 +1,6 @@
 {
+    "pos":"Noun",
+    "root_lexicon":"NounRoot",
     "morphology_source_path": "./NounSpreadsheets/",
     "regular_csv_files": [
 	"NAD_C",
@@ -63,6 +65,7 @@
 	"y2"
     ],
     "pre_element_tag": "[PRENOUN]",
+    "prefix_root":"PrenounRoot",
     "template_path":"./templates/prenouns.lexc.j2",
     "pv_source_path":"./PVSpreadsheets"
 }
