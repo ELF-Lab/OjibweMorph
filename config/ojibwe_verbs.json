@@ -1,4 +1,6 @@
 {
+    "pos":"Verb",
+    "root_lexicon":"VerbRoot",
     "morphology_source_path": "./VerbSpreadsheets/",
     "regular_csv_files": [
 	"VAIO_CNJ",
@@ -45,6 +47,7 @@
 	"<T>"
     ],
     "pre_element_tag": "[PREVERB]",
+    "prefix_root":"PreverbRoot",
     "template_path":"./templates/preverbs.lexc.j2",
     "pv_source_path":"./PVSpreadsheets"  
 }
