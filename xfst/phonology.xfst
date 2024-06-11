@@ -230,6 +230,7 @@ read regex [emptyFilter .o.
 ! Make sure @P.Alt@ flag is on both sides
 
 define Analyzer ;
+read regex Analyzer .o. cleanUp ;
 
 eliminate flags
 save stack ojibwe.fomabin
@@ -242,8 +243,9 @@ write att > ojibwe.att
 !set flag-is-epsilon OFF
 
 !define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} PREBD       |
-                                                             {nd}  PREBD       |
-							     {nin} PREBD Vowel ]  ?* _ .#. ;
+!                                                             {nd}  PREBD       |
+!							     {nin} PREBD Vowel ]  ?* _ .#. ;
+
 !read regex Analyzer .o. AltRule1 ;
 !twosided flag-diacritics
 !define Analyzer
