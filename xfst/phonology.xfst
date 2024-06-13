@@ -159,16 +159,17 @@ define gadaRule g a "-" -> d a "-" || .#. _ ;
 define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"-" ] ; 
 
 ! Changed conjunct rules
-! define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" [? - Vowel]* _ ;
+! define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" Cons* _ ;
 ! The weirdness of the rule is on purpose! hfst cannot compile longest match in the way we had above, so we needed to create temporary multicharacter symbols.
-define ChCnjV [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" [? - Vowel]* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" [? - Vowel]* _ ] .o. [ ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
+define ChCnjV [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" Cons* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" Cons* _ ] .o. [ ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
 
 define ChCnjDefault "<ChCnj>" -> 0 ;
 
 ! Tense-tensing: Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
-define tenseTensing b:p | d:t | j:{ch} | g:k | z:s | {zh}:{sh} @-> || "<T>" "-" (PREBD) _ ;
+define tenseTensing [ b -> p , d -> t , j -> {ch} , g -> k , {zh} -> {sh} || "<T>" "-" (PREBD) _ ] .o. [ z -> s || "<T>" "-" (PREBD) _ ];
+! <<gii<T>-<<dashi>>yaang
 
 ! Allow for deletion of preverb boundaries
 define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
