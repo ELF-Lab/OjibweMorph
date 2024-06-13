@@ -39,6 +39,7 @@
     "irregular_csv_files": [
     ],
     "lexical_database": "generated/NOUNS.csv",
+    "lexical_prefix_database": "generated/LEXICAL_PRENOUNS.csv",
     "regular_lexc_file": "ojibwe_nouns.lexc",
     "irregular_lexc_file": "None",
     "morph_features": [

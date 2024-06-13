@@ -89,8 +89,14 @@ LexPVAny ;
 @U.Order.Cnj@ LexPVPlainConjunct ;
 PreverbEnd ;
 
-{{ generate_pre_element_sub_lexicons([("PV_lex.csv", "PVLex/"), ("PV_qnt.csv", "PVQnt/")], "LexPV") }}
+LEXICON LexPVAny
+{{ load_pre_element_csv([("PV_lex.csv", "PVLex/")], "LexPVBoundary", "Any") }}
+{{ load_pre_element_csv([("PV_qnt.csv", "PVQnt/")], "LexPVBoundary", "Any") }}
+{{ load_pre_element_database("PVLex/","LexPVBoundary") }}
+{{ load_pre_element_database("PVQnt/","LexPVBoundary") }}
 
+LEXICON LexPVBoundary
+0:- LexPV ;
 
 LEXICON PreverbEnd
 0:%<%< VerbStems ;

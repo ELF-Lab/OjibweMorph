@@ -25,6 +25,7 @@
 	"VTA_IRR"
     ],
     "lexical_database": "generated/VERBS.csv",
+    "lexical_prefix_database": "generated/LEXICAL_PREVERBS.csv",    
     "regular_lexc_file": "ojibwe_verbs.lexc",
     "irregular_lexc_file": "ojibwe_irregular_verbs.lexc",
     "morph_features": [

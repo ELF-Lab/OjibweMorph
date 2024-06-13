@@ -23,7 +23,13 @@ LEXICON LexPN
 LexPNAny ;
 PrenounEnd ;
 
-{{ generate_pre_element_sub_lexicons([("PV_lex.csv", "PNLex/"), ("PV_qnt.csv", "PNQnt/")], "LexPN") }}
+{{ load_pre_element_csv([("PV_lex.csv", "PNLex/")], "LexPNBoundary", "Any") }}
+{{ load_pre_element_csv([("PV_qnt.csv", "PNQnt/")], "LexPNBoundary", "Any") }}
+{{ load_pre_element_database("PNLex/","LexPN") }}
+{{ load_pre_element_database("PNQnt/","LexPN") }}
+
+LEXICON LexPNBoundary
+0:- LexPN ;
 
 LEXICON PrenounEnd
 0:%<%< NounStems ;
