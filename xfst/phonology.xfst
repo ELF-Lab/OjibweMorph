@@ -74,7 +74,7 @@ define LengthenV [ i -> {ii} , a -> {aa} , o -> {oo} || _ SUFBD V1 ] .o. [ V1 ->
 
 ! w2Deletion: w2 deletes word finally, before consonants, before vowels "o", 
 ! before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
-define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | .#. ] ; 
+define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | "-" | .#. ] ; 
 
 ! y1hRule: Turn y1 into h if it follows a long vowel + n sequence at the end of a word 
 ! This handles some stems that are encoded inconsistently; 
