@@ -161,7 +161,7 @@ define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"
 ! Changed conjunct rules
 ! define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" Cons* _ ;
 ! The weirdness of the rule is on purpose! hfst cannot compile longest match in the way we had above, so we needed to create temporary multicharacter symbols.
-define ChCnjV [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" Cons* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" Cons* _ ] .o. [ ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
+define ChCnjV [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
 
 define ChCnjDefault "<ChCnj>" -> 0 ;
 
