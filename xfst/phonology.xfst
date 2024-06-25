@@ -35,8 +35,8 @@ define dDeletion d -> 0 || _ SUFBD Cons ;
 ! nasalAssimilation: With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
 define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
 
-! awaaRule: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
-define awaaRule w -> a || a _ SUFBD [k|g] ;
+! awaaRule: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g", "k", or "d".
+define awaaRule w -> a || a _ SUFBD [k|g|d] ;
 
 ! awooRule: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 define awooRule a w -> o o || _ SUFBD [n|s] ;
