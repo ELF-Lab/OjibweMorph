@@ -141,6 +141,7 @@ define PrefixNDInsertion [..] (->) n || .#. (PREBD) {ni} _ d PREBD Vowel ;
 define PrefixDDeletion d (->) 0 || .#. (PREBD) {nin} _ PREBD ;
 define PrefixIND {nid} (->) [{ind} | {nd}] || .#. (PREBD) _ PREBD;
 define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
+define PrefixYInsertion [..] (->) y || .#. (PREBD) {ni} _ PREBD {aa} ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
 define PrefixNInitialDeletion n (->) 0 || .#. (PREBD) _ [ {in} | {im} ] PREBD ;
 
@@ -213,6 +214,7 @@ read regex [!emptyFilter .o.
 			           	DepPrefixIInsertion .o.
 					   	DepPrefixWtoO .o.
 					   	DepPrefixWDeletion .o.
+						PrefixYInsertion .o.
 			           	PrefixDInsertion .o.					   
 				       	PrefixNDInsertion .o.
 				       	PrefixDDeletion .o.
@@ -250,7 +252,8 @@ read regex [!emptyFilter .o.
 
 !define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} PREBD       |
 !                                                             {nd}  PREBD       |
-!							     {nin} PREBD Vowel ]  ?* _ .#. ;
+!							     							  {nin} PREBD Vowel |
+!															  {niy}	PREBD {aa}	]  ?* _ .#. ;
 
 !read regex Analyzer .o. AltRule1 ;
 !twosided flag-diacritics
