@@ -155,7 +155,7 @@ define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 
 ! gadaRule
-define gadaRule g a "-" -> d a "-" || .#. _ ;
+define gadaRule g a "-" -> d a "-" || .#. (PREBD) _ ;
 
 ! "dan", "das", "dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
 ! endaso-biboonagizid 
