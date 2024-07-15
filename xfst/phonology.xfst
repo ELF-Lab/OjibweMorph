@@ -230,53 +230,14 @@ read regex [!emptyFilter .o.
 					ChCnjEn .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
-						gadaRule .o.
-					DeletePVHyphen .o.
-						! Cleanup rules
-						
+					gadaRule .o.
+						! Cleanup rules						
 				       	defaultRules .o.
 				       	ChCnjDefault .o.
-				       	emptyFilter .o.
-                                        cleanUp ] ;
+				       	emptyFilter
+                                        ] ;
 
-! Make sure @P.Alt@ flag is on both sides
+define RulesNoCleanup ;
 
-!define Analyzer ;
-!read regex Analyzer .o. cleanUp ;
-
-!eliminate flags
-!save stack ojibwe.fomabin
-!write att > ojibwe.att
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! The following is related to Alt-tags which mark alternative
-! analyses. We'll comment it out for now.
-
-!set flag-is-epsilon OFF
-
-!define AltRule1 [..] -> "@P.Alt.On@" || .#. "@P.Prefix.NI@" [{ind} PREBD       |
-!                                                             {nd}  PREBD       |
-!							     							  {nin} PREBD Vowel |
-!															  {niy}	PREBD {aa}	|
-!															  {m} PREBD 		|
-!															  {n} PREBD [d|j|z|{zh}|g] ]  ?* _ .#. ;
-
-!read regex Analyzer .o. AltRule1 ;
-!twosided flag-diacritics
-!define Analyzer
-!define AltRule2 [..] -> "+Alt" || _ "@P.Alt.On@" ;
-!read regex AltRule2.i .o. Analyzer ;
-!define Analyzer
-
-!set flag-is-epsilon ON
-
-!read regex Analyzer .o. cleanUp ;
-!define Analyzer ;
-
-!read lexc ojibwe_irregular_verbs.lexc
-!define IrregularVerbLexicon ;
-
-!define IrregularLexicon [ IrregularVerbLexicon ] ;
-
-!read regex Analyzer | IrregularLexicon ;
+read regex RulesNoCleanup .o. cleanUp ;
 
