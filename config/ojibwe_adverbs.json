@@ -8,6 +8,7 @@
     "irregular_csv_files": [
     ],
     "lexical_database": "generated/ADVERBS.csv",
+    "lexical_prefix_database": "generated/LEXICAL_PREADVERBS.csv",
     "regular_lexc_file": "ojibwe_adverbs.lexc",
     "irregular_lexc_file": "None",
     "morph_features": [
@@ -18,7 +19,8 @@
     "multichar_symbols": [
 	"w2"
     ],
-    "pre_element_tag": "",
-    "template_path":"None",
-    "pv_source_path":"None"
+    "pre_element_tag": "[PREADVERB]",
+    "prefix_root":"PreadverbRoot",
+    "template_path":"./templates/preadverbs.lexc.j2",
+    "pv_source_path":"./PVSpreadsheets"
 }

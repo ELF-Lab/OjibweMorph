@@ -1,0 +1,35 @@
+{#
+   This jinja2 template should be processed using a python script
+   to generate preadverbs.lexc.
+#}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!   PV lexicons start     !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON PreadverbRoot
+LexPA ;
+AdverbStems ;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!        Lexical PV       !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON LexPA
+LexPAAny ;
+PreadverbEnd ;
+
+{{ load_pre_element_csv([("PV_lex.csv", "PALex/")], "LexPABoundary", "Any") }}
+{{ load_pre_element_csv([("PV_qnt.csv", "PAQnt/")], "LexPABoundary", "Any") }}
+{{ load_pre_element_database("PALex/","LexPABoundary") }}
+{{ load_pre_element_database("PAQnt/","LexPABoundary") }}
+
+LEXICON LexPABoundary
+0:- LexPA ;
+
+LEXICON PreadverbEnd
+0:%<%< AdverbStems ;
