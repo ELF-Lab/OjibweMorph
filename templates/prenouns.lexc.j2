@@ -25,8 +25,8 @@ PrenounEnd ;
 
 {{ load_pre_element_csv([("PV_lex.csv", "PNLex/")], "LexPNBoundary", "Any") }}
 {{ load_pre_element_csv([("PV_qnt.csv", "PNQnt/")], "LexPNBoundary", "Any") }}
-{{ load_pre_element_database("PNLex/","LexPN") }}
-{{ load_pre_element_database("PNQnt/","LexPN") }}
+{{ load_pre_element_database("PNLex/","LexPNBoundary") }}
+{{ load_pre_element_database("PNQnt/","LexPNBoundary") }}
 
 LEXICON LexPNBoundary
 0:- LexPN ;
