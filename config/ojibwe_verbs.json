@@ -53,5 +53,6 @@
     "pre_element_tag": "[PREVERB]",
     "prefix_root":"PreverbRoot",
     "template_path":"./templates/preverbs.lexc.j2",
-    "pv_source_path":"./PVSpreadsheets"  
+    "pv_source_path":"./PVSpreadsheets",
+    "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv"
 }
