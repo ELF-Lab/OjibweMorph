@@ -23,10 +23,10 @@ LEXICON LexPA
 LexPAAny ;
 PreadverbEnd ;
 
-{{ load_pre_element_csv([("PV_lex.csv", "PALex/")], "LexPABoundary", "Any") }}
-{{ load_pre_element_csv([("PV_qnt.csv", "PAQnt/")], "LexPABoundary", "Any") }}
-{{ load_pre_element_database("PALex/","LexPABoundary") }}
-{{ load_pre_element_database("PAQnt/","LexPABoundary") }}
+{{ load_pre_element_csv([("PV_lex.csv", "PVLex/")], "LexPABoundary", "Any") }}
+{{ load_pre_element_csv([("PV_qnt.csv", "PVQnt/")], "LexPABoundary", "Any") }}
+{{ load_pre_element_database("PVLex/","LexPABoundary") }}
+{{ load_pre_element_database("PVQnt/","LexPABoundary") }}
 
 LEXICON LexPABoundary
 0:- LexPA ;
