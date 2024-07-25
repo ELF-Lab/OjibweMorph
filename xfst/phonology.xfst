@@ -47,6 +47,10 @@ define awaaRule w -> a || a _ SUFBD [k|g|d] ;
 !	when the suffix complex starts with "n" or "s".
 define awooRule a w -> o o || _ SUFBD [n|s] ;
 
+! awowRule: The amaw of benefactive verbs is replaced by amow 
+! in direct forms by some speakers at Red Lake and elsewhere.
+define awowRule a w (->) o w || a m _ SUFBD a a ;
+
 ! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
 ! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
 ! 	For example, we get "mizhwi" rather than "mizho" for the imerative form.
@@ -199,6 +203,7 @@ read regex [!emptyFilter .o.
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
+						awowRule .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
 				       	woRule2 .o.	! Must precede vowelDeletion			       
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
