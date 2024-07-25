@@ -50,8 +50,8 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 ! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
 ! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
 ! 	For example, we get "mizhwi" rather than "mizho" for the imerative form.
-define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
-define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define woRule1 [ w1 -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - [(SUFBD)|w1] ] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define woRule2 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
 ! shared noun and verb suffix rules
 
