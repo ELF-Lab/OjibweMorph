@@ -1,7 +1,6 @@
 ! There are flags at morpheme boundaries.
 set flag-is-epsilon ON
 
-
 ! Defining natural classes and morphological boundaries
 
 ! All consonants, including special characters
@@ -10,7 +9,7 @@ define Cons [ b | c | d | f | g | h | j | k | l | m | n | n1 | p | s | s1 | t | 
 ! implictly includes long vowels, which just repeats characters
 define Vowel [ a | e | i | o | i1 | V1 ] ;
 
-! nonlight vowels are simply short vowels
+! nonlight vowels are simply long vowels
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
 
 ! Define stem boundary markers
@@ -29,34 +28,40 @@ define SuffixBoundaryCleanup SUFBD @-> ">>" ;
 ! Begin verb suffix rules
 
 ! d-deletion: Delete stem-final "d" 
-! when the suffix complex starts with a consonant.
+! 	when the suffix complex starts with a consonant.
 define dDeletion d -> 0 || _ SUFBD Cons ;
 
-! nasalAssimilation: With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
+! iInsertion: insert "i" in derived reciprocal/reflexive stems 
+! that end in a glottal stop, n, w (because of wiijiiw), or s (because of gikas)
+define iInsertion [..] -> i || [{'}|{n}|{w}|{s}] _ SUFBD {di} ;
+
+! nasalAssimilation: With stems ending in "m", the "m" 
+! 	changes to "n" when the suffix complex starts with "z", "g", or "d".
 define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
 
-! awaaRule: For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g", "k", or "d".
+! awaaRule: For stems that end in "aw", the "aw" goes to "aa" 
+! 	when the suffix complex starts with "g", "k", or "d".
 define awaaRule w -> a || a _ SUFBD [k|g|d] ;
 
-! awooRule: For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+! awooRule: For stems that end in "aw", the "aw" goes to "oo" 
+!	when the suffix complex starts with "n" or "s".
 define awooRule a w -> o o || _ SUFBD [n|s] ;
 
-! woRule1, woRule2: For stems that end in "Cw", the "w" goes to "o" 
-! when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. 
-! In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
-! For example, we get "mizhwi" rather than "mizho" for the imerative form.
+! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
+! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
+! 	For example, we get "mizhwi" rather than "mizho" for the imerative form.
 define woRule1 [ w -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - (SUFBD)] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 define woRule2 [ w (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
 ! shared noun and verb suffix rules
 
-! Stems ending in "n1" palatalize to "zh" and "s1" to "sh" 
+! n1Rule, s1Rule: Stems ending in "n1" palatalize to "zh" and "s1" to "sh" 
 ! when the suffix complex starts with the first person theme sign "i1" 
 ! or inanimate singular marker "i2".
 define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
 define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
 
-! Delete word-final short vowels in multi-syllabic words 
+! vowelDeletion: Delete word-final short vowels in multi-syllabic words 
 ! or mono-syllabic words with a long vowel 
 ! (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
 define vowelDeletion [ Vowel - e ] -> 0 || NonLight Cons (SUFBD) _ (SUFBD) .#. ;
@@ -66,7 +71,6 @@ define w1Deletion w1 -> 0 || _ (SUFBD) .#. ;
 
 ! LengthenV: a short vowel to the left of v1 lengthens 
 ! (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
-! define LengthenV [ i:{ii} | a:{aa} | {e}:e | o:{oo} @-> || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
 define LengthenV [ i -> {ii} , a -> {aa} , o -> {oo} || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
 
 
@@ -85,35 +89,33 @@ define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
 define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
 
 ! hDeletion: Optionally delete h between n and y (h -> 0 / n_y). 
-! Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
+! Optional, only because sometimes the spelling convention of 
+! deleting that "h" is done inconsistently.
 define hDeletion h (->) 0 || n _ y1 ;
 
 ! y2Deletion: Always delete y2
 define y2Deletion y2 -> 0 ;
 
-! Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
+! irrDimGan: Irregular diminutive form nouns ending in -(i)gan. 
+! Appears as -gaans rather than -ganens
 define irrDimGan g a n SUFBD e n  -> g a a n ">>" ;
 
-! Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
+! irrDimVVny: Irregular diminutive form in VVny stems. 
+! For example, "-oon(h)yens" becomes "-oon(h)s" 
 define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 
-! Irregular diminutive form for animosh.
+! irrDimAnimosh: Irregular diminutive form for the noun animosh.
 define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
 
-! pejorativePalatalization: s and z palatalize to zh when followed by the pejorative marker ish.
+! pejorativePalatalization: s and z palatalize to zh when 
+! followed by the pejorative marker ish.
 define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
 
 ! Default rule
-
-!define defaultRules [a1:a | i2:i | n1:n | s1:s | i1:i | w1:w | w2:w | y1:y ] @-> || _ ;
 define defaultRules [ a1 -> a , i2 -> i , n1 -> n , s1 -> s , i1 -> i , w1 -> w , w2 -> w , y1 -> y ] ;
 
 ! Begin prefix rules
 
-! Sources:
-! https://ojibwe.lib.umn.edu/main-entry/g-pf
-! https://ojibwe.lib.umn.edu/main-entry/g-pf
-! https://ojibwegrammar.langsci.wisc.edu/Assets/Pdfs/InflAnishPersonPrefixes1.02.pdf
 !Border Lakes prefix rules:
 
 !ni(m/n/nd)-
@@ -162,8 +164,9 @@ define gadaRule g a "-" -> d a "-" || .#. (PREBD) _ ;
 define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"-" ] ; 
 
 ! Changed conjunct rules
-! define ChCnjV {aa}:{ayaa} | a:e | e:{aye} | {ii}:{aa} | i:e | {oo}:{waa} | o:{we} @-> || "<ChCnj>" Cons* _ ;
-! The weirdness of the rule is on purpose! hfst cannot compile longest match in the way we had above, so we needed to create temporary multicharacter symbols.
+! The weirdness of the rule is on purpose! 
+! hfst cannot compile longest match in the way we had before. 
+! So we needed to create temporary multicharacter symbols.
 define ChCnjV [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
 
 define ChCnjDefault "<ChCnj>" -> 0 ;
@@ -171,16 +174,14 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! Tense-tensing: Lenis consonants ("b", "d", "j", "g", "z", "zh") are strengthened to
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
+! This is triggered by a special character <T>.
 define tenseTensing [ b -> p , d -> t , j -> {ch} , g -> k , {zh} -> {sh} || "<T>" "-" (PREBD) _ ] .o. [ z -> s || "<T>" "-" (PREBD) _ ];
-! <<gii<T>-<<dashi>>yaang
 
 ! Allow for deletion of preverb boundaries
 define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
 
 ! Clean up rules
-
 define emptyFilter [? - "<EMPTYLEX>"]* ;
-
 define cleanUp [ BD | "<T>" ] -> 0 ; 
 
 
@@ -193,7 +194,8 @@ read regex [!emptyFilter .o.
             !cleanUp.i ] .o. Lexicon .o. [ 
 						! Suffix Rules
      	   	     	 	n1Rule .o. ! Must precede vowelDeletion
-				       	s1Rule .o. ! Must precede vowelDeletion				       
+				       	s1Rule .o. ! Must precede vowelDeletion	
+						iInsertion .o. ! Must precede nasalAssimilation	       
      	   	            nasalAssimilation .o.
 				       	awaaRule .o.
 				       	awooRule .o.
@@ -225,12 +227,12 @@ read regex [!emptyFilter .o.
 						PrefixMOnly .o.
 				       	PrefixNInsertion .o.
 						PrefixNOnly .o.
-					PrefixNInitialDeletion .o.
+						PrefixNInitialDeletion .o.
 			           	prefixOLengthening .o.
-					ChCnjEn .o.
+						ChCnjEn .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.
-					gadaRule .o.
+						gadaRule .o.
 						! Cleanup rules						
 				       	defaultRules .o.
 				       	ChCnjDefault .o.
