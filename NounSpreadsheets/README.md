@@ -115,6 +115,8 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
+| Sg	| Singular (inanimate)                |
+| Pl	| Plural (inanimate)                    |
 | ProxSg| Proximate singular                  |
 | ProxPl| Proximate plural                    |
 | ObvSg | Obviative singular                  |
