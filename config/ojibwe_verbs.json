@@ -32,7 +32,6 @@
     "irregular_lexc_file": "ojibwe_irregular_verbs.lexc",
     "morph_features": [
 	"Paradigm",
-	"Augmented",
 	"Order",
 	"Negation",
 	"Mode",
