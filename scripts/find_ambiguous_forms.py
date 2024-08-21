@@ -13,14 +13,28 @@ MISSING="MISSING" # Missing form marker
 def get_analysis(row, tag_order):
     tags = [row[feature] for feature in tag_order if (feature in row and
                                                       row[feature] != NONE)]
-    return f"{row['Lemma']}+{'+'.join(tags)}"
+    return '+'.join(tags)
+
+def subtract(l1, l2):
+    """Set subtraction which preserves order (by simulating sets by lists)."""
+    subtracted = []
+    l2 = set(l2)
+    for elem in l1:
+        if not elem in l2:
+            subtracted.append(elem)
+    return subtracted
+
+def symmetric_difference(analysis1, analysis2):
+    analysis1 = analysis1.split("+")
+    analysis2 = analysis2.split("+")
+    return ("+".join(subtract(analysis1,analysis2)),
+            "+".join(subtract(analysis2,analysis1)))
 
 @click.command()
 @click.option('--spreadsheets', required=True, help="Comma-separated list of spreadsheets to process. E.g. --spreadsheets=\"VTA_IND.csv,VTA_CNJ.csv,VTA_IMP.csv\".")
 @click.option('--config-file', required=True, help="Configuration file. E.g. --config-file=../config/ojibwe_verbs.json.")
 @click.option('--output-file',required=True, help="Output CSV file name. E.g. --output-file=VTA_ambiguity.csv.")
-@click.option('--include-class', required=False, default=False, help="Index both by lemma and indflection class (aka type). E.g. --include-class=True.")
-def main(spreadsheets, config_file, include_class,output_file):
+def main(spreadsheets, config_file, output_file):
     """Find ambiguous forms in CSV spreadsheets. E.g. for English, \"put\"
        would be ambiguous between the reading put+V+NON_3SG+PRES and
        put+V+PAST."""
@@ -36,8 +50,6 @@ def main(spreadsheets, config_file, include_class,output_file):
         for _, row in spreadsheet.iterrows():
             analysis = get_analysis(row, tag_order)
             lemma = row["Lemma"]
-            if include_class:
-                lemma += f",{row['Class']}"
             for i in range(1,MAXFORMS+1):
                 form_i_key = f"Form{i}Surface"
                 if not form_i_key in row.keys():
@@ -47,17 +59,23 @@ def main(spreadsheets, config_file, include_class,output_file):
                 form = row[form_i_key]                
                 analysis_sets[lemma][form].add(analysis)
 
+    analysis_sets = set(tuple(analyses) for lemma in analysis_sets
+                        for form, analyses in analysis_sets[lemma].items())
+    analysis_sets = set(analyses for analyses in analysis_sets
+                        if len(analyses) > 1)
+    analysis_diffs = defaultdict(set)
+    for analyses in analysis_sets:
+        for analysis1 in analyses:
+            for analysis2 in analyses:
+                if analysis1 != analysis2:
+                    analysis_diffs[symmetric_difference(analysis1, analysis2)].add((analysis1, analysis2))
+
     with open(output_file,"w") as output_file:
-        if include_class:
-            print("Lemma,Class,SurfaceForm,Analysis",file=output_file)
-        else:
-            print("Lemma,SurfaceForm,Analysis", file=output_file)
-        for lemma, forms in analysis_sets.items():
-            for form, analyses in sorted(forms.items()):
-                if len(analyses) < 2:
-                    continue
-                for analysis in analyses:
-                    print(lemma, form, analysis, sep=",",file=output_file)
-            
+        print("Unique1Tags,Unique2Tags,Analysis1,Analysis2",file=output_file)
+        for (unique_1_tags, unique_2_tags), analysis_set in analysis_diffs.items():
+            for (analysis1, analysis2) in sorted(analysis_set):
+                print(f"{unique_1_tags},{unique_2_tags},{analysis1},{analysis2}",
+                      file=output_file)
+
 if __name__=="__main__":
     main()
