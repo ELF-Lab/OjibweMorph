@@ -72,7 +72,9 @@ def main(spreadsheets, config_file, output_file):
 
     with open(output_file,"w") as output_file:
         print("Unique1Tags,Unique2Tags,Analysis1,Analysis2",file=output_file)
-        for (unique_1_tags, unique_2_tags), analysis_set in analysis_diffs.items():
+        for (unique_1_tags, unique_2_tags), analysis_set in sorted(analysis_diffs.items()):
+            if unique_2_tags < unique_1_tags:
+                continue
             for (analysis1, analysis2) in sorted(analysis_set):
                 print(f"{unique_1_tags},{unique_2_tags},{analysis1},{analysis2}",
                       file=output_file)
