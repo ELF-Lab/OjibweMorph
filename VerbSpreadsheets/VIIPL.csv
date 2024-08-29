@@ -1,52 +1,20 @@
 Paradigm,Order,Class,Lemma,Stem,Head,Subject,Object,Mode,Negation,Form1Surface,Form1Split,Form1Source,Form2Surface,Form2Split,Form2Source
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Pos,niibidegoodenig,<<niibidegoode>>nig,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Pos,niibidegoodeg,<<niibidegoode>>g,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Neg,niibidegoodesininig,<<niibidegoode>>sininig,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Neg,niibidegoodesinog,<<niibidegoode>>sinog,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Pos,niibidegoodenigiban,<<niibidegoode>>nigiban,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Pos,niibidegoodegiban,<<niibidegoode>>giban,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Neg,niibidegoodesininigiban,<<niibidegoode>>sininigiban,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Neg,niibidegoodesinoogiban,<<niibidegoode>>sinoogiban,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Pos,niibidegoodenigwen,<<niibidegoode>>nigwen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Pos,niibidegoodegwen,<<niibidegoode>>gwen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Neg,niibidegoodesininiigwen,<<niibidegoode>>sininiigwen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Neg,niibidegoodesinoogwen,<<niibidegoode>>sinoogwen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Pos,niibidegoodenigobanen,<<niibidegoode>>nigobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Pos,niibidegoodegobanen,<<niibidegoode>>gobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Neg,niibidegoodesininigobanen,<<niibidegoode>>sininigobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Neg,niibidegoodesinoogobanen,<<niibidegoode>>sinoogobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Neu,Pos,dadaakwaakwadinig,<<dadaakwaakwad>>inig,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Neu,Pos,dadaakwaakwak,<<dadaakwaakwa>>k,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Neu,Neg,dadaakwaakwasininig,<<dadaakwaakwa>>sininig,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Neu,Neg,dadaakwaakwasinog,<<dadaakwaakwa>>sinog,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Prt,Pos,dadaakwaakwadinigiban,<<dadaakwaakwad>>inigiban,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Prt,Pos,dadaakwaakwakiban,<<dadaakwaakwa>>kiban,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Prt,Neg,dadaakwaakwasininigiban,<<dadaakwaakwa>>sininigiban,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Prt,Neg,dadaakwaakwasinoogiban,<<dadaakwaakwa>>sinoogiban,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Dub,Pos,dadaakwaakwadinigwen,<<dadaakwaakwad>>inigwen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Dub,Pos,dadaakwaakwadogwen,<<dadaakwaakwad>>ogwen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Dub,Neg,dadaakwaakwasininiigwen,<<dadaakwaakwa>>sininiigwen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Dub,Neg,dadaakwaakwasinoogwen,<<dadaakwaakwa>>sinoogwen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,DubPrt,Pos,dadaakwaakwadinigobanen,<<dadaakwaakwad>>inigobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,DubPrt,Pos,dadaakwaakwadogobanen,<<dadaakwaakwad>>ogobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,DubPrt,Neg,dadaakwaakwasininigobanen,<<dadaakwaakwa>>sininigobanen,GUESS,,,
-VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,DubPrt,Neg,dadaakwaakwasinoogobanen,<<dadaakwaakwa>>sinoogobanen,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Neg,niibidegoodesininiwidogen,<<niibidegoode>>sininiwidogen,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Pos,niibidegoodeniwidogen,<<niibidegoode>>niwidogen,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Neg,niibidegoodesininigobaniin,<<niibidegoode>>sininigobaniin,GUESS,niibidegoodesininigobanen,<<niibidegoode>>sininigobanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Pos,niibidegoodenigobaniin,<<niibidegoode>>nigobaniin,GUESS,niibidegoodenigobanen,<<niibidegoode>>nigobanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Neg,niibidegoodesininiwan,<<niibidegoode>>sininiwan,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Pos,niibidegoodeniwan,<<niibidegoode>>niwan,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Neg,niibidegoodesininiibaniin,<<niibidegoode>>sininiibaniin,GUESS,niibidegoodesininiibanen,<<niibidegoode>>sininiibanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Pos,niibidegoodeniibaniin,<<niibidegoode>>niibaniin,GUESS,niibidegoodeniibanen,<<niibidegoode>>niibanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Neg,niibidegoodesinodogenan,<<niibidegoode>>sinodogenan,GUESS,niibidegoodesinodogen,<<niibidegoode>>sinodogen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Pos,niibidegoodedogenan,<<niibidegoode>>dogenan,GUESS,niibidegoodedogen,<<niibidegoode>>dogen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Neg,niibidegoodesinoogobaniin,<<niibidegoode>>sinoogobaniin,GUESS,niibidegoodesinoogobanen,<<niibidegoode>>sinoogobanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Pos,niibidegoodegobaniin,<<niibidegoode>>gobaniin,GUESS,niibidegoodegobanen,<<niibidegoode>>gobanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Neg,niibidegoodesinoon,<<niibidegoode>>sinoon,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Pos,niibidegoodewan,<<niibidegoode>>wan,GUESS,,,
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Neg,niibidegoodesinoobaniin,<<niibidegoode>>sinoobaniin,GUESS,niibidegoodesinoobanen,<<niibidegoode>>sinoobanen,GUESS
-VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Pos,niibidegoodebaniin,<<niibidegoode>>baniin,GUESS,niibidegoodebanen,<<niibidegoode>>banen,GUESS
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Dub,Neg,dadaakwaakwasininiigwen,<<dadaakwaakwa>>sininiigwen,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p19,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Dub,Pos,dadaakwaakwadinigwen,<<dadaakwaakwad>>inigwen,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p18,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,DubPrt,Neg,dadaakwaakwasininigobanen,<<dadaakwaakwa>>sininigobanen,JDN-2010-MS-VII-p21,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,DubPrt,Pos,dadaakwaakwadinigobanen,<<dadaakwaakwad>>inigobanen,JDN-2010-MS-VII-p20,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Neu,Neg,dadaakwaakwasininig,<<dadaakwaakwa>>sininig,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p15,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Neu,Pos,dadaakwaakwadininig,<<dadaakwaakwad>>ininig,NJ-zoom-2023Sep19,dadaakwaakwadinig,<<dadaakwaakwad>>inig,JDN-2010-MS-VII-p14
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Prt,Neg,dadaakwaakwasininigiban,<<dadaakwaakwa>>sininigiban,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p17,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Prt,Pos,dadaakwaakwadininigiban,<<dadaakwaakwad>>ininigiban,NJ-zoom-2023Sep19; NJ-zoom-2023Sep19,dadaakwaakwadinigiban,<<dadaakwaakwad>>inigiban,JDN-2010-MS-VII-p16
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Dub,Neg,dadaakwaakwasinoogwen,<<dadaakwaakwa>>sinoogwen,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p19,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Dub,Pos,dadaakwaakwadogwen,<<dadaakwaakwad>>ogwen,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p18,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,DubPrt,Neg,dadaakwaakwasinoogobanen,<<dadaakwaakwa>>sinoogobanen,JDN-2010-MS-VII-p21,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,DubPrt,Pos,dadaakwaakwadogobanen,<<dadaakwaakwad>>ogobanen,JDN-2010-MS-VII-p20,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Neu,Neg,dadaakwaakwasinok,<<dadaakwaakwa>>sinok,NJ-zoom-2023Sep19,dadaakwaakwasinog,<<dadaakwaakwa>>sinog,JDN-2010-MS-VII-p15
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Neu,Pos,dadaakwaakwakin,<<dadaakwaakwa>>kin,NJ-zoom-2023Sep19,dadaakwaakwak,<<dadaakwaakwa>>k,JDN-2010-MS-VII-p14
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Prt,Neg,dadaakwaakwasinoogiban,<<dadaakwaakwa>>sinoogiban,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p17,,,
+VIIPL,Cnj,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Prt,Pos,dadaakwaakwakiban,<<dadaakwaakwa>>kiban,NJ-zoom-2023Sep19; JDN-2010-MS-VII-p16,,,
 VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Dub,Neg,dadaakwaakwasininiwidogenan,<<dadaakwaakwa>>sininiwidogenan,GUESS,dadaakwaakwasininiwidogen,<<dadaakwaakwa>>sininiwidogen,GUESS
 VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,Dub,Pos,dadaakwaakwadiniwidogenan,<<dadaakwaakwad>>iniwidogenan,GUESS,dadaakwaakwadiniwidogen,<<dadaakwaakwad>>iniwidogen,GUESS
 VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlObvSubj,NONE,DubPrt,Neg,dadaakwaakwasininigobaniin,<<dadaakwaakwa>>sininigobaniin,GUESS,dadaakwaakwasininigobanen,<<dadaakwaakwa>>sininigobanen,GUESS
@@ -63,3 +31,35 @@ VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Neu,Neg,dadaa
 VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Neu,Pos,dadaakwaakwadoon,<<dadaakwaakwad>>oon,GUESS,,,
 VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Prt,Neg,dadaakwaakwasinoobaniin,<<dadaakwaakwa>>sinoobaniin,GUESS,dadaakwaakwasinoobanen,<<dadaakwaakwa>>sinoobanen,GUESS
 VIIPL,Ind,VIIPL_d,dadaakwaakwadoon,dadaakwaakwad,NONE,0PlSubj,NONE,Prt,Pos,dadaakwaakwadoobaniin,<<dadaakwaakwad>>oobaniin,GUESS,dadaakwaakwadoobanen,<<dadaakwaakwad>>oobanen,GUESS
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Neg,niibidegoodesininiigwen,<<niibidegoode>>sininiigwen,JDN-2010-MS-VII-p19,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Pos,niibidegoodenigwen,<<niibidegoode>>nigwen,JDN-2010-MS-VII-p18,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Neg,niibidegoodesininigobanen,<<niibidegoode>>sininigobanen,JDN-2010-MS-VII-p21,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Pos,niibidegoodenigobanen,<<niibidegoode>>nigobanen,JDN-2010-MS-VII-p20,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Neg,niibidegoodesininig,<<niibidegoode>>sininig,JDN-2010-MS-VII-p15,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Pos,niibidegoodeninig,<<niibidegoode>>ninig,GUESS,niibidegoodenig,<<niibidegoode>>nig,JDN-2010-MS-VII-p14
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Neg,niibidegoodesininigiban,<<niibidegoode>>sininigiban,JDN-2010-MS-VII-p17,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Pos,niibidegoodeninigiban,<<niibidegoode>>ninigiban,GUESS,niibidegoodenigiban,<<niibidegoode>>nigiban,JDN-2010-MS-VII-p16
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Neg,niibidegoodesinoogwen,<<niibidegoode>>sinoogwen,JDN-2010-MS-VII-p19,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Pos,niibidegoodegwen,<<niibidegoode>>gwen,JDN-2010-MS-VII-p18,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Neg,niibidegoodesinoogobanen,<<niibidegoode>>sinoogobanen,JDN-2010-MS-VII-p21,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Pos,niibidegoodegobanen,<<niibidegoode>>gobanen,JDN-2010-MS-VII-p20,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Neg,niibidegoodesinok,<<niibidegoode>>sinok,GUESS,niibidegoodesinog,<<niibidegoode>>sinog,JDN-2010-MS-VII-p15
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Pos,niibidegoodegin,<<niibidegoode>>gin,GUESS,niibidegoodeg,<<niibidegoode>>g,JDN-2010-MS-VII-p14
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Neg,niibidegoodesinoogiban,<<niibidegoode>>sinoogiban,JDN-2010-MS-VII-p17,,,
+VIIPL,Cnj,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Pos,niibidegoodegiban,<<niibidegoode>>giban,JDN-2010-MS-VII-p16,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Neg,niibidegoodesininiwidogen,<<niibidegoode>>sininiwidogen,GUESS,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Dub,Pos,niibidegoodeniwidogen,<<niibidegoode>>niwidogen,GUESS,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Neg,niibidegoodesininigobaniin,<<niibidegoode>>sininigobaniin,GUESS,niibidegoodesininigobanen,<<niibidegoode>>sininigobanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,DubPrt,Pos,niibidegoodenigobaniin,<<niibidegoode>>nigobaniin,GUESS,niibidegoodenigobanen,<<niibidegoode>>nigobanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Neg,niibidegoodesininiwan,<<niibidegoode>>sininiwan,GUESS,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Neu,Pos,niibidegoodeniwan,<<niibidegoode>>niwan,GUESS,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Neg,niibidegoodesininiibaniin,<<niibidegoode>>sininiibaniin,GUESS,niibidegoodesininiibanen,<<niibidegoode>>sininiibanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlObvSubj,NONE,Prt,Pos,niibidegoodeniibaniin,<<niibidegoode>>niibaniin,GUESS,niibidegoodeniibanen,<<niibidegoode>>niibanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Neg,niibidegoodesinodogenan,<<niibidegoode>>sinodogenan,GUESS,niibidegoodesinodogen,<<niibidegoode>>sinodogen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Dub,Pos,niibidegoodedogenan,<<niibidegoode>>dogenan,GUESS,niibidegoodedogen,<<niibidegoode>>dogen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Neg,niibidegoodesinoogobaniin,<<niibidegoode>>sinoogobaniin,GUESS,niibidegoodesinoogobanen,<<niibidegoode>>sinoogobanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,DubPrt,Pos,niibidegoodegobaniin,<<niibidegoode>>gobaniin,GUESS,niibidegoodegobanen,<<niibidegoode>>gobanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Neg,niibidegoodesinoon,<<niibidegoode>>sinoon,GUESS,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Neu,Pos,niibidegoodewan,<<niibidegoode>>wan,GUESS,,,
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Neg,niibidegoodesinoobaniin,<<niibidegoode>>sinoobaniin,GUESS,niibidegoodesinoobanen,<<niibidegoode>>sinoobanen,GUESS
+VIIPL,Ind,VIIPL_VV,niibidegoodewan,niibidegoode,NONE,0PlSubj,NONE,Prt,Pos,niibidegoodebaniin,<<niibidegoode>>baniin,GUESS,niibidegoodebanen,<<niibidegoode>>banen,GUESS
