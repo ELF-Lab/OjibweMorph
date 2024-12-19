@@ -157,8 +157,8 @@ define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} |
 
 ! Dependent noun prefix rules
 define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
+define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD [{o}|{w}] ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
-define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD o ;
 
 ! gadaRule
 define gadaRule g a "-" -> d a "-" || .#. (PREBD) _ ;
@@ -221,8 +221,8 @@ read regex [!emptyFilter .o.
 						pejorativePalatalization .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
+						DepPrefixWDeletion .o.
 					   	DepPrefixWtoO .o.
-					   	DepPrefixWDeletion .o.
 						PrefixYInsertion .o.
 			           	PrefixDInsertion .o.					   
 				       	PrefixNDInsertion .o.
