@@ -32,3 +32,5 @@ First, go into `create_fst.sh` and change the file path variables to match your 
 - `sh create_fst.sh all` to simply build the FST
 - `sh create_fst.sh check` to run tests on the FST
 - `sh create_fst.sh clean` to remove generated files
+
+By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD).  You can change this in `create_fst.sh` to look elsewhere *or* use multiple lists by giving a comma-separated list of directories.

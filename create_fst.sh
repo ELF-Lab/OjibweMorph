@@ -6,5 +6,6 @@ OJIBWE_LEXICON=~/Documents/ELF/OjibweTesting/OjibweLexicon
 # set this to ../../OjibweMorph
 OJIBWE_MORPH=../../OjibweMorph
 
+# Per ParserTools, you can also specify a comma-separated *list* of directories for LEMMAS_DIR
 cd $PARSER_TOOLS/csv2fst
 make $1 MORPHOLOGYSRCDIR=$OJIBWE_MORPH LEMMAS_DIR=$OJIBWE_LEXICON/OPD SPREADSHEETS_FOR_YAML_DIR=$OJIBWE_LEXICON/OPD/for_yaml PARADIGM_MAPS_DIR=$OJIBWE_LEXICON/resources OUTPUT_DIR=$OJIBWE_MORPH/FST
