@@ -3,7 +3,7 @@ from os import path
 import re
 
 # In the README, write results in this order
-RESULT_HEADERS_ORDERED = ["date", "forms", "precision", "recall"]
+RESULT_HEADERS_ORDERED = ["date", "forms", "forms_without_results", "precision", "recall"]
 
 # Ideally this CSV could be read in really tidily, but for the sake
 # of readability it has two "header" rows, which makes it hard to parse
@@ -16,10 +16,11 @@ def read_results(results_file_path):
     precision = most_recent_results_row["Total"].values[0]
     recall = most_recent_results_row["Unnamed: 2"].values[0]
     forms = most_recent_results_row["Unnamed: 3"].values[0]
+    forms_without_results = ((most_recent_results_row["Unnamed: 4"].values[0]).partition(" "))[0]
 
     print(f"\nReading in results from {results_file_path}...")
 
-    return {"date": date, "precision": precision, "recall": recall, "forms": forms}
+    return {"date": date, "precision": precision, "forms_without_results": forms_without_results, "recall": recall, "forms": forms}
 
 def format_results(results):
     RESULTS_ENTRY_PRECEDOR = "| "
