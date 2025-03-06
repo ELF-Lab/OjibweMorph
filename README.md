@@ -4,6 +4,11 @@
 |---|---|---|---|
 | 2025-03-03 | 54182 | 86.12% | 96.03% |
 
+### Nouns
+| Date Last Updated | Number of Forms Tested | Precision | Recall |
+|---|---|---|---|
+| 2025-03-03 | 8567 | 83.44% | 90.74% |
+
 # Citation
 
 To cite this work or the contents of the repository (including, but not limited to, datasets, tables, explanations, methods, analysis, structure, etc) in an academic work, please use the following:
