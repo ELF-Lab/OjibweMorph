@@ -1,4 +1,8 @@
 # Test Results
+These results reflect the performance of an FST built from the morphology stored in [OjibweMorph](https://github.com/ELF-Lab/OjibweMorph) and the lemmas stored in [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD).  The inflected test forms also come from [the OPD](https://ojibwe.lib.umn.edu), and are stored in [OjibweLexicon/OPD/for_yaml](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/for_yaml).  Each test form is inputted to the FST, then the corresponding analysis outputted by the FST is checked for correctness.
+
+The "# of Forms Without Results" counts the test forms for which the FST provides no analysis whatsoever.  The "Precision" captures how many outputted analyses were correct, while the "Recall" captures how many of the correct analyses were outputted.  Note that some forms have multiple correct analyses.
+
 ### Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
