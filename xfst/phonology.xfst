@@ -1,5 +1,5 @@
 ! There are flags at morpheme boundaries.
-set flag-is-epsilon ON
+set flag-is-epsilon ON 
 
 ! Defining natural classes and morphological boundaries
 
