@@ -7,8 +7,8 @@
     ],
     "irregular_csv_files": [
     ],
-    "lexical_database": "generated/ADVERBS.csv",
-    "lexical_prefix_database": "generated/LEXICAL_PREADVERBS.csv",
+    "lexical_database": "ADVERBS.csv",
+    "lexical_prefix_database": "LEXICAL_PREADVERBS.csv",
     "regular_lexc_file": "ojibwe_adverbs.lexc",
     "irregular_lexc_file": "None",
     "morph_features": [
