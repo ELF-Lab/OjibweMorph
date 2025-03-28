@@ -151,7 +151,7 @@ define PrefixMOnly {ni} (->) 0 || .#. (PREBD) _ m PREBD b ;
 define PrefixYInsertion [..] (->) y || .#. (PREBD) {ni} _ PREBD {aa} ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
 define PrefixNOnly {nin} (->) n || .#. _ PREBD [d|j|z|{zh}|g] ;
-define PrefixNInitialDeletion n (->) 0 || .#. (PREBD) _ [ {in} | {im} ] PREBD ;
+define PrefixNInitialDeletion n (->) 0 || .#. (PREBD) _ [ {ind} | {in} | {im} ] PREBD ;
 
 define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} | {in} | n ] d ] PREBD _ \o ; 
 

@@ -2,8 +2,8 @@ Paradigm,Order,Class,Lemma,Stem,Head,Subject,Object,Mode,Negation,Form1Surface,F
 VTA,Ind,VTA_irr,izhi,in,NONE,2PlSubj,1SgObj,Neu,Pos,gidizhim,gi<<izh>>i1m,NJ-zoom-2023-sep11,,,
 VTA,Ind,VTA_irr,izhi,in,NONE,2SgSubj,1SgObj,Neu,Pos,gidizh,gi<<izh>>i1,NJ-zoom-2023-sep11,,,
 VTA,Ind,VTA_irr,izhi,in,NONE,3PlProxSubj,1SgObj,Neu,Pos,nindigoog,ni<<>>igoog,NJ-zoom-2023-sep11,,,
-VTA,Ind,VTA_irr,izhi,in,NONE,3SgProxSubj,1SgObj,Neu,Pos,nindig,ni<<>>ig,NJ-zoom-2023-sep11,,,
-VTA,Ind,VTA_irr,izhi,in,NONE,XSubj,1SgObj,Neu,Pos,nindigoo,ni<<>>igoo,NJ-zoom-2023-sep11,,,
+VTA,Ind,VTA_irr,izhi,in,NONE,3SgProxSubj,1SgObj,Neu,Pos,nindig,ni<<>>ig,NJ-zoom-2023-sep11,indig,ind<<>>ig,GUESS
+VTA,Ind,VTA_irr,izhi,in,NONE,XSubj,1SgObj,Neu,Pos,nindigoo,ni<<>>igoo,NJ-zoom-2023-sep11,indigoo,ind<<>>igoo,GUESS
 VTA,Ind,VTA_irr,izhi,in,NONE,1SgSubj,2PlObj,Neu,Pos,gidinininim,gi<<in>>ininim,NJ-zoom-2023-sep11,,,
 VTA,Ind,VTA_irr,izhi,in,NONE,3PlProxSubj,2PlObj,Neu,Pos,gidigowaag,gi<<>>igowaag,NJ-zoom-2023-sep11,,,
 VTA,Ind,VTA_irr,izhi,in,NONE,3SgProxSubj,2PlObj,Neu,Pos,gidigowaa,gi<<>>igowaa,NJ-zoom-2023-sep11,,,
