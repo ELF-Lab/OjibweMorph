@@ -54,7 +54,7 @@ Still need to add the dependent nouns:
 | NA_C 	  | na consonant           		   |
 | NA_Cw   | na consonant w          	   |
 | NA_Cy   | na consonant y       		   |
-| NA_irrCw | na irrgular consonant w       |
+| NA_irrCw| na irregular consonant w       |
 | NA_VV   | na long vowel            	   |
 | NA_VVny | na nasal long vowel      	   |
 | NA_VVw  | na long vowel w        		   |
