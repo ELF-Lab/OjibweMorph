@@ -24,7 +24,6 @@
 	"VTI_IND"
     ],
     "irregular_csv_files": [
-	"VTA_IRR"
     ],
     "lexical_database": "VERBS.csv",
     "lexical_prefix_database": "LEXICAL_PREVERBS.csv",    

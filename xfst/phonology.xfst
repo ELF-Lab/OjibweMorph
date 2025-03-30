@@ -57,6 +57,12 @@ define awowRule a w (->) o w || a m _ SUFBD a a ;
 define woRule1 [ w1 -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - [(SUFBD)|w1] ] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 define woRule2 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
+! izhiInverseDel: Stem for izhi "in1" deletes just in case the theme sign is inverse (igo or igoo)
+! Accounts for sub-regular behavior of izhi "say/speak to h/"
+! Ensures that the inverse is treated like the stem for the purposes of prefix rules by deleting suffix boundary.
+
+define izhiInverseDel i n1 SUFBD -> 0 || PREBD _ i g ;
+
 ! shared noun and verb suffix rules
 
 ! n1Rule, s1Rule: Stems ending in "n1" palatalize to "zh" and "s1" to "sh" 
@@ -76,7 +82,6 @@ define w1Deletion w1 -> 0 || _ (SUFBD) .#. ;
 ! LengthenV: a short vowel to the left of v1 lengthens 
 ! (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
 define LengthenV [ i -> {ii} , a -> {aa} , o -> {oo} || _ SUFBD V1 ] .o. [ V1 -> 0 ] ;
-
 
 ! noun-specific suffix rules
 
@@ -219,6 +224,7 @@ read regex [!emptyFilter .o.
      	   	     	 	irrDimGan .o.
 						irrDimAnimosh .o.
 						pejorativePalatalization .o.
+						izhiInverseDel .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
 						DepPrefixWDeletion .o.
