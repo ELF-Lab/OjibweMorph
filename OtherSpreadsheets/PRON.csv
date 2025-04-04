@@ -1,5 +1,11 @@
 Paradigm,Class,Lemma,Stem,Form1Surface,Form1Split,Form1Source
 PRONDem,PRONDem,a'aw,a'aw,a'aw,<<a'aw>>,OPD
+PRONDem+NA+ProxSg,PRONDem+NA+ProxSg,wa'aw,wa'aw,wa'aw,<<wa'aw>>,OPD
+PRONDem+NA+ProxPl,PRONDem+NA+ProxPl,ongow,ongow,ongow,<<ongow>>,OPD
+PRONDem+NA+ObvSg,PRONDem+NA+ObvSg,onow,onow,onow,<<onow>>,OPD
+PRONDem+NA+ObvPl,PRONDem+NA+ObvPl,onow,onow,onow,<<onow>>,OPD
+PRONDem+NI+Sg,PRONDem+NI+Sg,o'ow,o'ow,o'ow,<<o'ow>>,OPD
+PRONDem+NI+Pl,PRONDem+NI+Pl,onow,onow,onow,<<onow>>,OPD
 PRONDub,PRONDub,awegodogwen,awegodogwen,awegodogwen,<<awegodogwen>>,OPD
 PRONIndf,PRONIndf,awiya,awiya,awiya,<<awiya>>,OPD
 PRONInter,PRONInter,wegonen,wegonen,wegonen,<<wegonen>>,OPD
