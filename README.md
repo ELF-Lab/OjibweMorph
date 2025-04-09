@@ -17,7 +17,7 @@ The "# of Forms Without Results" counts the test forms for which the FST provide
 
 To cite this work or the contents of the repository (including, but not limited to, datasets, tables, explanations, methods, analysis, structure, etc) in an academic work, please use the following:
 
-> Hammerly, C., Livesay, N., Arppe, A., Stacey, A., Steiner, R., & Silfverberg, M. (2024). OjibweMorph (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.1234
+> [Hammerly, C., Livesay, N., Arppe A., Stacey, A., & Silfverberg, M. (Submitted) OjibweMorph: An approachable morphological parser for Ojibwe](https://christopherhammerly.com/publication/ojibwemorph/OjibweMorph.pdf)
 
 # License/Copyright
 
