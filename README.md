@@ -35,6 +35,33 @@ Your attribution should include the above links, and should not in any way that 
 
 **Share Alike**: If you remix, transform, or build upon our materials, you may distribute the resulting work only under the same the same Creative Commons BY-NC-SA license, and include a link to the license.
 
+# Acknowledgements
+
+Several people and organizations have (directly or indirectly) contributed code, advice, tools and/or materials to this project. We extend our sincerest gratitude for the help! 
+
+### People
+
+* Antti Arppe
+* Chris Hammerly
+* Ogimaawigwanebiik Nancy Jones
+* Nora Livesay
+* Minh Nguyen
+* John Nichols
+* Scott Parkhill
+* Sandra Radic
+* Miikka Silfverberg
+* Anna Stacey
+* Reed Steiner
+
+### Organizations and resources
+
+* [AltLab](https://altlab.ualberta.ca/)
+* [CultureFoundry](https://www.culturefoundrystudios.com/)
+* [Foma](https://fomafst.github.io/)
+* [Giellatekno](https://giellatekno.uit.no/index.eng.html)
+* [Ojibwe People's Dictionary](https://ojibwe.lib.umn.edu/about-ojibwe-language)
+* [UBC ELF-Lab](https://github.com/ELF-Lab)
+
 # Building the FST
 **Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  ParserTools contains the non-language-specific pieces for creating an FST, and you should check out [the relevant documentation](https://github.com/ELF-Lab/ParserTools/tree/main/csv2fst) to make sure you have all the necessary prerequisites to use its code.
 
