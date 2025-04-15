@@ -63,6 +63,11 @@ define woRule2 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 
 
 define izhiInverseDel i n1 SUFBD -> 0 || PREBD _ i g ;
 
+! glottaloMetathesis: -ii'o becomes -iiw' at the end of a word.
+! VAI stems with ending in -ii'o show a variant where rather than deleting the short o word-finally, it gets turned to a w and metathesized to iiw'
+! Probably a rule specific to GJ or Lac La Croix more generally.
+define glottaloMetathesis ' o (->) w ' || i i _ SUFBD ;
+
 ! shared noun and verb suffix rules
 
 ! n1Rule, s1Rule: Stems ending in "n1" palatalize to "zh" and "s1" to "sh" 
@@ -210,7 +215,8 @@ read regex [!emptyFilter .o.
 				       	awooRule .o.
 						awowRule .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
-				       	woRule2 .o.	! Must precede vowelDeletion			       
+				       	woRule2 .o.	! Must precede vowelDeletion
+						glottaloMetathesis .o. ! Must precede vowelDeletion			       
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
 			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
