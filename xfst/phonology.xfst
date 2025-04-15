@@ -189,9 +189,11 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! the fortis counterpart ("p", "t", "ch", "k", "s", "sh") following the past tense preverbs
 ! (gii-/gii'-) and desiderative future tense preverbs (wii-/wii'-).
 ! This is triggered by a special character <T>.
-define tenseTensing [ b -> p , d -> t , j -> {ch} , g -> k , {zh} -> {sh} || "<T>" "-" (PREBD) _ ] .o. [ z -> s || "<T>" "-" (PREBD) _ ];
+! Now made optional, since it really can be variable, even in the most prescriptive writing/speaking
+define tenseTensing [ b (->) p , d (->) t , j (->) {ch} , g (->) k , {zh} (->) {sh} || "<T>" "-" (PREBD) _ ] .o. [ z (->) s || "<T>" "-" (PREBD) _ ];
 
 ! Allow for deletion of preverb boundaries
+! Not currently being used! This will be taken care of in the spell relaxation
 define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
 
 ! Clean up rules
