@@ -94,10 +94,11 @@ define LengthenV [ i -> {ii} , a -> {aa} , o -> {oo} || _ SUFBD V1 ] .o. [ V1 ->
 ! before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | "-" | .#. ] ; 
 
-! y1hRule: Turn y1 into h if it follows a long vowel + n sequence at the end of a word 
+! y(1)hRule: Turn y(1) into h if it follows a long vowel + n sequence at the end of a word 
 ! This handles some stems that are encoded inconsistently; 
 ! a purely orthographic rule.
 define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
+define yhrule y -> h || [Vowel Vowel | e] n _ SUFBD .#. ;
 
 ! y1Deletion: Delete y1 at the end of a word
 define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
@@ -225,6 +226,7 @@ read regex [!emptyFilter .o.
                        	dDeletion .o. ! Must follow w1Deletion
 						y2Deletion .o.   
                         y1hRule .o. ! Must precede y1Deletion
+						yhrule .o.
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
 						LengthenV .o. ! Must follow w2Deletion
