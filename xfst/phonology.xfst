@@ -60,7 +60,6 @@ define woRule2 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 
 ! izhiInverseDel: Stem for izhi "in1" deletes just in case the theme sign is inverse (igo or igoo)
 ! Accounts for sub-regular behavior of izhi "say/speak to h/"
 ! Ensures that the inverse is treated like the stem for the purposes of prefix rules by deleting suffix boundary.
-
 define izhiInverseDel i n1 SUFBD -> 0 || PREBD _ i g ;
 
 ! glottaloMetathesis: -ii'o becomes -iiw' at the end of a word.
@@ -75,6 +74,9 @@ define glottaloMetathesis ' o (->) w ' || i i _ SUFBD ;
 ! or inanimate singular marker "i2".
 define n1Rule n1 -> {zh} || _ SUFBD [i1|i2] ;
 define s1Rule s1 -> {sh} || _ SUFBD [i1|i2] ;
+
+! Deals with certain n1 stems that end in nn1 (e.g. wiinzh), where one n deletes so there is not two n's in a row
+define nDeletion n -> 0 || _ n1 SUFBD ;
 
 ! vowelDeletion: Delete word-final short vowels in multi-syllabic words 
 ! or mono-syllabic words with a long vowel 
@@ -210,7 +212,8 @@ define cleanUp [ BD | "<T>" ] -> 0 ;
 read regex [!emptyFilter .o.
             !cleanUp.i ] .o. Lexicon .o. [ 
 						! Suffix Rules
-     	   	     	 	n1Rule .o. ! Must precede vowelDeletion
+     	   	     	 	n1Rule .o. ! Must precede vowelDeletion and nDeletion
+						nDeletion .o. ! Must follow n1Rule
 				       	s1Rule .o. ! Must precede vowelDeletion	
 						iInsertion .o. ! Must precede nasalAssimilation	       
      	   	            nasalAssimilation .o.
