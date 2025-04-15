@@ -153,7 +153,7 @@ define defaultRules [ a1 -> a , i2 -> i , n1 -> n , s1 -> s , i1 -> i , w1 -> w 
 !nim-/im-/m-/ni- before b
 !nin-/in-/n-/ni- before d, j, z, zh, g
 !nind-/ind-/nd- before vowels
-!At Red Lake, we get niy- before aa
+!At Red Lake, we get oy- and niy- before aa
 
 define PrefixDInsertion [..] -> d || .#. (PREBD) [{gi}|o|{ni}] _ PREBD Vowel ;
 define PrefixNDInsertion [..] (->) n || .#. (PREBD) {ni} _ d PREBD Vowel ;
@@ -161,7 +161,7 @@ define PrefixDDeletion d (->) 0 || .#. (PREBD) {nin} _ PREBD ;
 define PrefixIND {nid} (->) [{ind} | {nd}] || .#. (PREBD) _ PREBD;
 define PrefixMInsertion [..] (->) m || .#. (PREBD) {ni} _ PREBD b ;
 define PrefixMOnly {ni} (->) 0 || .#. (PREBD) _ m PREBD b ;
-define PrefixYInsertion [..] (->) y || .#. (PREBD) {ni} _ PREBD {aa} ;
+define PrefixYInsertion [..] (->) y || .#. (PREBD) [{gi}|o|{ni}] _ PREBD {aa} ;
 define PrefixNInsertion [..] (->) n || .#. (PREBD) {ni} _ PREBD [d|j|z|{zh}|g] ;
 define PrefixNOnly {nin} (->) n || .#. _ PREBD [d|j|z|{zh}|g] ;
 define PrefixNInitialDeletion n (->) 0 || .#. (PREBD) _ [ {ind} | {in} | {im} ] PREBD ;
