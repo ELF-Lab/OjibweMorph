@@ -1,5 +1,5 @@
-Field,Value
-Lemma,LemmaExample
-Class,ClassExample
-Stem,StemExample
-Paradigm,ParadigmExample
+Directory,Field,Value
+OPD,Lemma,LemmaExample
+HammerlyFieldwork,Stem,StemExample
+OPD,Class,ClassExample
+OPD,Paradigm,ParadigmExample
