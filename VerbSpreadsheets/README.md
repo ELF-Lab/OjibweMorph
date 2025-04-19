@@ -106,15 +106,15 @@ All spreadsheets contain the following columns:
 
 #### MODE
 
-| Tag   | Description                         |
-|-------|-------------------------------------|
-| Neu   | Neutral                             |
-| Prt   | Preterit                            |
-| Dub   | Dubitative                          |
-| DubPrt| Dubitative-Preterit                 |
-| Sim   | Simple (imperative only)            |
-| Del	| Delayed (imperative only)           |
-| Prb	| Prohibative (imperative only)       |
+| Our Tag | OPD Tag | Description             |
+|---------|---------|-------------------------|
+| Neu   | no tag; default | Neutral           |
+| Prt   | pret      | Preterit                |
+| Dub   | dub       | Dubitative              |
+| DubPrt| dub pret (to be confirmed) | Dubitative-Preterit |
+| Sim   | imp       | Simple (imperative only)|
+| Del	| imp del   | Delayed (imperative only)|
+| Prb	| imp prohib| Prohibative (imperative only)|
 
 #### NEGATION
 
