@@ -6,12 +6,12 @@ The "# of Forms Without Results" counts the test forms for which the FST provide
 ### Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-04-19 | 54212 | 164 | 86.03% | 96.7% |
+| 2025-04-21 | 54212 | 157 | 86.03% | 96.72% |
 
 ### Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-04-19 | 8567 | 450 | 83.35% | 91.56% |
+| 2025-04-21 | 8567 | 450 | 83.35% | 91.56% |
 
 # Citation
 
