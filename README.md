@@ -21,8 +21,6 @@ To cite this work or the contents of the repository (including, but not limited 
 
 # License/Copyright
 
-<<<<<<< HEAD
-=======
 ### Using the FST
 This FST is created using [Foma](https://fomafst.github.io).  Some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).  Additonally, a simple example of using this Ojibwe FST is provided below:
 1. Start Foma with the following command:  
@@ -56,7 +54,6 @@ The `XSpreadsheets/` directories contain CSVs with example forms for the various
 The directories `config/`, `xsft/`, and `templates` contain additional Ojibwe-specific files used to create the FST.
 
 ### License/Copyright
->>>>>>> parent of c38db66 (Reworded README section on using the FST (slightly).)
 Unless otherwise indicated, the work and content within this repository is copyrighted by The Experimental Linguistics and Fieldwork Lab (ELF-Lab; https://github.com/ELF-Lab) at The University of British Colimbia (UBC) in collaboration with the Alberta Language Technology Lab (ALT-Lab; https://altlab.ualberta.ca/) at the University of Alberta (UofA) and the Ojibwe People's Dictionary (OPD; http://ojibwe.lib.umn.edu) at the University of Minnesota (UofM), as well as various other organizations, unless otherwise attributed.
 
 Unless otherwise indicated, this repository and its contents are copyrighted under the Creative Commons Attribution NonCommercial-ShareAlike 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). This means you are free to share the materials (copy and redistribute the material in any medium or format) and adapt the materials (remix, transform, and build upon the material) within this repository under the following conditions:
