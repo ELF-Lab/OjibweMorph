@@ -7,7 +7,7 @@ set flag-is-epsilon ON
 define Cons [ b | c | d | f | g | h | j | k | l | m | n | n1 | p | s | s1 | t | v | w | w1 | w2 | x | y | z | "'" ] ;
 
 ! implictly includes long vowels, which just repeats characters
-define Vowel [ a | e | i | o | i1 | V1 ] ;
+define Vowel [ a | e | i | o | i1 | i2 | V1 ] ;
 
 ! nonlight vowels are simply long vowels
 define NonLight [[Vowel ?* Vowel] | e ] ?* ;
