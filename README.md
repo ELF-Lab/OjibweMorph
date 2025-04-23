@@ -44,8 +44,9 @@ By default, the output will go in a local directory called `FST/`.
 By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in `create_fst.sh` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
 
 ### Using the FST
-This FST is created using [Foma](https://fomafst.github.io).  Some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).  Additonally, a simple example of using this Ojibwe FST is provided below:
-1. Start Foma with the following command:  
+This FST is run using [Foma](https://fomafst.github.io).  Some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).  Additonally, a simple example of using this Ojibwe FST is provided below:
+
+1. Start the Foma program with the following command:  
 `foma`  
 Some information about foma should appear, and your prompt should now say `foma[0]: `.
 
@@ -67,8 +68,9 @@ The output should be:
 `wiigwaas`  
 You can input as many of these commands as you like.
 
-4. Once you're done using foma, you can exit with:
+4. Once you're done using the FST, you can exit Foma with:  
 `quit` or `exit`
+
 ## About OjibweMorph
 ### Morphological Info
 The `XSpreadsheets/` directories contain CSVs with example forms for the various paradigm and class categories within each part-of-speech (POS) category.  The `NounSpreadsheets/`, `PVSpreadsheets/`, and `VerbSpreadsheets/` directories all contain detailed READMEs discussing their respective CSV contents.
