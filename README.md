@@ -39,7 +39,6 @@ The output should be:
 b. To get an inflected form from an analysis, use this command:  
 `down wiigwaas+NI+Sg`  
 The output should be:  
-`wiigwaasi`  
 `wiigwaas`  
 You can input as many of these commands as you like.
 
