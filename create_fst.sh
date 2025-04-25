@@ -1,10 +1,7 @@
-# Set these variables to point to the location of these repos on your system
-PARSER_TOOLS=~/ParserTools
-OJIBWE_LEXICON=~/OjibweLexicon
-# This path needs to be **relative to ParserTools/csv2fst**
-# For example, if both OjibweMorph and ParserTools are in your root folder,
-# set this to ../../OjibweMorph
-OJIBWE_MORPH=../../OjibweMorph
+# Set these three variables to point to the location of these repositories on your system
+PARSER_TOOLS=~/Documents/ParserTools
+OJIBWE_LEXICON=~/Documents/OjibweLexicon
+OJIBWE_MORPH=~/Documents/OjibweMorph
 
 # Per ParserTools, you can also specify a comma-separated *list* of directories for LEMMAS_DIR
 cd $PARSER_TOOLS/csv2fst

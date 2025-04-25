@@ -31,13 +31,15 @@ The "# of Forms Without Results" counts the test forms for which the FST provide
 ## User Instructions
 
 ### Building the FST
-**Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  ParserTools contains the non-language-specific pieces for creating an FST, and you should check out [the relevant documentation](https://github.com/ELF-Lab/ParserTools/tree/main/csv2fst) to make sure you have all the necessary prerequisites to use its code.
+**Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  ParserTools contains the non-language-specific pieces for creating an FST, and you should check out [the relevant documentation](https://github.com/ELF-Lab/ParserTools/tree/main/csv2fst#dependencies-for-building-an-fst-csv2fstpy) to make sure you have all the necessary prerequisites to use its code.
 
 The FST is created using code in ParserTools, which makes use of language-specific information stored in both OjibweMorph and OjibweLexicon.  The `create_fst.sh` script in this repo can be used to call the ParserTools code while supplying it with paths to the Ojibwe repos.  
 First, go into `create_fst.sh` and change the file path variables to match your system.  Next, when calling `create_fst.sh`, just pass a keyword that will be given to the `Makefile` in ParserTools:
 - `sh create_fst.sh all` to simply build the FST
 - `sh create_fst.sh check` to run tests on the FST
 - `sh create_fst.sh clean` to remove generated files
+
+> Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
 
 By default, the output will go in a local directory called `FST/`.
 
