@@ -1,7 +1,7 @@
 # Set these three variables to point to the location of these repositories on your system
-PARSER_TOOLS=~/Documents/ParserTools
-OJIBWE_LEXICON=~/Documents/OjibweLexicon
-OJIBWE_MORPH=~/Documents/OjibweMorph
+PARSER_TOOLS=~/ParserTools
+OJIBWE_LEXICON=~/OjibweLexicon
+OJIBWE_MORPH=~/OjibweMorph
 
 # Per ParserTools, you can also specify a comma-separated *list* of directories for LEMMAS_DIR
 cd $PARSER_TOOLS/csv2fst
