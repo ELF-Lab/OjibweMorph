@@ -17,3 +17,12 @@ VAIO,Imp,VAIO,adaawen,adaawe,NONE,2PlSubj,0SgObj,Del,NONE,adaawekeg,<<adaawe>>ke
 VAIO,Imp,VAIO,adaawen,adaawe,NONE,2PlSubj,0PlObj,Del,NONE,adaawekeg,<<adaawe>>keg,JDN-2010-MS-VTI-p46,,,,,,
 VAIO,Imp,VAIO,adaawen,adaawe,NONE,InclSubj,0SgObj,Del,NONE,adaawekang,<<adaawe>>kang,JDN-2010-MS-VTI-p46,,,,,,
 VAIO,Imp,VAIO,adaawen,adaawe,NONE,InclSubj,0PlObj,Del,NONE,adaawekang,<<adaawe>>kang,JDN-2010-MS-VTI-p46,,,,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,2PlSubj,NONE,Del,NONE,adaawekegon,<<adaawe>>kegon,NJ-ngs-2023Aug18,adaawekeg,<<adaawe>>keg,JDN-2010-MS-VAI-p39,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,2PlSubj,NONE,Prb,NONE,adaawekegon,<<adaawe>>kegon,GUESS,,,,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,2PlSubj,NONE,Sim,NONE,adaaweyok,<<adaawe>>yok,JDN-2010-MS-VAI-p39,adaawek,<<adaawe>>k,JDN-2010-MS-VAI-p39,adaaweg,<<adaawe>>g,JDN-2010-MS-VAI-p39
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,2SgSubj,NONE,Del,NONE,adaawekan,<<adaawe>>kan,JDN-2010-MS-VAI-p39,,,,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,2SgSubj,NONE,Prb,NONE,MISSING,,,,,,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,2SgSubj,NONE,Sim,NONE,adaawen,<<adaawe>>n,JDN-2010-MS-VAI-p39,,,,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,InclSubj,NONE,Del,NONE,adaawedaa,<<adaawe>>daa,NJ-ngs-2023Aug18,adaawekang,<<adaawe>>kang,JDN-2010-MS-VAI-p39,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,InclSubj,NONE,Prb,NONE,MISSING,,,,,,,,
+VAIO,Imp,VAIO,adaawen,adaawe,NONE,InclSubj,NONE,Sim,NONE,adaawedaa,<<adaawe>>daa,JDN-2010-MS-VAI-p39,,,,,,
