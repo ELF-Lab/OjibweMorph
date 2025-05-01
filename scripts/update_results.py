@@ -52,8 +52,8 @@ def update_readme(results_line, readme_file_path, section_title):
     readme.close()
 
 def main():
-    verb_results_file_path = "./FST/verb_test_summary.csv"
-    noun_results_file_path = "./FST/noun_test_summary.csv"
+    verb_results_file_path = "./FST/opd_verb_test_summary.csv"
+    noun_results_file_path = "./FST/opd_noun_test_summary.csv"
     readme_file_path = "./README.md"
     if path.isfile(verb_results_file_path):
         results = read_results(verb_results_file_path)
