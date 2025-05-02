@@ -51,22 +51,25 @@ def update_readme(results_line, readme_file_path, section_title):
     print("Wrote to", readme_file_path)
     readme.close()
 
-def main():
-    verb_results_file_path = "./FST/opd_verb_test_summary.csv"
-    noun_results_file_path = "./FST/opd_noun_test_summary.csv"
-    readme_file_path = "./README.md"
-    if path.isfile(verb_results_file_path):
-        results = read_results(verb_results_file_path)
+# Make all the necessary fxn calls for EACH results CSV
+def handle_results(results_file_path, readme_file_path, section_title):
+    if path.isfile(results_file_path):
+        results = read_results(results_file_path)
         results_line = format_results(results)
-        update_readme(results_line, readme_file_path, "Verbs")
+        update_readme(results_line, readme_file_path, section_title)
     else:
-        print(f"ERROR: The CSV expected to contain the test results ({verb_results_file_path}) was not found.")
+        print(f"ERROR: The CSV expected to contain the test results ({results_file_path}) was not found.")
 
-    if path.isfile(noun_results_file_path):
-        results = read_results(noun_results_file_path)
-        results_line = format_results(results)
-        update_readme(results_line, readme_file_path, "Nouns")
-    else:
-        print(f"ERROR: The CSV expected to contain the test results ({verb_results_file_path}) was not found.")
+def main():
+    opd_verb_results_file_path = "./FST/opd_verb_test_summary.csv"
+    opd_noun_results_file_path = "./FST/opd_noun_test_summary.csv"
+    paradigm_verb_results_file_path = "./FST/paradigm_verb_test_summary.csv"
+    paradigm_noun_results_file_path = "./FST/paradigm_noun_test_summary.csv"
+    readme_file_path = "./README.md"
+
+    handle_results(opd_verb_results_file_path, readme_file_path, "OPD Verbs")
+    handle_results(opd_noun_results_file_path, readme_file_path, "OPD Nouns")
+    handle_results(paradigm_verb_results_file_path, readme_file_path, "Paradigm Verbs")
+    handle_results(paradigm_noun_results_file_path, readme_file_path, "Paradigm Nouns")
 
 main()

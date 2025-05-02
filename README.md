@@ -15,21 +15,39 @@ Morphological information about Ojibwe words is housed here.  Combined with the 
     - [Citation](#citation)
 
 ## Test Results
-These results reflect the performance of an FST built from the morphology stored in [OjibweMorph](https://github.com/ELF-Lab/OjibweMorph) and the lemmas stored in [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  The inflected test forms also come from [the OPD](https://ojibwe.lib.umn.edu), and are stored in [OjibweLexicon/OPD/for_yaml](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/for_yaml).  Each test form is inputted to the FST, then the corresponding analysis outputted by the FST is checked for correctness.
+These results reflect the performance of an FST built from the morphology stored in [OjibweMorph](https://github.com/ELF-Lab/OjibweMorph) and the lemmas stored in [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).
+
+Each test form is inputted to the FST, then the corresponding analysis outputted by the FST is checked for correctness.
 
 The "# of Forms Without Results" counts the test forms for which the FST provides no analysis whatsoever.  The "Precision" captures how many outputted analyses were correct, while the "Recall" captures how many of the correct analyses were outputted.  Note that some forms have multiple correct analyses.
 
-### Verbs
+### OPD Tests
+These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and are stored in [OjibweLexicon/OPD/for_yaml](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/for_yaml).  This is a large test set covering a variety of word forms.
+
+#### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-04-30 | 54211 | 72 | 85.48% | 96.93% |
+| 2025-05-02 | 54211 | 72 | 85.48% | 96.93% |
 
-### Nouns
+#### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-04-30 | 8567 | 450 | 83.31% | 91.56% |
-## User Instructions
+| 2025-05-02 | 8567 | 450 | 83.31% | 91.56% |
 
+### Paradigm Tests
+The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
+
+#### Paradigm Verbs
+| Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
+|---|---|---|---|---|
+| 2025-05-02 | 8058 | 37 | 93.7% | 99.63% |
+
+#### Paradigm Nouns
+| Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
+|---|---|---|---|---|
+| 2025-05-02 | 10170 | 3 | 100.0% | 99.98% |
+
+## User Instructions
 ### Building the FST
 **Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  To make use of ParserTools, you have to follow [the instructions there](https://github.com/ELF-Lab/ParserTools/tree/dev#getting-set-up-to-build-the-fst) to make sure you have all the necessary prerequisites.
 
