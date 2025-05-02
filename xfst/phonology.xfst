@@ -52,10 +52,12 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 define awowRule a w (->) o w || a m _ SUFBD a a ;
 
 ! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
-! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. 
-! 	For example, we get "mizhwi" rather than "mizho" for the imerative form.
-define woRule1 [ w1 -> o1 || Cons _ SUFBD [i|i1] (SUFBD) [? - [(SUFBD)|w1] ] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
-define woRule2 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where C is anything other than the glottal stop.
+! 		For example, we get "mizhwi" rather than "mizho" for the imerative form
+!		and "nindoodita'wig" rather than "nindoodita'og" with the proximate acting on 1sg inverse.
+define woRule1 [ w1 -> o1 || [ Cons - '] _ SUFBD [i|i1] (SUFBD) [? - [(SUFBD)|w1] ] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define woRule2 [ w1 (->) o1 || ' _ SUFBD [i|i1] (SUFBD) [? - [(SUFBD)|w1] ] ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
+define woRule3 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 0 || o1 SUFBD _ ] .o. [o1 -> o];
 
 ! izhiInverseDel: Stem for izhi "in1" deletes just in case the theme sign is inverse (igo or igoo)
 ! Accounts for sub-regular behavior of izhi "say/speak to h/"
@@ -222,6 +224,7 @@ read regex [!emptyFilter .o.
 						awowRule .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
 				       	woRule2 .o.	! Must precede vowelDeletion
+						woRule3 .o.	! Must precede vowelDeletion
 						glottaloMetathesis .o. ! Must precede vowelDeletion			       
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
 			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion

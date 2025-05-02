@@ -163,7 +163,7 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 
 - *awooRule:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 
-- *woRule1, woRule2:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.
+- *woRule1, woRule2, woRule3:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where the preceding consonant is NOT a glottal stop. For example, we get "mizhwi" rather than "mizho" for the imerative form, and "nindoodita'wig" rather than "nindoodita'og" with the proximate acting on 1sg inverse.
 	- MUST PRECEED _vowelDeletion_
 
 - *n1Rule, s1Rule:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1" or inanimate singular marker "i2".
