@@ -27,7 +27,7 @@ These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and 
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-02 | 54211 | 72 | 85.48% | 96.93% |
+| 2025-05-02 | 54211 | 72 | 85.45% | 96.93% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
@@ -45,7 +45,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-02 | 10170 | 3 | 100.0% | 99.98% |
+| 2025-05-02 | 10170 | 0 | 100.0% | 100.0% |
 
 ## User Instructions
 ### Building the FST
