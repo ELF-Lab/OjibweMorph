@@ -27,12 +27,12 @@ These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and 
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-02 | 54210 | 49 | 85.45% | 96.97% |
+| 2025-05-03 | 54209 | 29 | 85.44% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-02 | 8567 | 450 | 83.31% | 91.56% |
+| 2025-05-03 | 8567 | 450 | 83.31% | 91.56% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -40,12 +40,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-02 | 8035 | 0 | 93.94% | 100.0% |
+| 2025-05-03 | 8037 | 1 | 93.94% | 99.98% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-02 | 10170 | 0 | 100.0% | 100.0% |
+| 2025-05-03 | 10170 | 0 | 100.0% | 100.0% |
 
 ## User Instructions
 ### Building the FST
