@@ -27,7 +27,7 @@ These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and 
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-03 | 54209 | 29 | 85.44% | 97.01% |
+| 2025-05-03 | 54205 | 13 | 85.44% | 97.03% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
