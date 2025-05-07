@@ -64,6 +64,10 @@ define woRule3 [ w1 (->) o1 || Cons _ SUFBD [i|i1] (SUFBD) .#. ] .o. [[i|i1] -> 
 ! Ensures that the inverse is treated like the stem for the purposes of prefix rules by deleting suffix boundary.
 define izhiInverseDel i n1 SUFBD -> 0 || PREBD _ i g ;
 
+! izhiShortVPreservation: Insert a w2 at the end of the word when irregular stem izhi "in1" is presnt just in case it only ends in "i1"
+! This prevents the short vowel from getting deleted when a preverb is added.
+define izhiShortVPreservation [..] -> w2 || PREBD (m a j i "-") i z h SUFBD i1 _ ;
+
 ! glottaloMetathesis: -ii'o becomes -iiw' at the end of a word.
 ! VAI stems with ending in -ii'o show a variant where rather than deleting the short o word-finally, it gets turned to a w and metathesized to iiw'
 ! Probably a rule specific to GJ or Lac La Croix more generally.
@@ -230,6 +234,7 @@ read regex [!emptyFilter .o.
 				       	woRule1 .o. ! Must precede vowelDeletion
 				       	woRule2 .o.	! Must precede vowelDeletion
 						woRule3 .o.	! Must precede vowelDeletion
+						izhiShortVPreservation .o. ! Must precede vowelDeletion and w2Deletion; must follow n1Rule
 						glottaloMetathesis .o. ! Must precede vowelDeletion	
 						wMetathesis .o. ! Must precede w1Deletion		       
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
