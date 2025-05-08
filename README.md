@@ -33,7 +33,7 @@ These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-08 | 8567 | 398 | 83.41% | 92.23% |
+| 2025-05-08 | 8567 | 350 | 83.38% | 92.84% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -41,12 +41,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-07 | 8037 | 0 | 93.94% | 99.99% |
+| 2025-05-08 | 8037 | 0 | 93.94% | 99.99% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-07 | 10432 | 0 | 100.0% | 100.0% |
+| 2025-05-08 | 10432 | 0 | 100.0% | 100.0% |
 
 ## User Instructions
 ### Building the FST
