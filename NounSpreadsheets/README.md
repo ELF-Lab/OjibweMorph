@@ -79,21 +79,39 @@ Still need to add the dependent nouns:
 
 | Tag     | Description                    |
 |---------|--------------------------------|
-| NA_C 	  | na consonant           		   |
-| NA_Cw   | na consonant w          	   |
-| NA_Cy   | na consonant y       		   |
+| NA_C 	  | na consonant (regular)         |
+| NA_ShortC | na consont (short)		   |
+| NA_Cw   | na consonant w (regular)       |
 | NA_irrCw| na irregular consonant w       |
+| NA_ShortCw | na consonant w (short)	   |
+| NA_Cy   | na consonant y       		   |
 | NA_VV   | na long vowel            	   |
 | NA_VVny | na nasal long vowel      	   |
 | NA_VVw  | na long vowel w        		   |
+| NA_VVy  | na long vowel y        		   |
 | NA_Vw   | na short vowel w        	   |
-| NI_C 	  | ni consonant           		   |
+| NAD_C	  | nad consonant				   |
+| NAD_Cw   | nad consonant w          	   |
+| NAD_Cy   | nad consonant y       		   |
+| NAD_VV   | nad long vowel            	   |
+| NAD_VVny | nad nasal long vowel      	   |
+| NAD_VVw  | nad long vowel w        	   |
+| NAD_VVy  | nad long vowel y        	   |
+| NDA_Vw   | nad short vowel w        	   |
+| NI_C 	  | ni consonant (regular)         |
+| NI_ShortC 	  | ni consonant (short)   |
 | NI_Cw   | ni consonant w          	   |
-| NI_Cy   | ni consonant y       		   |
+| NI_Cy   | ni consonant y (regular)       |
+| NI_ShortCy   | ni consonant y (short)    |
 | NI_VV   | ni long vowel            	   |
 | NI_VVny | ni nasal long vowel      	   |
 | NI_Vw   | ni short vowel w        	   |
 | NI_aa   | ni aa-augment 		       	   |
+| NI_kana   | ni -kana ending		       |
+| NID_aa  | nid aa-augment 		       	   |
+| NID_C   | nid consonant          		   |
+| NID_Cw  | nid consonant w          	   |
+| NID_Cy  | nid consonant y       		   |
 
 #### PossPers
 
