@@ -126,7 +126,8 @@ define y2Deletion y2 -> 0 ;
 
 ! irrDimGan: Irregular diminutive form nouns ending in -(i)gan. 
 ! Appears as -gaans rather than -ganens
-define irrDimGan g a n SUFBD e n  -> g a a n ">>" ;
+! This is optional on some level, so the regular form does surface too.
+define irrDimGan g a n SUFBD e n  (->) g a a n ">>" ;
 
 ! irrDimVVny: Irregular diminutive form in VVny stems. 
 ! For example, "-oon(h)yens" becomes "-oon(h)s" 
