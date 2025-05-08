@@ -2,6 +2,8 @@
 
 ## Contents
 
+- [Noun Spreadsheets](#noun-spreadsheets)
+	- [Contents](#contents)
 	- [General Information](#general-information)
 		- [Special characters](#special-characters)
 		- [Description of Tags](#description-of-tags)
