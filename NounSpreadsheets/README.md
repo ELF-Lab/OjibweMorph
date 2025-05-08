@@ -1,6 +1,32 @@
 # Noun Spreadsheets
 
-## General
+## Contents
+
+	- [General Information](#general-information)
+		- [Special characters](#special-characters)
+		- [Description of Tags](#description-of-tags)
+			- [Spreadsheet columns](#spreadsheet-columns)
+			- [Paradigm](#paradigm)
+			- [Class](#class)
+			- [PossPers](#posspers)
+			- [Dim](#dim)
+			- [Poss](#poss)
+			- [Pej](#pej)
+			- [Pret](#pret)
+			- [Basic](#basic)
+	- [Linguistic Details for Nouns](#linguistic-details-for-nouns)
+		- [Noun Animate (NA)](#noun-animate-na)
+		- [Noun Inanimate (NI)](#noun-inanimate-ni)
+		- [Noun Animate Dependent (NAD)](#noun-animate-dependent-nad)
+		- [Noun Inanimate Dependent (NID)](#noun-inanimate-dependent-nid)
+	- [Stacking rules](#stacking-rules)
+		- [Order of noun suffixes](#order-of-noun-suffixes)
+		- [Restrictions on noun suffix combinations](#restrictions-on-noun-suffix-combinations)
+		- [Sound changes between stacked suffixes](#sound-changes-between-stacked-suffixes)
+
+## General Information
+
+### Special characters
 
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
 *	Double \<\< marks the prefix/stem juncture (or the start of the stem)
@@ -16,9 +42,9 @@
 	*	i2, the vestigial "inanimate singular" marker that appears in inanimate "short" stems. Resists _ShortV-Deletion_ and triggers palatalization of s1.
 	*	a1, the vestigial "animate singular" marker that appears in animate "short" stems, and also with NI_kana stems. Resists _ShortV-Deletion_.
 
-## Organization
+### Description of Tags
 
-### Description of Tags (Nouns)
+#### Spreadsheet columns
 
 All spreadsheets contain the following columns:
 
@@ -36,7 +62,7 @@ All spreadsheets contain the following columns:
 * **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of possessed nouns) and suffixal morphology. This is the form before any phonological rules have applied, and is what is directly used to build the FST.
 * **Form\#Source**: The source for the surface form.
 
-#### PARADIGM
+#### Paradigm
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
@@ -45,7 +71,7 @@ All spreadsheets contain the following columns:
 | NI   	| Noun Inanimate         			  |
 | NID   | Noun Inanimate Dependent 			  |
 
-#### CLASS
+#### Class
 
 Still need to add the dependent nouns:
 
@@ -83,7 +109,7 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 | 3SgObv         | Animate third person singular obviative |
 | 3PlObv         | Animate third person plural obviative   |
 
-#### DIM
+#### Dim
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
@@ -206,7 +232,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NID_aa	 |	Class 6			 | ni /aa/-augment				  | "=denaniw-"				| /denaniw/			 	|
 
 
-## STACKING RULES
+## Stacking rules
 
 The overall approach we are taking means that we have hard-coded all possible "stacked" suffix forms rather than generating these forms from scratch. For example, an independent noun (e.g.\ _jiimaan_ "boat") can have just diminutive suffix (_jiimaanens_), just a plural suffix (_jiimaanan_), or can stack both (_jiimaanensan_). Both the individual and the stacked forms can be found in the spreadsheets. These stackings occur in a set order, can condition sound changes to forms between suffixes, and are subject to certain restrictions. This section gives a brief overview of the ordering and combinatorial restrictions, as well as some of the sound changes that occur between suffixes. 
 
