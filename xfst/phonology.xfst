@@ -111,7 +111,7 @@ define w2Deletion w2 -> 0 || _ (BD) [o | V1 | Cons | "-" | .#. ] ;
 ! This handles some stems that are encoded inconsistently; 
 ! a purely orthographic rule.
 define y1hRule y1 -> h || [Vowel Vowel | e] n (SUFBD) _ (SUFBD) .#. ;
-define yhrule y -> h || [Vowel Vowel | e] n _ SUFBD .#. ;
+define yhRule y -> h || [Vowel Vowel | e] n _ SUFBD .#. ;
 
 ! y1Deletion: Delete y1 at the end of a word
 define y1Deletion y1 -> 0 || _ (SUFBD) .#. ;
@@ -124,7 +124,7 @@ define hDeletion h (->) 0 || n _ y1 ;
 ! y2Deletion: Always delete y2
 define y2Deletion y2 -> 0 ;
 
-! irrDimGan: Irregular diminutive form nouns ending in "an". 
+! irrDiman: Irregular diminutive form nouns ending in "an". 
 ! Optionally appears as -aans rather than -anens
 define irrDiman a n SUFBD e n (->) a a n ">>" ;
 
@@ -136,7 +136,7 @@ define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
 
 ! pejorativePalatalization: s and z palatalize to zh when 
-! followed by the pejorative marker ish.
+! followed by the pejorative marker -ish.
 define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
 
 ! Default rule
@@ -206,10 +206,6 @@ define ChCnjDefault "<ChCnj>" -> 0 ;
 ! Now made optional, since it really can be variable, even in the most prescriptive writing/speaking
 define tenseTensing [ b (->) p , d (->) t , j (->) {ch} , g (->) k , {zh} (->) {sh} || "<T>" "-" (PREBD) _ ] .o. [ z (->) s || "<T>" "-" (PREBD) _ ];
 
-! Allow for deletion of preverb boundaries
-! Not currently being used! This will be taken care of in the spell relaxation
-define DeletePVHyphen "-" (->) [ 0 | " " ] || _ ?* "<<" ;
-
 ! Clean up rules
 define emptyFilter [? - "<EMPTYLEX>"]* ;
 define cleanUp [ BD | "<T>" ] -> 0 ; 
@@ -243,7 +239,7 @@ read regex [!emptyFilter .o.
                        	dDeletion .o. ! Must follow w1Deletion
 						y2Deletion .o.   
                         y1hRule .o. ! Must precede y1Deletion
-						yhrule .o.
+						yhRule .o.
 				       	y1Deletion .o. ! Must precede hDeletion; must follow vowelDeletion and y1hRule
 				      	hDeletion .o. ! Must follow y1Deletion
 						LengthenV .o. ! Must follow w2Deletion
