@@ -42,7 +42,7 @@ These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-08 | 8569 | 204 | 83.31% | 94.77% |
+| 2025-05-08 | 8569 | 200 | 83.31% | 94.81% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
