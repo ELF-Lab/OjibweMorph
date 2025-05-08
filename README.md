@@ -4,15 +4,24 @@ This repository is for creating a finite-state transducer (FST) in the Ojibwe la
 Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [ParserTools](https://github.com/ELF-Lab/ParserTools) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
 
 ## Contents
--  [Test Results](#test-results)
-- [User Instructions](#user-instructions)
+- [OjibweMorph](#ojibwemorph)
+  - [Contents](#contents)
+  - [Test Results](#test-results)
+    - [OPD Tests](#opd-tests)
+      - [OPD Verbs](#opd-verbs)
+      - [OPD Nouns](#opd-nouns)
+    - [Paradigm Tests](#paradigm-tests)
+      - [Paradigm Verbs](#paradigm-verbs)
+      - [Paradigm Nouns](#paradigm-nouns)
+  - [User Instructions](#user-instructions)
     - [Building the FST](#building-the-fst)
     - [Using the FST](#using-the-fst)
-- [About OjibweMorph](#about-ojibwemorph)
+  - [About OjibweMorph](#about-ojibwemorph)
     - [Morphological Info](#morphological-info)
     - [License/Copyright](#licensecopyright)
     - [Acknowledgements](#acknowledgements)
     - [Funding](#funding)
+    - [Organizations and resources](#organizations-and-resources)
     - [Citation](#citation)
 
 ## Test Results

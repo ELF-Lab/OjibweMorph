@@ -1,5 +1,41 @@
 # Verb Spreadsheets
 
+## Contents
+
+- [Verb Spreadsheets](#verb-spreadsheets)
+	- [Contents](#contents)
+	- [General](#general)
+	- [Organization](#organization)
+		- [Descripton of Tags (Verbs)](#descripton-of-tags-verbs)
+			- [PARADIGM](#paradigm)
+			- [ORDER](#order)
+			- [CLASS](#class)
+			- [SUBJECT/OBJECT](#subjectobject)
+			- [MODE](#mode)
+			- [NEGATION](#negation)
+			- [SOURCES](#sources)
+		- [Notes on ambiguous forms and alternate forms](#notes-on-ambiguous-forms-and-alternate-forms)
+	- [Guiding Principles](#guiding-principles)
+- [Linguistic Details for Verbs](#linguistic-details-for-verbs)
+	- [Verb Inanimate Intransitive (VII)](#verb-inanimate-intransitive-vii)
+		- [STEM TYPES](#stem-types)
+		- [RULES](#rules)
+		- [NOTES/ISSUES](#notesissues)
+	- [Verb Animate Intransitive (VAI)](#verb-animate-intransitive-vai)
+		- [STEM TYPES](#stem-types-1)
+		- [RULES](#rules-1)
+		- [NOTES/ISSUES](#notesissues-1)
+	- [Verb Transitive Inanimate (VTI)](#verb-transitive-inanimate-vti)
+		- [STEM TYPES](#stem-types-2)
+		- [RULES](#rules-2)
+		- [NOTES/ISSUES](#notesissues-2)
+	- [Verb Transitive Animate (VTA)](#verb-transitive-animate-vta)
+		- [STEM TYPES](#stem-types-3)
+		- [RULES](#rules-3)
+		- [NOTES/ISSUES](#notesissues-3)
+	- [Summary](#summary)
+		- [SUMMARY OF STEM CLASSES](#summary-of-stem-classes)
+
 ## General
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
 *	Double \<\< marks the prefix/stem juncture (or the start of the stem)
@@ -313,3 +349,6 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
 | VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
+
+
+[def]: #verb-spreadsheets
