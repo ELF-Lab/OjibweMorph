@@ -12,6 +12,7 @@ Morphological information about Ojibwe words is housed here.  Combined with the 
     - [Morphological Info](#morphological-info)
     - [License/Copyright](#licensecopyright)
     - [Acknowledgements](#acknowledgements)
+    - [Funding](#funding)
     - [Citation](#citation)
 
 ## Test Results
@@ -114,7 +115,6 @@ Your attribution should include the above links, and should not in any way that 
 ### Acknowledgements
 Several people and organizations have (directly or indirectly) contributed code, advice, tools and/or materials to this project. We extend our sincerest gratitude for the help! 
 
-### People
 * Antti Arppe
 * Chris Hammerly
 * Ogimaawigwanebiik Nancy Jones
@@ -126,6 +126,10 @@ Several people and organizations have (directly or indirectly) contributed code,
 * Miikka Silfverberg
 * Anna Stacey
 * Reed Steiner
+
+### Funding
+
+This work was supported by a SSHRC Insight Grant (435-2023-0474) awarded to Hammerly, Arppe, and Silfverberg and a SSHRC Partnership Grant (895-2019-1012) to Arppe, Silfverberg and Hammerly (among others).
 
 ### Organizations and resources
 * [AltLab](https://altlab.ualberta.ca/)
