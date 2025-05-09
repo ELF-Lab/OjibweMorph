@@ -20,8 +20,9 @@ Morphological information about Ojibwe words is housed here.  Combined with the 
     - [Morphological Info](#morphological-info)
     - [License/Copyright](#licensecopyright)
     - [Acknowledgements](#acknowledgements)
-    - [Funding](#funding)
-    - [Organizations and resources](#organizations-and-resources)
+      - [People](#people)
+      - [Organizations and resources](#organizations-and-resources)
+      - [Funding](#funding)
     - [Citation](#citation)
 
 ## Test Results
@@ -124,6 +125,8 @@ Your attribution should include the above links, and should not in any way that 
 ### Acknowledgements
 Several people and organizations have (directly or indirectly) contributed code, advice, tools and/or materials to this project. We extend our sincerest gratitude for the help! 
 
+#### People
+
 * Antti Arppe
 * Chris Hammerly
 * Ogimaawigwanebiik Nancy Jones
@@ -136,17 +139,17 @@ Several people and organizations have (directly or indirectly) contributed code,
 * Anna Stacey
 * Reed Steiner
 
-### Funding
-
-This work was supported by a SSHRC Insight Grant (435-2023-0474) awarded to Hammerly, Arppe, and Silfverberg and a SSHRC Partnership Grant (895-2019-1012) to Arppe, Silfverberg and Hammerly (among others).
-
-### Organizations and resources
+#### Organizations and resources
 * [AltLab](https://altlab.ualberta.ca/)
 * [CultureFoundry](https://www.culturefoundrystudios.com/)
 * [Foma](https://fomafst.github.io/)
 * [Giellatekno](https://giellatekno.uit.no/index.eng.html)
 * [Ojibwe People's Dictionary](https://ojibwe.lib.umn.edu/about-ojibwe-language)
 * [UBC ELF-Lab](https://github.com/ELF-Lab)
+
+#### Funding
+
+This work was supported by a SSHRC Insight Grant (435-2023-0474) awarded to Hammerly, Arppe, and Silfverberg and a SSHRC Partnership Grant (895-2019-1012) to Arppe, Silfverberg and Hammerly (among others).
 
 ### Citation
 To cite this work or the contents of the repository (including, but not limited to, datasets, tables, explanations, methods, analysis, structure, etc) in an academic work, please use the following:
