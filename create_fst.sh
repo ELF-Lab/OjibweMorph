@@ -30,7 +30,9 @@ if [ $1 = "check" ]; then
     cd $OJIBWE_MORPH
     python3 scripts/update_results.py
     sh scripts/analyze_text.sh $OJIBWE_LEXICON/OPD/example_sentences/example_sentences.txt ./FST/generated/ojibwe.fomabin
+    sh scripts/analyze_texts_by_speaker.sh ./FST/generated/ojibwe.fomabin
     fi;
 if [ $1 = "clean" ]; then
     rm $OJIBWE_LEXICON/OPD/example_sentences/example_sentences_*
+    rm -r $OJIBWE_LEXICON/OPD/example_sentences/by_speaker/
     fi;
