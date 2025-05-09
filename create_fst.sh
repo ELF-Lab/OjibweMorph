@@ -29,4 +29,5 @@ make $1 MORPHOLOGYSRCDIR=$OJIBWE_MORPH LEMMAS_DIR=$OJIBWE_LEXICON/OPD,$OJIBWE_LE
 if [ $1 = "check" ]; then
     cd $OJIBWE_MORPH
     python3 scripts/update_results.py
-fi;
+    sh scripts/analyze_text.sh $OJIBWE_LEXICON/OPD/example_sentences/example_sentences.txt ./FST/generated/ojibwe.fomabin
+    fi;
