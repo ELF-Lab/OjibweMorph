@@ -163,7 +163,7 @@ define defaultRules [ a1 -> a , i2 -> i , n1 -> n , s1 -> s , i1 -> i , w1 -> w 
 !ni-/n- before m, n, w, p, t, k, s, sh
 !nim-/im-/m-/ni- before b
 !nin-/in-/n-/ni- before d, j, z, zh, g
-!nind-/ind-/nd- before vowels
+!nind-/ind-/nd-/nid-/nin-/in- before vowels
 !At Red Lake, we get oy- and niy- before aa
 
 define PrefixDInsertion [..] -> d || .#. (PREBD) [{gi}|o|{ni}] _ PREBD Vowel ;
