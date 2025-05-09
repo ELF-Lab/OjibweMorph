@@ -31,3 +31,6 @@ if [ $1 = "check" ]; then
     python3 scripts/update_results.py
     sh scripts/analyze_text.sh $OJIBWE_LEXICON/OPD/example_sentences/example_sentences.txt ./FST/generated/ojibwe.fomabin
     fi;
+if [ $1 = "clean" ]; then
+    rm $OJIBWE_LEXICON/OPD/example_sentences/example_sentences_*
+    fi;
