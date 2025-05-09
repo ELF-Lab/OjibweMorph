@@ -194,6 +194,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
 
+- There are two variations for the obviative, plural, and diminutive markers for NA_Vw nouns. One "-an", "-ag", and "-ens" (deriving "migiziwan", "migiziwag" or "migiziwens"), and the other "-V1n", "-V1g" and "-V1ens" (deriving "migiziin", "migiziig", and "migiziins"). The distribution of this is not clear, so it might be overgenerating by applying it to all stems in this class, but the form variation is attested for some stems in the OPD. This also happens in the NI_Vw stems.
+
 - The NA_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
 - The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
@@ -221,6 +223,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 - At present, there are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 
 - For all of the NI nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
+
+- Like the NA_Vw nouns, there are two variations for the plural and diminutive marker for NI_Vw nouns. One "-an" and "-ens" (deriving "mashkikiwan" or "mashkikiwens"), and the other "-V1n" and "-V1ens" (deriving "mashkikiin" and "mashkikiins"). The distribution of this is not clear, so it might be overgenerating by applying it to all stems in this class, but the form variation is attested for some stems in the OPD.
 
 - The NI_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
