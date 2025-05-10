@@ -17,6 +17,9 @@ LABEL_FOR_OPD_TESTS="opd"
 VERB_DATA_FOR_OPD_TESTS_DIR=$OJIBWE_LEXICON/OPD/for_yaml/verbs
 NOUN_DATA_FOR_OPD_TESTS_DIR=$OJIBWE_LEXICON/OPD/for_yaml/nouns/
 FST_FOR_OPD_TESTS=$OUTPUT_DIR/generated/$LANGUAGE_NAME.noAlt.fomabin
+# For corpus tests
+FST_FOR_CORPUS_TESTS=$OUTPUT_DIR/generated/$LANGUAGE_NAME.fomabin
+EXAMPLE_SENTENCES_DIR=$OJIBWE_LEXICON/OPD/example_sentences
 
 
 # Per ParserTools, you can also specify a comma-separated *list* of directories for LEMMAS_DIR
@@ -29,10 +32,10 @@ make $1 MORPHOLOGYSRCDIR=$OJIBWE_MORPH LEMMAS_DIR=$OJIBWE_LEXICON/OPD,$OJIBWE_LE
 if [ $1 = "check" ]; then
     cd $OJIBWE_MORPH
     python3 scripts/update_results.py
-    sh scripts/analyze_text.sh $OJIBWE_LEXICON/OPD/example_sentences/example_sentences.txt ./FST/generated/ojibwe.fomabin
-    sh scripts/analyze_texts_by_speaker.sh ./FST/generated/ojibwe.fomabin
+    sh scripts/analyze_text.sh $EXAMPLE_SENTENCES_DIR/example_sentences.txt $FST_FOR_CORPUS_TESTS
+    sh scripts/analyze_texts_by_speaker.sh $EXAMPLE_SENTENCES_DIR/by_speaker $FST_FOR_CORPUS_TESTS
     fi;
 if [ $1 = "clean" ]; then
-    rm -f $OJIBWE_LEXICON/OPD/example_sentences/example_sentences_*
-    rm -f $OJIBWE_LEXICON/OPD/example_sentences/by_speaker/*_example_sentences_*
+    rm -f $EXAMPLE_SENTENCES_DIR/example_sentences_*
+    rm -f $EXAMPLE_SENTENCES_DIR/by_speaker/*_example_sentences_*
     fi;
