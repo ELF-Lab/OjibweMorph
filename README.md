@@ -38,12 +38,12 @@ These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and 
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-09 | 54205 | 12 | 85.44% | 97.03% |
+| 2025-05-12 | 54205 | 12 | 85.44% | 97.03% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-09 | 8569 | 193 | 83.31% | 94.9% |
+| 2025-05-12 | 8569 | 193 | 83.31% | 94.9% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -51,12 +51,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-09 | 8038 | 0 | 93.94% | 100.0% |
+| 2025-05-12 | 8038 | 0 | 93.94% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-09 | 10578 | 0 | 100.0% | 100.0% |
+| 2025-05-12 | 10578 | 0 | 100.0% | 100.0% |
 
 ## User Instructions
 ### Building the FST
@@ -103,7 +103,13 @@ You can input as many of these commands as you like.
 
 ## About OjibweMorph
 ### Morphological Info
-The `XSpreadsheets/` directories contain CSVs with example forms for the various paradigm and class categories within each part-of-speech (POS) category.  The `NounSpreadsheets/`, `PVSpreadsheets/`, and `VerbSpreadsheets/` directories all contain detailed READMEs discussing their respective CSV contents.
+The `XSpreadsheets/` directories contain CSVs with example forms for the various paradigm and class categories within each part-of-speech (POS) category.  The `NounSpreadsheets/`, `PVSpreadsheets/`, and `VerbSpreadsheets/` directories all contain detailed READMEs discussing their respective CSV contents, which also provides quite a lit of linguistic information similar to what one might find in a grammar. There is also detailed documentation of the phonological rules. Here are links to each one:
+
+* [Verbs](VerbSpreadsheets/README.md)
+* [Nouns](NounSpreadsheets/README.md)
+* [Preverbs/Prenouns](PVSpreadsheets/README.md)
+* [Adverbs, numerals, proper nouns, particles](OtherSpreadsheets/README.md)
+* [Phonological rules](xfst/README.md)
 
 The directories `config/`, `xsft/`, and `templates` contain additional Ojibwe-specific files used to create the FST.
 
@@ -155,3 +161,6 @@ This work was supported by a SSHRC Insight Grant (435-2023-0474) awarded to Hamm
 To cite this work or the contents of the repository (including, but not limited to, datasets, tables, explanations, methods, analysis, structure, etc) in an academic work, please use the following:
 
 > [Hammerly, C., Livesay, N., Arppe A., Stacey, A., & Silfverberg, M. (Submitted) OjibweMorph: An approachable morphological parser for Ojibwe](https://christopherhammerly.com/publication/ojibwemorph/OjibweMorph.pdf)
+
+
+[def]: VerbSpreadsheets/README.md
