@@ -20,6 +20,7 @@ FST_FOR_OPD_TESTS=$OUTPUT_DIR/generated/$LANGUAGE_NAME.noAlt.fomabin
 # For corpus tests
 FST_FOR_CORPUS_TESTS=$OUTPUT_DIR/generated/$LANGUAGE_NAME.fomabin
 EXAMPLE_SENTENCES_DIR=$OJIBWE_LEXICON/OPD/example_sentences
+CORPUS_TEST_OUTPUT_FILE=$OUTPUT_DIR/corpus_test.txt
 
 
 # Per ParserTools, you can also specify a comma-separated *list* of directories for LEMMAS_DIR
@@ -32,8 +33,9 @@ make $1 MORPHOLOGYSRCDIR=$OJIBWE_MORPH LEMMAS_DIR=$OJIBWE_LEXICON/OPD,$OJIBWE_LE
 if [ $1 = "check" ]; then
     cd $OJIBWE_MORPH
     python3 scripts/update_results.py
-    sh scripts/analyze_text.sh $EXAMPLE_SENTENCES_DIR/example_sentences.txt $FST_FOR_CORPUS_TESTS
+    sh scripts/analyze_text.sh $EXAMPLE_SENTENCES_DIR/example_sentences.txt $FST_FOR_CORPUS_TESTS > $CORPUS_TEST_OUTPUT_FILE
     sh scripts/analyze_texts_by_speaker.sh $EXAMPLE_SENTENCES_DIR/by_speaker $FST_FOR_CORPUS_TESTS
+    python3 scripts/summarize_corpus_tests.py --input_file_name $CORPUS_TEST_OUTPUT_FILE
     fi;
 if [ $1 = "clean" ]; then
     rm -f $EXAMPLE_SENTENCES_DIR/example_sentences_*
