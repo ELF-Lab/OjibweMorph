@@ -17,8 +17,12 @@ def extract_results(results_file):
                 test_section = (line.partition(":")[2]).strip()
             elif line.startswith("Error rate"):
                 test_section_results["error_rate"] = (((line.partition("=")[2]).partition("(")[0])).strip()
+                test_section_results["forms"] = ((line.partition("/")[2]).split()[0]).strip()
+                test_section_results["forms_with_no_results"] = (line.partition("/")[0]).partition("(")[2]
             elif line.startswith("Unique error rate"):
                 test_section_results["unique_error_rate"] = (((line.partition("=")[2]).partition("(")[0])).strip()
+                test_section_results["unique_forms"] = ((line.partition("/")[2]).split()[0]).strip()
+                test_section_results["unique_forms_with_no_results"] = (line.partition("/")[0]).partition("(")[2]
                 # Last line per section - finish things off
                 results[test_section] = test_section_results
                 test_section_results = {}
@@ -27,19 +31,23 @@ def extract_results(results_file):
 
 # Expects str, returns as str
 # E.g., ".0654" -> "6.54%"
-def format_value(value):
+def to_percent(value):
     value = float(value)
     value *= 100
     value = round(value, 2)
     value = str(value)
-    value += "%,"
+    value += "%"
     return value
 
 def format_results(results, test_sections):
     output_line = str(date.today()) + ","
     for test_section in test_sections:
-        output_line += format_value(results[test_section]["error_rate"])
-        output_line += format_value(results[test_section]["unique_error_rate"])
+        output_line += results[test_section]["forms"] + ","
+        output_line += results[test_section]["forms_with_no_results"]
+        output_line += " (" + to_percent(results[test_section]["error_rate"]) + "),"
+        output_line += results[test_section]["unique_forms"] + ","
+        output_line += results[test_section]["unique_forms_with_no_results"]
+        output_line += " (" + to_percent(results[test_section]["unique_error_rate"]) + "),"
 
     return output_line
 
@@ -58,8 +66,8 @@ def write_to_csv(output_line, test_sections, summary_output_file_path):
     HEADER_2 = ","
     for section in test_sections:
         HEADER_1 += section
-        HEADER_1 += ",," # 2 fields per section
-        HEADER_2 += "Error Rate,Unique Error Rate,"
+        HEADER_1 += ",,,," # 4 fields per section
+        HEADER_2 += "Tokens, Tokens without Results,Unique Tokens,Unique Tokens without Results,"
 
     if not path.isfile(summary_output_file_path):
             with open(summary_output_file_path, "w+") as csv_file:
