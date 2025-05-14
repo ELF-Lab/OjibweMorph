@@ -63,7 +63,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 The inflected forms used in these tests come from example sentences in the OPD, stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoon-siminikaaning | 5.76% (663/11504) | 9.68% (415/4284) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 5.76% (663/11504) | 9.68% (415/4284) |
 | GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
 | ES | Red Lake | Obaashiing | 7.53% (1250/16598) | 15.27% (750/4909) |
 | RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.65% (144/3945) | 6.81% (84/1233) |
