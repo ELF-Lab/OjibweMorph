@@ -32,10 +32,10 @@ make $1 MORPHOLOGYSRCDIR=$OJIBWE_MORPH LEMMAS_DIR=$OJIBWE_LEXICON/OPD,$OJIBWE_LE
 make $1 MORPHOLOGYSRCDIR=$OJIBWE_MORPH LEMMAS_DIR=$OJIBWE_LEXICON/OPD,$OJIBWE_LEXICON/HammerlyFieldwork LEXICAL_DATA_TO_EXCLUDE=$OJIBWE_LEXICON/other/lexical_data_to_exclude.csv OUTPUT_DIR=$OUTPUT_DIR LANGUAGE_NAME=$LANGUAGE_NAME PARADIGM_MAPS_DIR=$OJIBWE_LEXICON/resources LABEL_FOR_TESTS=$LABEL_FOR_OPD_TESTS VERB_DATA_FOR_TESTS_DIR=$VERB_DATA_FOR_OPD_TESTS_DIR NOUN_DATA_FOR_TESTS_DIR=$NOUN_DATA_FOR_OPD_TESTS_DIR FST_FOR_TESTS=$FST_FOR_OPD_TESTS
 if [ $1 = "check" ]; then
     cd $OJIBWE_MORPH
-    python3 scripts/update_results.py
     sh scripts/analyze_text.sh $EXAMPLE_SENTENCES_DIR/example_sentences.txt $FST_FOR_CORPUS_TESTS > $CORPUS_TEST_OUTPUT_FILE
     sh scripts/analyze_texts_by_speaker.sh $EXAMPLE_SENTENCES_DIR/by_speaker $FST_FOR_CORPUS_TESTS >> $CORPUS_TEST_OUTPUT_FILE
     python3 scripts/summarize_corpus_tests.py --input_file_name $CORPUS_TEST_OUTPUT_FILE
+    python3 scripts/update_results.py
     fi;
 if [ $1 = "clean" ]; then
     rm -f $EXAMPLE_SENTENCES_DIR/example_sentences_*

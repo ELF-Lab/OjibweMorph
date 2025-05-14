@@ -67,7 +67,7 @@ def write_to_csv(output_line, test_sections, summary_output_file_path):
     for section in test_sections:
         HEADER_1 += section
         HEADER_1 += ",,,," # 4 fields per section
-        HEADER_2 += "Tokens, Tokens without Results,Unique Tokens,Unique Tokens without Results,"
+        HEADER_2 += "Tokens,Tokens without Results,Unique Tokens,Unique Tokens without Results,"
 
     if not path.isfile(summary_output_file_path):
             with open(summary_output_file_path, "w+") as csv_file:
