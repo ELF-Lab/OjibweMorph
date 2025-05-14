@@ -63,16 +63,16 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 The inflected forms used in these tests come from example sentences in the OPD, stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoon-siminikaaning | 5.81% (669/11504) | 9.73% (417/4284) |
+| NJ | Border Lakes | Nigigoon-siminikaaning | 5.76% (663/11504) | 9.68% (415/4284) |
 | GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 7.65% (1270/16598) | 15.37% (755/4909) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.67% (145/3945) | 6.89% (85/1233) |
+| ES | Red Lake | Obaashiing | 7.53% (1250/16598) | 15.27% (750/4909) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.65% (144/3945) | 6.81% (84/1233) |
 | GH | Leech Lake | Jaachaabaaning | 5.79% (19/328) | 5.33% (11/206) |
-| LW | Leech Lake | Jaachaabaaning | 9.13% (21/230) | 7.14% (11/154) |
+| LW | Leech Lake | Jaachaabaaning | 8.69% (20/230) | 6.49% (10/154) |
 | LS | Mille Lacs | Aazhomog | 8.86% (7/79) | 13.46% (7/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
-| Overall | | | 6.54% (2148/32812) | 12.94% (1266/9782) |
+| Overall | | | 6.46% (2120/32812) | 12.89% (1261/9782) |
 ## User Instructions
 ### Building the FST
 **Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  To make use of ParserTools, you have to follow [the instructions there](https://github.com/ELF-Lab/ParserTools/tree/dev#getting-set-up-to-build-the-fst) to make sure you have all the necessary prerequisites.
