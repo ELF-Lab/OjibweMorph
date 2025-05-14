@@ -60,6 +60,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 | 2025-05-14 | 10578 | 0 | 100.0% | 100.0% |
 
 ### Corpus Tests
+The inflected forms used in these tests come from example sentences in the OPD, stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
 | NJ | Border Lakes | Nigigoon-siminikaaning | 5.81% (669/11504) | 9.73% (417/4284) |
