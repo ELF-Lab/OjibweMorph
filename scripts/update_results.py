@@ -175,7 +175,7 @@ def handle_results(results_file_path, readme_file_path, section_title, is_corpus
             update_readme(results_line, readme_file_path, section_title)
         print("Wrote to", readme_file_path)
     else:
-        print(f"ERROR: The README could not be updated because the CSV expected to contain the test results ({results_file_path}) was not found.")
+        print(f"\nERROR: The README could not be updated because the CSV expected to contain the test results ({results_file_path}) was not found.")
 
 def main():
     opd_verb_results_file_path = "./FST/opd_verb_test_summary.csv"
