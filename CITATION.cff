@@ -13,14 +13,10 @@ authors:
 - family-names: "Stacey"
   given-names: "Anna"
   orcid: ""
-- family-names: "Steiner"
-  given-names: "Reed"
-  orcid: ""
 - family-names: "Silfverberg"
   given-names: "Miikka"
   orcid: ""
-title: "OjibweMorph"
-version: 1.0.0
-doi: 10.5281/zenodo.1234
-date-released: 2024-03-21
-url: "https://github.com/ELF-Lab/OjibweMorph"
+title: "OjibweMorph: An approachable morphological parser for Ojibwe"
+version: 0.1.0
+date-released: 2025-05-15
+url: "https://christopherhammerly.com/publication/ojibwemorph/OjibweMorph.pdf"
