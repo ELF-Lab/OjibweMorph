@@ -31,10 +31,10 @@ These results reflect the performance of an FST built from the morphology stored
 
 Each test form is inputted to the FST, then the corresponding analysis outputted by the FST is checked for correctness.
 
-The "# of Forms Without Results" counts the test forms for which the FST provides no analysis whatsoever.  The "Precision" captures how many outputted analyses were correct, while the "Recall" captures how many of the correct analyses were outputted.  Note that some forms have multiple correct analyses.
-
 ### OPD Tests
 These inflected test forms come from [the OPD](https://ojibwe.lib.umn.edu), and are stored in [OjibweLexicon/OPD/for_yaml](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/for_yaml).  This is a large test set covering a variety of word forms.
+
+For these and the paradigm tests, the "# of Forms Without Results" counts the test forms for which the FST provides no analysis whatsoever.  The "Precision" captures how many outputted analyses were correct, while the "Recall" captures how many of the correct analyses were outputted.  Note that some forms have multiple correct analyses.
 
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
@@ -60,7 +60,11 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 | 2025-05-14 | 10578 | 0 | 100.0% | 100.0% |
 
 ### Corpus Tests
-The inflected forms used in these tests come from example sentences in the OPD, stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
+The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
+
+The overall results are given at the bottom of the table, but a breakdown by the speaker of the example sentence is also provided first.  Because the speakers come from a variety of communities, this can give an impression of how well the FST is covering different varieties of Ojibwe.  You can learn more about the speakers [here](https://ojibwe.lib.umn.edu/about/voices).
+
+In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
 | NJ | Border Lakes | Nigigoonsiminikaaning | 5.76% (663/11504) | 9.68% (415/4284) |
