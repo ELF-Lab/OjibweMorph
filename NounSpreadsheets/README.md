@@ -1,6 +1,34 @@
 # Noun Spreadsheets
 
-## General
+## Contents
+
+- [Noun Spreadsheets](#noun-spreadsheets)
+	- [Contents](#contents)
+	- [General Information](#general-information)
+		- [Special characters](#special-characters)
+		- [Description of Tags](#description-of-tags)
+			- [Spreadsheet columns](#spreadsheet-columns)
+			- [Paradigm](#paradigm)
+			- [Class](#class)
+			- [PossPers](#posspers)
+			- [Dim](#dim)
+			- [Poss](#poss)
+			- [Pej](#pej)
+			- [Pret](#pret)
+			- [Basic](#basic)
+	- [Linguistic Details for Nouns](#linguistic-details-for-nouns)
+		- [Noun Animate (NA)](#noun-animate-na)
+		- [Noun Inanimate (NI)](#noun-inanimate-ni)
+		- [Noun Animate Dependent (NAD)](#noun-animate-dependent-nad)
+		- [Noun Inanimate Dependent (NID)](#noun-inanimate-dependent-nid)
+	- [Stacking rules](#stacking-rules)
+		- [Order of noun suffixes](#order-of-noun-suffixes)
+		- [Restrictions on noun suffix combinations](#restrictions-on-noun-suffix-combinations)
+		- [Sound changes between stacked suffixes](#sound-changes-between-stacked-suffixes)
+
+## General Information
+
+### Special characters
 
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
 *	Double \<\< marks the prefix/stem juncture (or the start of the stem)
@@ -16,9 +44,9 @@
 	*	i2, the vestigial "inanimate singular" marker that appears in inanimate "short" stems. Resists _ShortV-Deletion_ and triggers palatalization of s1.
 	*	a1, the vestigial "animate singular" marker that appears in animate "short" stems, and also with NI_kana stems. Resists _ShortV-Deletion_.
 
-## Organization
+### Description of Tags
 
-### Description of Tags (Nouns)
+#### Spreadsheet columns
 
 All spreadsheets contain the following columns:
 
@@ -36,7 +64,7 @@ All spreadsheets contain the following columns:
 * **Form\#Split:** The part in brackets is a stand-in for any stem within that particular class. Only the pieces of the brackets are used by the model, which simply replaces the part in brackets with the relevant stem. The parts outside of the brackets is the "underlying" form the the prefixal (in the case of possessed nouns) and suffixal morphology. This is the form before any phonological rules have applied, and is what is directly used to build the FST.
 * **Form\#Source**: The source for the surface form.
 
-#### PARADIGM
+#### Paradigm
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
@@ -45,27 +73,45 @@ All spreadsheets contain the following columns:
 | NI   	| Noun Inanimate         			  |
 | NID   | Noun Inanimate Dependent 			  |
 
-#### CLASS
+#### Class
 
 Still need to add the dependent nouns:
 
 | Tag     | Description                    |
 |---------|--------------------------------|
-| NA_C 	  | na consonant           		   |
-| NA_Cw   | na consonant w          	   |
+| NA_C 	  | na consonant (regular)         |
+| NA_ShortC | na consont (short)		   |
+| NA_Cw   | na consonant w (regular)       |
+| NA_irrCw| na irregular consonant w       |
+| NA_ShortCw | na consonant w (short)	   |
 | NA_Cy   | na consonant y       		   |
-| NA_irrCw | na irrgular consonant w       |
 | NA_VV   | na long vowel            	   |
 | NA_VVny | na nasal long vowel      	   |
 | NA_VVw  | na long vowel w        		   |
+| NA_VVy  | na long vowel y        		   |
 | NA_Vw   | na short vowel w        	   |
-| NI_C 	  | ni consonant           		   |
+| NAD_C	  | nad consonant				   |
+| NAD_Cw   | nad consonant w          	   |
+| NAD_Cy   | nad consonant y       		   |
+| NAD_VV   | nad long vowel            	   |
+| NAD_VVny | nad nasal long vowel      	   |
+| NAD_VVw  | nad long vowel w        	   |
+| NAD_VVy  | nad long vowel y        	   |
+| NDA_Vw   | nad short vowel w        	   |
+| NI_C 	  | ni consonant (regular)         |
+| NI_ShortC 	  | ni consonant (short)   |
 | NI_Cw   | ni consonant w          	   |
-| NI_Cy   | ni consonant y       		   |
+| NI_Cy   | ni consonant y (regular)       |
+| NI_ShortCy   | ni consonant y (short)    |
 | NI_VV   | ni long vowel            	   |
 | NI_VVny | ni nasal long vowel      	   |
 | NI_Vw   | ni short vowel w        	   |
 | NI_aa   | ni aa-augment 		       	   |
+| NI_kana   | ni -kana ending		       |
+| NID_aa  | nid aa-augment 		       	   |
+| NID_C   | nid consonant          		   |
+| NID_Cw  | nid consonant w          	   |
+| NID_Cy  | nid consonant y       		   |
 
 #### PossPers
 
@@ -83,7 +129,7 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 | 3SgObv         | Animate third person singular obviative |
 | 3PlObv         | Animate third person plural obviative   |
 
-#### DIM
+#### Dim
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
@@ -148,6 +194,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
 
+- There are two variations for the obviative, plural, and diminutive markers for NA_Vw nouns. One "-an", "-ag", and "-ens" (deriving "migiziwan", "migiziwag" or "migiziwens"), and the other "-V1n", "-V1g" and "-V1ens" (deriving "migiziin", "migiziig", and "migiziins"). The distribution of this is not clear, so it might be overgenerating by applying it to all stems in this class, but the form variation is attested for some stems in the OPD. This also happens in the NI_Vw stems.
+
 - The NA_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
 - The special character "V1", which triggers the _ShortV-Lengthening_ rule, occurs in the NA_Vw stems when the suffix complex begins with the possessive suffix, the personal suffixes, the locative suffix, or the diminuative suffix.
@@ -175,6 +223,8 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 - At present, there are no known examples of inanimate Class 4C, a shorter inanimate consonant w stem. None are cited either in Nichols (2010) or turned up on a detailed search of the OPD.
 
 - For all of the NI nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
+
+- Like the NA_Vw nouns, there are two variations for the plural and diminutive marker for NI_Vw nouns. One "-an" and "-ens" (deriving "mashkikiwan" or "mashkikiwens"), and the other "-V1n" and "-V1ens" (deriving "mashkikiin" and "mashkikiins"). The distribution of this is not clear, so it might be overgenerating by applying it to all stems in this class, but the form variation is attested for some stems in the OPD.
 
 - The NI_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
@@ -206,7 +256,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NID_aa	 |	Class 6			 | ni /aa/-augment				  | "=denaniw-"				| /denaniw/			 	|
 
 
-## STACKING RULES
+## Stacking rules
 
 The overall approach we are taking means that we have hard-coded all possible "stacked" suffix forms rather than generating these forms from scratch. For example, an independent noun (e.g.\ _jiimaan_ "boat") can have just diminutive suffix (_jiimaanens_), just a plural suffix (_jiimaanan_), or can stack both (_jiimaanensan_). Both the individual and the stacked forms can be found in the spreadsheets. These stackings occur in a set order, can condition sound changes to forms between suffixes, and are subject to certain restrictions. This section gives a brief overview of the ordering and combinatorial restrictions, as well as some of the sound changes that occur between suffixes. 
 

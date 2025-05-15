@@ -41,7 +41,7 @@ VAI,Imp,VAI_m,minongwaam,minongwaam,NONE,2SgSubj,NONE,Prb,NONE,minongwaangen,<<m
 VAI,Imp,VAI_V,nagamo,nagamo,NONE,2SgSubj,NONE,Prb,NONE,nagamoken,<<nagamo>>ken,JDN-2010-MS-VAI-p40,,,,,,
 VAI,Imp,VAI_VV,nibaa,nibaa,NONE,2SgSubj,NONE,Prb,NONE,nibaaken,<<nibaa>>ken,NJ-ngs-2023Aug18; JDN-2010-MS-VAI-p40,,,,,,
 VAI,Imp,VAI_V,niimi,niimi,NONE,2SgSubj,NONE,Prb,NONE,niimiken,<<niimi>>ken,JDN-2010-MS-VAI-p40,,,,,,
-VAI,Imp,VAI_n,wanishin,wanishin,NONE,2SgSubj,NONE,Prb,NONE,wanishingen,<<wanishin>>gen,JDN-2010-MS-VAI-p40,,,,,,
+VAI,Imp,VAI_n,wanishin,wanishin,NONE,2SgSubj,NONE,Prb,NONE,wanishingen,<<wanishin>>gen,JDN-2010-MS-VAI-p40,wanishinoken,<<wanishin>>oken,OPD,,,
 VAI,Imp,VAI_VV,webinige,webinige,NONE,2SgSubj,NONE,Prb,NONE,MISSING,,,,,,,,
 VAI,Imp,VAI_am,zaaga'am,zaaga',NONE,2SgSubj,NONE,Prb,NONE,zaaga'angen,<<zaaga'>>angen,JDN-2010-MS-VAI-p40,,,,,,
 VAI,Imp,VAI_VV,maajiibatoo,maajiibatoo,NONE,2SgSubj,NONE,Sim,NONE,maajiibatoon,<<maajiibatoo>>n,JDN-2010-MS-VAI-p39,,,,,,

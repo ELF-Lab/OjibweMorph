@@ -65,8 +65,8 @@ VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2PlSubj,0SgObj,Prb,NONE,wanitookegon,<<wanit>
 VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2PlSubj,0PlObj,Prb,NONE,wanitookegon,<<wanit>>ookegon,JDN-2010-MS-VTI-p44,,,
 VTI,Imp,VTI_oo,wanitoon,wanit,NONE,InclSubj,0SgObj,Prb,NONE,wanitoosiidaa,<<wanit>>oosiidaa,JDN-2010-MS-VTI-p44,,,
 VTI,Imp,VTI_oo,wanitoon,wanit,NONE,InclSubj,0PlObj,Prb,NONE,wanitoosiidaanin,<<wanit>>oosiidaanin,JDN-2010-MS-VTI-p44,,,
-VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2SgSubj,0SgObj,Sim,NONE,wanitoon,<<wanit>>oon,JDN-2010-MS-VTI-p43,,,
-VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2SgSubj,0PlObj,Sim,NONE,wanitoon,<<wanit>>oon,JDN-2010-MS-VTI-p43,,,
+VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2SgSubj,0SgObj,Sim,NONE,wanitoon,<<wanit>>oon,JDN-2010-MS-VTI-p43,wanitooyok,<<wanit>>ooyok,OPD
+VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2SgSubj,0PlObj,Sim,NONE,wanitoon,<<wanit>>oon,JDN-2010-MS-VTI-p43,wanitooyok,<<wanit>>ooyok,OPD
 VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2PlSubj,0SgObj,Sim,NONE,wanitoog,<<wanit>>oog,JDN-2010-MS-VTI-p43,wanitook,<<wanit>>ook,JDN-2010-MS-VTI-p43
 VTI,Imp,VTI_oo,wanitoon,wanit,NONE,2PlSubj,0PlObj,Sim,NONE,wanitoog,<<wanit>>oog,JDN-2010-MS-VTI-p43,wanitook,<<wanit>>ook,JDN-2010-MS-VTI-p43
 VTI,Imp,VTI_oo,wanitoon,wanit,NONE,InclSubj,0SgObj,Sim,NONE,wanitoodaa,<<wanit>>oodaa,JDN-2010-MS-VTI-p43,,,

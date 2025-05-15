@@ -1,6 +1,8 @@
-# BorderLakesMorph Preverb Spreadsheets
+# OjibweMorph Preverb Spreadsheets
 
-This folder houses the spreadsheets for the various preverbs in Ojibwe. This description is in progress.
+:construction: This description is in progress :construction:
+
+This folder houses the spreadsheets for the various preverbs in Ojibwe.
 
 ## General overview
 

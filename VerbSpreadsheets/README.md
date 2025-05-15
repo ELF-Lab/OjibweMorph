@@ -1,5 +1,41 @@
 # Verb Spreadsheets
 
+## Contents
+
+- [Verb Spreadsheets](#verb-spreadsheets)
+	- [Contents](#contents)
+	- [General](#general)
+	- [Organization](#organization)
+		- [Descripton of Tags (Verbs)](#descripton-of-tags-verbs)
+			- [PARADIGM](#paradigm)
+			- [ORDER](#order)
+			- [CLASS](#class)
+			- [SUBJECT/OBJECT](#subjectobject)
+			- [MODE](#mode)
+			- [NEGATION](#negation)
+			- [SOURCES](#sources)
+		- [Notes on ambiguous forms and alternate forms](#notes-on-ambiguous-forms-and-alternate-forms)
+	- [Guiding Principles](#guiding-principles)
+- [Linguistic Details for Verbs](#linguistic-details-for-verbs)
+	- [Verb Inanimate Intransitive (VII)](#verb-inanimate-intransitive-vii)
+		- [STEM TYPES](#stem-types)
+		- [RULES](#rules)
+		- [NOTES/ISSUES](#notesissues)
+	- [Verb Animate Intransitive (VAI)](#verb-animate-intransitive-vai)
+		- [STEM TYPES](#stem-types-1)
+		- [RULES](#rules-1)
+		- [NOTES/ISSUES](#notesissues-1)
+	- [Verb Transitive Inanimate (VTI)](#verb-transitive-inanimate-vti)
+		- [STEM TYPES](#stem-types-2)
+		- [RULES](#rules-2)
+		- [NOTES/ISSUES](#notesissues-2)
+	- [Verb Transitive Animate (VTA)](#verb-transitive-animate-vta)
+		- [STEM TYPES](#stem-types-3)
+		- [RULES](#rules-3)
+		- [NOTES/ISSUES](#notesissues-3)
+	- [Summary](#summary)
+		- [SUMMARY OF STEM CLASSES](#summary-of-stem-classes)
+
 ## General
 *	Double \>\> marks the stem/suffix juncture (or the end of the stem)
 *	Double \<\< marks the prefix/stem juncture (or the start of the stem)
@@ -19,7 +55,7 @@
 
 ## Organization
 
-This folder (Spreadsheets) currently contains the verb paradigm spreadsheets used to build and validate the OjibweMorph FST for morphological production and parsing.
+This folder (VerbSpreadsheets) contains the verb paradigm spreadsheets used to build and validate the OjibweMorph FST for morphological production and parsing. Spreadsheets are
 
 ### Descripton of Tags (Verbs)
 
@@ -43,9 +79,9 @@ All spreadsheets contain the following columns:
 | Tag   | Description                         |
 |-------|-------------------------------------|
 | VAI   | Verb Animate Intransitive           |
-| VAI_PL   | Verb Animate Intransitive (Plural Only)           |
+| VAIPL   | Verb Animate Intransitive (Plural Only)           |
 | VII   | Verb Inanimate Intransitive         |
-| VII_PL   | Verb Inanimate Intransitive (Plural Only         |
+| VIIPL   | Verb Inanimate Intransitive (Plural Only         |
 | VTI   | Verb Transitive Inanimate           |
 | VTA   | Verb Transitive Animate             |
 | VAIO  | Verb Animate Intransitive + Object  |
@@ -57,6 +93,7 @@ All spreadsheets contain the following columns:
 | Cnj   | Conjunct order                      |
 | Ind   | Independent order                   |
 | Imp   | Imperative order                    |
+| Pcp   | Participles	                      |
 
 #### CLASS
 
@@ -83,7 +120,6 @@ All spreadsheets contain the following columns:
 | VTA_s   | vta changeable /S/ stems       |
 | VTA_aw  | vta /aw/ stems                 |
 | VTA_Cw  | vta consonant-w stems          |
-| VTA_irr | vta irregular stems            |
 
 #### SUBJECT/OBJECT
 
@@ -106,15 +142,15 @@ All spreadsheets contain the following columns:
 
 #### MODE
 
-| Tag   | Description                         |
-|-------|-------------------------------------|
-| Neu   | Neutral                             |
-| Prt   | Preterit                            |
-| Dub   | Dubitative                          |
-| DubPrt| Dubitative-Preterit                 |
-| Sim   | Simple (imperative only)            |
-| Del	| Delayed (imperative only)           |
-| Prb	| Prohibative (imperative only)       |
+| Our Tag | OPD Tag | Description             |
+|---------|---------|-------------------------|
+| Neu   | no tag; default | Neutral           |
+| Prt   | pret      | Preterit                |
+| Dub   | dub       | Dubitative              |
+| DubPrt| dub pret (to be confirmed) | Dubitative-Preterit |
+| Sim   | imp       | Simple (imperative only)|
+| Del	| imp del   | Delayed (imperative only)|
+| Prb	| imp prohib| Prohibative (imperative only)|
 
 #### NEGATION
 
@@ -170,15 +206,15 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### RULES
 
-- _d-deletion:_ Only stem change is "zanagad", where "d" is deleted when the suffix complex starts with a consonant.
+- _dDeletion:_ Only stem change is "zanagad", where "d" is deleted when the suffix complex starts with a consonant.
 
-- _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg in the VII Class 2)
+- _w1Deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg in the VII Class 2)
 
 ### NOTES/ISSUES
 
 - There are certain stems that can only take plural forms, which are modelled as their own sub-paradigm VII_Pl. These generally refer to collectives, but their exact semantics is not presently clear. In any case, they are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VII_Pl, which is a proper subset of the regular VII inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1 and Class 3A stems behaving this way.
-- Note that there is quite limited documentation for the VII Class 2 stems. Also, from a query of a dictionary, there seem to be a small set of VII forming "finals" that fall into this class including "-amo" meaning "it is a path", "-po" meaning "it snows/there is snow"  "-aagami" meaning "it is a liquid". A relevant note for Border Lakes from the dictionary: "Most US dialects add n to the final -po when there is no inflectional ending; For example, US zoogipon 'it is snowing' and Border Lakes zoogipo (https://ojibwe.lib.umn.edu/word-part/po-final)."
-	- This is now modelled by the suffix complex having a -w, which will block the short vowel deletion rule, then be deleted by the W-Deletion rule. 
+- Note that there is limited documentation for the VII Class 2 stems. Also, from a query of the OPD, there seem to be a small set of VII forming "finals" that fall into this class including "-amo" meaning "it is a path", "-po" meaning "it snows/there is snow"  "-aagami" meaning "it is a liquid". A relevant note for Border Lakes from the dictionary: "Most US dialects add n to the final -po when there is no inflectional ending; For example, US zoogipon 'it is snowing' and Border Lakes zoogipo (https://ojibwe.lib.umn.edu/word-part/po-final)."
+	- This is modelled by the suffix complex having a -w, which will block the short vowel deletion rule, then be deleted by the W-Deletion rule. 
 
 ## Verb Animate Intransitive (VAI)
 
@@ -198,13 +234,13 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 ### RULES
 
-- _Nasal assimilation:_ With stems ending in "m" (VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
+- _nasalAssimilation:_ With stems ending in "m" (VAI stems "minongwaam"), the "m" changes to "n" when the suffix complex starts with "z" (negation), "g" (3SgProx in the conjunct), or "d" (inclusive simple imperative)
 
-- _ShortV-deletion:_ Delete word-final short vowels, unless deletion creates monosyllabic word with only a short vowel nucleaus. That is, delete from non-monosyllabic words or monosyllabic words with a long vowel. (e.g.\ "i" and "o" delete in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
+- _vowelDeletion:_ Delete word-final short vowels, unless deletion creates monosyllabic word with only a short vowel nucleaus. That is, delete from non-monosyllabic words or monosyllabic words with a long vowel. (e.g.\ "i" and "o" delete in "niimi", "nagamo", and "waabandizo"; this rule MUST PRECEED the "w-deletion" rule)
 
-- _W-deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
+- _w1Deletion:_ Delete word-final "w1" (occurs with neutral, positive 3sg; this rule MUST FOLLOW the short-vowel-deletion rule)
 
-- _ShortV-lengthening:_ A short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1). That is, stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode.
+- _LengthenV:_ A short vowel to the left of V1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1). That is, stem-final short vowels are lengthened in front of the preterit morpheme "-ban" and the delayed imperative mode.
 
 ### NOTES/ISSUES
 
@@ -212,9 +248,9 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - There is a separate set of spreadsheets for the reflexive/reciprocal forms. These take normal VAI morpholgy, but are more restricted in the particular argument combinations they can have (the reflexives have an implict object that matches the subject, and the reciprocals must be plural). They are treated as specific VAI stem types (see the table above), but generally behave the same as the VAI short vowel stems in terms of the rules that apply.
 
-- There is a seperate set of spreadsheets for the VAI+O paradigms in each order. These are VAI verbs that can take an inanimate object, and ultimately inflect like a VTI3.
+- There is a seperate set of spreadsheets for the VAI+O paradigms in each order. These are VAI verbs that can take an inanimate object, and ultimately inflect like a VTI3 in addition to regular VAI inflection.
 
-- As in the VIIs, there are certain VAI stems that can only take plural forms. These are captured by a unique sub-paradigm VAI_Pl. They are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VAI_Pl, which is a proper subset of the regular VAI inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1A, 1B, and 2A stems behaving this way.
+- As in the VIIs, there are certain VAI stems that can only take plural forms. These are captured by a unique sub-paradigm VAIPl. They are diagnosable based on the dictionary entries (their lemma is plural, but the stem is not). These are fed to a special spreadsheet called VAIPl, which is a proper subset of the regular VAI inflections (i.e. only the plural forms). So far, there is only evidence for certain Class 1A, 1B, and 2A stems behaving this way.
 
 ## Verb Transitive Inanimate (VTI)
 
@@ -259,20 +295,26 @@ For VTA Class 2 and 3, we introduce special multicharacter symbols n1 (equivalen
 
 For the VTA Class 4, we don't have any examples, but from what we can see in the dictionary we found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
 
-For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). There is a specific spreadsheet for this verb, and in principle we could create some rules to deal with it since its "irregularity" is actually quite regular in many ways. At present, we just have the positive independent order, but it could easily be extended with educated guesses.
+For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). We capture this behavior with a number of rules detailed below.
 
 ### RULES
 
-- *aw-to-aa:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
+- *awaaRule:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
 
-- *aw-to-oo:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+- *awooRule:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
 
-- *w-to-o:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
-	- In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.  	
+- *woRule1, woRule2, woRule3:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __
+	- In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where C is anything other than the glottal stop. For example, we get "mizhwi" rather than "mizho" for the imerative form and "nindoodita'wig" rather than "nindoodita'og" with the proximate acting on 1sg inverse.  
+  	
+- *awowRule (optional):* The "amaw" ending of benefactive verbs is replaced by "amow" in third person only direct forms (with theme sign "-aa") by some speakers at Red Lake (and elsewhere?).
 
-- *i1-Palatalization:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization, and not all n's and s's palatalize either.
+- *n1Rule, s1Rule:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1". Note that it needs to be this specific, since it isn't just any old "i" that triggers palatalization, and not all n's and s's palatalize either.
 
-- *ShortV-deletion:* Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
+- *vowelDeletion:* Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa"). This role MUST FOLLOW i1-Palatalization and w-to-o since it needs to be there to trigger the palatalization, but does not show up in the surface form.
+
+- *izhiInverseDel:* Stem for izhi "in1" deletes just in case the theme sign is inverse (igo or igoo)
+
+- *izhiShortVPreservation:* Insert a w2 at the end of the word when irregular stem izhi "in1" is presnt just in case it only ends in "i1". This prevents the short vowel from getting deleted when a preverb is added.
 
 ### NOTES/ISSUES
 
@@ -282,7 +324,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 
 	- SOLUTION: For both of these, we've introduced a special character "i1" and the "i1-Palatalization" rule.
 
-- In the imperative order, with the 2Sg -> 3SgProx/3PlProx, there is an "i1" that appears only on monosyllabic shortvowel stems: nishi ‘killhim/her’. Otherwise, it is deleted. This is due to a more general rule that limits the word-final short-vowel deletion rule. For example, with the noun "makwa". This is implemented by only deleting in multisyllable words or monosyllable words that have a long vowel.
+- In the imperative order, with the 2Sg -> 3SgProx/3PlProx, there is an "i1" that appears only on monosyllabic shortvowel stems: nishi ‘kill him/her’. Otherwise, it is deleted. This is due to a more general rule that limits the word-final short-vowel deletion rule. For example, with the noun "makwa". This is implemented by only deleting in multisyllable words or monosyllable words that have a long vowel.
 
 ## Summary
 
@@ -299,8 +341,8 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VAI2A         | VAI_n  | vai consonant /n/ stems       | "washin"                                  |
 | VAI2B         | VAI_m  | vai consonant /m/ stems       | "minogwaam"                               |
 | VAI2          | VAI_am | vai2 /am/ stems               | "zaaga'am"                                |
-| NA 			| VAI_rfx | vai with /-idizo/        	 | "waabandizo"                     		 |
-| NA 			| VAI_rcp | vai with /-idi/         	 | "waabandi"                       		 |
+| N/A 			| VAI_rfx | vai with /-idizo/        	 | "waabandizo"                     		 |
+| N/A 			| VAI_rcp | vai with /-idi/         	 | "waabandi"                       		 |
 | VAIO          | VAIO	 | vai with 0sg/pl object        | "adaawe"                                  |
 | VTI1          | VTI_am | vti /am/ stems                | "waabandam"                               |
 | VTI2          | VTI_oo | vti /oo/ stems                | "wanitoon"                                |
@@ -313,3 +355,6 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
 | VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
+
+
+[def]: #verb-spreadsheets

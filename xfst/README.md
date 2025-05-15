@@ -45,15 +45,17 @@ More generally for Southerwestern Ojibwe, there is significant variation:
 	- nim-/im-/m-/ni- before b
 	- nin-/in-/n-/ni- before d, j, z, zh, g
 	- nind-/ind-/nd- OR nid- before vowels
-		- At Red Lake, we get niy- before aa
+    	- At Red Lake, we get niy- before aa
 
 - Second Person
 	- gi- before consonants
 	- gid- before vowels
+      - At Red Lake, we get giy- before aa
 
 - Third Person
 	- o- before consonants
 	- od- before vowels
+    	- At Red Lake, we can get oy- before aa
 
 In short, ni- can in principle appear before any consonant. Otherwise, the nim-/nin-/nind- allomorphs can lack the initial "n" deriving im-/in-/ind- (whether this is used is primarily a matter of dialect variation), and these can be further subjected to a vowel deletion process deriving m-/n-/nd- (which is primarily a matter of speech rate, I think). Then, sometimes nid- appears before vowels. The second and third person prefixes are generally easier to model, as they just have d-epenthesis before vowels and take the form that lacks a final d before consonants.  
 
@@ -62,9 +64,13 @@ This is captured by the following rules on verbs:
 - _PrefixDInsertion_: insert d at the end of the person prefix if whatever appears to the right starts with a vowel (derive nid-, gid-, od-)
 - _PrefixNDInsertion_: Optionally insert "n" between "ni" and "d" (derives "nind-")
 - _PrefixDDeletion_: Optionally delete "d" at the end of "nind" (derives "nin-")
-- _PrefixIND_: Optionally turn "nid" to "ind" and "nd" (derices "ind-" and "nd")
+- _PrefixIND_: Optionally turn "nid" to "ind" and "nd" (derives "ind-" and "nd")
 - _PrefixMInsertion_: Optionally insert "m" after "ni" if whatever appears to the right starts with "b" (derives "nim-")
-- _PrefixNInsertion_: Optionally insert "n" after "ni" if whatever appears to the right starts with "d", "j", z", "zh", or "g".
+- _PrefixMOnly_: Optionally delete the "ni" when whatever to the right starts with "b" (derives "m-")
+- _PrefixYInsertion_: Optionally insert "y" after the prefixes if whatever is to the right starts with "aa" (derives "niy-", "giy-" and "oy-")
+- _PrefixNInsertion_: Optionally insert "n" after "ni" if whatever appears to the right starts with "d", "j", z", "zh", or "g". (derives "nin-" prefix)
+- _PrefixNOnly_: Optionally change "nin" to "n" if whatever appears to the right starts with "d", "j", z", "zh", or "g" (derives "n-" prefix)
+- _PrefixNInitialDeletion_: Optionally delete the "n" from the start of "nind-", "nin-", and "nim-" (derives "ind-", "in-" and "im-")
 
 In dependent nouns, the rules are a little different. For the first and second person prefixes, we get "n" and "g" before vowels, and "gi" and "ni" before consonants. The third person prefix alternates between "w" before "ii", "o" before consonants, and null before "oo". The following rules account for this:
 
@@ -85,7 +91,7 @@ Sources:
 
 There is an allomorphic alternation in tense based on whether or not a person prefix is present:
 
-- *ga-to-da:* The definitive future marker in the independent order is ga-, unless there is no person prefix, in which case it appears as da-
+- *gadaRule:* The definitive future marker in the independent order is ga-, unless there is no person prefix, in which case it appears as da-
 
 Certain tenses trigger a phonological process that requires a bit of background on the phonology of the language. There is a distinction known as the lenis/fortis contrast, which is indicated by the use of voiced/voiceless consonants. The "lenis" consonants are prototyically written as "b", "d", "j", "g", "z", and "zh", but in some contexts are "devoiced"/"strengthened"/"tensed" to "p", "t", "ch", "k", "s", and "sh" respectively. In contrast, fortis consonants are invariably written as "p", "t", "ch", "k", "s", and "sh.
 
@@ -139,11 +145,11 @@ Pattern 3 (Nett Lake, Lac la Croix):
 | o           | we       |
 | oo          | oo       |
 
-Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1. Right now this is the only versio  of initial change being modelled.
+Based on examples from the dictionary, it seems like Border Lakes belongs into Pattern 1. Right now this is the only version of initial change being modelled.
 
 There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change. There are, also, exceptions to these exceptions. For example the tense preverb "daa-" instead appears as "ge-" under initial change, not "endaa-". 
 
-- _irrChCnj_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+- _ChCnjEn_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
 
 The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156).
 
@@ -153,50 +159,52 @@ Finally, not all of the directional preverbs undergo the expected vowel ablaut p
 
 # Suffix Rules
 
-Almost suffix rules target just processes occuring at the stem/suffix juncture, the only part of the phonology that we absolutely need to model. Some rules only end up applying in the verbal or nominal paradgims.
+Almost suffix rules target just processes occuring at the stem/suffix juncture, the only part of the phonology that we absolutely need to model. Some rules only end up applying in the verbal or nominal paradgims, and some to both/
 
-- _y2Deletion:_ Always delete y2
-
-- _nasalAssimilation:_ With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
-
-- *awaaRule:* For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
-
-- *awooRule:* For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
-
-- *woRule1, woRule2:* For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. In Border Lakes, this rule only applies with non-word-final "Cwi" sequences. For example, we get "mizhwi" rather than "mizho" for the imerative form.
-	- MUST PRECEED _vowelDeletion_
-
-- *n1Rule, s1Rule:* Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1" or inanimate singular marker "i2".
-  	- MUST PRECEED _vowelDeletion_
-
-- _vowelDeletion:_ Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
-	- MUST PRECEED _w1Deletion_, _w2Deletion_, and _yDeletion_
-	- MUST FOLLOW _n1Rule_, _s1Rule_, _woRule1_, and _woRule2_
-
-- _w1Deletion:_ Delete word-final "w1"
-	- MUST PRECEDE _dDeletion_
-  	- MUST FOLLOW _vowelDeletion_
+## Verb Specific Rules
 
 - _dDeletion:_ Delete stem-final "d" when the suffix complex starts with a consonant.
  	- MUST FOLLOW _w1Deletion_
+- _iInsertion_: insert "i" in derived reciprocal/reflexive stems.
+- _nasalAssimilation:_ With stems ending in "m", the "m" changes to "n" when the suffix complex starts with "z", "g", or "d".
+- _awaaRule:_ For stems that end in "aw", the "aw" goes to "aa" when the suffix complex starts with "g" or "k".
+- _awooRule:_ For stems that end in "aw", the "aw" goes to "oo" when the suffix complex starts with "n" or "s".
+- _awowRule:_ The amaw of benefactive verbs is replaced by amow in direct forms by some speakers at Red Lake and elsewhere.
+- _woRule1, woRule2, woRule3:_ For stems that end in "Cw", the "w" goes to "o" when the suffix complex starts with an "i" or "i1". AKA, wi -> o / C __. In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where the preceding consonant is NOT a glottal stop. For example, we get "mizhwi" rather than "mizho" for the imerative form, and "nindoodita'wig" rather than "nindoodita'og" with the proximate acting on 1sg inverse.
+	- MUST PRECEED _vowelDeletion_
+- _izhiInverseDel_: Stem for izhi "in1" deletes just in case the theme sign is inverse (igo or igoo)
+- _izhiShortVPreservation_: Insert a w2 at the end of the word when irregular stem izhi "in1" is presnt just in case it only ends in "i1"
+- _glottaloMetathesis:_ "ii'o" becomes "iiw'" at the end of a word.
+- _wMetathesis:_ "zha'w" becomes zhwa' at the end of a word.
+
+## Noun Specific Rules
 
 - _w2Deletion:_ w2 deletes word finally, before consonants, before vowels "o", before "oo", and before "V1" (so remains before vowels a, aa, i, ii, and e)
 	- MUST PRECEDE _LengthenV_
 	- MUST FOLLOW _vowelDeletion_
-
-- _LengthenV:_ a short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
-	- MUST FOLLOW _w2Deletion_
-
-- _y1hRule:_ Turn y1 into h if it follows a long vowel + n sequence at the end of a word (y1 -> h / VVn_#). This handles some stems that are encoded inconsistently in the OPD; a purely orthographic rule.
+- _y1hRule, yhRule:_ Turn y(1) into h if it follows a long vowel + n sequence at the end of a word (y1 -> h / VVn_#). This handles some stems that are encoded inconsistently in the OPD; a purely orthographic rule.
     - MUST PRECEDE _y1Deletion_
-
 - _y1Deletion:_ Delete y1 at the end of words (y1 -> 0 / _ #)
 	- MUST PRECEDE _hDeletion_
 	- MUST FOLLOW _vowelDeletion_ and _y1hRule_
-
 - _hDeletion (OPTIONAL!):_ Optionally delete h between n and y (h -> 0 / n_y). Optional, only because sometimes the spelling convention of deleting that "h" is done inconsistently.
 	- MUST FOLLOW _y1deletion_
-
-- _irrDimGan:_ Irregular diminutive form nouns ending in -(i)gan. Appears as -gaans rather than -ganens
-
+- _y2Deletion:_ Always delete y2
+- _irrDiman:_ Irregular diminutive form nouns ending in "an". Appears as "aans" rather than "anens"
 - _irrDimVVny:_ Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
+- _irrDimAnimosh:_ Irregular diminutive form for the noun animosh, where we get "animoshoons" rather than "animoshens"
+- _pejorativePalatalization:_ s and z palatalize to zh when followed by the pejorative marker -ish.
+
+## Shared Rules
+
+- _n1Rule, s1Rule:_ Stems ending in "n1" palatalize to "zh" and "s1" to "sh" when the suffix complex starts with the first person theme sign "i1" or inanimate singular marker "i2".
+  	- MUST PRECEED _vowelDeletion_
+- _nDeletion:_
+- _vowelDeletion:_ Delete word-final short vowels in multi-syllabic words or mono-syllabic words with a long vowel (preseve the short vowel in mono-syllabic words with a short vowel, e.g. "makwa").
+	- MUST PRECEED _w1Deletion_, _w2Deletion_, and _yDeletion_
+	- MUST FOLLOW _n1Rule_, _s1Rule_, _woRule1_, and _woRule2_
+- _w1Deletion:_ Delete word-final "w1"
+	- MUST PRECEDE _dDeletion_
+  	- MUST FOLLOW _vowelDeletion_
+- _LengthenV:_ a short vowel to the left of v1 lengthens (so i -> ii / _ v1, a -> aa / _ v1, o -> oo / _ v1)
+	- MUST FOLLOW _w2Deletion_
