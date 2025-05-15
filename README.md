@@ -39,12 +39,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-14 | 54205 | 12 | 85.44% | 97.03% |
+| 2025-05-15 | 54205 | 12 | 85.44% | 97.03% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-14 | 8569 | 193 | 83.31% | 94.9% |
+| 2025-05-15 | 8569 | 193 | 83.31% | 94.9% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -52,12 +52,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-14 | 8038 | 0 | 93.94% | 100.0% |
+| 2025-05-15 | 8038 | 0 | 93.94% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-14 | 10578 | 0 | 100.0% | 100.0% |
+| 2025-05-15 | 10578 | 0 | 100.0% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -77,6 +77,9 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
 | Overall | | | 6.46% (2120/32812) | 12.89% (1261/9782) |
+
+Date Last Updated: 2025-05-15
+
 ## User Instructions
 ### Building the FST
 **Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  To make use of ParserTools, you have to follow [the instructions there](https://github.com/ELF-Lab/ParserTools/tree/dev#getting-set-up-to-build-the-fst) to make sure you have all the necessary prerequisites.

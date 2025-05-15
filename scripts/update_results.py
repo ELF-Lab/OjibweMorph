@@ -66,7 +66,7 @@ def read_results(results_file_path, is_corpus = False):
 
         most_recent_results_dict = {"date": date, "precision": precision, "forms_without_results": forms_without_results, "recall": recall, "forms": forms}
 
-    return most_recent_results_dict
+    return most_recent_results_dict, date
 
 def format_results(results, is_corpus = False):
     RESULTS_ENTRY_PRECEDOR = "| "
@@ -113,7 +113,7 @@ def update_readme(results_line, readme_file_path, section_title, is_corpus = Fal
     # For the corpus results, we only want to replace the final 2 columns: so match "| A% (B/C) | D% (E/F)"
     CORPUS_SECTION_REGEX = r"\| [0-9]+\.[0-9]+\% \([0-9]+\/[0-9]+\)+ \| [0-9]+\.[0-9]+\% \([0-9]+\/[0-9]+\)+ \|$\n"
 
-    readme =  open(readme_file_path, "r+")
+    readme = open(readme_file_path, "r+")
     lines = readme.readlines()
     # Keep track of the current section in the README via the title
     current_section_title = ""
@@ -137,19 +137,40 @@ def update_readme(results_line, readme_file_path, section_title, is_corpus = Fal
 
     readme.close()
 
+# For the corpus tests
+# Here, the date is not in the table as usual, but a separate line
+def update_date_only(date, readme_file_path):
+    DATE_LINE_START = "Date Last Updated: "
+    # Get the current file contents
+    readme = open(readme_file_path, "r+")
+    lines = readme.readlines()
+
+    # Modify the date line
+    for index, line in enumerate(lines):
+        if line.startswith(DATE_LINE_START):
+            lines[index] = DATE_LINE_START + date + "\n"
+
+    # Re-write the file
+    readme.truncate(0)
+    readme.seek(0)
+    readme.writelines(lines)
+
+    readme.close()
+
 # Make all the necessary fxn calls for EACH results CSV
 def handle_results(results_file_path, readme_file_path, section_title, is_corpus_tests = False):
     if path.isfile(results_file_path):
         # The paradigm/opd tests are the same format (precision, recall, etc.)
         # and so can be handled the same way, but the corpus tests are of a different nature.
         if is_corpus_tests:
-            results = read_results(results_file_path, is_corpus = True)
+            results, date = read_results(results_file_path, is_corpus = True)
             for speaker in results.keys():
                 speaker_results = results[speaker]
                 results_line = format_results(speaker_results, is_corpus = True)
                 update_readme(results_line, readme_file_path, section_title, is_corpus = True, line_ID = speaker)
+                update_date_only(date, readme_file_path)
         else:
-            results = read_results(results_file_path)
+            results, _ = read_results(results_file_path)
             results_line = format_results(results)
             update_readme(results_line, readme_file_path, section_title)
         print("Wrote to", readme_file_path)
