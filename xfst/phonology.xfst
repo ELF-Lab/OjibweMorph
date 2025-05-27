@@ -126,7 +126,7 @@ define y2Deletion y2 -> 0 ;
 
 ! irrDiman: Irregular diminutive form nouns ending in "an". 
 ! Optionally appears as -aans rather than -anens
-define irrDiman a n SUFBD e n (->) a a n ">>" ;
+define irrDiman a n SUFBD e n (->) a a n ">>" || [? - a] _ ;
 
 ! irrDimVVny: Irregular diminutive form in VVny stems. 
 ! For example, "-oon(h)yens" becomes "-oon(h)s" 

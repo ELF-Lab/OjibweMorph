@@ -37,12 +37,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-26 | 54205 | 12 | 85.44% | 97.03% |
+| 2025-05-27 | 54205 | 12 | 85.44% | 97.03% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-26 | 8566 | 160 | 83.33% | 95.27% |
+| 2025-05-27 | 8566 | 159 | 83.35% | 95.29% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -50,12 +50,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-26 | 8038 | 0 | 93.94% | 100.0% |
+| 2025-05-27 | 8038 | 0 | 93.94% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-26 | 10578 | 0 | 100.0% | 100.0% |
+| 2025-05-27 | 10646 | 0 | 100.0% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -76,7 +76,7 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 | Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
 | Overall | | | 6.45% (2114/32757) | 12.87% (1258/9772) |
 
-Date Last Updated: 2025-05-26
+Date Last Updated: 2025-05-27
 
 ## User Instructions
 ### Building the FST
