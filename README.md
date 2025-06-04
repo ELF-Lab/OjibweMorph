@@ -42,7 +42,7 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-04 | 8566 | 139 | 83.24% | 95.48% |
+| 2025-06-04 | 8566 | 119 | 83.23% | 95.66% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -55,7 +55,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-04 | 12698 | 0 | 100.0% | 100.0% |
+| 2025-06-04 | 12768 | 0 | 100.0% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -65,16 +65,16 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 5.75% (667/11597) | 9.68% (415/4287) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 5.68% (659/11597) | 9.61% (412/4287) |
 | GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 7.48% (1259/16813) | 15.24% (751/4925) |
+| ES | Red Lake | Obaashiing | 7.43% (1250/16813) | 15.16% (747/4925) |
 | RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.63% (145/3988) | 6.7% (83/1237) |
 | GH | Leech Lake | Jaachaabaaning | 5.75% (19/330) | 5.33% (11/206) |
 | LW | Leech Lake | Jaachaabaaning | 8.69% (20/230) | 6.49% (10/154) |
 | LS | Mille Lacs | Aazhomog | 8.86% (7/79) | 13.46% (7/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
-| Overall | | | 6.43% (2134/33165) | 12.86% (1261/9803) |
+| Overall | | | 6.38% (2117/33165) | 12.8% (1255/9803) |
 
 Date Last Updated: 2025-06-04
 
