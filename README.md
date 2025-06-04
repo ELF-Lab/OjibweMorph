@@ -55,7 +55,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-04 | 12695 | 5 | 100.0% | 99.97% |
+| 2025-06-04 | 12695 | 0 | 100.0% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
