@@ -135,6 +135,12 @@ define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 ! irrDimAnimosh: Irregular diminutive form for the noun animosh.
 define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
 
+! ayDeletion: Delete the stem-final "ay" when the followed by "aa" or "e" and before "kw" or "gw"
+! For example, the NID stem =nagway- has the form ninagwens for the diminutive and ninagwaang for the locative (with 1sg possessor)
+define ayDeletion a y -> 0 || [ g | k ] w _ SUFBD [ a a | e ] ;
+
+define ningwDeletion w -> 0 || n i n g _ SUFBD .#. ;
+
 ! pejorativePalatalization: s and z palatalize to zh when 
 ! followed by the pejorative marker -ish.
 define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
@@ -246,6 +252,8 @@ read regex [!emptyFilter .o.
 				       	irrDimVVny .o.
      	   	     	 	irrDiman .o.
 						irrDimAnimosh .o.
+						ayDeletion .o.
+						ningwDeletion .o.
 						pejorativePalatalization .o.
 						izhiInverseDel .o.
 						! Prefix Rules							       
