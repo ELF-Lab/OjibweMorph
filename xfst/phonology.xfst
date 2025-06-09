@@ -187,7 +187,7 @@ define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} |
 
 ! Dependent noun prefix rules
 define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
-define DepPrefixOInsertion [..] -> o || .#. (PREBD) _ w PREBD i i ;
+define DepPrefixOInsertion [..] (->) o || .#. (PREBD) _ w PREBD i i ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD [{o}|{w}] ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 
@@ -259,7 +259,7 @@ read regex [!emptyFilter .o.
 						izhiInverseDel .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
-						DepPrefixOInsertion
+						DepPrefixOInsertion .o.
 						DepPrefixWDeletion .o.
 					   	DepPrefixWtoO .o.
 						PrefixYInsertion .o.
