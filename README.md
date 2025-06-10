@@ -50,7 +50,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-10 | 8038 | 0 | 93.94% | 100.0% |
+| 2025-06-10 | 8046 | 0 | 93.95% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
@@ -65,16 +65,16 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 5.31% (616/11597) | 9.37% (402/4287) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 5.27% (612/11597) | 9.35% (401/4287) |
 | GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 6.77% (1139/16813) | 14.55% (717/4925) |
+| ES | Red Lake | Obaashiing | 6.7% (1127/16813) | 14.49% (714/4925) |
 | RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.46% (138/3988) | 6.54% (81/1237) |
 | GH | Leech Lake | Jaachaabaaning | 3.63% (12/330) | 4.36% (9/206) |
 | LW | Leech Lake | Jaachaabaaning | 3.04% (7/230) | 3.89% (6/154) |
 | LS | Mille Lacs | Aazhomog | 8.86% (7/79) | 13.46% (7/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
-| Overall | | | 5.83% (1936/33165) | 12.42% (1218/9803) |
+| Overall | | | 5.78% (1920/33165) | 12.38% (1214/9803) |
 
 Date Last Updated: 2025-06-10
 
