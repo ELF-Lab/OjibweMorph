@@ -42,7 +42,7 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-10 | 8566 | 25 | 83.39% | 96.85% |
+| 2025-06-10 | 8566 | 24 | 83.39% | 96.86% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
