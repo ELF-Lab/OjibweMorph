@@ -143,11 +143,17 @@ define ayDeletion a y -> 0 || [ g | k ] w _ SUFBD [ a a | e ] ;
 ! Captures the case of ningwy, where both the glides get deleted when at the end of the word, but the "y" blocks "w" deletion.
 define ningwDeletion w -> 0 || n i n g _ SUFBD .#. ;
 
+! iwiiRule: iw turns to ii (and the following vowel deletes) after certain consonants
+! Captures a less-than-regular form of certain nouns, like gidagaa-bizhiins, nibizhiim, wajiing
 define iwiiRule i [ w | w2 ] (SUFBD) [ i | e ] (->) i i ">>" || [ z h | n | d | j ] _ ;
 
-! pejorativePalatalization: s and z palatalize to zh when 
-! followed by the pejorative marker -ish.
-define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
+! pejorativePalatalization: s and z palatalize to zh (or sh) when followed by the pejorative marker -ish.
+! First rule is the most common case
+! Second rule captures the occasional case where with s we get sh
+! Third rule captures the "long-distance" case, where further away things palatalize
+define pejorativePalatalization1 [ s | z ] (->) z h || _ SUFBD i s h ;
+define pejorativePalatalization2 s (->) s h || _ SUFBD i s h ;
+define pejorativePalatalization3 z (->) z h || _ \h [ Cons | Vowel ]* SUFBD i s h ;
 
 ! Default rule
 define defaultRules [ a1 -> a , i2 -> i , n1 -> n , s1 -> s , i1 -> i , w1 -> w , w2 -> w , y1 -> y ] ;
@@ -260,7 +266,9 @@ read regex [!emptyFilter .o.
 						ayDeletion .o.
 						ningwDeletion .o.
 						iwiiRule .o.
-						pejorativePalatalization .o.
+						pejorativePalatalization1 .o.
+						pejorativePalatalization2 .o.
+						pejorativePalatalization3 .o.
 						izhiInverseDel .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.

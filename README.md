@@ -42,7 +42,7 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-10 | 8563 | 34 | 83.38% | 96.74% |
+| 2025-06-10 | 8563 | 28 | 83.39% | 96.81% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -67,14 +67,14 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 |---|---|---|---|---|
 | NJ | Border Lakes | Nigigoonsiminikaaning | 5.68% (659/11597) | 9.61% (412/4287) |
 | GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 7.14% (1202/16813) | 14.88% (733/4925) |
+| ES | Red Lake | Obaashiing | 7.1% (1195/16813) | 14.82% (730/4925) |
 | RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.63% (145/3988) | 6.7% (83/1237) |
 | GH | Leech Lake | Jaachaabaaning | 5.75% (19/330) | 5.33% (11/206) |
-| LW | Leech Lake | Jaachaabaaning | 8.69% (20/230) | 6.49% (10/154) |
+| LW | Leech Lake | Jaachaabaaning | 8.26% (19/230) | 5.84% (9/154) |
 | LS | Mille Lacs | Aazhomog | 8.86% (7/79) | 13.46% (7/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
-| Overall | | | 6.23% (2069/33165) | 12.65% (1241/9803) |
+| Overall | | | 6.21% (2061/33165) | 12.62% (1238/9803) |
 
 Date Last Updated: 2025-06-10
 
