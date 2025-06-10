@@ -135,6 +135,9 @@ define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 ! irrDimAnimosh: Irregular diminutive form for the noun animosh.
 define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
 
+! irrOgiin: The NAD stem for "mother" has an irregular form of "ogiin" instead of "ogawan" in the third person
+define irrOgiin w (PREBD) g a w2 (SUFBD) a n -> o "<<" g i i ">>" n ;
+
 ! ayDeletion: Delete the stem-final "ay" when the followed by "aa" or "e" and before "kw" or "gw"
 ! For example, the NID stem =nagway- has the form ninagwens for the diminutive and ninagwaang for the locative (with 1sg possessor)
 define ayDeletion a y -> 0 || [ g | k ] w _ SUFBD [ a a | e ] ;
@@ -266,6 +269,7 @@ read regex [!emptyFilter .o.
 						ayDeletion .o.
 						ningwDeletion .o.
 						iwiiRule .o.
+						irrOgiin .o.
 						pejorativePalatalization1 .o.
 						pejorativePalatalization2 .o.
 						pejorativePalatalization3 .o.
