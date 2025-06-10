@@ -139,7 +139,11 @@ define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
 ! For example, the NID stem =nagway- has the form ninagwens for the diminutive and ninagwaang for the locative (with 1sg possessor)
 define ayDeletion a y -> 0 || [ g | k ] w _ SUFBD [ a a | e ] ;
 
+! ningwDeletion: Delete stem-final w with the stem ningwy.
+! Captures the case of ningwy, where both the glides get deleted when at the end of the word, but the "y" blocks "w" deletion.
 define ningwDeletion w -> 0 || n i n g _ SUFBD .#. ;
+
+define iwiiRule i [ w | w2 ] (SUFBD) [ i | e ] (->) i i ">>" || [ z h | n | d | j ] _ ;
 
 ! pejorativePalatalization: s and z palatalize to zh when 
 ! followed by the pejorative marker -ish.
@@ -255,6 +259,7 @@ read regex [!emptyFilter .o.
 						irrDimAnimosh .o.
 						ayDeletion .o.
 						ningwDeletion .o.
+						iwiiRule .o.
 						pejorativePalatalization .o.
 						izhiInverseDel .o.
 						! Prefix Rules							       
