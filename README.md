@@ -65,16 +65,16 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 5.22% (606/11597) | 9.3% (399/4287) |
-| GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 6.34% (1067/16813) | 14.01% (690/4925) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.38% (135/3988) | 6.46% (80/1237) |
-| GH | Leech Lake | Jaachaabaaning | 3.63% (12/330) | 4.36% (9/206) |
-| LW | Leech Lake | Jaachaabaaning | 3.04% (7/230) | 3.89% (6/154) |
-| LS | Mille Lacs | Aazhomog | 7.59% (6/79) | 11.53% (6/52) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 6.37% (424/6651) | 9.31% (399/4285) |
+| GJ | Border Lakes | Lac La Croix | 20.54% (15/73) | 19.44% (14/72) |
+| ES | Red Lake | Obaashiing | 7.79% (743/9531) | 14.01% (690/4925) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 4.05% (89/2197) | 6.46% (80/1237) |
+| GH | Leech Lake | Jaachaabaaning | 3.48% (9/258) | 4.36% (9/206) |
+| LW | Leech Lake | Jaachaabaaning | 3.15% (6/190) | 3.89% (6/154) |
+| LS | Mille Lacs | Aazhomog | 9.83% (6/61) | 11.53% (6/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
-| Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
-| Overall | | | 5.57% (1850/33165) | 12.1% (1187/9803) |
+| Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
+| Overall | | | 6.8% (1293/18997) | 12.1% (1187/9803) |
 
 Date Last Updated: 2025-06-11
 
