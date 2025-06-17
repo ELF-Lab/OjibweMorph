@@ -323,8 +323,8 @@ NI,NI_aa,mashkimod,mashkimod,2SgPoss,NONE,Poss,NONE,Pret,Pl,gimashkimodaamibanii
 NI,NI_aa,mashkimod,mashkimod,2PlPoss,NONE,Poss,NONE,Pret,Pl,gimashkimodaamiwaabaniin,gi<<mashkimod>>aamiwaabaniin,JDN-2010-Nouns,gimashkimodaamiwaabanen,gi<<mashkimod>>aamiwaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3SgProxPoss,NONE,Poss,NONE,Pret,Pl,omashkimodaamibaniin,o<<mashkimod>>aamibaniin,JDN-2010-Nouns,omashkimodaamibanen,o<<mashkimod>>aamibanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3PlProxPoss,NONE,Poss,NONE,Pret,Pl,omashkimodaamiwaabaniin,o<<mashkimod>>aamiwaabaniin,JDN-2010-Nouns,omashkimodaamiwaabanen,o<<mashkimod>>aamiwaabanen,GUESS
-NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,NONE,Poss,NONE,Pret,Pl,omashkimodaaminiban,o<<mashkimod>>aaminiban,JDN-2010-Nouns,omashkimodaaminiban,o<<mashkimod>>aaminiban,GUESS
-NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,NONE,Poss,NONE,Pret,Pl,omashkimodaaminiban,o<<mashkimod>>aaminiban,GUESS,omashkimodaaminiban,o<<mashkimod>>aaminiban,GUESS
+NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,NONE,Poss,NONE,Pret,Pl,omashkimodaaminiban,o<<mashkimod>>aaminiban,JDN-2010-Nouns,,,
+NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,NONE,Poss,NONE,Pret,Pl,omashkimodaaminiban,o<<mashkimod>>aaminiban,GUESS,,,
 NI,NI_aa,mashkimod,mashkimod,1SgPoss,Dim,NONE,NONE,Pret,Pl,nimashkimodensibaniin,ni<<mashkimod>>ensibaniin,JDN-2010-Nouns,nimashkimodensibanen,ni<<mashkimod>>ensibanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,ExclPoss,Dim,NONE,NONE,Pret,Pl,nimashkimodensinaabaniin,ni<<mashkimod>>ensinaabaniin,JDN-2010-Nouns,nimashkimodensinaabanen,ni<<mashkimod>>ensinaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,InclPoss,Dim,NONE,NONE,Pret,Pl,gimashkimodensinaabaniin,gi<<mashkimod>>ensinaabaniin,JDN-2010-Nouns,gimashkimodensinaabanen,gi<<mashkimod>>ensinaabanen,GUESS
@@ -332,8 +332,8 @@ NI,NI_aa,mashkimod,mashkimod,2SgPoss,Dim,NONE,NONE,Pret,Pl,gimashkimodensibaniin
 NI,NI_aa,mashkimod,mashkimod,2PlPoss,Dim,NONE,NONE,Pret,Pl,gimashkimodensiwaabaniin,gi<<mashkimod>>ensiwaabaniin,JDN-2010-Nouns,gimashkimodensiwaabanen,gi<<mashkimod>>ensiwaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3SgProxPoss,Dim,NONE,NONE,Pret,Pl,omashkimodensibaniin,o<<mashkimod>>ensibaniin,JDN-2010-Nouns,omashkimodensibanen,o<<mashkimod>>ensibanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3PlProxPoss,Dim,NONE,NONE,Pret,Pl,omashkimodensiwaabaniin,o<<mashkimod>>ensiwaabaniin,JDN-2010-Nouns,omashkimodensiwaabanen,o<<mashkimod>>ensiwaabanen,GUESS
-NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,Dim,NONE,NONE,Pret,Pl,omashkimodensiniban,o<<mashkimod>>ensiniban,JDN-2010-Nouns,omashkimodensiniban,o<<mashkimod>>ensiniban,GUESS
-NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,Dim,NONE,NONE,Pret,Pl,omashkimodensiniban,o<<mashkimod>>ensiniban,GUESS,omashkimodensiniban,o<<mashkimod>>ensiniban,GUESS
+NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,Dim,NONE,NONE,Pret,Pl,omashkimodensiniban,o<<mashkimod>>ensiniban,JDN-2010-Nouns,,,
+NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,Dim,NONE,NONE,Pret,Pl,omashkimodensiniban,o<<mashkimod>>ensiniban,GUESS,,,
 NI,NI_aa,mashkimod,mashkimod,1SgPoss,Dim,Poss,NONE,Pret,Pl,nimashkimodensimibaniin,ni<<mashkimod>>ensimibaniin,JDN-2010-Nouns,nimashkimodensimibanen,ni<<mashkimod>>ensimibanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,ExclPoss,Dim,Poss,NONE,Pret,Pl,nimashkimodensiminaabaniin,ni<<mashkimod>>ensiminaabaniin,JDN-2010-Nouns,nimashkimodensiminaabanen,ni<<mashkimod>>ensiminaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,InclPoss,Dim,Poss,NONE,Pret,Pl,gimashkimodensiminaabaniin,gi<<mashkimod>>ensiminaabaniin,JDN-2010-Nouns,gimashkimodensiminaabanen,gi<<mashkimod>>ensiminaabanen,GUESS
@@ -341,8 +341,8 @@ NI,NI_aa,mashkimod,mashkimod,2SgPoss,Dim,Poss,NONE,Pret,Pl,gimashkimodensimibani
 NI,NI_aa,mashkimod,mashkimod,2PlPoss,Dim,Poss,NONE,Pret,Pl,gimashkimodensimiwaabaniin,gi<<mashkimod>>ensimiwaabaniin,JDN-2010-Nouns,gimashkimodensimiwaabanen,gi<<mashkimod>>ensimiwaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3SgProxPoss,Dim,Poss,NONE,Pret,Pl,omashkimodensimibaniin,o<<mashkimod>>ensimibaniin,JDN-2010-Nouns,omashkimodensimibanen,o<<mashkimod>>ensimibanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3PlProxPoss,Dim,Poss,NONE,Pret,Pl,omashkimodensimiwaabaniin,o<<mashkimod>>ensimiwaabaniin,JDN-2010-Nouns,omashkimodensimiwaabanen,o<<mashkimod>>ensimiwaabanen,GUESS
-NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,Dim,Poss,NONE,Pret,Pl,omashkimodensiminiban,o<<mashkimod>>ensiminiban,JDN-2010-Nouns,omashkimodensiminiban,o<<mashkimod>>ensiminiban,GUESS
-NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,Dim,Poss,NONE,Pret,Pl,omashkimodensiminiban,o<<mashkimod>>ensiminiban,GUESS,omashkimodensiminiban,o<<mashkimod>>ensiminiban,GUESS
+NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,Dim,Poss,NONE,Pret,Pl,omashkimodensiminiban,o<<mashkimod>>ensiminiban,JDN-2010-Nouns,,,
+NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,Dim,Poss,NONE,Pret,Pl,omashkimodensiminiban,o<<mashkimod>>ensiminiban,GUESS,,,
 NI,NI_aa,mashkimod,mashkimod,NONE,NONE,NONE,NONE,Pret,Sg,mashkimodaaban,<<mashkimod>>aaban,JDN-2010-Nouns,,,
 NI,NI_aa,mashkimod,mashkimod,NONE,Dim,NONE,NONE,Pret,Sg,mashkimodensiban,<<mashkimod>>ensiban,JDN-2010-Nouns,,,
 NI,NI_aa,mashkimod,mashkimod,1SgPoss,NONE,NONE,NONE,Pret,Sg,nimashkimodaaban,ni<<mashkimod>>aaban,JDN-2010-Nouns,,,

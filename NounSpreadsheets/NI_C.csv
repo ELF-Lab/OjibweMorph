@@ -314,8 +314,8 @@ NI,NI_C,jiimaan,jiimaan,2SgPoss,NONE,NONE,NONE,Pret,Pl,gijiimaanibaniin,gi<<jiim
 NI,NI_C,jiimaan,jiimaan,2PlPoss,NONE,NONE,NONE,Pret,Pl,gijiimaaniwaabaniin,gi<<jiimaan>>iwaabaniin,JDN-2010-Nouns,gijiimaaniwaabanen,gi<<jiimaan>>iwaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3SgProxPoss,NONE,NONE,NONE,Pret,Pl,ojiimaanibaniin,o<<jiimaan>>ibaniin,JDN-2010-Nouns,ojiimaanibanen,o<<jiimaan>>ibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3PlProxPoss,NONE,NONE,NONE,Pret,Pl,ojiimaaniwaabaniin,o<<jiimaan>>iwaabaniin,JDN-2010-Nouns,ojiimaaniwaabanen,o<<jiimaan>>iwaabanen,GUESS
-NI,NI_C,jiimaan,jiimaan,3SgObvPoss,NONE,NONE,NONE,Pret,Pl,ojiimaaniniban,o<<jiimaan>>iniban,JDN-2010-Nouns,ojiimaaniniban,o<<jiimaan>>iniban,GUESS
-NI,NI_C,jiimaan,jiimaan,3PlObvPoss,NONE,NONE,NONE,Pret,Pl,ojiimaaniniban,o<<jiimaan>>iniban,GUESS,ojiimaaniniban,o<<jiimaan>>iniban,GUESS
+NI,NI_C,jiimaan,jiimaan,3SgObvPoss,NONE,NONE,NONE,Pret,Pl,ojiimaaniniban,o<<jiimaan>>iniban,JDN-2010-Nouns,,,
+NI,NI_C,jiimaan,jiimaan,3PlObvPoss,NONE,NONE,NONE,Pret,Pl,ojiimaaniniban,o<<jiimaan>>iniban,GUESS,,,
 NI,NI_C,jiimaan,jiimaan,1SgPoss,NONE,Poss,NONE,Pret,Pl,ninjiimaanimibaniin,ni<<jiimaan>>imibaniin,JDN-2010-Nouns,ninjiimaanimibanen,ni<<jiimaan>>imibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,ExclPoss,NONE,Poss,NONE,Pret,Pl,ninjiimaaniminaabaniin,ni<<jiimaan>>iminaabaniin,JDN-2010-Nouns,ninjiimaaniminaabanen,ni<<jiimaan>>iminaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,InclPoss,NONE,Poss,NONE,Pret,Pl,gijiimaaniminaabaniin,gi<<jiimaan>>iminaabaniin,JDN-2010-Nouns,gijiimaaniminaabanen,gi<<jiimaan>>iminaabanen,GUESS
@@ -323,8 +323,8 @@ NI,NI_C,jiimaan,jiimaan,2SgPoss,NONE,Poss,NONE,Pret,Pl,gijiimaanimibaniin,gi<<ji
 NI,NI_C,jiimaan,jiimaan,2PlPoss,NONE,Poss,NONE,Pret,Pl,gijiimaanimiwaabaniin,gi<<jiimaan>>imiwaabaniin,JDN-2010-Nouns,gijiimaanimiwaabanen,gi<<jiimaan>>imiwaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3SgProxPoss,NONE,Poss,NONE,Pret,Pl,ojiimaanimibaniin,o<<jiimaan>>imibaniin,JDN-2010-Nouns,ojiimaanimibanen,o<<jiimaan>>imibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3PlProxPoss,NONE,Poss,NONE,Pret,Pl,ojiimaanimiwaabaniin,o<<jiimaan>>imiwaabaniin,JDN-2010-Nouns,ojiimaanimiwaabanen,o<<jiimaan>>imiwaabanen,GUESS
-NI,NI_C,jiimaan,jiimaan,3SgObvPoss,NONE,Poss,NONE,Pret,Pl,ojiimaaniminiban,o<<jiimaan>>iminiban,JDN-2010-Nouns,ojiimaaniminiban,o<<jiimaan>>iminiban,GUESS
-NI,NI_C,jiimaan,jiimaan,3PlObvPoss,NONE,Poss,NONE,Pret,Pl,ojiimaaniminiban,o<<jiimaan>>iminiban,GUESS,ojiimaaniminiban,o<<jiimaan>>iminiban,GUESS
+NI,NI_C,jiimaan,jiimaan,3SgObvPoss,NONE,Poss,NONE,Pret,Pl,ojiimaaniminiban,o<<jiimaan>>iminiban,JDN-2010-Nouns,,,
+NI,NI_C,jiimaan,jiimaan,3PlObvPoss,NONE,Poss,NONE,Pret,Pl,ojiimaaniminiban,o<<jiimaan>>iminiban,GUESS,,,
 NI,NI_C,jiimaan,jiimaan,1SgPoss,Dim,NONE,NONE,Pret,Pl,ninjiimaanensibaniin,ni<<jiimaan>>ensibaniin,JDN-2010-Nouns,ninjiimaanensibanen,ni<<jiimaan>>ensibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,ExclPoss,Dim,NONE,NONE,Pret,Pl,ninjiimaanensinaabaniin,ni<<jiimaan>>ensinaabaniin,JDN-2010-Nouns,ninjiimaanensinaabanen,ni<<jiimaan>>ensinaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,InclPoss,Dim,NONE,NONE,Pret,Pl,gijiimaanensinaabaniin,gi<<jiimaan>>ensinaabaniin,JDN-2010-Nouns,gijiimaanensinaabanen,gi<<jiimaan>>ensinaabanen,GUESS
@@ -332,8 +332,8 @@ NI,NI_C,jiimaan,jiimaan,2SgPoss,Dim,NONE,NONE,Pret,Pl,gijiimaanensibaniin,gi<<ji
 NI,NI_C,jiimaan,jiimaan,2PlPoss,Dim,NONE,NONE,Pret,Pl,gijiimaanensiwaabaniin,gi<<jiimaan>>ensiwaabaniin,JDN-2010-Nouns,gijiimaanensiwaabanen,gi<<jiimaan>>ensiwaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3SgProxPoss,Dim,NONE,NONE,Pret,Pl,ojiimaanensibaniin,o<<jiimaan>>ensibaniin,JDN-2010-Nouns,ojiimaanensibanen,o<<jiimaan>>ensibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3PlProxPoss,Dim,NONE,NONE,Pret,Pl,ojiimaanensiwaabaniin,o<<jiimaan>>ensiwaabaniin,JDN-2010-Nouns,ojiimaanensiwaabanen,o<<jiimaan>>ensiwaabanen,GUESS
-NI,NI_C,jiimaan,jiimaan,3SgObvPoss,Dim,NONE,NONE,Pret,Pl,ojiimaanensiniban,o<<jiimaan>>ensiniban,JDN-2010-Nouns,ojiimaanensiniban,o<<jiimaan>>ensiniban,GUESS
-NI,NI_C,jiimaan,jiimaan,3PlObvPoss,Dim,NONE,NONE,Pret,Pl,ojiimaanensiniban,o<<jiimaan>>ensiniban,GUESS,ojiimaanensiniban,o<<jiimaan>>ensiniban,GUESS
+NI,NI_C,jiimaan,jiimaan,3SgObvPoss,Dim,NONE,NONE,Pret,Pl,ojiimaanensiniban,o<<jiimaan>>ensiniban,JDN-2010-Nouns,,,
+NI,NI_C,jiimaan,jiimaan,3PlObvPoss,Dim,NONE,NONE,Pret,Pl,ojiimaanensiniban,o<<jiimaan>>ensiniban,GUESS,,,
 NI,NI_C,jiimaan,jiimaan,1SgPoss,Dim,Poss,NONE,Pret,Pl,ninjiimaanensimibaniin,ni<<jiimaan>>ensimibaniin,JDN-2010-Nouns,ninjiimaanensimibanen,ni<<jiimaan>>ensimibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,ExclPoss,Dim,Poss,NONE,Pret,Pl,ninjiimaanensiminaabaniin,ni<<jiimaan>>ensiminaabaniin,JDN-2010-Nouns,ninjiimaanensiminaabanen,ni<<jiimaan>>ensiminaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,InclPoss,Dim,Poss,NONE,Pret,Pl,gijiimaanensiminaabaniin,gi<<jiimaan>>ensiminaabaniin,JDN-2010-Nouns,gijiimaanensiminaabanen,gi<<jiimaan>>ensiminaabanen,GUESS
@@ -341,8 +341,8 @@ NI,NI_C,jiimaan,jiimaan,2SgPoss,Dim,Poss,NONE,Pret,Pl,gijiimaanensimibaniin,gi<<
 NI,NI_C,jiimaan,jiimaan,2PlPoss,Dim,Poss,NONE,Pret,Pl,gijiimaanensimiwaabaniin,gi<<jiimaan>>ensimiwaabaniin,JDN-2010-Nouns,gijiimaanensimiwaabanen,gi<<jiimaan>>ensimiwaabanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3SgProxPoss,Dim,Poss,NONE,Pret,Pl,ojiimaanensimibaniin,o<<jiimaan>>ensimibaniin,JDN-2010-Nouns,ojiimaanensimibanen,o<<jiimaan>>ensimibanen,GUESS
 NI,NI_C,jiimaan,jiimaan,3PlProxPoss,Dim,Poss,NONE,Pret,Pl,ojiimaanensimiwaabaniin,o<<jiimaan>>ensimiwaabaniin,JDN-2010-Nouns,ojiimaanensimiwaabanen,o<<jiimaan>>ensimiwaabanen,GUESS
-NI,NI_C,jiimaan,jiimaan,3SgObvPoss,Dim,Poss,NONE,Pret,Pl,ojiimaanensiminiban,o<<jiimaan>>ensiminiban,JDN-2010-Nouns,ojiimaanensiminiban,o<<jiimaan>>ensiminiban,GUESS
-NI,NI_C,jiimaan,jiimaan,3PlObvPoss,Dim,Poss,NONE,Pret,Pl,ojiimaanensiminiban,o<<jiimaan>>ensiminiban,GUESS,ojiimaanensiminiban,o<<jiimaan>>ensiminiban,GUESS
+NI,NI_C,jiimaan,jiimaan,3SgObvPoss,Dim,Poss,NONE,Pret,Pl,ojiimaanensiminiban,o<<jiimaan>>ensiminiban,JDN-2010-Nouns,,,
+NI,NI_C,jiimaan,jiimaan,3PlObvPoss,Dim,Poss,NONE,Pret,Pl,ojiimaanensiminiban,o<<jiimaan>>ensiminiban,GUESS,,,
 NI,NI_C,jiimaan,jiimaan,NONE,NONE,NONE,NONE,Pret,Sg,jiimaaniban,<<jiimaan>>iban,JDN-2010-Nouns,,,
 NI,NI_C,jiimaan,jiimaan,NONE,Dim,NONE,NONE,Pret,Sg,jiimaanensiban,<<jiimaan>>ensiban,JDN-2010-Nouns,,,
 NI,NI_C,jiimaan,jiimaan,1SgPoss,NONE,NONE,NONE,Pret,Sg,ninjiimaaniban,ni<<jiimaan>>iban,JDN-2010-Nouns,,,
