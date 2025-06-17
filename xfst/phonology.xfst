@@ -207,9 +207,9 @@ define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 ! gadaRule
 define gadaRule g a "-" -> d a "-" || .#. (PREBD) _ ;
 
-! "dan", "das", "dash", "dazhi" (and the VAI dazhe-), or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+! "dan", "das", "dash", "dazhi" (and the VAI dazhe), or "daa" (specifically the stem), then add "en-" instead of the usualy initial change ablaut.
 ! endaso-biboonagizid 
-define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"-" | {dazhe} SUFBD | {dazhi} \{iko} ] ; 
+define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} SUFBD | {dazhe} SUFBD | {dazhi} \{iko} ] ; 
 
 ! Changed conjunct rules
 ! The weirdness of the rule is on purpose! 
