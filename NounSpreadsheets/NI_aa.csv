@@ -314,8 +314,8 @@ NI,NI_aa,mashkimod,mashkimod,2SgPoss,NONE,NONE,NONE,Pret,Pl,gimashkimodaabaniin,
 NI,NI_aa,mashkimod,mashkimod,2PlPoss,NONE,NONE,NONE,Pret,Pl,gimashkimodaawaabaniin,gi<<mashkimod>>aawaabaniin,JDN-2010-Nouns,gimashkimodaawaabanen,gi<<mashkimod>>aawaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3SgProxPoss,NONE,NONE,NONE,Pret,Pl,omashkimodaabaniin,o<<mashkimod>>aabaniin,JDN-2010-Nouns,omashkimodaabanen,o<<mashkimod>>aabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,3PlProxPoss,NONE,NONE,NONE,Pret,Pl,omashkimodaawaabaniin,o<<mashkimod>>aawaabaniin,JDN-2010-Nouns,omashkimodaawaabanen,o<<mashkimod>>aawaabanen,GUESS
-NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,NONE,NONE,NONE,Pret,Pl,omashkimodaaniban,o<<mashkimod>>aaniban,JDN-2010-Nouns,omashkimodaaniban,o<<mashkimod>>aaniban,GUESS
-NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,NONE,NONE,NONE,Pret,Pl,omashkimodaaniban,o<<mashkimod>>aaniban,GUESS,omashkimodaaniban,o<<mashkimod>>aaniban,GUESS
+NI,NI_aa,mashkimod,mashkimod,3SgObvPoss,NONE,NONE,NONE,Pret,Pl,omashkimodaaniban,o<<mashkimod>>aaniban,JDN-2010-Nouns,,,
+NI,NI_aa,mashkimod,mashkimod,3PlObvPoss,NONE,NONE,NONE,Pret,Pl,omashkimodaaniban,o<<mashkimod>>aaniban,GUESS,,,
 NI,NI_aa,mashkimod,mashkimod,1SgPoss,NONE,Poss,NONE,Pret,Pl,nimashkimodaamibaniin,ni<<mashkimod>>aamibaniin,JDN-2010-Nouns,nimashkimodaamibanen,ni<<mashkimod>>aamibanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,ExclPoss,NONE,Poss,NONE,Pret,Pl,nimashkimodaaminaabaniin,ni<<mashkimod>>aaminaabaniin,JDN-2010-Nouns,nimashkimodaaminaabanen,ni<<mashkimod>>aaminaabanen,GUESS
 NI,NI_aa,mashkimod,mashkimod,InclPoss,NONE,Poss,NONE,Pret,Pl,gimashkimodaaminaabaniin,gi<<mashkimod>>aaminaabaniin,JDN-2010-Nouns,gimashkimodaaminaabanen,gi<<mashkimod>>aaminaabanen,GUESS
