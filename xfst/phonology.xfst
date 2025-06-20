@@ -49,7 +49,7 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 
 ! awowRule: The amaw of benefactive verbs is replaced by amow 
 ! in direct forms by some speakers at Red Lake and elsewhere.
-define awowRule a w (->) o w || a m _ SUFBD a a ;
+define awowRule a w (->) o w || a m _ SUFBD [ a a | a g ] ;
 
 ! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
 ! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where C is anything other than the glottal stop.
@@ -201,6 +201,7 @@ define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} |
 ! Dependent noun prefix rules
 define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
 define DepPrefixOInsertion [..] (->) o || .#. (PREBD) _ w PREBD i i ;
+define DepPrefixWtoOOptional w (->) o || .#. (PREBD) _ PREBD w ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD [{o}|{w}] ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 
@@ -282,6 +283,7 @@ read regex [!emptyFilter .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
 						DepPrefixOInsertion .o.
+						DepPrefixWtoOOptional .o.
 						DepPrefixWDeletion .o.
 					   	DepPrefixWtoO .o.
 						PrefixYInsertion .o.
