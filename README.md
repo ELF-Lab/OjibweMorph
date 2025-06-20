@@ -50,7 +50,7 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-20 | 8081 | 0 | 93.98% | 100.0% |
+| 2025-06-20 | 8083 | 0 | 93.98% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
@@ -65,16 +65,16 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 6.26% (417/6651) | 9.14% (392/4285) |
-| GJ | Border Lakes | Lac La Croix | 20.54% (15/73) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 7.5% (715/9531) | 13.64% (672/4925) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.68% (81/2197) | 6.22% (77/1237) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 6.14% (409/6651) | 9.0% (386/4285) |
+| GJ | Border Lakes | Lac La Croix | 17.8% (13/73) | 18.05% (13/72) |
+| ES | Red Lake | Obaashiing | 7.16% (683/9531) | 13.27% (654/4925) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.5% (77/2197) | 6.06% (75/1237) |
 | GH | Leech Lake | Jaachaabaaning | 3.48% (9/258) | 4.36% (9/206) |
 | LW | Leech Lake | Jaachaabaaning | 3.15% (6/190) | 3.89% (6/154) |
 | LS | Mille Lacs | Aazhomog | 9.83% (6/61) | 11.53% (6/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 6.57% (1250/18997) | 11.83% (1160/9803) |
+| Overall | | | 6.33% (1204/18997) | 11.57% (1135/9803) |
 
 Date Last Updated: 2025-06-20
 
