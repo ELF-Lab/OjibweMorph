@@ -78,6 +78,11 @@ define glottaloMetathesis ' o (->) w ' || i i _ SUFBD ;
 ! Not clear how general this rule is to a dialect versus a specific speaker.
 define wMetathesis a ' w1 (->) w a ' || z h _ SUFBD ;
 
+! ywRule: Change y to w after o in certain contexts
+! This captures a variant of the conjunct order -yaan, -yaang, -yan, and -yang where the y is a w.
+! In the OPD set, this is specific to Border Lakes (and specifically NJ)
+define ywRule y (->) w || [ o SUFBD | {igoo} | SUFBD o o ] _ a (a) n ;
+
 ! shared noun and verb suffix rules
 
 ! n1Rule, s1Rule: Stems ending in "n1" palatalize to "zh" and "s1" to "sh" 
@@ -258,7 +263,8 @@ read regex [!emptyFilter .o.
 						woRule3 .o.	! Must precede vowelDeletion
 						izhiShortVPreservation .o. ! Must precede vowelDeletion and w2Deletion; must follow n1Rule
 						glottaloMetathesis .o. ! Must precede vowelDeletion	
-						wMetathesis .o. ! Must precede w1Deletion		       
+						wMetathesis .o. ! Must precede w1Deletion	
+						ywRule .o.	       
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
 			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
