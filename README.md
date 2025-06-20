@@ -37,7 +37,7 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-20 | 66801 | 138 | 77.26% | 97.0% |
+| 2025-06-20 | 66801 | 135 | 77.26% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |

@@ -210,7 +210,7 @@ define gadaRule g a "-" -> d a "-" || .#. (PREBD) _ ;
 ! There is something strange here! These excpetions do "regular" initial change, but involve the expected "dazhi" initial
 ! This rule just makes sure that these exceptions to the exceptions get the right version of IC.
 ! The stems are: dazhiikodaadiwag, dazhinge, dazhindi, dazhindizo, dazhinjigaade
-define ChCnjExceptions "<ChCnj>" (PREBD) {da} -> "<<" {de} || _ [ z h i i k o | z h i n g e SUFBD | z h i n d i SUFBD | z h i n d i z o SUFBD | z h i n j i g a a d e SUFBD ] ;
+define ChCnjExceptions "<ChCnj>" (PREBD) {da} -> "<<" {de} || _ [ z h i i k o | z h i n g e SUFBD | z h i n d i SUFBD | z h i n d i z o SUFBD | z h i n j i g a a d e SUFBD | s o o z | s o o n i d i | s o o z h SUFBD | s o o n1 SUFBD ] ;
 
 ! "dan", "das", "dash", "dazhi" (and the VAI dazhe), "dood", "dapin" (as in "dapine") or "daa" (specifically the stem), then add "en-" instead of the usualy initial change ablaut.
 ! endaso-biboonagizid 
