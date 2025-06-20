@@ -154,7 +154,7 @@ define iwiiRule i [ w | w2 ] (SUFBD) [ i | e ] (->) i i ">>" || [ z h | n | d | 
 ! First rule is the most common case
 ! Second rule captures the occasional case where with s we get sh
 ! Third rule captures the "long-distance" case, where further away things palatalize
-define pejorativePalatalization1 [ s | z ] (->) z h || _ SUFBD i s h ;
+define pejorativePalatalization1 [ s | z | s h ] (->) z h || _ SUFBD i s h ;
 define pejorativePalatalization2 s (->) s h || _ SUFBD i s h ;
 define pejorativePalatalization3 z (->) z h || _ \h [ Cons | Vowel ]* SUFBD i s h ;
 
