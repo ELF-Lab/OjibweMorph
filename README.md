@@ -37,12 +37,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-23 | 66801 | 135 | 77.26% | 97.01% |
+| 2025-06-25 | 66801 | 135 | 77.25% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-23 | 8565 | 20 | 83.45% | 96.87% |
+| 2025-06-25 | 8565 | 20 | 83.45% | 96.87% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -50,12 +50,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-23 | 8089 | 0 | 93.93% | 100.0% |
+| 2025-06-25 | 8089 | 0 | 93.93% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-23 | 14330 | 0 | 99.98% | 100.0% |
+| 2025-06-25 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -65,18 +65,18 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 5.48% (365/6651) | 8.02% (344/4285) |
-| GJ | Border Lakes | Lac La Croix | 17.8% (13/73) | 18.05% (13/72) |
-| ES | Red Lake | Obaashiing | 6.5% (620/9531) | 12.16% (599/4925) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.09% (68/2197) | 5.41% (67/1237) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 5.36% (357/6651) | 7.84% (336/4285) |
+| GJ | Border Lakes | Lac La Croix | 16.43% (12/73) | 16.66% (12/72) |
+| ES | Red Lake | Obaashiing | 6.36% (607/9531) | 11.89% (586/4925) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 2.86% (63/2197) | 5.01% (62/1237) |
 | GH | Leech Lake | Jaachaabaaning | 3.1% (8/258) | 3.88% (8/206) |
 | LW | Leech Lake | Jaachaabaaning | 3.15% (6/190) | 3.89% (6/154) |
 | LS | Mille Lacs | Aazhomog | 9.83% (6/61) | 11.53% (6/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 5.72% (1087/18997) | 10.56% (1036/9803) |
+| Overall | | | 5.57% (1060/18997) | 10.29% (1009/9803) |
 
-Date Last Updated: 2025-06-23
+Date Last Updated: 2025-06-25
 
 ## User Instructions
 ### Building the FST
