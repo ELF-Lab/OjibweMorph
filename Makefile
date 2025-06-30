@@ -16,23 +16,6 @@ OUTPUT_DIR=$(OJIBWE_MORPH)/FST
 VERB_JSON = $(OJIBWE_MORPH)/config/verbs.json
 NOUN_JSON = $(OJIBWE_MORPH)/config/nouns.json
 
-# *** Constants for YAML tests ***
-# * Tools *
-LOOKUP=flookup
-# * Keyword (for naming output files, etc.) *
-# Change this value to have a name relevant to your set of tests
-LABEL_FOR_TESTS="paradigm"
-# * Source files *
-# Change the below values to point to the relevant files on your system
-PARADIGM_MAPS_DIR=$(OJIBWE_LEXICON)/resources
-VERB_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
-NOUN_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
-FST_FOR_TESTS=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin # This can be the regular FST, or some alternative versions created further below in the Tests section of this Makefile
-# Do not change the below values; determined automatically
-YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)_yaml_output
-REGULAR_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)-test.log
-CORE_TEST_LOG=$(OUTPUT_DIR)/core-$(LABEL_FOR_TESTS)-test.log
-
 # *** Constants for building the LEXC files ***
 # Likely no need to change any of these values!
 # POS are determined by the files in config/
@@ -121,6 +104,22 @@ $(OUTPUT_DIR)/generated/%_tags.json:$(OJIBWE_MORPH)/config/%.json
 #                             TESTS                                 #
 #                                                                   #
 #####################################################################
+# *** Constants for YAML tests ***
+# * Tools *
+LOOKUP=flookup
+# * Keyword (for naming output files, etc.) *
+# Change this value to have a name relevant to your set of tests
+LABEL_FOR_TESTS="paradigm"
+# * Source files *
+# Change the below values to point to the relevant files on your system
+PARADIGM_MAPS_DIR=$(OJIBWE_LEXICON)/resources
+VERB_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
+NOUN_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
+FST_FOR_TESTS=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin
+# Do not change the below values; determined automatically
+YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)_yaml_output
+REGULAR_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)-test.log
+CORE_TEST_LOG=$(OUTPUT_DIR)/core-$(LABEL_FOR_TESTS)-test.log
 
 # We can build a separate FST which you can use for YAML tests because
 # entries from the external lexical database will interfere with YAML
