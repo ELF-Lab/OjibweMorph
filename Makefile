@@ -117,12 +117,14 @@ NOUN_DATA_FOR_OPD_TESTS_DIR=$(OJIBWE_LEXICON)/OPD/for_yaml/nouns/
 # Do not change the below values; determined automatically
 PARADIGM_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)_yaml_output
 OPD_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_OPD_TESTS)_yaml_output
+EXAMPLE_SENTENCES_DIR=$(OJIBWE_LEXICON)/OPD/example_sentences
 PARADIGM_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)-test.log
 OPD_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_OPD_TESTS)-test.log
+CORPUS_TEST_OUTPUT_FILE=$(OUTPUT_DIR)/corpus_test.txt
 NO_ALT_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin
 NO_LEX_DB_FST=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin
 
-check: check-paradigm-tests check-opd-tests
+check: check-paradigm-tests check-opd-tests check-corpus-tests
 
 $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin:$(REGULAR_FST) $(DELETE_ALT_TAG_XFST)
 	cat $(DELETE_ALT_TAG_XFST) | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $(OUTPUT_DIR)/generated/delete_alt_tag.xfst
@@ -192,6 +194,12 @@ check-opd-tests:$(NO_ALT_FST) $(OPD_YAML_DIR)
                   done > $(OPD_TEST_LOG)
 	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(OPD_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_OPD_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_OPD_TESTS)
 	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(OPD_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_OPD_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_OPD_TESTS) --for_nouns
+
+check-corpus-tests:$(REGULAR_FST)
+	sh scripts/analyze_text.sh $(EXAMPLE_SENTENCES_DIR)/example_sentences.txt $(REGULAR_FST) > $(CORPUS_TEST_OUTPUT_FILE)
+	sh scripts/analyze_texts_by_speaker.sh $(EXAMPLE_SENTENCES_DIR)/by_speaker $(REGULAR_FST) >> $(CORPUS_TEST_OUTPUT_FILE)
+	$(PYTHON) scripts/summarize_corpus_tests.py --input_file_name $(CORPUS_TEST_OUTPUT_FILE)
+	$(PYTHON) scripts/update_results.py
 
 # *** The core-only tests are no longer being used -- just keeping this here as an example
 # 	  in case these get used in future. ***
