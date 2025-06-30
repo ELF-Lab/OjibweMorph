@@ -4,12 +4,12 @@ PYTHON=python3
 FOMA=foma
 # * Keyword (for naming output files, etc.) *
 # Change this value to have a name relevant to your FST
-LANGUAGE_NAME="ojibwe"
+LANGUAGE_NAME=ojibwe
 # * Source files *
 # Change the below values to point to the relevant files on your system
-MORPHOLOGYSRCDIR=~/OjibweMorph
+MORPHOLOGYSRCDIR=.
 LEMMAS_DIR=~/OjibweLexicon/OPD,~/OjibweLexicon/HammerlyFieldwork # Can be a list (separated by commas) e.g., LEMMAS_DIR=~/folder1,~/folder2
-LEXICAL_DATA_TO_EXCLUDE=""
+LEXICAL_DATA_TO_EXCLUDE=~/OjibweLexicon/other/lexical_data_to_exclude.csv
 OUTPUT_DIR=$(MORPHOLOGYSRCDIR)/FST
 # Do not change the below values; determined automatically
 VERB_JSON = $(MORPHOLOGYSRCDIR)/config/verbs.json
@@ -39,6 +39,7 @@ CORE_TEST_LOG=$(OUTPUT_DIR)/core-$(LABEL_FOR_TESTS)-test.log
 # Likely no need to change any of these values!
 # POS are determined by the files in config/
 CONFIG_FILES=$(shell find $(MORPHOLOGYSRCDIR)/config/ -name "*.json")
+COMPILE_FST_XFST=$(shell python3 scripts/get_package_file.py "fstmorph" "assets/compile_fst.xfst")
 # Add escape chars to the file path so it can be used in the gsub below
 MORPHOLOGYSRCDIR_REGEX=$(shell echo $(MORPHOLOGYSRCDIR) | sed 's/\./\\\./g' | sed 's/\//\\\//g')
 # Strip each file path to only include the POS e.g., "../config/nouns.json" -> "nouns"
@@ -55,7 +56,7 @@ release:all
 
 $(OUTPUT_DIR)/generated/all.lexc:$(CONFIG_FILES)
 	mkdir -p $(OUTPUT_DIR)/generated
-	$(PYTHON) FSTmorph/csv2lexc.py --config-files `echo $^ | tr ' ' ','` \
+	$(PYTHON) -m fstmorph.csv2lexc --config-files `echo $^ | tr ' ' ','` \
                               --source-path $(MORPHOLOGYSRCDIR) \
                               --database-paths $(LEMMAS_DIR) \
                               --alt-tag $(ALTTAG) \
@@ -69,14 +70,14 @@ $(OUTPUT_DIR)/generated/all.lexc:$(CONFIG_FILES)
 	mkdir -p $*
 	cp $^ $@
 
-$(OUTPUT_DIR)/generated/compile_fst.xfst:FSTmorph/assets/compile_fst.xfst
+$(OUTPUT_DIR)/generated/compile_fst.xfst:
 	mkdir -p $(OUTPUT_DIR)/generated
-	cp $^ $@
-	cat $^ | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $@
+	cp $(COMPILE_FST_XFST) $@
+	cat $(COMPILE_FST_XFST) | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $@
 
-$(OUTPUT_DIR)/check-generated/compile_fst.xfst:FSTmorph/assets/compile_fst.xfst
+$(OUTPUT_DIR)/check-generated/compile_fst.xfst:
 	mkdir -p $(OUTPUT_DIR)/check-generated
-	cat $^ | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $@
+	cat $(COMPILE_FST_XFST) | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $@
 
 $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/generated/phonology.xfst $(OUTPUT_DIR)/generated/compile_fst.xfst
 	mkdir -p $(OUTPUT_DIR)/generated
@@ -100,7 +101,7 @@ $(OUTPUT_DIR)/generated/lang-ciw:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/
 # Tag specification file
 $(OUTPUT_DIR)/generated/verbs_tags.json:$(MORPHOLOGYSRCDIR)/config/verbs.json
 	mkdir -p $(OUTPUT_DIR)/generated
-	$(PYTHON) FSTmorph/extract_tag_combinations.py \
+	$(PYTHON) -m fstmorph.extract_tag_combinations \
              --config-file $< \
              --source-path $(MORPHOLOGYSRCDIR) \
              --pre-element=TensePreverbs \
@@ -111,7 +112,7 @@ $(OUTPUT_DIR)/generated/verbs_tags.json:$(MORPHOLOGYSRCDIR)/config/verbs.json
 
 $(OUTPUT_DIR)/generated/%_tags.json:$(MORPHOLOGYSRCDIR)/config/%.json
 	mkdir -p $(OUTPUT_DIR)/generated
-	$(PYTHON) FSTmorph/extract_tag_combinations.py \
+	$(PYTHON) -m fstmorph.extract_tag_combinations \
              --config-file $< \
              --source-path $(MORPHOLOGYSRCDIR) \
              --output-file $@
@@ -132,7 +133,7 @@ check: check-core-tests check-tests
 # A different version of the lexc files that *doesn't* use the external lexical database
 $(OUTPUT_DIR)/check-generated/all.lexc:$(shell find $(MORPHOLOGYSRCDIR)/config/ -name "*.json")
 	mkdir -p $(OUTPUT_DIR)/check-generated
-	$(PYTHON) FSTmorph/csv2lexc.py --config-files `echo $^ | tr ' ' ','` \
+	$(PYTHON) -m fstmorph.csv2lexc --config-files `echo $^ | tr ' ' ','` \
                               --source-path $(MORPHOLOGYSRCDIR) \
                               --database-paths $(LEMMAS_DIR) \
                               --lexc-path $(OUTPUT_DIR)/check-generated \
@@ -185,21 +186,3 @@ check-core-tests:$(FST_FOR_TESTS) $(YAML_DIR)
 
 clean:
 	rm -rf $(OUTPUT_DIR)/generated $(OUTPUT_DIR)/check-generated $(YAML_DIR) $(CORE_TEST_LOG) $(REGULAR_TEST_LOG) csv_output
-
-#####################################################################
-#                                                                   #
-#                       DOCUMENTATION                               #
-#                                                                   #
-#####################################################################
-
-# Generating documentation requires the python module pdoc
-# Install it by `pip3 install pdoc3` if you need to build
-# the docs
-
-doc:*py
-	pdoc --force -c syntax_highlighting=True --html .
-	rm -r -f docs/html_docs
-	mkdir docs/html_docs/
-	mv html/FSTmorph/* docs/html_docs/
-	rm -r html/
-
