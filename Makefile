@@ -105,21 +105,19 @@ $(OUTPUT_DIR)/generated/%_tags.json:$(OJIBWE_MORPH)/config/%.json
 # * Tools *
 LOOKUP=flookup
 # * Keyword (for naming output files, etc.) *
-# Change this value to have a name relevant to your set of tests
-LABEL_FOR_TESTS="paradigm"
+LABEL_FOR_PARADIGM_TESTS="paradigm"
 # * Source files *
 # Change the below values to point to the relevant files on your system
 PARADIGM_MAPS_DIR=$(OJIBWE_LEXICON)/resources
-VERB_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
-NOUN_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
+VERB_DATA_FOR_PARADIGM_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
+NOUN_DATA_FOR_PARADIGM_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
 # Do not change the below values; determined automatically
-YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)_yaml_output
-REGULAR_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)-test.log
-CORE_TEST_LOG=$(OUTPUT_DIR)/core-$(LABEL_FOR_TESTS)-test.log
+PARADIGM_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)_yaml_output
+PARADIGM_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)-test.log
 NO_ALT_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin
 NO_LEX_DB_FST=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin
 
-check: check-core-tests check-tests
+check: check-paradigm-tests
 
 $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin:$(REGULAR_FST) FSTmorph/assets/delete_alt_tag.xfst 
 	cat FSTmorph/assets/delete_alt_tag.xfst | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $(OUTPUT_DIR)/generated/delete_alt_tag.xfst
@@ -151,37 +149,39 @@ $(NO_LEX_DB_FST):$(OUTPUT_DIR)/check-generated/all.lexc $(OUTPUT_DIR)/check-gene
 
 # Generate the YAML files for testing
 # Add non-core-tags if you want to run some "core" tests as well
-$(YAML_DIR):
+$(PARADIGM_YAML_DIR):
 	rm -Rf $@
 	mkdir $@
-	$(PYTHON) -m fstmorph.tests.create_yaml $(VERB_DATA_FOR_TESTS_DIR) $(VERB_JSON) ./ --pos=verb
+	$(PYTHON) -m fstmorph.tests.create_yaml $(VERB_DATA_FOR_PARADIGM_TESTS_DIR) $(VERB_JSON) ./ --pos=verb
 	mv yaml_output/* $@
-	$(PYTHON) -m fstmorph.tests.create_yaml $(NOUN_DATA_FOR_TESTS_DIR) $(NOUN_JSON) ./ --pos=noun
+	$(PYTHON) -m fstmorph.tests.create_yaml $(NOUN_DATA_FOR_PARADIGM_TESTS_DIR) $(NOUN_JSON) ./ --pos=noun
 	mv yaml_output/* $@
 	rm -d yaml_output
 
 # Create test .log files from the YAML files
-check-tests:$(NO_LEX_DB_FST) $(YAML_DIR)
-	rm -f $(REGULAR_TEST_LOG)
-	for f in `ls $(YAML_DIR)/*.yaml | grep -v core`; do \
+check-paradigm-tests:$(NO_LEX_DB_FST) $(PARADIGM_YAML_DIR)
+	rm -f $(PARADIGM_TEST_LOG)
+	for f in `ls $(PARADIGM_YAML_DIR)/*.yaml | grep -v core`; do \
                   echo "YAML test file $$f"; \
                   $(PYTHON) -m fstmorph.tests.run_yaml_tests --app $(LOOKUP) --surface --mor $(NO_LEX_DB_FST) $$f; \
                   echo ; \
-                  done > $(REGULAR_TEST_LOG)
-	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS)
-	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS) --for_nouns
+                  done > $(PARADIGM_TEST_LOG)
+	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(PARADIGM_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_PARADIGM_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_PARADIGM_TESTS)
+	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(PARADIGM_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_PARADIGM_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_PARADIGM_TESTS) --for_nouns
 
+# *** The core-only tests are no longer being used -- just keeping this here as an example
+# 	  in case these get used in future. ***
 # If there are no core YAML files, this will do nothing.
-check-core-tests:$(NO_LEX_DB_FST) $(YAML_DIR)
-	rm -f $(CORE_TEST_LOG)
-	for f in `ls $(YAML_DIR)/*core.yaml`; do \
-                  echo "YAML test file $$f"; \
-                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --hide-passes --app $(LOOKUP) --surface --mor $(NO_LEX_DB_FST) $$f; \
-                  echo ; \
-                  done > $(CORE_TEST_LOG)
-	if [ ! -s "$(CORE_TEST_LOG)" ]; then \
-		rm -f $(CORE_TEST_LOG); \
-	fi
+# check-core-tests:$(NO_LEX_DB_FST) $(PARADIGM_YAML_DIR)
+# 	rm -f $(CORE_TEST_LOG)
+# 	for f in `ls $(PARADIGM_YAML_DIR)/*core.yaml`; do \
+#                   echo "YAML test file $$f"; \
+#                   $(PYTHON) -m fstmorph.tests.run_yaml_tests --hide-passes --app $(LOOKUP) --surface --mor $(NO_LEX_DB_FST) $$f; \
+#                   echo ; \
+#                   done > $(CORE_TEST_LOG)
+# 	if [ ! -s "$(CORE_TEST_LOG)" ]; then \
+# 		rm -f $(CORE_TEST_LOG); \
+# 	fi
 
 clean:
-	rm -rf $(OUTPUT_DIR)/generated $(OUTPUT_DIR)/check-generated $(YAML_DIR) $(CORE_TEST_LOG) $(REGULAR_TEST_LOG) csv_output
+	rm -rf $(OUTPUT_DIR)/generated $(OUTPUT_DIR)/check-generated $(PARADIGM_YAML_DIR) $(CORE_TEST_LOG) $(PARADIGM_TEST_LOG) csv_output
