@@ -3,7 +3,6 @@
 PYTHON=python3
 FOMA=foma
 # * Keyword (for naming output files, etc.) *
-# Change this value to have a name relevant to your FST
 LANGUAGE_NAME=ojibwe
 # * Source files *
 # Change the below values to point to the relevant files on your system
@@ -22,6 +21,7 @@ REGULAR_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin
 # POS are determined by the files in config/
 CONFIG_FILES=$(shell find $(OJIBWE_MORPH)/config/ -name "*.json")
 COMPILE_FST_XFST=$(shell python3 scripts/get_package_file.py "fstmorph" "assets/compile_fst.xfst")
+DELETE_ALT_TAG_XFST=$(shell python3 scripts/get_package_file.py "fstmorph" "assets/delete_alt_tag.xfst")
 # Add escape chars to the file path so it can be used in the gsub below
 OJIBWE_MORPH_REGEX=$(shell echo $(OJIBWE_MORPH) | sed 's/\./\\\./g' | sed 's/\//\\\//g')
 # Strip each file path to only include the POS e.g., "../config/nouns.json" -> "nouns"
@@ -106,21 +106,26 @@ $(OUTPUT_DIR)/generated/%_tags.json:$(OJIBWE_MORPH)/config/%.json
 LOOKUP=flookup
 # * Keyword (for naming output files, etc.) *
 LABEL_FOR_PARADIGM_TESTS="paradigm"
+LABEL_FOR_OPD_TESTS="opd"
 # * Source files *
 # Change the below values to point to the relevant files on your system
 PARADIGM_MAPS_DIR=$(OJIBWE_LEXICON)/resources
 VERB_DATA_FOR_PARADIGM_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
 NOUN_DATA_FOR_PARADIGM_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
+VERB_DATA_FOR_OPD_TESTS_DIR=$(OJIBWE_LEXICON)/OPD/for_yaml/verbs
+NOUN_DATA_FOR_OPD_TESTS_DIR=$(OJIBWE_LEXICON)/OPD/for_yaml/nouns/
 # Do not change the below values; determined automatically
 PARADIGM_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)_yaml_output
+OPD_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_OPD_TESTS)_yaml_output
 PARADIGM_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)-test.log
+OPD_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_OPD_TESTS)-test.log
 NO_ALT_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin
 NO_LEX_DB_FST=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin
 
-check: check-paradigm-tests
+check: check-paradigm-tests check-opd-tests
 
-$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin:$(REGULAR_FST) FSTmorph/assets/delete_alt_tag.xfst 
-	cat FSTmorph/assets/delete_alt_tag.xfst | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $(OUTPUT_DIR)/generated/delete_alt_tag.xfst
+$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin:$(REGULAR_FST) $(DELETE_ALT_TAG_XFST)
+	cat $(DELETE_ALT_TAG_XFST) | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $(OUTPUT_DIR)/generated/delete_alt_tag.xfst
 	cd $(OUTPUT_DIR)/generated; $(FOMA) -f delete_alt_tag.xfst
 
 # A different version of the lexc files that *doesn't* use the external lexical database
@@ -158,6 +163,15 @@ $(PARADIGM_YAML_DIR):
 	mv yaml_output/* $@
 	rm -d yaml_output
 
+$(OPD_YAML_DIR):
+	rm -Rf $@
+	mkdir $@
+	$(PYTHON) -m fstmorph.tests.create_yaml $(VERB_DATA_FOR_OPD_TESTS_DIR) $(VERB_JSON) ./ --pos=verb
+	mv yaml_output/* $@
+	$(PYTHON) -m fstmorph.tests.create_yaml $(NOUN_DATA_FOR_OPD_TESTS_DIR) $(NOUN_JSON) ./ --pos=noun
+	mv yaml_output/* $@
+	rm -d yaml_output
+
 # Create test .log files from the YAML files
 check-paradigm-tests:$(NO_LEX_DB_FST) $(PARADIGM_YAML_DIR)
 	rm -f $(PARADIGM_TEST_LOG)
@@ -168,6 +182,16 @@ check-paradigm-tests:$(NO_LEX_DB_FST) $(PARADIGM_YAML_DIR)
                   done > $(PARADIGM_TEST_LOG)
 	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(PARADIGM_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_PARADIGM_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_PARADIGM_TESTS)
 	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(PARADIGM_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_PARADIGM_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_PARADIGM_TESTS) --for_nouns
+
+check-opd-tests:$(NO_ALT_FST) $(OPD_YAML_DIR)
+	rm -f $(OPD_TEST_LOG)
+	for f in `ls $(OPD_YAML_DIR)/*.yaml | grep -v core`; do \
+                  echo "YAML test file $$f"; \
+                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --app $(LOOKUP) --surface --mor $(NO_ALT_FST) $$f; \
+                  echo ; \
+                  done > $(OPD_TEST_LOG)
+	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(OPD_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_OPD_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_OPD_TESTS)
+	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(OPD_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_OPD_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_OPD_TESTS) --for_nouns
 
 # *** The core-only tests are no longer being used -- just keeping this here as an example
 # 	  in case these get used in future. ***
