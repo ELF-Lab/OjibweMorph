@@ -8,13 +8,14 @@ LANGUAGE_NAME=ojibwe
 # * Source files *
 # Change the below values to point to the relevant files on your system
 OJIBWE_MORPH=.
-OJIBWE_LEXICON=~/OjibweLexicon
+OJIBWE_LEXICON=../OjibweLexicon
 LEMMAS_DIR=$(OJIBWE_LEXICON)/OPD,$(OJIBWE_LEXICON)/HammerlyFieldwork # Can be a list (separated by commas) e.g., LEMMAS_DIR=~/folder1,~/folder2
 LEXICAL_DATA_TO_EXCLUDE=$(OJIBWE_LEXICON)/other/lexical_data_to_exclude.csv
 OUTPUT_DIR=$(OJIBWE_MORPH)/FST
 # Do not change the below values; determined automatically
 VERB_JSON = $(OJIBWE_MORPH)/config/verbs.json
 NOUN_JSON = $(OJIBWE_MORPH)/config/nouns.json
+REGULAR_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin
 
 # *** Constants for building the LEXC files ***
 # Likely no need to change any of these values!
@@ -30,7 +31,7 @@ TAG_CONFIGURATION_FILES=$(POS:%=$(OUTPUT_DIR)/generated/%_tags.json)
 ALTTAG=False
 DERIVATIONS=True
 
-all:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).att $(TAG_CONFIGURATION_FILES)
+all:$(OUTPUT_DIR)/generated/all.lexc $(REGULAR_FST) $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).att $(TAG_CONFIGURATION_FILES)
 
 release:all
 	zip generated.zip $(OUTPUT_DIR)/generated/*
@@ -60,14 +61,10 @@ $(OUTPUT_DIR)/check-generated/compile_fst.xfst:
 	mkdir -p $(OUTPUT_DIR)/check-generated
 	cat $(COMPILE_FST_XFST) | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $@
 
-$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/generated/phonology.xfst $(OUTPUT_DIR)/generated/compile_fst.xfst
+$(REGULAR_FST):$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/generated/phonology.xfst $(OUTPUT_DIR)/generated/compile_fst.xfst
 	mkdir -p $(OUTPUT_DIR)/generated
 	echo "Compiling FST using XFST script $(FSTSCRIPT) and LEXC targets $(LEXCTARGETS)"
 	cd $(OUTPUT_DIR)/generated; $(FOMA) -f compile_fst.xfst
-
-$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin:$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin FSTmorph/assets/delete_alt_tag.xfst 
-	cat FSTmorph/assets/delete_alt_tag.xfst | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $(OUTPUT_DIR)/generated/delete_alt_tag.xfst
-	cd $(OUTPUT_DIR)/generated; $(FOMA) -f delete_alt_tag.xfst
 
 # For building spell checkers etc. using Giellatekno infrastructure.
 $(OUTPUT_DIR)/generated/lang-ciw:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/generated/phonology.xfst
@@ -115,19 +112,22 @@ LABEL_FOR_TESTS="paradigm"
 PARADIGM_MAPS_DIR=$(OJIBWE_LEXICON)/resources
 VERB_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
 NOUN_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
-FST_FOR_TESTS=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin
 # Do not change the below values; determined automatically
 YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)_yaml_output
 REGULAR_TEST_LOG=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)-test.log
 CORE_TEST_LOG=$(OUTPUT_DIR)/core-$(LABEL_FOR_TESTS)-test.log
-
-# We can build a separate FST which you can use for YAML tests because
-# entries from the external lexical database will interfere with YAML
-# testing due to morphological ambiguity.
+NO_ALT_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin
+NO_LEX_DB_FST=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin
 
 check: check-core-tests check-tests
 
+$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).noAlt.fomabin:$(REGULAR_FST) FSTmorph/assets/delete_alt_tag.xfst 
+	cat FSTmorph/assets/delete_alt_tag.xfst | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $(OUTPUT_DIR)/generated/delete_alt_tag.xfst
+	cd $(OUTPUT_DIR)/generated; $(FOMA) -f delete_alt_tag.xfst
+
 # A different version of the lexc files that *doesn't* use the external lexical database
+# (because entries from the external lexical database will interfere with YAML
+# testing due to morphological ambiguity).
 $(OUTPUT_DIR)/check-generated/all.lexc:$(shell find $(OJIBWE_MORPH)/config/ -name "*.json")
 	mkdir -p $(OUTPUT_DIR)/check-generated
 	$(PYTHON) -m fstmorph.csv2lexc --config-files `echo $^ | tr ' ' ','` \
@@ -142,7 +142,9 @@ $(OUTPUT_DIR)/check-generated/all.lexc:$(shell find $(OJIBWE_MORPH)/config/ -nam
         cat root.lexc `ls *lexc | grep -v root.lexc | tr '\n' ' '` > all.lexc
 
 # A different version of the FST that *doesn't* use the external lexical database
-$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin:$(OUTPUT_DIR)/check-generated/all.lexc $(OUTPUT_DIR)/check-generated/phonology.xfst $(OUTPUT_DIR)/check-generated/compile_fst.xfst
+# (because entries from the external lexical database will interfere with YAML
+# testing due to morphological ambiguity).
+$(NO_LEX_DB_FST):$(OUTPUT_DIR)/check-generated/all.lexc $(OUTPUT_DIR)/check-generated/phonology.xfst $(OUTPUT_DIR)/check-generated/compile_fst.xfst
 	mkdir -p $(OUTPUT_DIR)/check-generated
 	echo "Compiling FST using XFST script $(FSTSCRIPT) and LEXC targets $(LEXCTARGETS)"
 	cd $(OUTPUT_DIR)/check-generated; $(FOMA) -f compile_fst.xfst
@@ -159,22 +161,22 @@ $(YAML_DIR):
 	rm -d yaml_output
 
 # Create test .log files from the YAML files
-check-tests:$(FST_FOR_TESTS) $(YAML_DIR)
+check-tests:$(NO_LEX_DB_FST) $(YAML_DIR)
 	rm -f $(REGULAR_TEST_LOG)
 	for f in `ls $(YAML_DIR)/*.yaml | grep -v core`; do \
                   echo "YAML test file $$f"; \
-                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --app $(LOOKUP) --surface --mor $(FST_FOR_TESTS) $$f; \
+                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --app $(LOOKUP) --surface --mor $(NO_LEX_DB_FST) $$f; \
                   echo ; \
                   done > $(REGULAR_TEST_LOG)
 	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS)
 	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS) --for_nouns
 
 # If there are no core YAML files, this will do nothing.
-check-core-tests:$(FST_FOR_TESTS) $(YAML_DIR)
+check-core-tests:$(NO_LEX_DB_FST) $(YAML_DIR)
 	rm -f $(CORE_TEST_LOG)
 	for f in `ls $(YAML_DIR)/*core.yaml`; do \
                   echo "YAML test file $$f"; \
-                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --hide-passes --app $(LOOKUP) --surface --mor $(FST_FOR_TESTS) $$f; \
+                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --hide-passes --app $(LOOKUP) --surface --mor $(NO_LEX_DB_FST) $$f; \
                   echo ; \
                   done > $(CORE_TEST_LOG)
 	if [ ! -s "$(CORE_TEST_LOG)" ]; then \
