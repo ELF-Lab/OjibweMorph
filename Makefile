@@ -7,28 +7,26 @@ FOMA=foma
 LANGUAGE_NAME=ojibwe
 # * Source files *
 # Change the below values to point to the relevant files on your system
-MORPHOLOGYSRCDIR=.
-LEMMAS_DIR=~/OjibweLexicon/OPD,~/OjibweLexicon/HammerlyFieldwork # Can be a list (separated by commas) e.g., LEMMAS_DIR=~/folder1,~/folder2
-LEXICAL_DATA_TO_EXCLUDE=~/OjibweLexicon/other/lexical_data_to_exclude.csv
-OUTPUT_DIR=$(MORPHOLOGYSRCDIR)/FST
+OJIBWE_MORPH=.
+OJIBWE_LEXICON=~/OjibweLexicon
+LEMMAS_DIR=$(OJIBWE_LEXICON)/OPD,$(OJIBWE_LEXICON)/HammerlyFieldwork # Can be a list (separated by commas) e.g., LEMMAS_DIR=~/folder1,~/folder2
+LEXICAL_DATA_TO_EXCLUDE=$(OJIBWE_LEXICON)/other/lexical_data_to_exclude.csv
+OUTPUT_DIR=$(OJIBWE_MORPH)/FST
 # Do not change the below values; determined automatically
-VERB_JSON = $(MORPHOLOGYSRCDIR)/config/verbs.json
-NOUN_JSON = $(MORPHOLOGYSRCDIR)/config/nouns.json
+VERB_JSON = $(OJIBWE_MORPH)/config/verbs.json
+NOUN_JSON = $(OJIBWE_MORPH)/config/nouns.json
 
 # *** Constants for YAML tests ***
 # * Tools *
-CREATE_YAML=FSTmorph/tests/create_yaml.py
 LOOKUP=flookup
-RUN_YAML_TESTS=FSTmorph/tests/run_yaml_tests.py
-SUMMARIZE_TESTS=FSTmorph/tests/summarize_tests.py
 # * Keyword (for naming output files, etc.) *
 # Change this value to have a name relevant to your set of tests
 LABEL_FOR_TESTS="paradigm"
 # * Source files *
 # Change the below values to point to the relevant files on your system
-PARADIGM_MAPS_DIR=~/OjibweLexicon/resources
-VERB_DATA_FOR_TESTS_DIR=$(MORPHOLOGYSRCDIR)/VerbSpreadsheets
-NOUN_DATA_FOR_TESTS_DIR=$(MORPHOLOGYSRCDIR)/NounSpreadsheets
+PARADIGM_MAPS_DIR=$(OJIBWE_LEXICON)/resources
+VERB_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/VerbSpreadsheets
+NOUN_DATA_FOR_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
 FST_FOR_TESTS=$(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin # This can be the regular FST, or some alternative versions created further below in the Tests section of this Makefile
 # Do not change the below values; determined automatically
 YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_TESTS)_yaml_output
@@ -38,12 +36,12 @@ CORE_TEST_LOG=$(OUTPUT_DIR)/core-$(LABEL_FOR_TESTS)-test.log
 # *** Constants for building the LEXC files ***
 # Likely no need to change any of these values!
 # POS are determined by the files in config/
-CONFIG_FILES=$(shell find $(MORPHOLOGYSRCDIR)/config/ -name "*.json")
+CONFIG_FILES=$(shell find $(OJIBWE_MORPH)/config/ -name "*.json")
 COMPILE_FST_XFST=$(shell python3 scripts/get_package_file.py "fstmorph" "assets/compile_fst.xfst")
 # Add escape chars to the file path so it can be used in the gsub below
-MORPHOLOGYSRCDIR_REGEX=$(shell echo $(MORPHOLOGYSRCDIR) | sed 's/\./\\\./g' | sed 's/\//\\\//g')
+OJIBWE_MORPH_REGEX=$(shell echo $(OJIBWE_MORPH) | sed 's/\./\\\./g' | sed 's/\//\\\//g')
 # Strip each file path to only include the POS e.g., "../config/nouns.json" -> "nouns"
-POS=$(shell awk '{ gsub(/$(MORPHOLOGYSRCDIR_REGEX)\/config\/+/, ""); gsub(/\.json/, ""); print }' <<< "$(CONFIG_FILES)")
+POS=$(shell awk '{ gsub(/$(OJIBWE_MORPH_REGEX)\/config\/+/, ""); gsub(/\.json/, ""); print }' <<< "$(CONFIG_FILES)")
 LEXCTARGETS=$(POS:%=%.lexc)
 TAG_CONFIGURATION_FILES=$(POS:%=$(OUTPUT_DIR)/generated/%_tags.json)
 ALTTAG=False
@@ -57,7 +55,7 @@ release:all
 $(OUTPUT_DIR)/generated/all.lexc:$(CONFIG_FILES)
 	mkdir -p $(OUTPUT_DIR)/generated
 	$(PYTHON) -m fstmorph.csv2lexc --config-files `echo $^ | tr ' ' ','` \
-                              --source-path $(MORPHOLOGYSRCDIR) \
+                              --source-path $(OJIBWE_MORPH) \
                               --database-paths $(LEMMAS_DIR) \
                               --alt-tag $(ALTTAG) \
                               --add-derivations $(DERIVATIONS) \
@@ -66,7 +64,7 @@ $(OUTPUT_DIR)/generated/all.lexc:$(CONFIG_FILES)
 	cd $(OUTPUT_DIR)/generated; \
         cat root.lexc `ls *lexc | grep -v root.lexc | tr '\n' ' '` > all.lexc
 
-%/phonology.xfst:$(MORPHOLOGYSRCDIR)/xfst/phonology.xfst
+%/phonology.xfst:$(OJIBWE_MORPH)/xfst/phonology.xfst
 	mkdir -p $*
 	cp $^ $@
 
@@ -99,22 +97,22 @@ $(OUTPUT_DIR)/generated/lang-ciw:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/
 	cp preverbs.lexc prenouns.lexc preadverbs.lexc lang-ciw/src/fst/morphology/stems/
 
 # Tag specification file
-$(OUTPUT_DIR)/generated/verbs_tags.json:$(MORPHOLOGYSRCDIR)/config/verbs.json
+$(OUTPUT_DIR)/generated/verbs_tags.json:$(OJIBWE_MORPH)/config/verbs.json
 	mkdir -p $(OUTPUT_DIR)/generated
 	$(PYTHON) -m fstmorph.extract_tag_combinations \
              --config-file $< \
-             --source-path $(MORPHOLOGYSRCDIR) \
+             --source-path $(OJIBWE_MORPH) \
              --pre-element=TensePreverbs \
              --pre-element-tags="PVTense/gii,0" \
              --post-element=Derivations \
              --post-element-tags="VII+Augment/magad,0" \
              --output-file $@
 
-$(OUTPUT_DIR)/generated/%_tags.json:$(MORPHOLOGYSRCDIR)/config/%.json
+$(OUTPUT_DIR)/generated/%_tags.json:$(OJIBWE_MORPH)/config/%.json
 	mkdir -p $(OUTPUT_DIR)/generated
 	$(PYTHON) -m fstmorph.extract_tag_combinations \
              --config-file $< \
-             --source-path $(MORPHOLOGYSRCDIR) \
+             --source-path $(OJIBWE_MORPH) \
              --output-file $@
 
 
@@ -131,10 +129,10 @@ $(OUTPUT_DIR)/generated/%_tags.json:$(MORPHOLOGYSRCDIR)/config/%.json
 check: check-core-tests check-tests
 
 # A different version of the lexc files that *doesn't* use the external lexical database
-$(OUTPUT_DIR)/check-generated/all.lexc:$(shell find $(MORPHOLOGYSRCDIR)/config/ -name "*.json")
+$(OUTPUT_DIR)/check-generated/all.lexc:$(shell find $(OJIBWE_MORPH)/config/ -name "*.json")
 	mkdir -p $(OUTPUT_DIR)/check-generated
 	$(PYTHON) -m fstmorph.csv2lexc --config-files `echo $^ | tr ' ' ','` \
-                              --source-path $(MORPHOLOGYSRCDIR) \
+                              --source-path $(OJIBWE_MORPH) \
                               --database-paths $(LEMMAS_DIR) \
                               --lexc-path $(OUTPUT_DIR)/check-generated \
                               --add-derivations $(DERIVATIONS) \
@@ -155,9 +153,9 @@ $(OUTPUT_DIR)/check-generated/$(LANGUAGE_NAME).fomabin:$(OUTPUT_DIR)/check-gener
 $(YAML_DIR):
 	rm -Rf $@
 	mkdir $@
-	$(PYTHON) $(CREATE_YAML) $(VERB_DATA_FOR_TESTS_DIR) $(VERB_JSON) ./ --pos=verb
+	$(PYTHON) -m fstmorph.tests.create_yaml $(VERB_DATA_FOR_TESTS_DIR) $(VERB_JSON) ./ --pos=verb
 	mv yaml_output/* $@
-	$(PYTHON) $(CREATE_YAML) $(NOUN_DATA_FOR_TESTS_DIR) $(NOUN_JSON) ./ --pos=noun
+	$(PYTHON) -m fstmorph.tests.create_yaml $(NOUN_DATA_FOR_TESTS_DIR) $(NOUN_JSON) ./ --pos=noun
 	mv yaml_output/* $@
 	rm -d yaml_output
 
@@ -166,18 +164,18 @@ check-tests:$(FST_FOR_TESTS) $(YAML_DIR)
 	rm -f $(REGULAR_TEST_LOG)
 	for f in `ls $(YAML_DIR)/*.yaml | grep -v core`; do \
                   echo "YAML test file $$f"; \
-                  $(PYTHON) $(RUN_YAML_TESTS) --app $(LOOKUP) --surface --mor $(FST_FOR_TESTS) $$f; \
+                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --app $(LOOKUP) --surface --mor $(FST_FOR_TESTS) $$f; \
                   echo ; \
                   done > $(REGULAR_TEST_LOG)
-	$(PYTHON) $(SUMMARIZE_TESTS) --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS)
-	$(PYTHON) $(SUMMARIZE_TESTS) --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS) --for_nouns
+	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(VERB_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/VERBS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS)
+	$(PYTHON) -m fstmorph.tests.summarize_tests --input_file_name "$(REGULAR_TEST_LOG)" --yaml_source_csv_dir $(NOUN_DATA_FOR_TESTS_DIR) --paradigm_map_path "$(PARADIGM_MAPS_DIR)/NOUNS_paradigm_map.csv" --output_dir $(OUTPUT_DIR) --output_file_identifier $(LABEL_FOR_TESTS) --for_nouns
 
 # If there are no core YAML files, this will do nothing.
 check-core-tests:$(FST_FOR_TESTS) $(YAML_DIR)
 	rm -f $(CORE_TEST_LOG)
 	for f in `ls $(YAML_DIR)/*core.yaml`; do \
                   echo "YAML test file $$f"; \
-                  $(PYTHON) $(RUN_YAML_TESTS) --hide-passes --app $(LOOKUP) --surface --mor $(FST_FOR_TESTS) $$f; \
+                  $(PYTHON) -m fstmorph.tests.run_yaml_tests --hide-passes --app $(LOOKUP) --surface --mor $(FST_FOR_TESTS) $$f; \
                   echo ; \
                   done > $(CORE_TEST_LOG)
 	if [ ! -s "$(CORE_TEST_LOG)" ]; then \
