@@ -1,7 +1,7 @@
 # OjibweMorph
 This repository is for creating a finite-state transducer (FST) in the Ojibwe language.  The FST can be used to generate morphological analyses for an inflected form, or vice versa.
 
-Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [ParserTools](https://github.com/ELF-Lab/ParserTools) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
+Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [FSTMorph](https://github.com/ELF-Lab/FSTMorph) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
 
 ## Contents
 - [Test Results](#test-results)
@@ -37,12 +37,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-28 | 66801 | 135 | 77.25% | 97.01% |
+| 2025-06-30 | 66801 | 135 | 77.25% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-28 | 8565 | 20 | 83.45% | 96.87% |
+| 2025-06-30 | 8565 | 20 | 83.45% | 96.87% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -50,12 +50,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-28 | 8089 | 0 | 93.93% | 100.0% |
+| 2025-06-30 | 8089 | 0 | 93.93% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-06-28 | 14330 | 0 | 99.98% | 100.0% |
+| 2025-06-30 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -76,23 +76,31 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
 | Overall | | | 5.2% (989/18997) | 9.56% (938/9803) |
 
-Date Last Updated: 2025-06-28
+Date Last Updated: 2025-06-30
 
 ## User Instructions
 ### Building the FST
-**Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  To make use of ParserTools, you have to follow [the instructions there](https://github.com/ELF-Lab/ParserTools/tree/dev#getting-set-up-to-build-the-fst) to make sure you have all the necessary prerequisites.
+1. Clone **OjibweLexicon**  
+In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
-The FST is created using code in ParserTools, which makes use of language-specific information stored in both OjibweMorph and OjibweLexicon.  Once you have downloaded all three repositories, the `create_fst.sh` script in this repo can be used to call the ParserTools code while supplying it with paths to the Ojibwe repos.  
-First, go into `create_fst.sh` and change the file path variables to match your system.  Next, when calling `create_fst.sh`, just pass a keyword that will be given to the `Makefile` in ParserTools:
-- `sh create_fst.sh all` to simply build the FST
-- `sh create_fst.sh check` to run tests on the FST
-- `sh create_fst.sh clean` to remove generated files
+2. Install **FSTMorph**  
+The FST is created using code in **FSTMorph**, which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
+**FSTMorph** can be installed via pip:  
+`pip install fstmorph`
+
+3. Make edits to `Makefile` as needed  
+The Makefile in this repo contains variables for various file locations.  For the most part the pre-set values should work fine, but you should ensure that the location of **OjibweLexicon** (i.e., the `OJIBWE_LEXICON` var) is correct for your local installation.
+
+4. Use the `Makefile`  
+- `make all` to simply build the FST
+- `make check` to run tests on the FST
+- `make clean` to remove generated files
 
 > Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
 
 By default, the output will go in a local directory called `FST/`.
 
-By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in `create_fst.sh` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
+By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in the `Makefile` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
 
 ### Using the FST
 This FST is run using [Foma](https://fomafst.github.io).  Some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).  Additonally, a simple example of using this Ojibwe FST is provided below:

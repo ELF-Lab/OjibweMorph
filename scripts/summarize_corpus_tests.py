@@ -1,6 +1,6 @@
 '''
 - Summary of corpus test flow:
-    - Call to ParserTools in create_fst.sh creates .fomabin
+    - Call to FSTMorph in Makefile creates .fomabin
     - analyze_text.sh creates .tok, .analyzed, etc.
         - output written to corpus_test.txt
     - summarize_corpus_tests.py converts corpus_test.txt to a CSV
@@ -14,7 +14,7 @@
         - Then summarize_corpus_tests.py will indicate that the tests did not run.
 '''
 
-# Largely based off test_summary.py in ParserTools
+# Largely based off test_summary.py in FSTMorph
 
 import argparse
 from datetime import date
