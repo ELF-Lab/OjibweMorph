@@ -1,7 +1,7 @@
 # OjibweMorph
 This repository is for creating a finite-state transducer (FST) in the Ojibwe language.  The FST can be used to generate morphological analyses for an inflected form, or vice versa.
 
-Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [FSTMorph](https://github.com/ELF-Lab/FSTMorph) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
+Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
 
 ## Contents
 - [Test Results](#test-results)
@@ -79,13 +79,18 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 Date Last Updated: 2025-06-30
 
 ## User Instructions
+### Prerequesites
+To make use of the FST, you will need to install [the foma compiler](https://fomafst.github.io) (and the `flookup` program, included as part of the foma toolkit). On Mac or Linux, the easiest way to install is via [homebrew](https://formulae.brew.sh/formula/foma).  Just use the command `brew install foma`.  Alternatively, there are other installation instructions [here](https://blogs.cornell.edu/finitestatecompling/2016/08/24/installing-foma/) (including for Windows users).
+
+> Note for Windows users: In addition to the page given above, we found [these instructions](https://ufal.mff.cuni.cz/~zeman/vyuka/morfosynt/lab-twolm/get-foma.html) useful for installing.  Also, ensure that the directory you add to your PATH immediately contains `foma.exe` and `flookup.exe`.  For example, if the path to `foma.exe` is `C:\Program Files (x86)\Foma\win32\foma.exe`, then add `C:\Program Files (x86)\Foma\win32` (not `C:\Program Files (x86)\Foma\`) to your PATH.
+
 ### Building the FST
 1. Clone **OjibweLexicon**  
 In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
-2. Install **FSTMorph**  
-The FST is created using code in **FSTMorph**, which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
-**FSTMorph** can be installed via pip:  
+2. Install **FSTmorph**  
+The FST is created using code in **FSTmorph**, which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
+**FSTmorph** can be installed via pip:  
 `pip install fstmorph`
 
 3. Make edits to `Makefile` as needed  
@@ -98,12 +103,12 @@ The Makefile in this repo contains variables for various file locations.  For th
 
 > Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
 
-By default, the output will go in a local directory called `FST/`.
+By default, the output will go in a local directory called `FST/`.  In there, the directory `generated` contains the FST, lexc files and XFST rules.  The FST itself is `FST/generated/ojibwe.fomabin`.
 
 By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in the `Makefile` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
 
 ### Using the FST
-This FST is run using [Foma](https://fomafst.github.io).  Some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).  Additonally, a simple example of using this Ojibwe FST is provided below:
+This FST is run using [foma](https://fomafst.github.io).  In addition to the example give below, some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).
 
 1. Start the Foma program with the following command:  
 `foma`  
@@ -128,6 +133,13 @@ You can input as many of these commands as you like.
 
 4. Once you're done using the FST, you can exit Foma with:  
 `quit` or `exit`
+
+### Running the Tests
+A call to `make check` will test the generated FST.  As outlined in the [Test Results](#test-results) section of this README, three sets of tests are run: OPD tests, paradigm tests, and corpus tests.
+
+The OPD and paradigm tests are conducted using testing infrastructure in FSTmorph, based on [giella-core](https://github.com/giellalt/giella-core).  Detailed information about the results of the (most recent run of) tests can be found in the generated log files: `FST/opd-test.log` and `FST/paradigm-test.log`.  A CSV summarizing the results of the tests *over time* is also generated: `FST/opd_noun_test_summary.csv` etc.  In the CSV, each row corresponds to a new run of the tests (though it will not add duplicate rows, i.e., no new rows will get printed if the test results and date have not changed).
+
+The corpus tests are specific to this FST and are thus not run via FSTmorph -- the relevant code is all in `scripts/` here in OjibweMorph.  Similarly to the other tests, you can view details about the most recent test results in `FST/corpus_test.txt` and a summary of results over time in `FST/corpus_test_summary.csv`.
 
 ## About OjibweMorph
 ### Morphological Info
