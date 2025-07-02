@@ -13,8 +13,10 @@ Morphological information about Ojibwe words is housed here.  Combined with the 
     - [Paradigm Nouns](#paradigm-nouns)
   - [Corpus Tests](#corpus-tests)
 - [User Instructions](#user-instructions)
+  - [Prerequesites](#prerequesites)
   - [Building the FST](#building-the-fst)
   - [Using the FST](#using-the-fst)
+  - [Running the Tests](#running-the-tests)
 - [About OjibweMorph](#about-ojibwemorph)
   - [Morphological Info](#morphological-info)
   - [License/Copyright](#licensecopyright)
@@ -93,7 +95,7 @@ The FST is created using code in **FSTmorph**, which makes use of language-speci
 **FSTmorph** can be installed via pip:  
 `pip install fstmorph`
 
-3. Make edits to `Makefile` as needed  
+3. Make edits to the `Makefile` as needed  
 The Makefile in this repo contains variables for various file locations.  For the most part the pre-set values should work fine, but you should ensure that the location of **OjibweLexicon** (i.e., the `OJIBWE_LEXICON` var) is correct for your local installation.
 
 4. Use the `Makefile`  
