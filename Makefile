@@ -73,7 +73,7 @@ $(OUTPUT_DIR)/generated/lang-ciw:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/
         git clone https://github.com/giellalt/lang-ciw.git; \
 	cp root.lexc lang-ciw/src/fst/morphology/ ; \
 	cp phonology.xfst lang-ciw/src/fst/morphology/phonology.xfscript ; \
-	cp $(addprefix ojibwe_,$(LEXCTARGETS)) lang-ciw/src/fst/morphology/stems/; \
+	cp $(addprefix $(LANGUAGE_NAME)_,$(LEXCTARGETS)) lang-ciw/src/fst/morphology/stems/; \
 	cp preverbs.lexc prenouns.lexc preadverbs.lexc lang-ciw/src/fst/morphology/stems/
 
 # Tag specification file
