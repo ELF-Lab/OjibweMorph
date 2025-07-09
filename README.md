@@ -91,7 +91,7 @@ To make use of the FST, you will need to install [the foma compiler](https://fom
 In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
 2. Install **FSTmorph**  
-The FST is created using code in **FSTmorph**, which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
+The FST is created using code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph), which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
 **FSTmorph** can be installed via pip:  
 `pip install fstmorph`
 
