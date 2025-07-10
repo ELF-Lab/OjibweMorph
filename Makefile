@@ -12,8 +12,6 @@ LEMMAS_DIR=$(OJIBWE_LEXICON)/OPD,$(OJIBWE_LEXICON)/HammerlyFieldwork # Can be a 
 LEXICAL_DATA_TO_EXCLUDE=$(OJIBWE_LEXICON)/other/lexical_data_to_exclude.csv
 OUTPUT_DIR=$(OJIBWE_MORPH)/FST
 # Do not change the below values; determined automatically
-VERB_JSON = $(OJIBWE_MORPH)/config/verbs.json
-NOUN_JSON = $(OJIBWE_MORPH)/config/nouns.json
 REGULAR_FST=$(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).fomabin
 
 # *** Constants for building the LEXC files ***
@@ -54,7 +52,6 @@ $(OUTPUT_DIR)/generated/all.lexc:$(CONFIG_FILES)
 
 $(OUTPUT_DIR)/generated/compile_fst.xfst:
 	mkdir -p $(OUTPUT_DIR)/generated
-	cp $(COMPILE_FST_XFST) $@
 	cat $(COMPILE_FST_XFST) | sed 's/LANGUAGE_NAME/$(LANGUAGE_NAME)/g' > $@
 
 $(OUTPUT_DIR)/check-generated/compile_fst.xfst:
@@ -115,6 +112,8 @@ NOUN_DATA_FOR_PARADIGM_TESTS_DIR=$(OJIBWE_MORPH)/NounSpreadsheets
 VERB_DATA_FOR_OPD_TESTS_DIR=$(OJIBWE_LEXICON)/OPD/for_yaml/verbs
 NOUN_DATA_FOR_OPD_TESTS_DIR=$(OJIBWE_LEXICON)/OPD/for_yaml/nouns/
 # Do not change the below values; determined automatically
+VERB_JSON = $(OJIBWE_MORPH)/config/verbs.json
+NOUN_JSON = $(OJIBWE_MORPH)/config/nouns.json
 PARADIGM_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_PARADIGM_TESTS)_yaml_output
 OPD_YAML_DIR=$(OUTPUT_DIR)/$(LABEL_FOR_OPD_TESTS)_yaml_output
 EXAMPLE_SENTENCES_DIR=$(OJIBWE_LEXICON)/OPD/example_sentences
