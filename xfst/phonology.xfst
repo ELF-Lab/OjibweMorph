@@ -84,7 +84,7 @@ define wMetathesis a ' w1 (->) w a ' || z h _ SUFBD ;
 define ywRule y (->) w || [ o SUFBD | {igoo} | SUFBD o o ] _ a (a) n ;
 
 ! angongRule: change the first person exclusive -ang to -ong after am
-define angongRule a (->) o || a m _ n g ;
+define angongRule a (->) o || a (SUFBD) m _ n g ;
 
 ! shared noun and verb suffix rules
 
