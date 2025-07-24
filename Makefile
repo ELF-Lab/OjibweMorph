@@ -215,4 +215,4 @@ check-corpus-tests:$(REGULAR_FST)
 # 	fi
 
 clean:
-	rm -rf $(OUTPUT_DIR)/generated $(OUTPUT_DIR)/check-generated $(PARADIGM_YAML_DIR) $(CORE_TEST_LOG) $(PARADIGM_TEST_LOG) csv_output $(EXAMPLE_SENTENCES_DIR)/example_sentences_* $(EXAMPLE_SENTENCES_DIR)/by_speaker/*_example_sentences_*
+	rm -rf $(OUTPUT_DIR)/generated $(OUTPUT_DIR)/check-generated $(PARADIGM_YAML_DIR) $(CORE_TEST_LOG) $(PARADIGM_TEST_LOG) csv_output $(EXAMPLE_SENTENCES_DIR)/example_sentences_* $(EXAMPLE_SENTENCES_DIR)/by_speaker/*_example_sentences_* $(EXAMPLE_SENTENCES_DIR)/ambiguity*

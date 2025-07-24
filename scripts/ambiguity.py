@@ -80,7 +80,7 @@ def calculate_amount_of_ambiguity(form_analyses_dict):
 
 def write_csv(form_analyses_dict, output_dir):
     CSV_HEADER = "Form,# of Analyses\n"
-    CSV_NAME = "ambiguity_summary.csv"
+    CSV_NAME = "ambiguity_by_wordform.csv"
 
     if not path.exists(output_dir):
         mkdir(output_dir)

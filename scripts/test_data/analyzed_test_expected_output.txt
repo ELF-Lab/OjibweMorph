@@ -13,4 +13,4 @@ Ambiguity summary for 49 *non-unique* forms (i.e., each form counted every time 
 Mean number of analyses (excl. those with 0): 1.65
 Median number of analyses (excl. those with 0): 1
 
-Wrote 45 forms and analysis counts (excl. those with 0 analyses) to scripts/test_data/ambiguity_summary.csv
+Wrote 45 forms and analysis counts (excl. those with 0 analyses) to scripts/test_data/ambiguity_by_wordform.csv
