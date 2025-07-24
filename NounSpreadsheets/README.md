@@ -168,6 +168,7 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 | ObvSg | Obviative singular                  |
 | ObvPl | Obviative plural 	                  |
 | Loc   | Locative                            |
+| LocDist| Distributive Locative              |
 | Voc   | Vocative 	                          |
 
 ## Linguistic Details for Nouns

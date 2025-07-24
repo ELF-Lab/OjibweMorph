@@ -1,7 +1,7 @@
 # OjibweMorph
 This repository is for creating a finite-state transducer (FST) in the Ojibwe language.  The FST can be used to generate morphological analyses for an inflected form, or vice versa.
 
-Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [ParserTools](https://github.com/ELF-Lab/ParserTools) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
+Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
 
 ## Contents
 - [Test Results](#test-results)
@@ -13,8 +13,10 @@ Morphological information about Ojibwe words is housed here.  Combined with the 
     - [Paradigm Nouns](#paradigm-nouns)
   - [Corpus Tests](#corpus-tests)
 - [User Instructions](#user-instructions)
+  - [Prerequesites](#prerequesites)
   - [Building the FST](#building-the-fst)
   - [Using the FST](#using-the-fst)
+  - [Running the Tests](#running-the-tests)
 - [About OjibweMorph](#about-ojibwemorph)
   - [Morphological Info](#morphological-info)
   - [License/Copyright](#licensecopyright)
@@ -37,12 +39,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-15 | 54205 | 12 | 85.44% | 97.03% |
+| 2025-07-21 | 66801 | 135 | 77.25% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-15 | 8569 | 193 | 83.31% | 94.9% |
+| 2025-07-21 | 8565 | 15 | 83.4% | 96.92% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -50,12 +52,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-15 | 8038 | 0 | 93.94% | 100.0% |
+| 2025-07-21 | 8089 | 0 | 93.93% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-05-15 | 10578 | 0 | 100.0% | 100.0% |
+| 2025-07-21 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -65,37 +67,50 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 5.76% (663/11504) | 9.68% (415/4284) |
-| GJ | Border Lakes | Lac La Croix | 18.39% (16/87) | 19.44% (14/72) |
-| ES | Red Lake | Obaashiing | 7.53% (1250/16598) | 15.27% (750/4909) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 3.65% (144/3945) | 6.81% (84/1233) |
-| GH | Leech Lake | Jaachaabaaning | 5.79% (19/328) | 5.33% (11/206) |
-| LW | Leech Lake | Jaachaabaaning | 8.69% (20/230) | 6.49% (10/154) |
-| LS | Mille Lacs | Aazhomog | 8.86% (7/79) | 13.46% (7/52) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 5.03% (335/6651) | 7.32% (314/4285) |
+| GJ | Border Lakes | Lac La Croix | 12.32% (9/73) | 12.5% (9/72) |
+| ES | Red Lake | Obaashiing | 5.65% (539/9531) | 10.51% (518/4925) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 2.54% (56/2197) | 4.44% (55/1237) |
+| GH | Leech Lake | Jaachaabaaning | 2.71% (7/258) | 3.39% (7/206) |
+| LW | Leech Lake | Jaachaabaaning | 2.63% (5/190) | 3.24% (5/154) |
+| LS | Mille Lacs | Aazhomog | 8.19% (5/61) | 9.61% (5/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
-| Unknown | N/A | N/A | 0.0% (0/10) | 0.0% (0/5) |
-| Overall | | | 6.46% (2120/32812) | 12.89% (1261/9782) |
+| Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
+| Overall | | | 5.03% (957/18997) | 9.24% (906/9803) |
 
-Date Last Updated: 2025-05-15
+Date Last Updated: 2025-07-21
 
 ## User Instructions
-### Building the FST
-**Prerequisites**: In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) and [ParserTools](https://github.com/ELF-Lab/ParserTools) installed locally.  To make use of ParserTools, you have to follow [the instructions there](https://github.com/ELF-Lab/ParserTools/tree/dev#getting-set-up-to-build-the-fst) to make sure you have all the necessary prerequisites.
+### Prerequesites
+To make use of the FST, you will need to install [the foma compiler](https://fomafst.github.io) (and the `flookup` program, included as part of the foma toolkit). On Mac or Linux, the easiest way to install is via [homebrew](https://formulae.brew.sh/formula/foma).  Just use the command `brew install foma`.  Alternatively, there are other installation instructions [here](https://blogs.cornell.edu/finitestatecompling/2016/08/24/installing-foma/) (including for Windows users).
 
-The FST is created using code in ParserTools, which makes use of language-specific information stored in both OjibweMorph and OjibweLexicon.  Once you have downloaded all three repositories, the `create_fst.sh` script in this repo can be used to call the ParserTools code while supplying it with paths to the Ojibwe repos.  
-First, go into `create_fst.sh` and change the file path variables to match your system.  Next, when calling `create_fst.sh`, just pass a keyword that will be given to the `Makefile` in ParserTools:
-- `sh create_fst.sh all` to simply build the FST
-- `sh create_fst.sh check` to run tests on the FST
-- `sh create_fst.sh clean` to remove generated files
+> Note for Windows users: In addition to the page given above, we found [these instructions](https://ufal.mff.cuni.cz/~zeman/vyuka/morfosynt/lab-twolm/get-foma.html) useful for installing.  Also, ensure that the directory you add to your PATH immediately contains `foma.exe` and `flookup.exe`.  For example, if the path to `foma.exe` is `C:\Program Files (x86)\Foma\win32\foma.exe`, then add `C:\Program Files (x86)\Foma\win32` (not `C:\Program Files (x86)\Foma\`) to your PATH.
+
+### Building the FST
+1. Clone **OjibweLexicon**  
+In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
+
+2. Install **FSTmorph**  
+The FST is created using code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph), which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
+**FSTmorph** can be installed via pip:  
+`pip install fstmorph`
+
+3. Make edits to the `Makefile` as needed  
+The Makefile in this repo contains variables for various file locations.  For the most part the pre-set values should work fine, but you should ensure that the location of **OjibweLexicon** (i.e., the `OJIBWE_LEXICON` var) is correct for your local installation.
+
+4. Use the `Makefile`  
+- `make all` to simply build the FST
+- `make check` to run tests on the FST
+- `make clean` to remove generated files
 
 > Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
 
-By default, the output will go in a local directory called `FST/`.
+By default, the output will go in a local directory called `FST/`.  In there, the directory `generated` contains the FST, lexc files and XFST rules.  The FST itself is `FST/generated/ojibwe.fomabin`.
 
-By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in `create_fst.sh` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
+By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in the `Makefile` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
 
 ### Using the FST
-This FST is run using [Foma](https://fomafst.github.io).  Some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).  Additonally, a simple example of using this Ojibwe FST is provided below:
+This FST is run using [foma](https://fomafst.github.io).  In addition to the example give below, some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).
 
 1. Start the Foma program with the following command:  
 `foma`  
@@ -121,6 +136,13 @@ You can input as many of these commands as you like.
 4. Once you're done using the FST, you can exit Foma with:  
 `quit` or `exit`
 
+### Running the Tests
+A call to `make check` will test the generated FST.  As outlined in the [Test Results](#test-results) section of this README, three sets of tests are run: OPD tests, paradigm tests, and corpus tests.
+
+The OPD and paradigm tests are conducted using testing infrastructure in FSTmorph, based on [giella-core](https://github.com/giellalt/giella-core).  Detailed information about the results of the (most recent run of) tests can be found in the generated log files: `FST/opd-test.log` and `FST/paradigm-test.log`.  A CSV summarizing the results of the tests *over time* is also generated: `FST/opd_noun_test_summary.csv` etc.  In the CSV, each row corresponds to a new run of the tests (though it will not add duplicate rows, i.e., no new rows will get printed if the test results and date have not changed).
+
+The corpus tests are specific to this FST and are thus not run via FSTmorph -- the relevant code is all in `scripts/` here in OjibweMorph.  Similarly to the other tests, you can view details about the most recent test results in `FST/corpus_test.txt` and a summary of results over time in `FST/corpus_test_summary.csv`.
+
 ## About OjibweMorph
 ### Morphological Info
 The `XSpreadsheets/` directories contain CSVs with example forms for the various paradigm and class categories within each part-of-speech (POS) category.  The `NounSpreadsheets/`, `PVSpreadsheets/`, and `VerbSpreadsheets/` directories all contain detailed READMEs discussing their respective CSV contents, which also provides quite a lit of linguistic information similar to what one might find in a grammar. There is also detailed documentation of the phonological rules. Here are links to each one:
@@ -134,13 +156,13 @@ The `XSpreadsheets/` directories contain CSVs with example forms for the various
 The directories `config/`, `xsft/`, and `templates` contain additional Ojibwe-specific files used to create the FST.
 
 ### License/Copyright
-Unless otherwise indicated, the work and content within this repository is copyrighted by The Experimental Linguistics and Fieldwork Lab (ELF-Lab; https://github.com/ELF-Lab) at The University of British Colimbia (UBC) in collaboration with the Alberta Language Technology Lab (ALT-Lab; https://altlab.ualberta.ca/) at the University of Alberta (UofA) and the Ojibwe People's Dictionary (OPD; http://ojibwe.lib.umn.edu) at the University of Minnesota (UofM), as well as various other organizations, unless otherwise attributed.
+Unless otherwise indicated, the work and content within this repository is copyrighted by The Experimental Linguistics and Fieldwork Lab (ELF-Lab; https://github.com/ELF-Lab) at The University of British Columbia (UBC) in collaboration with the Alberta Language Technology Lab (ALT-Lab; https://altlab.ualberta.ca/) at the University of Alberta (UofA) and the Ojibwe People's Dictionary (OPD; http://ojibwe.lib.umn.edu) at the University of Minnesota (UofM), as well as various other organizations, unless otherwise attributed.
 
 Unless otherwise indicated, this repository and its contents are copyrighted under the Creative Commons Attribution NonCommercial-ShareAlike 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). This means you are free to share the materials (copy and redistribute the material in any medium or format) and adapt the materials (remix, transform, and build upon the material) within this repository under the following conditions:
 
 **Attribution**: You must give appropriate credit when using this material, indicate changes that were made to the original material, and include a statement such as:
 
-> *"Copyrighted under the Creative Commons Attribution NonCommercial-ShareAlike 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/) by The Experimental Linguistics and Fieldwork Lab (ELF-Lab; https://github.com/ELF-Lab) at The University of British Colimbia (UBC) in collaboration with the Alberta Language Technology Lab (ALT-Lab; https://altlab.ualberta.ca/) at the University of Alberta (UofA) and the Ojibwe People's Dictionary (OPD; http://ojibwe.lib.umn.edu) at the University of Minnesota (UofM)."* 
+> *"Copyrighted under the Creative Commons Attribution NonCommercial-ShareAlike 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/) by The Experimental Linguistics and Fieldwork Lab (ELF-Lab; https://github.com/ELF-Lab) at The University of British Columbia (UBC) in collaboration with the Alberta Language Technology Lab (ALT-Lab; https://altlab.ualberta.ca/) at the University of Alberta (UofA) and the Ojibwe People's Dictionary (OPD; http://ojibwe.lib.umn.edu) at the University of Minnesota (UofM)."* 
 
 Your attribution should include the above links, and should not in any way that suggest that ELF-Lab, UBC, ALT-Lab, UofA, the OPD, or the UofM endorses you or your use of the work unless otherwise indicated with a written endorsement.
 

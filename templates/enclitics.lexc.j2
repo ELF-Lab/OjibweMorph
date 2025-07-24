@@ -1,0 +1,27 @@
+{#
+   This jinja2 template should be processed using a python script
+   to generate enclitics.lexc.
+#}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!   CL lexicons start     !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON EncliticRoot
+enCLBoundary ;
+# ;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                         !!
+!!        enCLitic         !!
+!!                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON enCL
+{{ load_enclitic_csv([("ENCLITIC.csv", "CL/")], "#") }}
+{{ load_pre_element_database("CL/","#") }}
+
+LEXICON enCLBoundary
+0:- enCL ;

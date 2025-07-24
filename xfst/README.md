@@ -75,6 +75,7 @@ This is captured by the following rules on verbs:
 In dependent nouns, the rules are a little different. For the first and second person prefixes, we get "n" and "g" before vowels, and "gi" and "ni" before consonants. The third person prefix alternates between "w" before "ii", "o" before consonants, and null before "oo". The following rules account for this:
 
 - _DepPrefixIInsertion_: Insert "i" after "n" or "g" if whatever to the right is a consonant (derives "ni" and "gi")
+- _DepPrefixOInsertion:_ Add an "o" in from of "w" optionall if the stem starts with "ii" (derives "ow", observed in the OPD)
 - _DepPrefixWtoO_: change "w" to "o" if whatever to the right is a consonant (derives "o")
 - _DepPrefixWDeletion_: delete "w" if whatever to the right starts with "o" or "oo" (derives null third person prefix)
 
@@ -149,9 +150,9 @@ Based on examples from the dictionary, it seems like Border Lakes belongs into P
 
 There is also a class of exceptions. Stems/roots that begin with "dan", "das", dash", and "daa" instead add a prefix "en". For example, *daso-biboonagizid* "if s/he is a certain number of years old" goes to *endaso-biboonagizid* "one who is a certain number of years old" under initial change. There are, also, exceptions to these exceptions. For example the tense preverb "daa-" instead appears as "ge-" under initial change, not "endaa-". 
 
-- _ChCnjEn_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+- _ChCnjEn_: If the string immediately to the right of the changed conjunct prefix begins with begin with "dan", "das", "dash", "dazhi" (and the VAI dazhe-), or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
 
-The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156).
+The above description is adapted from here: https://ojibwegrammar.langsci.wisc.edu/Grammar/InflMorphology/InitialChange.htm. Discussion can also be found in Valentine (2001, p. 156). The observation that dazhi- is also involved is not in the above source, and might be new to this description.
 
 There are also a lot of complications with the future tense prefer "ga-" that interact with intial change. Future tense appears as "ga-" in the independent order in the presence of a person prefix, but "da-" in the independent order when there is no prefix. In many dialects the "plain" conjunct (when there is no initial change), the future morpheme is realized as "ji-" (in others, it is realized as "da-" in this context). But, in the changed conjunct, it appears as "ge-". So the changed form is the regular changed form of the independent order allomorph in the presence of a person prefix, but not a changed version the plain conjunct allomorph, nor the independent allomorph in the absence of a prefix. Finally, note that some speakers will epethsize a "d" to "ga-" and "ge-" when the following segment is a vowel. This is probably best modeled as an irregularity and part of a more fullsome modeling of this future tense marker. For details and sources, see here: https://ojibwe.lib.umn.edu/main-entry/ga-pv-tns
 
@@ -193,7 +194,11 @@ Almost suffix rules target just processes occuring at the stem/suffix juncture, 
 - _irrDiman:_ Irregular diminutive form nouns ending in "an". Appears as "aans" rather than "anens"
 - _irrDimVVny:_ Irregular diminutive form in VVny stems. For example, "-oon(h)yens" becomes "-oon(h)s" 
 - _irrDimAnimosh:_ Irregular diminutive form for the noun animosh, where we get "animoshoons" rather than "animoshens"
-- _pejorativePalatalization:_ s and z palatalize to zh when followed by the pejorative marker -ish.
+- _ayDeletion:_ Delete the stem-final "ay" when the followed by "aa" or "e" and before "kw" or "gw"
+- _ningwDeletion:_ Delete stem-final w with the stem ningwy. Captures the case of ningwy, where both the glides get deleted when at the end of the word, but the "y" blocks "w" deletion.
+- _iwiiRule:_ iw turns to ii (and the following vowel deletes) after certain consonants. Captures a less-than-regular form of certain nouns, like gidagaa-bizhiins, nibizhiim, wajiing
+- _irrOgiin_: The NAD stem for "mother" has an irregular form of "ogiin" instead of "ogawan" in the third person
+- _pejorativePalatalization:_ Generally, s and z palatalize to zh when followed by the pejorative marker -ish. Sometimes, s palatalizes to sh, and sometimes the palatalization "spreads" to any other s or z in the word.
 
 ## Shared Rules
 

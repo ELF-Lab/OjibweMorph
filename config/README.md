@@ -1,3 +1,3 @@
 # Configuration Files
 
-A description of the parameters used in these files is found in [the ParserTools documentation](https://github.com/ELF-Lab/ParserTools/tree/dev/csv2fst#json-configuration-files).
+A description of the parameters used in these files is found in [the FSTMorph documentation](https://github.com/ELF-Lab/FSTMorph/tree/dev#json-configuration-files).

@@ -4,7 +4,7 @@ set flag-is-epsilon ON
 ! Defining natural classes and morphological boundaries
 
 ! All consonants, including special characters
-define Cons [ b | c | d | f | g | h | j | k | l | m | n | n1 | p | s | s1 | t | v | w | w1 | w2 | x | y | z | "'" ] ;
+define Cons [ b | c | d | f | g | h | j | k | l | m | n | n1 | p | s | s1 | t | v | w | w1 | w2 | x | y | y1 | z | "'" ] ;
 
 ! implictly includes long vowels, which just repeats characters
 define Vowel [ a | e | i | o | i1 | i2 | V1 ] ;
@@ -49,7 +49,7 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 
 ! awowRule: The amaw of benefactive verbs is replaced by amow 
 ! in direct forms by some speakers at Red Lake and elsewhere.
-define awowRule a w (->) o w || a m _ SUFBD a a ;
+define awowRule a w (->) o w || a m _ SUFBD [ a a | a g ] ;
 
 ! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
 ! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where C is anything other than the glottal stop.
@@ -77,6 +77,14 @@ define glottaloMetathesis ' o (->) w ' || i i _ SUFBD ;
 ! For ES in the OPD, biindigenizha' and babaaminizha' have variants biindigenizhwa' and babaaminizhwa'
 ! Not clear how general this rule is to a dialect versus a specific speaker.
 define wMetathesis a ' w1 (->) w a ' || z h _ SUFBD ;
+
+! ywRule: Change y to w after o in certain contexts
+! This captures a variant of the conjunct order -yaan, -yaang, -yan, and -yang where the y is a w.
+! In the OPD set, this is specific to Border Lakes (and specifically NJ)
+define ywRule y (->) w || [ o SUFBD | {igoo} | SUFBD o o ] _ a (a) n ;
+
+! angongRule: change the first person exclusive -ang to -ong after am
+define angongRule a (->) o || a (SUFBD) m _ n g ;
 
 ! shared noun and verb suffix rules
 
@@ -126,7 +134,7 @@ define y2Deletion y2 -> 0 ;
 
 ! irrDiman: Irregular diminutive form nouns ending in "an". 
 ! Optionally appears as -aans rather than -anens
-define irrDiman a n SUFBD e n (->) a a n ">>" ;
+define irrDiman a n SUFBD e n (->) a a n ">>" || [? - a] _ ;
 
 ! irrDimVVny: Irregular diminutive form in VVny stems. 
 ! For example, "-oon(h)yens" becomes "-oon(h)s" 
@@ -135,9 +143,28 @@ define irrDimVVny n y1 SUFBD e n (->) n ">>" || [Vowel Vowel | e] _ ;
 ! irrDimAnimosh: Irregular diminutive form for the noun animosh.
 define irrDimAnimosh e n -> o o n || a n i m o s h SUFBD _ ;
 
-! pejorativePalatalization: s and z palatalize to zh when 
-! followed by the pejorative marker -ish.
-define pejorativePalatalization [ s | z ] (->) z h || _ SUFBD i s h ;
+! irrOgiin: The NAD stem for "mother" has an irregular form of "ogiin" instead of "ogawan" in the third person
+define irrOgiin w (PREBD) g a w2 (SUFBD) a n -> o "<<" g i i ">>" n ;
+
+! ayDeletion: Delete the stem-final "ay" when the followed by "aa" or "e" and before "kw" or "gw"
+! For example, the NID stem =nagway- has the form ninagwens for the diminutive and ninagwaang for the locative (with 1sg possessor)
+define ayDeletion a y -> 0 || [ g | k ] w _ SUFBD [ a a | e ] ;
+
+! ningwDeletion: Delete stem-final w with the stem ningwy.
+! Captures the case of ningwy, where both the glides get deleted when at the end of the word, but the "y" blocks "w" deletion.
+define ningwDeletion w -> 0 || n i n g _ SUFBD .#. ;
+
+! iwiiRule: iw turns to ii (and the following vowel deletes) after certain consonants
+! Captures a less-than-regular form of certain nouns, like gidagaa-bizhiins, nibizhiim, wajiing
+define iwiiRule i [ w | w2 ] (SUFBD) [ i | e ] (->) i i ">>" || [ z h | n | d | j ] _ ;
+
+! pejorativePalatalization: s and z palatalize to zh (or sh) when followed by the pejorative marker -ish.
+! First rule is the most common case
+! Second rule captures the occasional case where with s we get sh
+! Third rule captures the "long-distance" case, where further away things palatalize
+define pejorativePalatalization1 [ s | z | s h ] (->) z h || _ SUFBD i s h ;
+define pejorativePalatalization2 s (->) s h || _ SUFBD i s h ;
+define pejorativePalatalization3 z (->) z h || _ \h [ Cons | Vowel ]* SUFBD i s h ;
 
 ! Default rule
 define defaultRules [ a1 -> a , i2 -> i , n1 -> n , s1 -> s , i1 -> i , w1 -> w , w2 -> w , y1 -> y ] ;
@@ -181,21 +208,28 @@ define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} |
 
 ! Dependent noun prefix rules
 define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
+define DepPrefixOInsertion [..] (->) o || .#. (PREBD) _ w PREBD i i ;
+define DepPrefixWtoOOptional w (->) o || .#. (PREBD) _ PREBD w ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD [{o}|{w}] ;
 define DepPrefixWtoO w -> o || .#. (PREBD) _ PREBD Cons ;
 
 ! gadaRule
 define gadaRule g a "-" -> d a "-" || .#. (PREBD) _ ;
 
-! "dan", "das", "dash", or "daa" (excluding the preverb "daa-"), then add "en-" instead of the usualy initial change ablaut.
+! There is something strange here! These excpetions do "regular" initial change, but involve the expected "dazhi" initial
+! This rule just makes sure that these exceptions to the exceptions get the right version of IC.
+! The stems are: dazhiikodaadiwag, dazhinge, dazhindi, dazhindizo, dazhinjigaade
+define ChCnjExceptions "<ChCnj>" (PREBD) {da} -> "<<" {de} || _ [ z h i i k o | z h i n g e SUFBD | z h i n d i SUFBD | z h i n d i z o SUFBD | z h i n j i g a a d e SUFBD | s o o z | s o o n i d i | s o o z h SUFBD | s o o n1 SUFBD ] ;
+
+! "dan", "das", "dash", "dazhi" (and the VAI dazhe), "dood", "dapin" (as in "dapine") or "daa" (specifically the stem), then add "en-" instead of the usualy initial change ablaut.
 ! endaso-biboonagizid 
-define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} \"-" ] ; 
+define ChCnjEn "<ChCnj>" -> {en} || (PREBD) _ (PREBD) [ {dan} | {das} | {daa} SUFBD | {dazhe} SUFBD | {dazhi} | {dood} | {dapin} ] ; 
 
 ! Changed conjunct rules
 ! The weirdness of the rule is on purpose! 
 ! hfst cannot compile longest match in the way we had before. 
 ! So we needed to create temporary multicharacter symbols.
-define ChCnjV [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
+define ChCnjV [{ii} (->) iyii1, {oo} (->) oyoo1, e (->) eye1 || "<ChCnj>" [PREBD | Cons]* _ ] .o. [{aa} -> ayaa1 , {ii} -> aa1, {oo} -> waa1 || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ a -> e , e -> {aye}  , i -> e , o -> {we} || "<ChCnj>" [PREBD | Cons]* _ ] .o. [ iyii1 -> {iyii}, eye1 -> {eye}, oyoo1 -> {oyoo}, ayaa1 -> {ayaa}, aa1 -> {aa}, waa1 -> {waa} ];
 
 define ChCnjDefault "<ChCnj>" -> 0 ;
 
@@ -232,7 +266,9 @@ read regex [!emptyFilter .o.
 						woRule3 .o.	! Must precede vowelDeletion
 						izhiShortVPreservation .o. ! Must precede vowelDeletion and w2Deletion; must follow n1Rule
 						glottaloMetathesis .o. ! Must precede vowelDeletion	
-						wMetathesis .o. ! Must precede w1Deletion		       
+						wMetathesis .o. ! Must precede w1Deletion	
+						ywRule .o.	  
+						angongRule .o.     
 			            vowelDeletion .o. ! Must precede w1Deletion, w2Deletion, and y1Deletion; must follow n1Rule, s1Rule, woRule1, and woRule2
 			            w1Deletion .o. ! Must precede dDeletion; must follow vowelDeletion
 				       	w2Deletion .o. ! Must precede LengthenV; must follow vowelDeletion
@@ -246,10 +282,18 @@ read regex [!emptyFilter .o.
 				       	irrDimVVny .o.
      	   	     	 	irrDiman .o.
 						irrDimAnimosh .o.
-						pejorativePalatalization .o.
+						ayDeletion .o.
+						ningwDeletion .o.
+						iwiiRule .o.
+						irrOgiin .o.
+						pejorativePalatalization1 .o.
+						pejorativePalatalization2 .o.
+						pejorativePalatalization3 .o.
 						izhiInverseDel .o.
 						! Prefix Rules							       
 			           	DepPrefixIInsertion .o.
+						DepPrefixOInsertion .o.
+						DepPrefixWtoOOptional .o.
 						DepPrefixWDeletion .o.
 					   	DepPrefixWtoO .o.
 						PrefixYInsertion .o.
@@ -263,6 +307,7 @@ read regex [!emptyFilter .o.
 						PrefixNOnly .o.
 						PrefixNInitialDeletion .o.
 			           	prefixOLengthening .o.
+						ChCnjExceptions .o.
 						ChCnjEn .o.
 				       	ChCnjV .o.
 				       	tenseTensing .o.

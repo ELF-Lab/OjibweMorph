@@ -1,0 +1,148 @@
+odaanaang	odaanaang+ADVLoc
+
+bimibatoowan	bimibatoo+VAI+Ind+Pos+Neu+3PlObvSubj
+bimibatoowan	bimibatoo+VAI+Ind+Pos+Neu+3SgObvSubj
+
+odayan	ayaan+VTI+Ind+Pos+Neu+3SgProxSubj+0SgObj
+odayan	day+NAD+ObvPl+3SgProxPoss
+odayan	day+NAD+ObvSg+3SgProxPoss
+
+gaa-bimaagonebizod	PVSub/gaa+bimaagonebizo+VAI+Cnj+Pos+Neu+3SgProxSubj
+
+mishawagaam	mishawagaam+ADVLoc
+
+waasaashkaa	waasaashkaa+VII+Ind+Pos+Neu+0SgSubj
+
+gichi-onzaamaanimad	PVLex/gichi+onzaamaanimad+VII+Ind+Pos+Neu+0SgSubj
+
+waasaashkaa	waasaashkaa+VII+Ind+Pos+Neu+0SgSubj
+
+iwe	+?
+
+zaaga'igan	zaaga'igan+NI+Sg
+
+gii-nameshin	PVTense/gii+nameshin+VAI+Ind+Pos+Neu+3SgProxSubj
+
+a'aw	a'aw+PRONDem
+
+ginebig	ginebig+NA+ProxSg
+
+o'omaa	o'omaa+ADVLoc
+
+gii-pimi-ayaagwen	PVTense/gii+bimi-ayaa+VII+Cnj+Pos+Dub+0SgSubj
+gii-pimi-ayaagwen	PVTense/gii+bimi-ayaa+VII+Cnj+Pos+Dub+0PlSubj
+gii-pimi-ayaagwen	PVTense/gii+bimi-ayaa+VAI+Cnj+Pos+Dub+3SgProxSubj
+gii-pimi-ayaagwen	PVTense/gii+PVDir/bimi+ayaa+VAI+Cnj+Pos+Dub+3SgProxSubj
+gii-pimi-ayaagwen	PVTense/gii+PVDir/bimi+ayaa+VII+Cnj+Pos+Dub+0SgSubj
+gii-pimi-ayaagwen	PVTense/gii+PVDir/bimi+ayaa+VII+Cnj+Pos+Dub+0PlSubj
+
+oshkiinamoog	+?
+
+gaa-gii-pimi-miikanaakewaad	PVSub/gaa+PVTense/gii+PVDir/bimi+miikanaake+VAI+Cnj+Pos+Neu+3PlProxSubj
+
+ganabaj	ganabaj+ADVMan
+
+zhebaa	zhebaa+ADVTmp
+
+gii-pimi-ayaawag	PVTense/gii+bimi-ayaa+VAI+Ind+Pos+Neu+3PlProxSubj
+gii-pimi-ayaawag	PVTense/gii+PVDir/bimi+ayaaw+VTA+Cnj+Pos+Neu+1SgSubj+3SgProxObj
+gii-pimi-ayaawag	PVTense/gii+PVDir/bimi+ayaa+VAI+Ind+Pos+Neu+3PlProxSubj
+
+niwii-pabaamaakwii	PVTense/wii+babaamaakwii+VAI+Ind+Pos+Neu+1SgSubj
+
+noopimiing	noopimiing+ADVLoc
+
+niwii'-andawagoodoo	PVTense/wii'+andawagoodoo+VAI+Ind+Pos+Neu+1SgSubj
+
+wenda-gabe-ishkwaa-naawakwe	PVLex/wenda+gabe-ishkwaa-naawakwe+ADVTmp
+wenda-gabe-ishkwaa-naawakwe	PVLex/wenda+PVLex/gabe+PVLex/ishkwaa+naawakwe+VII+Ind+Pos+Neu+0SgSubj
+wenda-gabe-ishkwaa-naawakwe	PVLex/wenda+PVLex/gabe+ishkwaa-naawakwe+VII+Ind+Pos+Neu+0SgSubj
+
+babaam	+?
+
+obabaama'anaan	babaama'azh+VTA+Ind+Pos+Neu+3SgProxSubj+3SgObvObj
+obabaama'anaan	babaama'azh+VTA+Ind+Pos+Neu+3SgProxSubj+3PlObvObj
+
+iniwen	iniwen+PRONDem
+
+waawaashkeshiwan	waawaashkeshi+NA+ObvPl
+waawaashkeshiwan	waawaashkeshi+NA+ObvSg
+
+a'awe	a'awe+PRONDem
+
+gaawased	+?
+
+waasamoog	+?
+
+manidoog	manidoo+NA+ProxPl
+
+aabiji-waasamoog	+?
+
+igiweg	igiweg+PRONDem
+
+manidoog	manidoo+NA+ProxPl
+
+ba-ayaawaad	ChCnj+PVDir/bi+ayaaw+VTA+Cnj+Pos+Neu+3SgProxSubj+3SgObvObj
+ba-ayaawaad	ChCnj+PVDir/bi+ayaaw+VTA+Cnj+Pos+Neu+3SgProxSubj+3PlObvObj
+ba-ayaawaad	ChCnj+PVDir/bi+ayaa+VAI+Cnj+Pos+Neu+3PlProxSubj
+
+owii-ikoshimaan	PVTense/wii+ikoshim+VTA+Ind+Pos+Neu+3SgProxSubj+3SgObvObj
+owii-ikoshimaan	PVTense/wii+ikoshim+VTA+Ind+Pos+Neu+3SgProxSubj+3PlObvObj
+
+iniw	iniw+PRONDem
+
+mitigoon	mitig+NI+Pl
+mitigoon	mitig+NA+ObvPl
+mitigoon	mitig+NA+ObvSg
+
+gaa-aazhawishininid	ChCnj+PVTense/gii+aazhawishin+VAI+Cnj+Pos+Neu+3PlObvSubj
+gaa-aazhawishininid	ChCnj+PVTense/gii+aazhawishin+VAI+Cnj+Pos+Neu+3SgObvSubj
+gaa-aazhawishininid	PVSub/gaa+aazhawishin+VAI+Cnj+Pos+Neu+3PlObvSubj
+gaa-aazhawishininid	PVSub/gaa+aazhawishin+VAI+Cnj+Pos+Neu+3SgObvSubj
+
+imaa	imaa+ADVLoc
+
+miikanaang	miikana+NI+Loc
+
+gii-aazhawibizo	PVTense/gii+aazhawibizo+VAI+Ind+Pos+Neu+3SgProxSubj
+
+imaa	imaa+ADVLoc
+
+eshpaanig	ChCnj+ishpaa+VII+Cnj+Pos+Neu+0PlObvSubj
+eshpaanig	ChCnj+ishpaa+VII+Cnj+Pos+Neu+0SgObvSubj
+eshpaanig	ishpaa+VII+Pcp+Pos+Neu+0SgObvSubj+0SgObvHead
+
+aazhogan	aazhogan+NI+Sg
+
+gidanoonigoo	anoozh+VTA+Ind+Pos+Neu+XSubj+2SgObj
+gidanoonigoo	anoozh+VTA+Ind+Pos+Neu+ExclSubj+2SgObj
+
+ji-o-wiindaman	PVTense/ga+PVDir/o+wiindan+VTI+Cnj+Pos+Neu+2SgSubj+0SgObj
+ji-o-wiindaman	PVTense/ga+PVDir/o+wiindan+VTI+Cnj+Pos+Neu+2SgSubj+0PlObj
+ji-o-wiindaman	PVTense/daa+PVDir/o+wiindan+VTI+Cnj+Pos+Neu+2SgSubj+0SgObj
+ji-o-wiindaman	PVTense/daa+PVDir/o+wiindan+VTI+Cnj+Pos+Neu+2SgSubj+0PlObj
+
+i'iw	i'iw+PRONDem
+
+oshki-aazhogan	PNLex/oshki+aazhogan+NI+Sg
+
+ogotaan	gotan+VTI+Ind+Pos+Neu+3SgProxSubj+0SgObj
+
+ji-aazhawishkang	+?
+
+iwe	+?
+
+gete-aazhoganish	PNLex/gete+aazhogan+NI+Pej+Sg
+
+dabasaakosin	dabasaakosin+VII+Ind+Pos+Neu+0SgSubj
+
+aazhogan	aazhogan+NI+Sg
+
+gichi-mookomaanakiing	+?
+
+gaa-izhi-aazhawamog	ChCnj+PVTense/gii+PVRel/izhi+aazhawamon+VII+Cnj+Pos+Neu+0SgSubj
+gaa-izhi-aazhawamog	ChCnj+PVTense/gii+PVRel/izhi+aazhawamon+VII+Cnj+Pos+Neu+0PlSubj
+gaa-izhi-aazhawamog	PVTense/gii+PVRel/izhi+aazhawamon+VII+Pcp+Pos+Neu+0SgSubj+0SgHead
+gaa-izhi-aazhawamog	PVSub/gaa+PVRel/izhi+aazhawamon+VII+Cnj+Pos+Neu+0SgSubj
+gaa-izhi-aazhawamog	PVSub/gaa+PVRel/izhi+aazhawamon+VII+Cnj+Pos+Neu+0PlSubj
+

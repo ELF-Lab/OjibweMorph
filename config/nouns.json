@@ -10,6 +10,8 @@
 	"NAD_VVny",
 	"NAD_VVy",
 	"NAD_Vw",
+	"NAD_aa",
+	"NAD_irrCw",
 	"NA_C",
 	"NA_Cw",
 	"NA_Cy",
@@ -34,6 +36,7 @@
 	"NI_VVny",
 	"NI_Vw",
 	"NI_aa",
+	"NI_VVw",
 	"NA_irrCw"	
     ],
     "irregular_csv_files": [
