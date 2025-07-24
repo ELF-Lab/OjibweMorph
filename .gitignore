@@ -1,2 +1,6 @@
 .DS_Store
 FST/
+# Some files that get generated if you run ambiguity tests
+scripts/test_data/ambiguity_by_wordform.csv
+scripts/test_data/ambiguity_summary_actual.txt
+scripts/test_data/analyzed_test_actual_output.txt
