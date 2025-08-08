@@ -1,0 +1,19 @@
+{
+    "name": "OjibweMorph",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."  
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ],
+            "settings": {
+                // Make sure we use LF and not CRLF, even on Windows
+                "files.eol": "\n"
+            }
+        }
+    },
+    "workspaceFolder": "/app"
+}

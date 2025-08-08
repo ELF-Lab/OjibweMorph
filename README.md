@@ -39,12 +39,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-07-21 | 66801 | 135 | 77.25% | 97.01% |
+| 2025-08-12 | 66801 | 135 | 77.25% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-07-21 | 8565 | 15 | 83.4% | 96.92% |
+| 2025-08-12 | 8565 | 15 | 83.4% | 96.92% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -52,12 +52,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2025-07-21 | 8089 | 0 | 93.93% | 100.0% |
+| 2025-08-12 | 8089 | 0 | 93.93% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2025-07-21 | 14330 | 0 | 99.98% | 100.0% |
+| 2025-08-12 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -78,15 +78,38 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
 | Overall | | | 5.03% (957/18997) | 9.24% (906/9803) |
 
-Date Last Updated: 2025-07-21
+Date Last Updated: 2025-08-12
 
 ## User Instructions
-### Prerequesites
-To make use of the FST, you will need to install [the foma compiler](https://fomafst.github.io) (and the `flookup` program, included as part of the foma toolkit). On Mac or Linux, the easiest way to install is via [homebrew](https://formulae.brew.sh/formula/foma).  Just use the command `brew install foma`.  Alternatively, there are other installation instructions [here](https://blogs.cornell.edu/finitestatecompling/2016/08/24/installing-foma/) (including for Windows users).
+There are a few different ways to install OjibweMorph (in ascending order of effort involved):
+- You can download the zipped files included with the [most recent release](https://github.com/ELF-Lab/OjibweMorph/releases).  The FST is already generated there, and you just need to install `foma` in order to make use of it.
+- You can install the relevant files via Docker, and create the FST yourself (within the Docker container).
+- You can download the relevant files directly to your system and create the FST yourself.
 
-> Note for Windows users: In addition to the page given above, we found [these instructions](https://ufal.mff.cuni.cz/~zeman/vyuka/morfosynt/lab-twolm/get-foma.html) useful for installing.  Also, ensure that the directory you add to your PATH immediately contains `foma.exe` and `flookup.exe`.  For example, if the path to `foma.exe` is `C:\Program Files (x86)\Foma\win32\foma.exe`, then add `C:\Program Files (x86)\Foma\win32` (not `C:\Program Files (x86)\Foma\`) to your PATH.
+If you're going for the pre-built FST route, download those files and skip ahead to [*Preparing to use the FST*](#preparing-to-use-the-fst).  Otherwise, read on for the steps to build the FST yourself.
 
-### Building the FST
+### Preparing to Build the FST
+These steps will get all the necessary pieces installed to ultimately generate the FST.  Two sets of steps are included below -- via Docker and via installing directly on your local system.  
+We have included detailed instructions on using Docker so that you shouldn't need to have used it previously to follow the steps.  Essentially, using Docker installs everything in a 'container', separated from your general system, so that the installations are isolated and won't affect other programs you run.
+
+#### Installation via Docker
+These instructions will have you create and use a container directly in VSCode, so you can use the `Makefile` to generate the FST from within the container.
+
+1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed.
+- In order to use docker in the command line, we also had to go to the Settings page in Docker Desktop and Choose `Advanced` > Check `System` > `Apply`.
+2. Install the `Dev Containers` extension in VSCode <mark>(and maybe `Container Tools`?)</mark>
+3. Right click on the `Dockerfile` in the VSCode Explorer panel and choose `Build image`.  It will suggest a tag (name) for this image by default; press enter to go with it (or type your own, if you prefer).
+- Alternatively, run `docker build -t ojibwemorph:latest -f .devcontainer/Dockerfile .` in the command line.
+  - `-t ojibwemorph:latest` gives the image the name `ojibwemorph` and tag `latest`.
+  - `-f .devcontainer/Dockerfile` specifies the Dockerfile to use to build the image, which has to be manually specified because it is not in the build context, which is specified as `.` (i.e., the current directory = the root of OjibweMorph).
+- You'll see the image being built in the terminal in VSCode.  It may take a minute or two, and when it's done, you can push any key to close it.
+- In Docker Desktop, you should now see your built image.
+3. Back in VSCode, use `Cmd+Shift+P` to run commands, and choose `Dev Containers: Reopen in Container`.  This will reopen the VSCode window inside the container.
+4. Here, you should see the directories `OjibweLexicon/` and `OjibweMorph/` ready to go.  You can `cd` into `OjibweMorph/` and use the `Makefile` as normal to generate the FST (see the next section).
+5. When done, you can click the blue `Dev Container...` button in the bottom left of VSCode, then choose `Reopen Locally` to close the container.
+6. You can use `docker system prune -a -f` to delete all Docker containers and images you've generated (though if you have other containers/images you wish to keep, you can also just manually delete individual ones in Docker Desktop).
+
+#### Regular Installation
 1. Clone **OjibweLexicon**  
 In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
@@ -98,7 +121,8 @@ The FST is created using code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph)
 3. Make edits to the `Makefile` as needed  
 The Makefile in this repo contains variables for various file locations.  For the most part the pre-set values should work fine, but you should ensure that the location of **OjibweLexicon** (i.e., the `OJIBWE_LEXICON` var) is correct for your local installation.
 
-4. Use the `Makefile`  
+### Building the FST
+Use the `Makefile`:
 - `make all` to simply build the FST
 - `make check` to run tests on the FST
 - `make clean` to remove generated files
@@ -109,6 +133,11 @@ By default, the output will go in a local directory called `FST/`.  In there, th
 
 By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in the `Makefile` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
 
+### Preparing to Use the FST
+To make use of the FST, you will need to install [the foma compiler](https://fomafst.github.io) (and the `flookup` program, included as part of the foma toolkit). On Mac or Linux, the easiest way to install is via [homebrew](https://formulae.brew.sh/formula/foma).  Just use the command `brew install foma`.  Alternatively, there are other installation instructions [here](https://blogs.cornell.edu/finitestatecompling/2016/08/24/installing-foma/) (including for Windows users).
+
+> Note for Windows users: In addition to the page given above, we found [these instructions](https://ufal.mff.cuni.cz/~zeman/vyuka/morfosynt/lab-twolm/get-foma.html) useful for installing.  Also, ensure that the directory you add to your PATH immediately contains `foma.exe` and `flookup.exe`.  For example, if the path to `foma.exe` is `C:\Program Files (x86)\Foma\win32\foma.exe`, then add `C:\Program Files (x86)\Foma\win32` (not `C:\Program Files (x86)\Foma\`) to your PATH.
+
 ### Using the FST
 This FST is run using [foma](https://fomafst.github.io).  In addition to the example give below, some documentation from their team is available [here](https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md).
 
@@ -118,6 +147,7 @@ Some information about foma should appear, and your prompt should now say `foma[
 
 2.  Load the Ojibwe FST you created in [the previous section](#building-the-fst) with:  
 `load FST/generated/ojibwe.fomabin`  
+Adjust the filepath as necessary -- this will work if you are in `OjibweMorph/` and used the default FST location.
 The output should look something like this:  
 `5.0 MB. 160042 states, 328686 arcs, Cyclic.`
 
