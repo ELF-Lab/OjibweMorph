@@ -13,8 +13,9 @@ Morphological information about Ojibwe words is housed here.  Combined with the 
     - [Paradigm Nouns](#paradigm-nouns)
   - [Corpus Tests](#corpus-tests)
 - [User Instructions](#user-instructions)
-  - [Prerequesites](#prerequesites)
+  - [Preparing to Build the FST](#preparing-to-build-the-fst)
   - [Building the FST](#building-the-fst)
+  - [Preparing to Use the FST](#preparing-to-use-the-fst)
   - [Using the FST](#using-the-fst)
   - [Running the Tests](#running-the-tests)
 - [About OjibweMorph](#about-ojibwemorph)
@@ -86,18 +87,19 @@ There are a few different ways to install OjibweMorph (in ascending order of eff
 - You can install the relevant files via Docker, and create the FST yourself (within the Docker container).
 - You can download the relevant files directly to your system and create the FST yourself.
 
-If you're going for the pre-built FST route, download those files and skip ahead to [*Preparing to use the FST*](#preparing-to-use-the-fst).  Otherwise, read on for the steps to build the FST yourself.
+If you're going for the pre-built FST route, download those files and skip ahead to [*Preparing to Use the FST*](#preparing-to-use-the-fst).  Otherwise, read on for the steps to build the FST yourself.
 
 ### Preparing to Build the FST
 These steps will get all the necessary pieces installed to ultimately generate the FST.  Two sets of steps are included below -- via Docker and via installing directly on your local system.  
 We have included detailed instructions on using Docker so that you shouldn't need to have used it previously to follow the steps.  Essentially, using Docker installs everything in a 'container', separated from your general system, so that the installations are isolated and won't affect other programs you run.
 
 #### Installation via Docker
-These instructions will have you create and use a container directly in VSCode, so you can use the `Makefile` to generate the FST from within the container.
+These instructions will have you create and use a container directly in VSCode, so you can use the `Makefile` to generate the FST from within the container.  
+This method includes the installation of `foma`, so you can skip that installation step later.
 
 1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed.
 - In order to use docker in the command line, we also had to go to the Settings page in Docker Desktop and Choose `Advanced` > Check `System` > `Apply`.
-2. Install the `Dev Containers` extension in VSCode <mark>(and maybe `Container Tools`?)</mark>
+2. Install the `Dev Containers` extension in VSCode.
 3. Right click on the `Dockerfile` in the VSCode Explorer panel and choose `Build image`.  It will suggest a tag (name) for this image by default; press enter to go with it (or type your own, if you prefer).
 - Alternatively, run `docker build -t ojibwemorph:latest -f .devcontainer/Dockerfile .` in the command line.
   - `-t ojibwemorph:latest` gives the image the name `ojibwemorph` and tag `latest`.
@@ -113,10 +115,10 @@ These instructions will have you create and use a container directly in VSCode, 
 1. Clone **OjibweLexicon**  
 In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
-2. Install **FSTmorph**  
+2. Install **FSTmorph**
 The FST is created using code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph), which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
-**FSTmorph** can be installed via pip:  
-`pip install fstmorph`
+**FSTmorph** can be installed via pip (along with a couple other python packages), by running the following (while in the `OjibweMorph/` root directory):
+`pip install -r requirements.txt`
 
 3. Make edits to the `Makefile` as needed  
 The Makefile in this repo contains variables for various file locations.  For the most part the pre-set values should work fine, but you should ensure that the location of **OjibweLexicon** (i.e., the `OJIBWE_LEXICON` var) is correct for your local installation.
