@@ -9,7 +9,7 @@ RUN apt-get update && \
     make \
     bc \
     python3-dev \
-    foma-bin \
+    foma \
     libfoma-dev \
     && \
     apt-get clean && \

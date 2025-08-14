@@ -100,15 +100,16 @@ This method includes the installation of `foma`, so you can skip that installati
 1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed.
 - In order to use docker in the command line, we also had to go to the Settings page in Docker Desktop and Choose `Advanced` > Check `System` > `Apply`.
 2. Install the `Dev Containers` extension in VSCode.
-3. Right click on the `Dockerfile` in the VSCode Explorer panel and choose `Build image`.  It will suggest a tag (name) for this image by default; press enter to go with it (or type your own, if you prefer).
-- Alternatively, run `docker build -t ojibwemorph:latest -f .devcontainer/Dockerfile .` in the command line.
+3. With OjibweMorph open in VSCode, run `docker build -t ojibwemorph:latest -f .devcontainer/Dockerfile .` in the command line.
   - `-t ojibwemorph:latest` gives the image the name `ojibwemorph` and tag `latest`.
   - `-f .devcontainer/Dockerfile` specifies the Dockerfile to use to build the image, which has to be manually specified because it is not in the build context, which is specified as `.` (i.e., the current directory = the root of OjibweMorph).
+  - On Mac, running this may lead to a system prompt saying that VSCode wants to access data from other apps.  You can decline; everything will still build fine.
 - You'll see the image being built in the terminal in VSCode.  It may take a minute or two, and when it's done, you can push any key to close it.
 - In Docker Desktop, you should now see your built image.
 3. Back in VSCode, use `Cmd+Shift+P` to run commands, and choose `Dev Containers: Reopen in Container`.  This will reopen the VSCode window inside the container.
-4. Here, you should see the directories `OjibweLexicon/` and `OjibweMorph/` ready to go.  You can `cd` into `OjibweMorph/` and use the `Makefile` as normal to generate the FST (see the next section).
-5. When done, you can click the blue `Dev Container...` button in the bottom left of VSCode, then choose `Reopen Locally` to close the container.
+  - You may get asked which `devcontainer.json` to use -- choose `OjibweMorph` (`OjibweMorph/.devcontainer/devcontainer.json`).
+4. Here, you should see the directories `OjibweLexicon/` and `OjibweMorph/` ready to go.  You can `cd` into `OjibweMorph/` and use the `Makefile` as normal to generate the FST (see [Buildling the FST](#building-the-fst)).
+5. When done, you can click the `Dev Container: OjibweMorph @...` button in the bottom left of VSCode, then choose `Reopen Locally` to close the container.
 6. You can use `docker system prune -a -f` to delete all Docker containers and images you've generated (though if you have other containers/images you wish to keep, you can also just manually delete individual ones in Docker Desktop).
 
 #### Regular Installation
@@ -127,7 +128,7 @@ The Makefile in this repo contains variables for various file locations.  For th
 Use the `Makefile`:
 - `make all` to simply build the FST
 - `make check` to run tests on the FST
-- `make clean` to remove generated files
+- `make clean` to remove all generated files, if desired
 
 > Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
 
@@ -136,7 +137,7 @@ By default, the output will go in a local directory called `FST/`.  In there, th
 By default, the lemma list will be taken from [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).  You can change this in the `Makefile` to look elsewhere.  You can use multiple lists by giving a comma-separated list of directories.
 
 ### Preparing to Use the FST
-To make use of the FST, you will need to install [the foma compiler](https://fomafst.github.io) (and the `flookup` program, included as part of the foma toolkit). On Mac or Linux, the easiest way to install is via [homebrew](https://formulae.brew.sh/formula/foma).  Just use the command `brew install foma`.  Alternatively, there are other installation instructions [here](https://blogs.cornell.edu/finitestatecompling/2016/08/24/installing-foma/) (including for Windows users).
+To make use of the FST, you will need to install [the foma compiler](https://fomafst.github.io) (and the `flookup` program, included as part of the foma toolkit).  If you installed via Docker, this is already installed for you. Otherwise, on Mac or Linux, the easiest way to install is via [homebrew](https://formulae.brew.sh/formula/foma).  Just use the command `brew install foma`.  Alternatively, there are other installation instructions [here](https://blogs.cornell.edu/finitestatecompling/2016/08/24/installing-foma/) (including for Windows users).
 
 > Note for Windows users: In addition to the page given above, we found [these instructions](https://ufal.mff.cuni.cz/~zeman/vyuka/morfosynt/lab-twolm/get-foma.html) useful for installing.  Also, ensure that the directory you add to your PATH immediately contains `foma.exe` and `flookup.exe`.  For example, if the path to `foma.exe` is `C:\Program Files (x86)\Foma\win32\foma.exe`, then add `C:\Program Files (x86)\Foma\win32` (not `C:\Program Files (x86)\Foma\`) to your PATH.
 
