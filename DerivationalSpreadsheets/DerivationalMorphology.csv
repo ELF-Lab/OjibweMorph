@@ -15,3 +15,10 @@ idi,Recip/di,VTA,VTA_n,VAI,VAI_rcp
 idi,Recip/di,VTA,VTA_s,VAI,VAI_rcp
 di,Recip/di,VTA,VTA_aw,VAI,VAI_rcp
 idi,Recip/di,VTA,VTA_Cw,VAI,VAI_rcp
+amaw,Ditrans/amaw,VTI,VTI_am,VTA,VTA_aw
+amaw,Ditrans/amaw,VTI,VTI_oo,VTA,VTA_aw
+amaw,Ditrans/amaw,VTI,VTI_i,VTA,VTA_aw
+ge,Detrans/ge,VTI,VTI_am,VAI,VAI_VV
+ge,Detrans/ge,VTI,VTI_oo,VAI,VAI_VV
+ge,Detrans/ge,VTA,VTA_C,VAI,VAI_VV
+ge,Detrans/ge,VTA,VTA_aw,VAI,VAI_VV

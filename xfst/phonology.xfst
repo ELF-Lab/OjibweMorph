@@ -35,9 +35,28 @@ define dDeletion d -> 0 || _ SUFBD Cons ;
 ! that end in a glottal stop, n, w (because of wiijiiw), or s (because of gikas)
 define iInsertion [..] -> i || [{'}|{n}|{w}|{s}] _ SUFBD {di} ;
 
+! dPalatalizationGe: "d" stems get palatalized to "j" with detransitive suffix /-ge/ 
+! e.g. agood- (vti2 agoodoon) + -ge -> agoojige
+define dPalatalizationGe d -> j || _ SUFBD {ge} ;
+
+! tPalatalizationGe: "t" stems get palatalized to "ch" with detransitive suffix /-ge/ 
+! e.g. at- (vti2 atoon) + -ge -> achige
+define tPalatalizationGe t -> {ch} || _ SUFBD {ge} ;
+
+! iInsertionGe: insert "i" in all detransitivized stems ending in a consonant, 
+! excluding "m", because here we want nasal assimilation (as seen in "agazonge").
+! i-insertion is done here to avoid overlapping with a different  "-ige" suffix, 
+! like the one present in "aanjige", with "-ige" meaning s/he acts in relation to a dwelling (OPD).
+define iInsertionGe [..] -> i || [{s}|{z}|{'}|{k}|{n}|{j}|{zh}|{ch}] _ SUFBD {ge} ;
+
 ! nasalAssimilation: With stems ending in "m", the "m" 
 ! 	changes to "n" when the suffix complex starts with "z", "g", or "d".
-define nasalAssimilation m -> n || a _ SUFBD [z|g|d] ;
+define nasalAssimilation m -> n || Vowel _ SUFBD [z|g|d] ;
+
+! iBeforeAmawDeletion: Delete the stem final "i" that follows "d" 
+! when the suffix is the benefactive marker "amaw".
+! Currently only seen in the vti3 case naadi- (naadin) + -amaw -> naadamaw 
+define iBeforeAmawDeletion i -> 0 || d _ SUFBD {amaw} ;
 
 ! awaaRule: For stems that end in "aw", the "aw" goes to "aa" 
 ! 	when the suffix complex starts with "g", "k", or "d".
@@ -207,7 +226,7 @@ define PrefixNInitialDeletion n (->) 0 || .#. (PREBD) _ [ {ind} | {in} | {im} ] 
 define prefixOLengthening o -> {oo} || .#. (PREBD) [ [ [ n | g ] i | o | {nin} | {in} | n ] d ] PREBD _ \o ; 
 
 ! Dependent noun prefix rules
-define DepPrefixIInsertion [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
+define DepPrefixiInsertionDi [..] -> i || .#. (PREBD) [{g}|{n}] _ PREBD Cons ;
 define DepPrefixOInsertion [..] (->) o || .#. (PREBD) _ w PREBD i i ;
 define DepPrefixWtoOOptional w (->) o || .#. (PREBD) _ PREBD w ;
 define DepPrefixWDeletion w -> 0 || .#. (PREBD) _ PREBD [{o}|{w}] ;
@@ -256,8 +275,12 @@ read regex [!emptyFilter .o.
      	   	     	 	n1Rule .o. ! Must precede vowelDeletion and nDeletion
 						nDeletion .o. ! Must follow n1Rule
 				       	s1Rule .o. ! Must precede vowelDeletion	
-						iInsertion .o. ! Must precede nasalAssimilation	       
+						iInsertion .o. ! Must precede nasalAssimilation	   
+						dPalatalizationGe .o. ! Must precede iInsertionGe
+						tPalatalizationGe .o. 
+						iInsertionGe .o.
      	   	            nasalAssimilation .o.
+						iBeforeAmawDeletion .o.
 				       	awaaRule .o.
 				       	awooRule .o.
 						awowRule .o.
@@ -291,7 +314,7 @@ read regex [!emptyFilter .o.
 						pejorativePalatalization3 .o.
 						izhiInverseDel .o.
 						! Prefix Rules							       
-			           	DepPrefixIInsertion .o.
+			           	DepPrefixiInsertionDi .o.
 						DepPrefixOInsertion .o.
 						DepPrefixWtoOOptional .o.
 						DepPrefixWDeletion .o.
