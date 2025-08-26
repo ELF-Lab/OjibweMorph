@@ -1,6 +1,5 @@
 {
     "pos":"ProperNoun",
-    "root_lexicon":"ProperNounRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"PROPER_NOUN"

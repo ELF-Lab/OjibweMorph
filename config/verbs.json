@@ -1,6 +1,5 @@
 {
     "pos":"Verb",
-    "root_lexicon":"VerbRoot",
     "morphology_source_path": "./VerbSpreadsheets/",
     "regular_csv_files": [
 	"VAIO_CNJ",

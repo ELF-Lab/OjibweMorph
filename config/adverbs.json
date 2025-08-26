@@ -1,6 +1,5 @@
 {
     "pos":"Adverb",
-    "root_lexicon":"AdverbRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"ADVERB"

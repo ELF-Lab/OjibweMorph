@@ -1,6 +1,5 @@
 {
     "pos":"Noun",
-    "root_lexicon":"NounRoot",
     "morphology_source_path": "./NounSpreadsheets/",
     "regular_csv_files": [
 	"NAD_C",
