@@ -53,7 +53,7 @@
 	"ChCnj+",
 	"<ChCnj>"
     ],
-    "pre_element_tag": "Preverb",
+    "pre_element": "Preverb",
     "template_path":"./templates/preverbs.lexc.j2",
     "pv_source_path":"./PVSpreadsheets",
     "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv"

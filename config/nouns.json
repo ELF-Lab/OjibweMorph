@@ -67,7 +67,7 @@
 	"y1",
 	"y2"
     ],
-    "pre_element_tag": "Prenoun",
+    "pre_element": "Prenoun",
     "template_path":"./templates/prenouns.lexc.j2",
     "pv_source_path":"./PVSpreadsheets"
 }

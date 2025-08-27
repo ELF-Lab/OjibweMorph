@@ -18,7 +18,7 @@
     "multichar_symbols": [
 	"w2"
     ],
-    "pre_element_tag": "Preadverb",
+    "pre_element": "Preadverb",
     "template_path":"./templates/preadverbs.lexc.j2",
     "pv_source_path":"./PVSpreadsheets"
 }
