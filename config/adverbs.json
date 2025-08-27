@@ -20,5 +20,5 @@
     ],
     "pre_element": "Preadverb",
     "template_path":"./templates/preadverbs.lexc.j2",
-    "pv_source_path":"./PVSpreadsheets"
+    "pre_element_source_path":"./PVSpreadsheets"
 }

@@ -69,5 +69,5 @@
     ],
     "pre_element": "Prenoun",
     "template_path":"./templates/prenouns.lexc.j2",
-    "pv_source_path":"./PVSpreadsheets"
+    "pre_element_source_path":"./PVSpreadsheets"
 }
