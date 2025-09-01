@@ -4,11 +4,10 @@
     "regular_csv_files": [
 	"NUMERAL"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "NUMERALS.csv",
     "regular_lexc_file": "ojibwe_numerals.lexc",
-    "irregular_lexc_file": "None",
+    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm"
     ],
@@ -18,6 +17,8 @@
 	"w2"
     ],
     "pre_element": "",
-    "pre_element_template_path":"None",
-    "pre_element_source_path":"None"
+    "pre_element_template_path": "",
+    "pre_element_source_path": "",
+    "pre_element_lexical_database": "",
+    "derivational_csv_file": ""
 }

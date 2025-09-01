@@ -4,11 +4,10 @@
     "regular_csv_files": [
 	"ADVERB"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "ADVERBS.csv",
     "regular_lexc_file": "ojibwe_adverbs.lexc",
-    "irregular_lexc_file": "None",
+    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm"
     ],
@@ -20,5 +19,6 @@
     "pre_element": "Preadverb",
     "pre_element_template_path":"./templates/preadverbs.lexc.j2",
     "pre_element_source_path":"./PVSpreadsheets",
-    "pre_element_lexical_database": "LEXICAL_PREADVERBS.csv"
+    "pre_element_lexical_database": "LEXICAL_PREADVERBS.csv",
+    "derivational_csv_file": ""
 }

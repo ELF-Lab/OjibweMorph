@@ -15,7 +15,7 @@
 	"VII_CNJ",
 	"VII_IND",
 	"VII_PCP",
-	"VIIPL",      
+	"VIIPL",
 	"VTA_CNJ",
 	"VTA_IMP",
 	"VTA_IND",
@@ -25,11 +25,10 @@
 	"VTI_IND",
 	"VTI_PCP"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "VERBS.csv",
     "regular_lexc_file": "ojibwe_verbs.lexc",
-    "irregular_lexc_file": "None",
+    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm",
 	"Order",
@@ -55,6 +54,6 @@
     "pre_element": "Preverb",
     "pre_element_template_path":"./templates/preverbs.lexc.j2",
     "pre_element_source_path":"./PVSpreadsheets",
-    "pre_element_lexical_database": "LEXICAL_PREVERBS.csv",    
+    "pre_element_lexical_database": "LEXICAL_PREVERBS.csv",
     "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv"
 }

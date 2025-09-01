@@ -4,11 +4,10 @@
     "regular_csv_files": [
 	"PROPER_NOUN"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "PROPER_NOUNS.csv",
     "regular_lexc_file": "ojibwe_proper_nouns.lexc",
-    "irregular_lexc_file": "None",
+    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm",
 	"Pret",
@@ -21,6 +20,8 @@
     "V1"
     ],
     "pre_element": "",
-    "pre_element_template_path":"None",
-    "pre_element_source_path":"None"
+    "pre_element_template_path": "",
+    "pre_element_source_path": "",
+    "pre_element_lexical_database": "",
+    "derivational_csv_file": ""
 }
