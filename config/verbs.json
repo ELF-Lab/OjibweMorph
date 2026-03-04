@@ -19,6 +19,7 @@
 	"VTA_CNJ",
 	"VTA_IMP",
 	"VTA_IND",
+	"VTA_PCP",
 	"VTI_CNJ",
 	"VTI_IMP",
 	"VTI_IND"
@@ -47,7 +48,8 @@
 	"w1",
 	"V1",
 	"w2",
-	"<T>"
+	"<T>",
+	"<ChCnj>"
     ],
     "pre_element_tag": "[PREVERB]",
     "prefix_root":"PreverbRoot",
