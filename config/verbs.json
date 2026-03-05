@@ -22,7 +22,8 @@
 	"VTA_PCP",
 	"VTI_CNJ",
 	"VTI_IMP",
-	"VTI_IND"
+	"VTI_IND",
+	"VTI_PCP"
     ],
     "irregular_csv_files": [
     ],
