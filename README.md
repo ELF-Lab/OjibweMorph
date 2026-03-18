@@ -40,12 +40,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-05 | 66801 | 135 | 70.0% | 97.01% |
+| 2026-03-17 | 66801 | 135 | 70.0% | 97.01% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-05 | 8565 | 15 | 83.39% | 96.92% |
+| 2026-03-17 | 8565 | 15 | 83.39% | 96.92% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -53,12 +53,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-05 | 9696 | 0 | 88.05% | 100.0% |
+| 2026-03-17 | 9696 | 0 | 88.05% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-05 | 14330 | 0 | 99.98% | 100.0% |
+| 2026-03-17 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -68,18 +68,18 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 5.03% (335/6651) | 7.32% (314/4285) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 4.88% (325/6651) | 7.09% (304/4285) |
 | GJ | Border Lakes | Lac La Croix | 12.32% (9/73) | 12.5% (9/72) |
-| ES | Red Lake | Obaashiing | 5.65% (539/9531) | 10.51% (518/4925) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 2.54% (56/2197) | 4.44% (55/1237) |
+| ES | Red Lake | Obaashiing | 5.35% (510/9531) | 9.92% (489/4925) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 2.5% (55/2197) | 4.36% (54/1237) |
 | GH | Leech Lake | Jaachaabaaning | 2.71% (7/258) | 3.39% (7/206) |
 | LW | Leech Lake | Jaachaabaaning | 2.63% (5/190) | 3.24% (5/154) |
 | LS | Mille Lacs | Aazhomog | 8.19% (5/61) | 9.61% (5/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 5.03% (957/18997) | 9.24% (906/9803) |
+| Overall | | | 4.82% (917/18997) | 8.83% (866/9803) |
 
-Date Last Updated: 2026-03-05
+Date Last Updated: 2026-03-17
 
 ## User Instructions
 There are a few different ways to install OjibweMorph (in ascending order of effort involved):
