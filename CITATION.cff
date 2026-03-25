@@ -16,7 +16,33 @@ authors:
 - family-names: "Silfverberg"
   given-names: "Miikka"
   orcid: ""
-title: "OjibweMorph: An approachable morphological parser for Ojibwe"
-version: 0.1.0
+title: "OjibweMorph"
+version: 1.1.0
 date-released: 2025-05-15
 url: "https://christopherhammerly.com/publication/ojibwemorph/OjibweMorph.pdf"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Hammerly"
+    given-names: "Christopher"
+    orcid: ""
+  - family-names: "Livesay"
+    given-names: "Nora"
+    orcid: ""
+  - family-names: "Arppe"
+    given-names: "Antti"
+    orcid: ""
+  - family-names: "Stacey"
+    given-names: "Anna"
+    orcid: ""
+  - family-names: "Silfverberg"
+    given-names: "Miikka"
+    orcid: ""
+  doi: "10.1007/s10579-025-09887-4"
+  journal: "Language Resources and Evaluation"
+  month: 2
+  start: 1 # First page number
+  end: 44 # Last page number
+  title: "OjibweMorph: An approachable morphological parser for Ojibwe (and beyond)"
+  volume: 60
+  year: 2026
