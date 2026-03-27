@@ -6,6 +6,7 @@
 	"VAIO_CNJ",
 	"VAIO_IMP",
 	"VAIO_IND",
+	"VAIO_PCP",
 	"VAI_CNJ",
 	"VAI_IMP",
 	"VAI_IND",
@@ -19,9 +20,11 @@
 	"VTA_CNJ",
 	"VTA_IMP",
 	"VTA_IND",
+	"VTA_PCP",
 	"VTI_CNJ",
 	"VTI_IMP",
-	"VTI_IND"
+	"VTI_IND",
+	"VTI_PCP"
     ],
     "irregular_csv_files": [
     ],
@@ -47,7 +50,9 @@
 	"w1",
 	"V1",
 	"w2",
-	"<T>"
+	"<T>",
+	"ChCnj+",
+	"<ChCnj>"
     ],
     "pre_element_tag": "[PREVERB]",
     "prefix_root":"PreverbRoot",
