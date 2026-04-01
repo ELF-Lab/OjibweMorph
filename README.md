@@ -235,7 +235,7 @@ This work was supported by a SSHRC Insight Grant (435-2023-0474) awarded to Hamm
 ### Citation
 To cite this work or the contents of the repository (including, but not limited to, datasets, tables, explanations, methods, analysis, structure, etc) in an academic work, please use the following:
 
-> Hammerly, C., Livesay, N., Arppe, A., Stacey, A., & Silfverberg, M. (2026). OjibweMorph: An approachable morphological parser for Ojibwe (and beyond). Language Resources and Evaluation, 60, 1–44. https://doi.org/10.1007/s10579-025-09887-4
+> Hammerly, C., Livesay, N., Arppe, A., Stacey, A., & Silfverberg, M. (2026). OjibweMorph: An approachable finite-state transducer for Ojibwe (and beyond). Language Resources and Evaluation, 60, 1–44. https://doi.org/10.1007/s10579-025-09887-4
 
 
 [def]: VerbSpreadsheets/README.md
