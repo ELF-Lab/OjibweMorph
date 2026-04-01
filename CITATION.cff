@@ -43,6 +43,6 @@ preferred-citation:
   month: 2
   start: 1 # First page number
   end: 44 # Last page number
-  title: "OjibweMorph: An approachable morphological parser for Ojibwe (and beyond)"
+  title: "OjibweMorph: An approachable finite-state transducer for Ojibwe (and beyond)"
   volume: 60
   year: 2026
