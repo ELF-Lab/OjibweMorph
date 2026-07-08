@@ -49,7 +49,7 @@ define awooRule a w -> o o || _ SUFBD [n|s] ;
 
 ! awowRule: The amaw of benefactive verbs is replaced by amow 
 ! in direct forms by some speakers at Red Lake and elsewhere.
-define awowRule a w (->) o w || a m _ SUFBD [ a a | a g ] ;
+define awowRule a w (->) o w || a m _ SUFBD [ a a | a g | a d | a n g] ;
 
 ! woRule1, woRule2: "wi(1)" becomes "o" after a consonant (either everywhere or word finally). 
 ! 	In Border Lakes, this rule only applies with non-word-final "Cwi" sequences where C is anything other than the glottal stop.
