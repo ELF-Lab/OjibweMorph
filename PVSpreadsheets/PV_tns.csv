@@ -1,7 +1,9 @@
 PV,Tag,Independent,PlainConjunct,ChangedConjunct
-ga,PVTense,ga,ji,ge
-daa,PVTense,daa,ji,ge
-daa,PVTense,daa,da,ge
+daa,PVTense,daa,NONE,NONE
+ga,PVTense,ga,NONE,NONE
+ji,PVTense,NONE,ji,NONE
+da,PVTense,NONE,da,NONE
+ge,PVTense,NONE,NONE,ge
 gii,PVTense,gii<T>,gii<T>,NONE
 gii',PVTense,gii'<T>,gii'<T>,NONE
 wii,PVTense,wii<T>,wii<T>,NONE
