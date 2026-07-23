@@ -4,28 +4,32 @@ This repository is for creating a finite-state transducer (FST) in the Ojibwe la
 Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
 
 ## Contents
-- [Test Results](#test-results)
-  - [OPD Tests](#opd-tests)
-    - [OPD Verbs](#opd-verbs)
-    - [OPD Nouns](#opd-nouns)
-  - [Paradigm Tests](#paradigm-tests)
-    - [Paradigm Verbs](#paradigm-verbs)
-    - [Paradigm Nouns](#paradigm-nouns)
-  - [Corpus Tests](#corpus-tests)
-- [User Instructions](#user-instructions)
-  - [Preparing to Build the FST](#preparing-to-build-the-fst)
-  - [Building the FST](#building-the-fst)
-  - [Preparing to Use the FST](#preparing-to-use-the-fst)
-  - [Using the FST](#using-the-fst)
-  - [Running the Tests](#running-the-tests)
-- [About OjibweMorph](#about-ojibwemorph)
-  - [Morphological Info](#morphological-info)
-  - [License/Copyright](#licensecopyright)
-  - [Acknowledgements](#acknowledgements)
-    - [People](#people)
-    - [Organizations and resources](#organizations-and-resources)
-    - [Funding](#funding)
-  - [Citation](#citation)
+- [OjibweMorph](#ojibwemorph)
+  - [Contents](#contents)
+  - [Test Results](#test-results)
+    - [OPD Tests](#opd-tests)
+      - [OPD Verbs](#opd-verbs)
+      - [OPD Nouns](#opd-nouns)
+    - [Paradigm Tests](#paradigm-tests)
+      - [Paradigm Verbs](#paradigm-verbs)
+      - [Paradigm Nouns](#paradigm-nouns)
+    - [Corpus Tests](#corpus-tests)
+  - [User Instructions](#user-instructions)
+    - [Preparing to Build the FST](#preparing-to-build-the-fst)
+      - [Installation via Docker](#installation-via-docker)
+      - [Regular Installation](#regular-installation)
+    - [Building the FST](#building-the-fst)
+    - [Preparing to Use the FST](#preparing-to-use-the-fst)
+    - [Using the FST](#using-the-fst)
+    - [Running the Tests](#running-the-tests)
+  - [About OjibweMorph](#about-ojibwemorph)
+    - [Morphological Info](#morphological-info)
+    - [License/Copyright](#licensecopyright)
+    - [Acknowledgements](#acknowledgements)
+      - [People](#people)
+      - [Organizations and resources](#organizations-and-resources)
+      - [Funding](#funding)
+    - [Citation](#citation)
 
 ## Test Results
 These results reflect the performance of an FST built from the morphology stored in [OjibweMorph](https://github.com/ELF-Lab/OjibweMorph) and the lemmas stored in [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).
@@ -130,7 +134,7 @@ Use the `Makefile`:
 - `make check` to run tests on the FST
 - `make clean` to remove all generated files, if desired
 
-> Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
+> Note: When running these commands, we have sometimes encountered an error message related to `malloc`. We believe this issue arises with Mac users with machines that use Apple Silicon chips (as opposed to Intel chips). This can be resolved by ensuring you are using foma v0.10.0alpha, which can run natively on these new chips. 
 
 By default, the output will go in a local directory called `FST/`.  In there, the directory `generated` contains the FST, lexc files and XFST rules.  The FST itself is `FST/generated/ojibwe.fomabin`.
 
