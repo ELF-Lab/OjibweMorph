@@ -926,7 +926,7 @@ VTA,Cnj,VTA_Cw,mizho,mizhw1,NONE,1SgSubj,2SgObj,Neu,Neg,mizhosinowaan,<<mizho>>i
 VTA,Cnj,VTA_C,waabam,waabam,NONE,1SgSubj,2SgObj,Neu,Neg,waabamisinowaan,<<waabam>>isinowaan,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_s,mawadish,mawadis1,NONE,1SgSubj,2SgObj,Neu,Pos,mawadisinaan,<<mawadis>>inaan,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_n,miizh,miin1,NONE,1SgSubj,2SgObj,Neu,Pos,miininaan,<<miin>>inaan,NJ-ngs-2023-Aug19,,,
-VTA,Cnj,VTA_aw,mikaw,mikaw,NONE,1SgSubj,2SgObj,Neu,Pos,mikoonaan,<<mikoo>>naan,NJ-ngs-2023-Aug19,,,
+VTA,Cnj,VTA_aw,mikaw,mikaw,NONE,1SgSubj,2SgObj,Neu,Pos,mikoonaan,<<mikoo>>naan,NJ-ngs-2023-Aug19,mikawinaan,<<mikaw>>inaan,OPD-Sentences
 VTA,Cnj,VTA_Cw,mizho,mizhw1,NONE,1SgSubj,2SgObj,Neu,Pos,mizhonaan,<<mizho>>inaan,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_C,waabam,waabam,NONE,1SgSubj,2SgObj,Neu,Pos,waabaminaan,<<waabam>>inaan,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_s,mawadish,mawadis1,NONE,1SgSubj,3PlObvObj,Neu,Neg,mawadisimaasiwag,<<mawadis>>imaasiwag,RECONFIRM,,,
@@ -1136,7 +1136,7 @@ VTA,Cnj,VTA_Cw,mizho,mizhw1,NONE,3PlProxSubj,2SgObj,Neu,Neg,mizhosinokwaa,<<mizh
 VTA,Cnj,VTA_C,waabam,waabam,NONE,3PlProxSubj,2SgObj,Neu,Neg,waabamisinokwaa,<<waabam>>isinokwaa,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_s,mawadish,mawadis1,NONE,3PlProxSubj,2SgObj,Neu,Pos,mawadisikwaa,<<mawadis>>ikwaa,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_n,miizh,miin1,NONE,3PlProxSubj,2SgObj,Neu,Pos,miinikwaa,<<miin>>ikwaa,NJ-ngs-2023-Aug19,,,
-VTA,Cnj,VTA_aw,mikaw,mikaw,NONE,3PlProxSubj,2SgObj,Neu,Pos,mikaakwaa,<<mikaa>>kwaa,NJ-ngs-2023-Aug19,,,
+VTA,Cnj,VTA_aw,mikaw,mikaw,NONE,3PlProxSubj,2SgObj,Neu,Pos,mikaakwaa,<<mikaa>>kwaa,NJ-ngs-2023-Aug19,mikawikwaa,<<mikaw>>ikwaa,OPD-Sentences
 VTA,Cnj,VTA_Cw,mizho,mizhw1,NONE,3PlProxSubj,2SgObj,Neu,Pos,mizhokwaa,<<mizho>>ikwaa,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_C,waabam,waabam,NONE,3PlProxSubj,2SgObj,Neu,Pos,waabamikwaa,<<waabam>>ikwaa,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_s,mawadish,mawadis1,NONE,3PlProxSubj,3PlObvObj,Neu,Neg,mawadisaasigwaa,<<mawadis>>aasigwaa,RECONFIRM,,,
@@ -1226,7 +1226,7 @@ VTA,Cnj,VTA_Cw,mizho,mizhw1,NONE,3SgProxSubj,2SgObj,Neu,Neg,mizhosinok,<<mizho>>
 VTA,Cnj,VTA_C,waabam,waabam,NONE,3SgProxSubj,2SgObj,Neu,Neg,waabamisinok,<<waabam>>isinok,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_s,mawadish,mawadis1,NONE,3SgProxSubj,2SgObj,Neu,Pos,mawadisik,<<mawadis>>ik,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_n,miizh,miin1,NONE,3SgProxSubj,2SgObj,Neu,Pos,miinik,<<miin>>ik,NJ-ngs-2023-Aug19,,,
-VTA,Cnj,VTA_aw,mikaw,mikaw,NONE,3SgProxSubj,2SgObj,Neu,Pos,mikaak,<<mikaa>>k,NJ-ngs-2023-Aug19,,,
+VTA,Cnj,VTA_aw,mikaw,mikaw,NONE,3SgProxSubj,2SgObj,Neu,Pos,mikaak,<<mikaa>>k,NJ-ngs-2023-Aug19,mikawik,<<mikaa>>ik,OPD-Sentences
 VTA,Cnj,VTA_Cw,mizho,mizhw1,NONE,3SgProxSubj,2SgObj,Neu,Pos,mizhok,<<mizho>>ik,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_C,waabam,waabam,NONE,3SgProxSubj,2SgObj,Neu,Pos,waabamik,<<waabam>>ik,NJ-ngs-2023-Aug19,,,
 VTA,Cnj,VTA_s,mawadish,mawadis1,NONE,3SgProxSubj,3PlObvObj,Neu,Neg,mawadisaasig,<<mawadis>>aasig,RECONFIRM,,,

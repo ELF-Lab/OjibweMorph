@@ -4,28 +4,32 @@ This repository is for creating a finite-state transducer (FST) in the Ojibwe la
 Morphological information about Ojibwe words is housed here.  Combined with the FST-generating code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph) and the Ojibwe lexical information stored in [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon), the FST can be generated as specified [below](#building-the-fst).
 
 ## Contents
-- [Test Results](#test-results)
-  - [OPD Tests](#opd-tests)
-    - [OPD Verbs](#opd-verbs)
-    - [OPD Nouns](#opd-nouns)
-  - [Paradigm Tests](#paradigm-tests)
-    - [Paradigm Verbs](#paradigm-verbs)
-    - [Paradigm Nouns](#paradigm-nouns)
-  - [Corpus Tests](#corpus-tests)
-- [User Instructions](#user-instructions)
-  - [Preparing to Build the FST](#preparing-to-build-the-fst)
-  - [Building the FST](#building-the-fst)
-  - [Preparing to Use the FST](#preparing-to-use-the-fst)
-  - [Using the FST](#using-the-fst)
-  - [Running the Tests](#running-the-tests)
-- [About OjibweMorph](#about-ojibwemorph)
-  - [Morphological Info](#morphological-info)
-  - [License/Copyright](#licensecopyright)
-  - [Acknowledgements](#acknowledgements)
-    - [People](#people)
-    - [Organizations and resources](#organizations-and-resources)
-    - [Funding](#funding)
-  - [Citation](#citation)
+- [OjibweMorph](#ojibwemorph)
+  - [Contents](#contents)
+  - [Test Results](#test-results)
+    - [OPD Tests](#opd-tests)
+      - [OPD Verbs](#opd-verbs)
+      - [OPD Nouns](#opd-nouns)
+    - [Paradigm Tests](#paradigm-tests)
+      - [Paradigm Verbs](#paradigm-verbs)
+      - [Paradigm Nouns](#paradigm-nouns)
+    - [Corpus Tests](#corpus-tests)
+  - [User Instructions](#user-instructions)
+    - [Preparing to Build the FST](#preparing-to-build-the-fst)
+      - [Installation via Docker](#installation-via-docker)
+      - [Regular Installation](#regular-installation)
+    - [Building the FST](#building-the-fst)
+    - [Preparing to Use the FST](#preparing-to-use-the-fst)
+    - [Using the FST](#using-the-fst)
+    - [Running the Tests](#running-the-tests)
+  - [About OjibweMorph](#about-ojibwemorph)
+    - [Morphological Info](#morphological-info)
+    - [License/Copyright](#licensecopyright)
+    - [Acknowledgements](#acknowledgements)
+      - [People](#people)
+      - [Organizations and resources](#organizations-and-resources)
+      - [Funding](#funding)
+    - [Citation](#citation)
 
 ## Test Results
 These results reflect the performance of an FST built from the morphology stored in [OjibweMorph](https://github.com/ELF-Lab/OjibweMorph) and the lemmas stored in [OjibweLexicon/OPD](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD) and [OjibweLexicon/HammerlyFieldwork](https://github.com/ELF-Lab/OjibweLexicon/tree/main/HammerlyFieldwork).
@@ -40,12 +44,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-25 | 66801 | 135 | 69.37% | 97.01% |
+| 2026-07-23 | 66806 | 155 | 67.82% | 96.97% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-25 | 8565 | 15 | 83.39% | 96.92% |
+| 2026-07-23 | 8565 | 15 | 80.03% | 96.87% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -53,12 +57,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-25 | 9833 | 0 | 88.41% | 100.0% |
+| 2026-07-23 | 11577 | 0 | 72.87% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2026-03-25 | 14330 | 0 | 99.98% | 100.0% |
+| 2026-07-23 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -68,18 +72,18 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 4.87% (324/6651) | 7.07% (303/4285) |
-| GJ | Border Lakes | Lac La Croix | 12.32% (9/73) | 12.5% (9/72) |
-| ES | Red Lake | Obaashiing | 5.25% (501/9531) | 9.74% (480/4925) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 2.5% (55/2197) | 4.36% (54/1237) |
-| GH | Leech Lake | Jaachaabaaning | 2.71% (7/258) | 3.39% (7/206) |
-| LW | Leech Lake | Jaachaabaaning | 2.63% (5/190) | 3.24% (5/154) |
-| LS | Mille Lacs | Aazhomog | 8.19% (5/61) | 9.61% (5/52) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 2.43% (162/6651) | 3.33% (143/4285) |
+| GJ | Border Lakes | Lac La Croix | 6.84% (5/73) | 6.94% (5/72) |
+| ES | Red Lake | Obaashiing | 2.52% (241/9531) | 4.46% (220/4925) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 1.91% (42/2197) | 3.15% (39/1237) |
+| GH | Leech Lake | Jaachaabaaning | 2.32% (6/258) | 2.91% (6/206) |
+| LW | Leech Lake | Jaachaabaaning | 1.57% (3/190) | 1.94% (3/154) |
+| LS | Mille Lacs | Aazhomog | 6.55% (4/61) | 7.69% (4/52) |
 | LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 4.77% (907/18997) | 8.73% (856/9803) |
+| Overall | | | 2.44% (464/18997) | 4.2% (412/9803) |
 
-Date Last Updated: 2026-03-25
+Date Last Updated: 2026-07-23
 
 ## User Instructions
 There are a few different ways to install OjibweMorph (in ascending order of effort involved):
@@ -130,7 +134,7 @@ Use the `Makefile`:
 - `make check` to run tests on the FST
 - `make clean` to remove all generated files, if desired
 
-> Note: When running these commands, we have sometimes encountered an error message related to `malloc`.  It seems to happen randomly, and you can just run the command again (perhaps running the `clean` command above in between) until the error does not occur.
+> Note: When running these commands, we have sometimes encountered an error message related to `malloc`. We believe this issue arises with Mac users with machines that use Apple Silicon chips (as opposed to Intel chips). This can be resolved by ensuring you are using foma v0.10.0alpha, which can run natively on these new chips. 
 
 By default, the output will go in a local directory called `FST/`.  In there, the directory `generated` contains the FST, lexc files and XFST rules.  The FST itself is `FST/generated/ojibwe.fomabin`.
 
