@@ -74,14 +74,14 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 |---|---|---|---|---|
 | NJ | Border Lakes | Nigigoonsiminikaaning | 0.9% (60/6648) | 0.99% (44/4445) |
 | GJ | Border Lakes | Lac La Croix | 1.37% (1/73) | 1.37% (1/73) |
-| ES | Red Lake | Obaashiing | 0.55% (52/9481) | 0.88% (44/4997) |
+| ES | Red Lake | Obaashiing | 0.53% (50/9481) | 0.84% (42/4997) |
 | RG | Red Lake | Odaawaa-Zaaga'iganiing | 0.37% (8/2181) | 0.63% (8/1280) |
 | GH | Leech Lake | Jaachaabaaning | 0.0% (0/258) | 0.0% (0/209) |
 | LW | Leech Lake | Jaachaabaaning | 0.53% (1/190) | 0.64% (1/156) |
 | LS | Mille Lacs | Aazhomog | 0.0% (0/59) | 0.0% (0/52) |
 | LSA | Mille Lacs | Lake Lena | 3.23% (1/31) | 3.45% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 0.65% (123/18926) | 0.96% (97/10098) |
+| Overall | | | 0.64% (121/18926) | 0.94% (95/10098) |
 
 Date Last Updated: 2026-07-27
 
