@@ -44,7 +44,7 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-07-27 | 66809 | 152 | 67.81% | 96.97% |
+| 2026-07-27 | 66809 | 156 | 67.81% | 96.96% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
@@ -72,16 +72,16 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 1.03% (69/6648) | 1.21% (52/4270) |
-| GJ | Border Lakes | Lac La Croix | 1.36% (1/73) | 1.38% (1/72) |
-| ES | Red Lake | Obaashiing | 0.65% (62/9481) | 1.09% (53/4852) |
-| RG | Red Lake | Odaawaa-Zaaga'iganiing | 0.45% (10/2181) | 0.82% (10/1218) |
-| GH | Leech Lake | Jaachaabaaning | 0.77% (2/258) | 0.48% (1/205) |
-| LW | Leech Lake | Jaachaabaaning | 0.52% (1/190) | 0.64% (1/154) |
-| LS | Mille Lacs | Aazhomog | 0.0% (0/59) | 0.0% (0/50) |
-| LSA | Mille Lacs | Lake Lena | 3.22% (1/31) | 3.44% (1/29) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 0.9% (60/6648) | 0.99% (44/4445) |
+| GJ | Border Lakes | Lac La Croix | 1.37% (1/73) | 1.37% (1/73) |
+| ES | Red Lake | Obaashiing | 0.55% (52/9481) | 0.88% (44/4997) |
+| RG | Red Lake | Odaawaa-Zaaga'iganiing | 0.37% (8/2181) | 0.63% (8/1280) |
+| GH | Leech Lake | Jaachaabaaning | 0.0% (0/258) | 0.0% (0/209) |
+| LW | Leech Lake | Jaachaabaaning | 0.53% (1/190) | 0.64% (1/156) |
+| LS | Mille Lacs | Aazhomog | 0.0% (0/59) | 0.0% (0/52) |
+| LSA | Mille Lacs | Lake Lena | 3.23% (1/31) | 3.45% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 0.77% (146/18926) | 1.19% (116/9684) |
+| Overall | | | 0.65% (123/18926) | 0.96% (97/10098) |
 
 Date Last Updated: 2026-07-27
 
