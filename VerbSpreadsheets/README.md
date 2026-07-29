@@ -55,7 +55,7 @@
 
 ## Organization
 
-This folder (VerbSpreadsheets) contains the verb paradigm spreadsheets used to build and validate the OjibweMorph FST for morphological production and parsing. Spreadsheets are
+This folder (VerbSpreadsheets) contains the verb paradigm spreadsheets used to build and validate the OjibweMorph FST for morphological production and parsing. Spreadsheets are, for convenience, split based on paradigm (e.g. VAI, VTA, etc) and order (independent, conjunct, etc). 
 
 ### Descripton of Tags (Verbs)
 
@@ -66,8 +66,9 @@ All spreadsheets contain the following columns:
 * **Class:** Phonological classes based on the sounds at the right edge of the stem. Change the shape of the suffix complex due to phonological processes at the stem-suffix boundary.
 * **Lemma:** Each class within each order/paradigm combination is exemplified by at least one sample verb, often more than one. The lemma is the "dictionary form" of the verb (akin to the infinitive with English verbs) as taken from the OPD. This is usually either the third person singular and/or second person simple imperative form. Lemmas are also used for verb tags in the FST.
 * **Stem:** The stem is the underlying form of the example verb. Unless otherwise indicated, we take the stem specified in the OPD. Sometimes, this is the same as the lemma. However, often it is distinct, as various phonological processes can intervene.
+* **Head:** The noun associated with the head position (the item being modified by) a relative clause. Only present in the participle forms.
 * **Subject:** The person/noun associated with the prototpyical "actor" role in transitive paradigms, or the sole person/noun of intransitive paradigms. 
-* **Object:** The person/noun associated with the prototypical "undergoer" role in transitive paradigms. Always NA in intransitive paradigms.
+* **Object:** The person/noun associated with the prototypical "undergoer" role in transitive paradigms. Always NONE in intransitive paradigms.
 * **Mode:** Traditional Algonquianist categories in Ojibwe related to the epistemic/modal/aspectual system. In the imperative order (command forms) this encodes whether it is "simple", "delayed", or "prohibative". The prohibative must be precede by "gego" to be well-formed.
 * **Negation:** Whether the verb is positive or negative. The independent order negatives must be preceded by "gaawiin" to be well-formed.
 * **Form\#Surface:** The surface form of the example verb, after all phonological processes have been executed. The source for these forms is indated in a different column. Form1 is the attested or assumed form for Border Lakes, which all other forms are variants from other closely related dialects. Marked MISSING if a form is expected, but not yet attested in a source or extended with a GUESS. Surface forms are used to test the FST.
@@ -81,7 +82,7 @@ All spreadsheets contain the following columns:
 | VAI   | Verb Animate Intransitive           |
 | VAIPL   | Verb Animate Intransitive (Plural Only)           |
 | VII   | Verb Inanimate Intransitive         |
-| VIIPL   | Verb Inanimate Intransitive (Plural Only         |
+| VIIPL   | Verb Inanimate Intransitive (Plural Only)         |
 | VTI   | Verb Transitive Inanimate           |
 | VTA   | Verb Transitive Animate             |
 | VAIO  | Verb Animate Intransitive + Object  |
@@ -94,6 +95,16 @@ All spreadsheets contain the following columns:
 | Ind   | Independent order                   |
 | Imp   | Imperative order                    |
 | Pcp   | Participles	                      |
+
+A few additional notes on the participle order in particular are necessary. Participles are verbs that, functionally speaking, behave like a noun. More specifically, they are usually analyzed as relative clauses (e.g. Sullivan 2016), with literal translations being things like "the one who sings" for a form like *negamod* (and a more general translation being "singer"). Generally, it is not typical to treat participles as a separate clausal order within the Algonquianist tradition, as there is significant overlap with the (changed) conjunct order form. 
+
+However, certain varieties within the Southwestern group (though this is certainly not unique to Southwestern speakers), in particular more southerly speakers like those at Mille Lacs, have dedicated participle forms that arise in certain cases, and always appears alongside the process of initial change. For example, many speakers in the plural will show a form *negamojig* translating to "the ones who sing" -- note the change from singular to plural. This is distinct from the (changed) conjunct morphology, which is instead *negamowaad*. Inflection like that seen in *negamojig* are true participle forms, in that such a form could not be used in any other way.
+
+Further complicating this picture is that not all dialects and varieties we are modelling have this form. In particular speakers of Northern varieties, like Border Lakes, simply do not have this form within their grammar. Instead, speakers use a dedicated subordinating preverb *gaa-* to form relative clauses with conjunct order inflection. For example, *gaa-nagamowaad* would translate to "singers" or "the ones who sing". Note, *gaa-* is distinct from the changed form of the past tesnse preverb *gii(')-*. It seems that speakers with the subordinating preverb *gaa-* never have distinctive participle inflection (i.e. there is no speaker who would say *gaa-nagamojig* to mean "the ones who sing"). These speakers also seem to form verbs that behave functionally like participles with a changed conjunct verb. That is *negamowaad* can also mean "singers". There are subtle meaning differences between this and the form produced with *gaa-*, but the exact differences are not entirely clear at present.
+
+A final complication: There are also speakers who seem to have neither dedicated participle form nor the *gaa-* relativizer. This seems to be the case for at least some speakers at Ponemah in Red Lake. These speakers form the functional equivalent of the participle form with a changed conjunct verb.
+
+In our spreadsheets, we currently model both the "Southern" Southwestern dedicated participle forms, as well as the "Northern" *gaa-* forms. These utilize the **Head** column, which indicates what type of noun is being modified by the clause. While it is technically possible to have a first or second person head noun, these forms are never distinct from the regular (changed) conjunct forms (i.e. they never have dedicated participle forms). We therefore focus only on those cases where the head noun is a third person, either animate or inanimate, as these often (but not always) have a special form.
 
 #### CLASS
 
@@ -175,7 +186,7 @@ All spreadsheets contain the following columns:
 
 ### Notes on ambiguous forms and alternate forms
 
-Right now, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations in Northwestern Ontario, just east of Fort Frances. Any additional forms (Form2, Form3, etc) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have innovated the obviative plural form. Additional forms are included to expand coverage of the model when parsing, and also with hopes that we will also have a more proper multi-dialect model in the future (where dialect is more clearly indicated in some way).
+Right now, only Form1 is meant to represent a particular dialect or way of spekaing Anishinaabemowin. Specifically, Border Lakes as spoken at Nigigoonsiminikaaning and Seine River First Nations in Northwestern Ontario, just east of Fort Frances. Any additional forms (Form2, Form3, etc) are variants oberved in other dialects in the Southwestern group. Often, but not always, Form1 is shared across the dialect group writ large. For example, few dialects, if any, outside of Border Lakes have retained the obviative plural form. Additional forms are included to expand coverage of the model when parsing, and also with hopes that we will also have a more proper multi-dialect model in the future (where dialect is more clearly indicated in some way).
 
 When a given form is ambiguous, we have represented that indirectly by repeating identical forms in more than one row. There are no "composite" tags to indicate ambiguity. On the FST side, this will result in an ambiguous form being ambiguous as to which particular tag set is appropriate. In other uses such as the conjugator, this means the same form will appear in more than one place in the table.
 
