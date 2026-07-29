@@ -10,7 +10,7 @@
 			- [PARADIGM](#paradigm)
 			- [ORDER](#order)
 			- [CLASS](#class)
-			- [SUBJECT/OBJECT](#subjectobject)
+			- [SUBJECT/OBJECT/HEAD](#subjectobjecthead)
 			- [MODE](#mode)
 			- [NEGATION](#negation)
 			- [SOURCES](#sources)
@@ -132,7 +132,7 @@ In our spreadsheets, we currently model both the "Southern" Southwestern dedicat
 | VTA_aw  | vta /aw/ stems                 |
 | VTA_Cw  | vta consonant-w stems          |
 
-#### SUBJECT/OBJECT
+#### SUBJECT/OBJECT/HEAD
 
 | Our Tag        | OPD Tag  | Description                             |
 |----------------|----------|-----------------------------------------|
