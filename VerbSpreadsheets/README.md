@@ -240,7 +240,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | VAI2        | vai2 /am/ stems           |	 "zaaga'am"                        			   | /zaaga'am/         |
 | VAI Reflexive | vai with /-idizo/        | "waabandizo"                     			   | /waabandizo/       |
 | VAI Reciprocal | vai with /-idi/         | "waabandi"                       			   | /waabandi/         |
-| VAIO         | vai with 0sg/pl object    | "adaawe"                         			   | /adaawe/           |
+| VAIO         | vai with 0sg/pl object    | "adaawen"                         			   | /adaawe/           |
 
 
 ### RULES
@@ -306,7 +306,7 @@ For VTA Class 2 and 3, we introduce special multicharacter symbols n1 (equivalen
 
 For the VTA Class 4, we don't have any examples, but from what we can see in the dictionary we found two verbs that fall into this class. "gonzhi" meaning "swallow h/" and "wiinzh" meaning "name h/". There are some example conjugations of each, but more work is needed for me to fully understand this class. From what I see, they are not discussed in Valentine (2001) or in other notes from Nichols that I have.
 
-For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). We capture this behavior with a number of rules detailed below.
+For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks about "zhi(n)" meaning "say Y to AN". This corresponds to "izhi" in CIW and has underlying stem form "iN". It patterns with Class 2, except it is completely null when there are the inverse theme signs "-igw" and "igoo" (again, see Valentine 2001:285). We capture this behavior with a number of rules detailed below, and no longer use the irregular spreadsheets in current versions of the model.
 
 ### RULES
 
@@ -354,7 +354,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VAI2          | VAI_am | vai2 /am/ stems               | "zaaga'am"                                |
 | N/A 			| VAI_rfx | vai with /-idizo/        	 | "waabandizo"                     		 |
 | N/A 			| VAI_rcp | vai with /-idi/         	 | "waabandi"                       		 |
-| VAIO          | VAIO	 | vai with 0sg/pl object        | "adaawe"                                  |
+| VAIO          | VAIO	 | vai with 0sg/pl object        | "adaawen"                                  |
 | VTI1          | VTI_am | vti /am/ stems                | "waabandam"                               |
 | VTI2          | VTI_oo | vti /oo/ stems                | "wanitoon"                                |
 | VTI3          | VTI_i  | vti /i/ stems                 | "miijin"                                  |
@@ -365,7 +365,7 @@ For Class 8 (irregulars) there is one known example. Valentine (2001:285) talks 
 | VTA4          | ???    | vta changeable /Nn/ stems     | ???                                       |
 | VTA5          | VTA_aw | vta /aw/ stems                | "mikaw"                                   |
 | VTA6/7        | VTA_Cw | vta consonant-w stems         | "mizho"                                   |
-| VTA8          | VTA_irr    | vta irregular stems           | "izhi"                                       |
+| VTA8          | VTA_irr    | vta irregular stems       | "izhi"                                       |
 
 
 [def]: #verb-spreadsheets
