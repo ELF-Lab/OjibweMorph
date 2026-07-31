@@ -56,7 +56,7 @@ All spreadsheets contain the following columns:
 * **Stem:** The stem is the underlying form of the example noun. Unless otherwise indicated, we take the stem specified in the OPD. Sometimes, this is the same as the lemma. However, often it is distinct, as various phonological processes can intervene.
 * **PersPoss:** The person/number associated with the possessor, if any.
 * **Dim:** Whether noun is a diminuative, or not.
-* **Poss:** Whether or not the special possessive marker is present.
+* **Poss:** Whether or not the special possessive marker (canonically *-im*) is present.
 * **Pej:** Whether or not the pejorative marker is present.
 * **Pret:** Whether or not the preterit marker is present.
 * **Basic:** A morpheme slot that alternates in obviation/number, locative marking, and vocative marking.
@@ -74,8 +74,6 @@ All spreadsheets contain the following columns:
 | NID   | Noun Inanimate Dependent 			  |
 
 #### Class
-
-Still need to add the dependent nouns:
 
 | Tag     | Description                    |
 |---------|--------------------------------|
@@ -140,7 +138,7 @@ All tags end with "Poss" to indicate that they are the possessor of the noun.
 
 | Tag   | Description                         |
 |-------|-------------------------------------|
-| Poss  | Possessive                          |
+| Poss  | Possessive suffix                   |
 | NONE  | Regular 	                          |
 
 #### Pej
@@ -195,7 +193,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - For all of the NA nouns that end in "w", we use a special character "w2" in order to capture the specific contexts where it deletes or surfaces, as captured by the _w2-deletion_ rule.
 
-- There are two variations for the obviative, plural, and diminutive markers for NA_Vw nouns. One "-an", "-ag", and "-ens" (deriving "migiziwan", "migiziwag" or "migiziwens"), and the other "-V1n", "-V1g" and "-V1ens" (deriving "migiziin", "migiziig", and "migiziins"). The distribution of this is not clear, so it might be overgenerating by applying it to all stems in this class, but the form variation is attested for some stems in the OPD. This also happens in the NI_Vw stems.
+- There are two variations for the obviative, plural, and diminutive markers for NA_Vw nouns. One "-an", "-ag", and "-ens" (deriving "migiziwan", "migiziwag" or "migiziwens"), and the other "-V1n", "-V1g" and "-V1ens" (deriving "migiziin", "migiziig", and "migiziins"). The distribution of this is not clear, so it might be overgenerating by applying it to all stems in this class, but form variation is attested for some stems in the OPD. This also happens in the NI_Vw stems.
 
 - The NA_Cy stems end in a special "y2", which always deletes via the _y2-deletion_ rule.
 
@@ -233,7 +231,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 
 - The special character "i2" appears in the singular forms of the two "short" stems (Classes 1B and 5B). This resists deletion and triggers palatalization of s1 (the same as i1 does in many verb forms). Very few nouns fall into these classes.
 
-- The words ending in "-kana" eaming "road, path" are treated in a special class, as they are irregular. We assume the underlying stem lacks the underlying final vowel, which is instead added in the inflection as the "a1" (non-deleting "a").
+- The words ending in "-kana" meaning "road, path" are treated in a special class, as they are irregular. We assume the underlying stem lacks the underlying final vowel, which is instead added in the inflection as the "a1" (non-deleting "a").
 
 ### Noun Animate Dependent (NAD)
 
@@ -247,6 +245,10 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NAD_Cy	 |	Class 5A		 |	nad consonant /y/ (regular)	  |	"=shkanzhy-"			| /shkanzhy2/			 |
 | NAD_VVy    |  N/A		    	 |  nad long vowel /y/            | "=maamaa-"		 	    | /maamaay1/			 |
 
+The NAD nouns are more restricted than their NA counterparts (they never show the possessive suffix, but also are obligatorily possessed). Otherwise, in the suffixes, all of the same processes apply as was discussed above to their NA counterparts.
+
+One major difference is in the behavior of the person prefix. In many cases, the form of the person prefix looks the same. However, the prefixes show different allomorphy with dependent nouns than they do in both the verbs and with independent nouns. These are handled through specific phonological rules that apply in these cases, as well as distinct forms of the prefixes in the spreadsheets. With dependent nouns, the first person prefix is *n-*, second person *g-*, and third person *w-* (as opposed to, respectively, *ni-*, *gi-*, and *o-* with independent nouns and verbs). More discussion of the rules that derive the final forms of dependent noun prefixes can be found in the Readme for the phonological rules. 
+
 ### Noun Inanimate Dependent (NID)
 
 | Tag     	 | Nichols/Valentine | Description                    | Example Lemmas 		    | Example Stems 		 |
@@ -256,6 +258,7 @@ This section is devoted to detailing the paradigms and stem classes as intantiat
 | NID_Cy	 |	Class 5A		 | na consonant /y/ (regular)	  | "=disy-"				| /disy2/			 	 |
 | NID_aa	 |	Class 6			 | ni /aa/-augment				  | "=denaniw-"				| /denaniw/			 	|
 
+As discussed above with the animate dependent nouns, there are no dependent-noun specific classes or phonological process that target the stem/suffix boundary with inanimate dependent nouns. However, again like the NAD cases, there is a distinct set of forms and rules for the prefixes in these cases.
 
 ## Stacking rules
 
