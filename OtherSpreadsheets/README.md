@@ -91,9 +91,11 @@ For example, the animate singular demonstrative *wa'aw* gets the analysis `PROND
 
 # Proper Nouns
 
-Proper nouns refer to a specific person or place. For example, someone's name or the name of a town. There are currently two paradigms of proper nouns: `NamePerson` and `NamePlace`, with both serving as the tag in combination with the lemma (e.g. `LEMMA+NamePlace`). For example, *Bemijigamaag* is analyzed as `Bemijigamaag+NamePlace`. Like English, it is typical to capitalize the initial character in a proper noun, regardless of where it appears in the sentence. They are encoded to enforce this convention, so analyzing the string *bemijigamaag* (without capitalization) will return `+?`.
+Proper nouns refer to a specific person or place. For example, someone's name or the name of a town. There are currently three paradigms of proper nouns: `NamePerson`, `NamePlace`, and `NameVocative`, with all serving as the tag in combination with the lemma (e.g. `LEMMA+NameType`). For example, *Bemijigamaag* is analyzed as `Bemijigamaag+NamePlace`. Like English, it is typical to capitalize the initial character in a proper noun, regardless of where it appears in the sentence. Personal and place names are encoded to enforce this convention, so analyzing the string *bemijigamaag* (without capitalization) will return `+?`.
 
-Currently, we have not implemented the fact that inflection can appear on proper nouns. For example, names can appear with obviative marking, and names referring to people who have passed away can be inflected for the preterit. We plan to expand these spreadsheets in the future to allow for this inflection soon.
+The items that receive the tag `NameVocative` are unique to the FST, and are not directly listed as such in the OPD. These are items like *niijjii* "my friend; bro" that get used as vocative terms of address, usually for close friends or family. We treat these as proper nouns, since they do not inflect in the same way as other nouns, and generally have functional overlap with personal names. Similarly, they serve a similar function to regular animate nouns inflected with the vocative suffix *-dog*, as in *anishinaabedog* "fellow Ojibwe people!", but are usually formed by shortening a longer word (i.e. how "bro" is a shortening of "brother" in English) and not by adding the vocative suffix. We retain a distinct tag to ensure they can be easily identified when parsing text.
+
+Currently, we have not implemented the fact that inflection can appear on certain proper nouns. For example, names can appear with obviative marking, and names referring to people who have passed away can be inflected for the preterit. We plan to expand these spreadsheets in the future to allow for this inflection soon.
 
 # Enclitics
 
