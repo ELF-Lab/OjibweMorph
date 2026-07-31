@@ -73,7 +73,7 @@ Here is a summary of the tenses that we are currently modelling:
 | Future volitional (General Southwestern) | wii         | wii           | waa              |
 | Future volitional (Border Lakes) | wii'        | wii'          | waa'              |
 
-Our current approach is for the FST to output tags for each tense on its own terms for the Independent and Conjunct orders. That is, if a (conjunct order) verb has *ji-*, then the system will output `PVTense/ji+`, rather than linking it to *ga-/da-* or *daa-*, even though *ji-* is considered the plain conjunct form of those preverbs. In the changed conjunct, the form, even if irregular, is tied to the plain conjunct order form. 
+Our current approach is for the FST to output tags for each tense on its own terms. That is, if a (conjunct order) verb has *ji-*, then the system will output `PVTense/ji+`, rather than linking it to *ga-/da-* or *daa-*, even though *ji-* is considered the plain conjunct form of those preverbs. 
 
 Note that both the general forms (gii-/wii-) and the Border Lakes specific forms (gii'-/wii'-) are both used in Border Lakes. The difference between the two forms is not currently well understood, but those that lack the glottal stop seem to be associated less with past tense, and more with simultaneous tense. 
 
