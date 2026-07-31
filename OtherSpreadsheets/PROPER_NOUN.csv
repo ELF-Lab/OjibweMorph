@@ -1,4 +1,8 @@
-Paradigm,Class,Lemma,Stem,Form1Surface,Form1Split,Form1Source
-NamePerson,NamePerson,Wenabozho,Wenabozhow2,Wenabozho,<<Wenabozho>>,Hammerly
-NamePlace,NamePlace,Waashtanong,Waashtanong,Waashtanong,<<Waashtanong>>,OPD
-NameVocative,NameVocative,niijii,niijii,niijii,<<niijii>>,Hammerly
+Paradigm,Class,Lemma,Stem,Pret,Basic,Form1Surface,Form1Split,Form1Source
+NamePerson,NamePerson,Wenabozho,Wenabozhow2,NONE,NONE,Wenabozho,<<Wenabozho>>,Hammerly
+NamePerson,NamePerson_Vw,Wenabozho,Wenabozhow2,NONE,ProxSg,Wenabozho,<<Wenabozho>>,Hammerly
+NamePerson,NamePerson_Vw,Wenabozho,Wenabozhow2,NONE,ObvSg,Wenabozhoon,<<Wenabozho>>V1n,Hammerly
+NamePerson,NamePerson_Vw,Wenabozho,Wenabozhow2,Pret,ProxSg,Wenabozho,<<Wenabozho>>V1ban,Hammerly
+NamePerson,NamePerson_Vw,Wenabozho,Wenabozhow2,Pret,ObvSg,Wenabozhoon,<<Wenabozho>>V1baniin,Hammerly
+NamePlace,NamePlace,Waashtanong,Waashtanong,NONE,NONE,Waashtanong,<<Waashtanong>>,OPD
+NameVocative,NameVocative,niijii,niijii,NONE,NONE,niijii,<<niijii>>,Hammerly

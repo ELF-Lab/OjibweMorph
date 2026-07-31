@@ -95,7 +95,7 @@ Proper nouns refer to a specific person or place. For example, someone's name or
 
 The items that receive the tag `NameVocative` are unique to the FST, and are not directly listed as such in the OPD. These are items like *niijjii* "my friend; bro" that get used as vocative terms of address, usually for close friends or family. We treat these as proper nouns, since they do not inflect in the same way as other nouns, and generally have functional overlap with personal names. Similarly, they serve a similar function to regular animate nouns inflected with the vocative suffix *-dog*, as in *anishinaabedog* "fellow Ojibwe people!", but are usually formed by shortening a longer word (i.e. how "bro" is a shortening of "brother" in English) and not by adding the vocative suffix. We retain a distinct tag to ensure they can be easily identified when parsing text.
 
-Currently, we have not implemented the fact that inflection can appear on certain proper nouns. For example, names can appear with obviative marking, and names referring to people who have passed away can be inflected for the preterit. We plan to expand these spreadsheets in the future to allow for this inflection soon.
+Currently, we have just a very initial version of personal name inflection. Names can appear with obviative marking, and names referring to people who have passed away can be inflected for the preterit. The spreadsheets have this capability, but many names are not yet integrated. Expanding this is on the docket.
 
 # Enclitics
 

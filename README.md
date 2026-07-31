@@ -72,7 +72,7 @@ The overall results are given at the bottom of the table, but a breakdown by the
 In the table below, we are simply counting 'failures' -- forms that receive no analysis whatsover from the FST.  This is because unlike with the OPD and paradigm tests, we do not have a "gold standard" analysis to check.  The "by-token" failure covers every token (word) in the example sentences, whereas the "by-type" failures consider every *unique* token (i.e., so that each token only counts once towards the score regardless of its frequency).
 | Speaker | Region | Community |  By-Token Failure | By-Type Failure |
 |---|---|---|---|---|
-| NJ | Border Lakes | Nigigoonsiminikaaning | 0.87% (58/6649) | 0.95% (42/4444) |
+| NJ | Border Lakes | Nigigoonsiminikaaning | 0.86% (57/6649) | 0.92% (41/4444) |
 | GJ | Border Lakes | Lac La Croix | 0.0% (0/73) | 0.0% (0/73) |
 | ES | Red Lake | Obaashiing | 0.42% (40/9480) | 0.68% (34/4996) |
 | RG | Red Lake | Odaawaa-Zaaga'iganiing | 0.37% (8/2181) | 0.63% (8/1280) |
@@ -81,7 +81,7 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 | LS | Mille Lacs | Aazhomog | 0.0% (0/59) | 0.0% (0/52) |
 | LSA | Mille Lacs | Lake Lena | 3.23% (1/31) | 3.45% (1/29) |
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
-| Overall | | | 0.57% (107/18926) | 0.82% (83/10096) |
+| Overall | | | 0.56% (106/18926) | 0.81% (82/10096) |
 
 Date Last Updated: 2026-07-31
 
