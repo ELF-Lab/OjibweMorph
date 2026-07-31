@@ -54,7 +54,7 @@ Note, there are further complications. There are at least three patterns of init
 
 ## Subordinating
 
-Subordinating preverbs only combine with conjunct order verbs. There are differences across dialects, and we have included all known subordinators in Ojibwe. In Border Lakes, currently only "gaa-" is attested. It is likely dervied from the past tense marker "gii-" under initial change, but does not have a past tense interpretation synchronically, so is therefore distinct. In previous iterations of the model, this was modelled using these spreadsheets. It is not currently found within the spreadsheet, as the element only appears with verbs serving a participle function. Therefore, it is instead treated as a perfix attaching to participle order verbs in the VerbSpreadsheets. See the README there for more details.
+Subordinating preverbs only combine with conjunct order verbs. There are differences across dialects, and we have included all known subordinators in Ojibwe. In Border Lakes, currently only "gaa-" is attested. It is likely dervied from the tense marker "gii-" under initial change, but does not have a past tense interpretation synchronically, so is therefore distinct.
 
 ## Tense
 

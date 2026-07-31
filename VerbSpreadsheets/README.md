@@ -104,7 +104,7 @@ Further complicating this picture is that not all dialects and varieties we are 
 
 A final complication: There are also speakers who seem to have neither dedicated participle form nor the *gaa-* relativizer. This seems to be the case for at least some speakers at Ponemah in Red Lake. These speakers form the functional equivalent of the participle form with a changed conjunct verb.
 
-In our spreadsheets, we currently model both the "Southern" Southwestern dedicated participle forms, as well as the "Northern" *gaa-* forms. These utilize the **Head** column, which indicates what type of noun is being modified by the clause. While it is technically possible to have a first or second person head noun, these forms are never distinct from the regular (changed) conjunct forms (i.e. they never have dedicated participle forms). We therefore focus only on those cases where the head noun is a third person, either animate or inanimate, as these often (but not always) have a special form.
+In our spreadsheets, we currently model both the "Southern" Southwestern dedicated participle forms, with all others simply being analyzed with the conjunt order or changed conjunct. These utilize the **Head** column, which indicates what type of noun is being modified by the clause. While it is technically possible to have a first or second person head noun, these forms are never distinct from the regular (changed) conjunct forms (i.e. they never have dedicated participle forms). We therefore focus only on those cases where the head noun is a third person, either animate or inanimate, as these often (but not always) have a special form.
 
 #### CLASS
 
