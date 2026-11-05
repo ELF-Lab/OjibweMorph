@@ -16,5 +16,8 @@
     "missing_form_marker": "MISSING",
     "multichar_symbols": [
 	"w2"
-    ]
+    ],
+    "enclitic_root":"EncliticRoot",
+    "enclitic_template_path":"./templates/enclitics.lexc.j2",
+    "enclitic_source_path":"./OtherSpreadsheets"
 }

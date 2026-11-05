@@ -57,5 +57,8 @@
     "prefix_root":"PreverbRoot",
     "template_path":"./templates/preverbs.lexc.j2",
     "pv_source_path":"./PVSpreadsheets",
-    "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv"
+    "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv",
+    "enclitic_root":"EncliticRoot",
+    "enclitic_template_path":"./templates/enclitics.lexc.j2",
+    "enclitic_source_path":"./OtherSpreadsheets"
 }
