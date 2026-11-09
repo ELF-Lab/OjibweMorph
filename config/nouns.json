@@ -70,5 +70,8 @@
     "pre_element_tag": "[PRENOUN]",
     "prefix_root":"PrenounRoot",
     "template_path":"./templates/prenouns.lexc.j2",
-    "pv_source_path":"./PVSpreadsheets"
+    "pv_source_path":"./PVSpreadsheets",
+    "enclitic_root":"EncliticRoot",
+    "enclitic_template_path":"./templates/enclitics.lexc.j2",
+    "enclitic_source_path":"./OtherSpreadsheets"
 }
