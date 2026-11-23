@@ -7,7 +7,6 @@
     "irregular_csv_files": [],
     "lexical_database": "ADVERBS.csv",
     "regular_lexc_file": "ojibwe_adverbs.lexc",
-    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm"
     ],

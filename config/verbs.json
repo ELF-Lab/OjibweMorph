@@ -28,7 +28,6 @@
     "irregular_csv_files": [],
     "lexical_database": "VERBS.csv",
     "regular_lexc_file": "ojibwe_verbs.lexc",
-    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm",
 	"Order",

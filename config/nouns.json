@@ -41,7 +41,6 @@
     "irregular_csv_files": [],
     "lexical_database": "NOUNS.csv",
     "regular_lexc_file": "ojibwe_nouns.lexc",
-    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm",
 	"Dim",

@@ -7,7 +7,6 @@
     "irregular_csv_files": [],
     "lexical_database": "PRONOUNS.csv",
     "regular_lexc_file": "ojibwe_pronouns.lexc",
-    "irregular_lexc_file": "",
     "morph_features": [
 	"Paradigm"
     ],
@@ -15,10 +14,5 @@
     "missing_form_marker": "MISSING",
     "multichar_symbols": [
 	"w2"
-    ],
-    "pre_element": "",
-    "pre_element_template_path": "",
-    "pre_element_source_path": "",
-    "pre_element_lexical_database": "",
-    "derivational_csv_file": ""
+    ]
 }
