@@ -18,5 +18,8 @@
     "pre_element": "Preadverb",
     "pre_element_template_path":"./templates/preadverbs.lexc.j2",
     "pre_element_source_path":"./PVSpreadsheets",
-    "pre_element_lexical_database": "LEXICAL_PREADVERBS.csv"
+    "pre_element_lexical_database": "LEXICAL_PREADVERBS.csv",
+    "enclitic_root":"EncliticRoot",
+    "enclitic_template_path":"./templates/enclitics.lexc.j2",
+    "enclitic_source_path":"./OtherSpreadsheets"
 }

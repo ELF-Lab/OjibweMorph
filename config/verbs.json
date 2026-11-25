@@ -54,5 +54,8 @@
     "pre_element_template_path":"./templates/preverbs.lexc.j2",
     "pre_element_source_path":"./PVSpreadsheets",
     "pre_element_lexical_database": "LEXICAL_PREVERBS.csv",
-    "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv"
+    "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv",
+    "enclitic_root":"EncliticRoot",
+    "enclitic_template_path":"./templates/enclitics.lexc.j2",
+    "enclitic_source_path":"./OtherSpreadsheets"
 }
