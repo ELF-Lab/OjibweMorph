@@ -1,12 +1,10 @@
 {
     "pos":"Numeral",
-    "root_lexicon":"NumeralRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"NUMERAL"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "NUMERALS.csv",
     "regular_lexc_file": "ojibwe_numerals.lexc",
     "morph_features": [

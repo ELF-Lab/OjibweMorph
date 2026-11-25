@@ -1,6 +1,5 @@
 {
     "pos":"Verb",
-    "root_lexicon":"VerbRoot",
     "morphology_source_path": "./VerbSpreadsheets/",
     "regular_csv_files": [
 	"VAIO_CNJ",
@@ -16,7 +15,7 @@
 	"VII_CNJ",
 	"VII_IND",
 	"VII_PCP",
-	"VIIPL",      
+	"VIIPL",
 	"VTA_CNJ",
 	"VTA_IMP",
 	"VTA_IND",
@@ -26,10 +25,8 @@
 	"VTI_IND",
 	"VTI_PCP"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "VERBS.csv",
-    "lexical_prefix_database": "LEXICAL_PREVERBS.csv",    
     "regular_lexc_file": "ojibwe_verbs.lexc",
     "morph_features": [
 	"Paradigm",
@@ -53,10 +50,10 @@
 	"ChCnj+",
 	"<ChCnj>"
     ],
-    "pre_element_tag": "[PREVERB]",
-    "prefix_root":"PreverbRoot",
-    "template_path":"./templates/preverbs.lexc.j2",
-    "pv_source_path":"./PVSpreadsheets",
+    "pre_element": "Preverb",
+    "pre_element_template_path":"./templates/preverbs.lexc.j2",
+    "pre_element_source_path":"./PVSpreadsheets",
+    "pre_element_lexical_database": "LEXICAL_PREVERBS.csv",
     "derivational_csv_file":"./DerivationalSpreadsheets/DerivationalMorphology.csv",
     "enclitic_root":"EncliticRoot",
     "enclitic_template_path":"./templates/enclitics.lexc.j2",

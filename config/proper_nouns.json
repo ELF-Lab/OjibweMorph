@@ -1,12 +1,10 @@
 {
     "pos":"ProperNoun",
-    "root_lexicon":"ProperNounRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"PROPER_NOUN"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "PROPER_NOUNS.csv",
     "regular_lexc_file": "ojibwe_proper_nouns.lexc",
     "morph_features": [

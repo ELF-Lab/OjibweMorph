@@ -1,12 +1,10 @@
 {
     "pos":"Particle",
-    "root_lexicon":"ParticleRoot",
     "morphology_source_path": "./OtherSpreadsheets/",
     "regular_csv_files": [
 	"PARTICLE"
     ],
-    "irregular_csv_files": [
-    ],
+    "irregular_csv_files": [],
     "lexical_database": "PARTICLES.csv",
     "regular_lexc_file": "ojibwe_particles.lexc",
     "morph_features": [

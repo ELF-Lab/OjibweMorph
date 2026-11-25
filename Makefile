@@ -26,11 +26,10 @@ OJIBWE_MORPH_REGEX=$(shell echo $(OJIBWE_MORPH) | sed 's/\./\\\./g' | sed 's/\//
 # Strip each file path to only include the POS e.g., "../config/nouns.json" -> "nouns"
 POS=$(shell awk '{ gsub(/$(OJIBWE_MORPH_REGEX)\/config\/+/, ""); gsub(/\.json/, ""); print }' <<< "$(CONFIG_FILES)")
 LEXCTARGETS=$(POS:%=%.lexc)
-TAG_CONFIGURATION_FILES=$(POS:%=$(OUTPUT_DIR)/generated/%_tags.json)
 ALTTAG=False
 DERIVATIONS=True
 
-all:$(OUTPUT_DIR)/generated/all.lexc $(REGULAR_FST) $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).att $(TAG_CONFIGURATION_FILES)
+all:$(OUTPUT_DIR)/generated/all.lexc $(REGULAR_FST) $(OUTPUT_DIR)/generated/$(LANGUAGE_NAME).att
 
 release:all
 	zip generated.zip $(OUTPUT_DIR)/generated/*
@@ -73,26 +72,6 @@ $(OUTPUT_DIR)/generated/lang-ciw:$(OUTPUT_DIR)/generated/all.lexc $(OUTPUT_DIR)/
 	cp phonology.xfst lang-ciw/src/fst/morphology/phonology.xfscript ; \
 	cp $(addprefix $(LANGUAGE_NAME)_,$(LEXCTARGETS)) lang-ciw/src/fst/morphology/stems/; \
 	cp preverbs.lexc prenouns.lexc preadverbs.lexc lang-ciw/src/fst/morphology/stems/
-
-# Tag specification file
-$(OUTPUT_DIR)/generated/verbs_tags.json:$(OJIBWE_MORPH)/config/verbs.json
-	mkdir -p $(OUTPUT_DIR)/generated
-	$(PYTHON) -m fstmorph.extract_tag_combinations \
-             --config-file $< \
-             --source-path $(OJIBWE_MORPH) \
-             --pre-element=TensePreverbs \
-             --pre-element-tags="PVTense/gii,0" \
-             --post-element=Derivations \
-             --post-element-tags="VII+Augment/magad,0" \
-             --output-file $@
-
-$(OUTPUT_DIR)/generated/%_tags.json:$(OJIBWE_MORPH)/config/%.json
-	mkdir -p $(OUTPUT_DIR)/generated
-	$(PYTHON) -m fstmorph.extract_tag_combinations \
-             --config-file $< \
-             --source-path $(OJIBWE_MORPH) \
-             --output-file $@
-
 
 #####################################################################
 #                                                                   #
