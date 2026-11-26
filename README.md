@@ -101,7 +101,7 @@ We have included detailed instructions on using Docker so that you shouldn't nee
 These instructions will have you create and use a container directly in VSCode, so you can use the `Makefile` to generate the FST from within the container.  
 This method includes the installation of `foma`, so you can skip that installation step later.
 
-1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed.
+1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed and open.
 - In order to use docker in the command line, we also had to go to the Settings page in Docker Desktop and Choose `Advanced` > Check `System` > `Apply`.
 2. Install the `Dev Containers` extension in VSCode.
 3. With OjibweMorph open in VSCode, run `docker build -t ojibwemorph:latest -f .devcontainer/Dockerfile .` in the command line.
@@ -120,7 +120,7 @@ This method includes the installation of `foma`, so you can skip that installati
 1. Clone **OjibweLexicon**  
 In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
-2. Install **FSTmorph**
+2. Install **FSTmorph**  
 The FST is created using code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph), which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
 **FSTmorph** can be installed via pip (along with a couple other python packages), by running the following (while in the `OjibweMorph/` root directory):
 `pip install -r requirements.txt`
