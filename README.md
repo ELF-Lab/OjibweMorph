@@ -44,12 +44,12 @@ For these and the paradigm tests, the "# of Forms Without Results" counts the te
 #### OPD Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-07-31 | 66809 | 156 | 67.81% | 96.96% |
+| 2026-11-27 | 66809 | 156 | 67.81% | 96.96% |
 
 #### OPD Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2026-07-31 | 8565 | 15 | 80.09% | 96.83% |
+| 2026-11-27 | 8565 | 15 | 80.09% | 96.83% |
 
 ### Paradigm Tests
 The inflected forms used in these tests come from the `NounSpreadsheets/` and `VerbSpreadsheets/` folders here in `OjibweMorph`. This smaller test set is used largely as a sanity check.
@@ -57,12 +57,12 @@ The inflected forms used in these tests come from the `NounSpreadsheets/` and `V
 #### Paradigm Verbs
 | Date Last Updated | # of Forms Tested | # of Forms Without Results | Precision | Recall |
 |---|---|---|---|---|
-| 2026-07-31 | 9926 | 0 | 86.24% | 100.0% |
+| 2026-11-27 | 9926 | 0 | 86.24% | 100.0% |
 
 #### Paradigm Nouns
 | Date Last Updated | # of Forms Tested | # of Forms Without Results |  Precision | Recall |
 |---|---|---|---|---|
-| 2026-07-31 | 14330 | 0 | 99.98% | 100.0% |
+| 2026-11-27 | 14330 | 0 | 99.98% | 100.0% |
 
 ### Corpus Tests
 The inflected forms used in these tests come from example sentences in [the OPD](https://ojibwe.lib.umn.edu), stored in [OjibweLexicon/OPD/example_sentences](https://github.com/ELF-Lab/OjibweLexicon/tree/main/OPD/example_sentences).
@@ -83,7 +83,7 @@ In the table below, we are simply counting 'failures' -- forms that receive no a
 | Unknown | N/A | N/A | 0.0% (0/5) | 0.0% (0/5) |
 | Overall | | | 0.56% (106/18926) | 0.81% (82/10096) |
 
-Date Last Updated: 2026-07-31
+Date Last Updated: 2026-11-27
 
 ## User Instructions
 There are a few different ways to install OjibweMorph (in ascending order of effort involved):
@@ -101,7 +101,7 @@ We have included detailed instructions on using Docker so that you shouldn't nee
 These instructions will have you create and use a container directly in VSCode, so you can use the `Makefile` to generate the FST from within the container.  
 This method includes the installation of `foma`, so you can skip that installation step later.
 
-1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed.
+1. Make sure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed and open.
 - In order to use docker in the command line, we also had to go to the Settings page in Docker Desktop and Choose `Advanced` > Check `System` > `Apply`.
 2. Install the `Dev Containers` extension in VSCode.
 3. With OjibweMorph open in VSCode, run `docker build -t ojibwemorph:latest -f .devcontainer/Dockerfile .` in the command line.
@@ -120,7 +120,7 @@ This method includes the installation of `foma`, so you can skip that installati
 1. Clone **OjibweLexicon**  
 In addition to this repository, you'll also need to get [OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon) installed locally.
 
-2. Install **FSTmorph**
+2. Install **FSTmorph**  
 The FST is created using code in [FSTmorph](https://github.com/ELF-Lab/FSTmorph), which makes use of language-specific information stored in both **OjibweMorph** and **OjibweLexicon**.  
 **FSTmorph** can be installed via pip (along with a couple other python packages), by running the following (while in the `OjibweMorph/` root directory):
 `pip install -r requirements.txt`
